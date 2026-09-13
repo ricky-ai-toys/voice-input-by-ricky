@@ -196,11 +196,13 @@ def main() -> int:
     seen = []
     while time.time() < deadline:
         pump(hwnd, 0.25, "hold")
-        res = pipe.call(0x17, b"")
-        if res and res[1] and res[1] != b"\x00" * 12:
-            seen.append(res[1])
-            print(f"   [peek {time.time() - deadline + hold:4.2f}s] {res[1].hex()} "
-                  f"{res[1].decode('utf-8', 'replace')[:80]!r}")
+        ops = (0x17, 0x0A, 0x19, 0x09) if "--poll-all" in sys.argv else (0x17,)
+        for op in ops:
+            res = pipe.call(op, b"")
+            if res and res[1] and res[1] != b"\x00" * len(res[1]):
+                seen.append((op, res[1]))
+                print(f"   [op 0x{op:02X} {time.time() - deadline + hold:4.2f}s] "
+                      f"{res[1].hex()} {res[1].decode('utf-8', 'replace')[:80]!r}")
 
     user32.keybd_event(0xA5, 0, 2, None)
     print("[key] Right Alt up; waiting for the tail")

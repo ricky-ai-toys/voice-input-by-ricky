@@ -540,3 +540,25 @@ poll). Two concrete triggers remain to be closed, both local:
 Either way the output half is already settled: `PeekVoiceCommit` on the private pipe is the
 text channel, and it is exactly what the v0.1.0 product would poll instead of the file-based
 `--test-sami` path.
+
+### Milestone 17 - the settings channel is captured and replayable
+
+`capture_settings_ipc.py` spawns `DoubaoImeSettings.exe` under frida with pipe hooks and
+captured the channel the voice state rides on:
+
+```
+\\.\pipe\DoubaoIme\settings-rpc
+u32 length | {"version":1,"requestId":"<32 hex>","method":"settings.get"}
+u32 length | {"version":1,"ok":true,"payload":{...},"requestId":"..."}
+```
+
+Methods seen: `settings.get`, `settings.getMicrophoneList`, `settings.getRuntimeStatus`,
+`settings.update`, `settings.validateShortcut`, `settings.startShortcutRecording`,
+`settings.stopShortcutRecording`, `settings.setVoiceTryoutActive`, `settings.startMicMeter`,
+`settings.stopMicMeter`, `settings.getMicLevel`, `settings.completeOnboarding`.
+
+`settings_ipc_client.py` speaks that framing; against the running IME it returns
+`{"ok": true, "payload": {"systemChEnHotkeyIsCtrlSpace": true}, ...}` (evidence in
+`planb/evidence/settings_ipc_response.txt`), so a plain user-level process can set the
+voice-tryout state - which is the last gate in front of the engine's voice session. Our copy
+already renames its settings pipe (`settings-rp1`) so it never fights the installed IME for it.

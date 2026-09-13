@@ -1,0 +1,9 @@
+ITfContext                       {AA80E7FD-2021-11D2-93E0-0060B067B86E}
+ITfContextOwnerCompositionSink   {5F20AA40-B57A-4F34-96AB-3576F377CC79}
+ITfDocumentMgr                   {AA80E7F4-2021-11D2-93E0-0060B067B86E}
+ITfInputProcessorProfiles        {1F02B6C5-7842-4EE6-8A0B-9A24183A95CA}
+ITfKeyEventSink                  {AA80E7F5-2021-11D2-93E0-0060B067B86E}
+ITfTextInputProcessor            {AA80E7F7-2021-11D2-93E0-0060B067B86E}
+ITfThreadMgr                     {AA80E801-2021-11D2-93E0-0060B067B86E}
+ITfThreadMgrEventSink            {AA80E80E-2021-11D2-93E0-0060B067B86E}
+ITfUIElementSink                 {EA1EA136-19DF-11D7-A6D2-00065B84435C}

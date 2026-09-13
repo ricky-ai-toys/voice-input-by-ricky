@@ -1,0 +1,505 @@
+[1] ITfThreadMgr hr=0x00000000
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server')
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501001b0002000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=2 head=0801
+      text=..
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=000000000000000039fd9b72f87f0000
+      text=........9..r....
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100060016000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=22 head=784b0000010000000a000000707974686f6e2e657865
+      text=xK..........python.exe
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=d0e53ef8cc0000001000000000000000
+      text=..>.............
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501000c0005000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=5 head=08f8071801
+      text=.....
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=0000000000000000d0e53ef8cc000000
+      text=..........>.....
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100150010000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=16 head=400c33000000000001000000628f4ddf
+      text=@.3.........b.M.
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=784b000000000000bc72000000000000
+      text=xK.......r......
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=3912 head=544c4f47010000003c0f000018000000470000005b323032362d30392d31332031393a32313a33392e3635315d5b7069
+      text=TLOG....<.......G...[2026-09-13 19:21:39.651][pid=19320 tid=29372] DllMain PROCESS_ATTACH2.....[2026-09-13 19:21:39.651][pid=19320 tid=29372] TSF_STATE tag=DllMain.PROCESS_ATTACH proc=python.exe pid=1
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501001b0002000000
+      text=OMPE........
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\pipe\ObricIme\oime-server len=2 head=0801
+      text=..
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=000000000000000039fd9b72f87f0000
+      text=........9..r....
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100060016000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=22 head=784b0000010000000a000000707974686f6e2e657865
+      text=xK..........python.exe
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=60e63ef8cc0000001000000000000000
+      text=`.>.............
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=652 head=544c4f47010000008002000003000000410000005b323032362d30392d31332031393a32313a33392e3635375d5b7069
+      text=TLOG............A...[2026-09-13 19:21:39.657][pid=19320 tid=29372] LangBar AddItem okJ...[2026-09-13 19:21:39.657][pid=19320 tid=29372] OnFocusChanged(true) begin.....[2026-09-13 19:21:39.657][pid=193
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501000c0005000000
+      text=OMPE........
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\pipe\ObricIme\oime-server len=5 head=08f8071801
+      text=.....
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=000000000000000060e63ef8cc000000
+      text=........`.>.....
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[2] tid=32 pdm=2745752256160
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[2.2] docmgr vtable=0x7FF8F02891A0 QI(ITfDocumentMgr) hr=0x00000000
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=99 head=544c4f470100000057000000010000004f0000005b323032362d30392d31332031393a32313a33392e3635375d5b7069
+      text=TLOG....W.......O...[2026-09-13 19:21:39.657][pid=19320 tid=29372] UpdateCursorPos GetFocus failed.
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=686 head=544c4f4701000000a202000003000000e30100005b323032362d30392d31332031393a32313a33392e3635375d5b7069
+      text=TLOG................[2026-09-13 19:21:39.657][pid=19320 tid=29372] TSF_STATE tag=OnFocusChanged.true.end proc=python.exe pid=19320 tid=29372 thread_hkl=0x0000000008040804 fg_hkl=0x0000000008040804 fg_
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=1147 head=544c4f47010000006f04000004000000d80100005b323032362d30392d31332031393a32313a33392e3635375d5b7069
+      text=TLOG....o...........[2026-09-13 19:21:39.657][pid=19320 tid=29372] TSF_STATE tag=Activate.end proc=python.exe pid=19320 tid=29372 thread_hkl=0x0000000008040804 fg_hkl=0x0000000008040804 fg_tid=12388 f
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[2.5] text store built, vtable=0x27F4D9D9998
+[2.55] vtable[0..3] = 0x27F4D605D40, 0, 0, 0x1
+[qi] QueryInterface({28888FE3-C2A0-483A-A3EA-8CB1CE51FF3E})
+[2.6] store self-test: QI hr=0x00000000 ptr=2745786276248 GetEndACP hr=0x00000000 end=0
+[qi] QueryInterface({9B2077B0-5F18-4DEC-BEE9-3CC722F5DFE0})
+[qi] QueryInterface({28888FE3-C2A0-483A-A3EA-8CB1CE51FF3D})
+[qi] QueryInterface({F86AD89F-5FE4-4B8D-BB9F-EF3797A84F1F})
+[qi] QueryInterface({5F20AA40-B57A-4F34-96AB-3576F377CC79})
+[qi] QueryInterface({86B4403F-C187-4A8B-B13E-C93C4AD1078C})
+[3] CreateContext done
+[3] CreateContext(store) hr=0x00000000 pic=2745752256432
+[4] SetFocus(docmgr) hr=0x00000000
+[5] CoCreateInstance(TIP) hr=0x00000000
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=185 head=544c4f4701000000ad00000002000000480000005b323032362d30392d31332031393a32313a33392e3636335d5b7069
+      text=TLOG............H...[2026-09-13 19:21:39.663][pid=19320 tid=29372] DllGetClassObject called.Y...[2026-09-13 19:21:39.663][pid=19320 tid=29372] DllGetClassObject returning class factory.
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=909 head=544c4f47010000008103000006000000500000005b323032362d30392d31332031393a32313a33392e3636335d5b7069
+      text=TLOG............P...[2026-09-13 19:21:39.663][pid=19320 tid=29372] OimeClassFactory::CreateInstance.H...[2026-09-13 19:21:39.663][pid=19320 tid=29372] OimeTextService::ActivateO...[2026-09-13 19:21:39
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501001b0000000000
+      text=OMPE........
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=000000000000000039fd9b72f87f0000
+      text=........9..r....
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=197 head=544c4f4701000000b900000002000000630000005b323032362d30392d31332031393a32313a33392e3636335d5b7069
+      text=TLOG............c...[2026-09-13 19:21:39.663][pid=19320 tid=29372] LangBar AddItem FAILED hr=0x80004005, button clearedJ...[2026-09-13 19:21:39.663][pid=19320 tid=29372] OnFocusChanged(true) begin.
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100060016000000
+      text=OMPE........
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\pipe\ObricIme\oime-server len=22 head=784b0000010000000a000000707974686f6e2e657865
+      text=xK..........python.exe
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=40eb3ef8cc0000001000000000000000
+      text=@.>.............
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=505 head=544c4f4701000000ed01000001000000e50100005b323032362d30392d31332031393a32313a33392e3636335d5b7069
+      text=TLOG................[2026-09-13 19:21:39.663][pid=19320 tid=29372] TSF_STATE tag=OnFocusChanged.true.begin proc=python.exe pid=19320 tid=29372 thread_hkl=0x0000000008040804 fg_hkl=0x0000000008040804 f
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501000c0005000000
+      text=OMPE........
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\pipe\ObricIme\oime-server len=5 head=08f8071801
+      text=.....
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=000000000000000040eb3ef8cc000000
+      text=........@.>.....
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100150010000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=16 head=1a0e18000000000002000000628f4ddf
+      text=............b.M.
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=01000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[6] Activate hr=0x00000000
+[6.5] ITfInputProcessorProfileMgr hr=0x00000000 ptr=2745788625632
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=108 head=544c4f47010000006000000001000000580000005b323032362d30392d31332031393a32313a33392e3636335d5b7069
+      text=TLOG....`.......X...[2026-09-13 19:21:39.663][pid=19320 tid=29372] UpdateCursorPos context ok=0 rc=(0,0,0,0)
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=806 head=544c4f47010000001a03000004000000540000005b323032362d30392d31332031393a32313a33392e3636335d5b7069
+      text=TLOG............T...[2026-09-13 19:21:39.663][pid=19320 tid=29372] UpdateCursorPos gui ok=0 rc=(0,0,0,0)....[2026-09-13 19:21:39.663][pid=19320 tid=29372] TSF_STATE tag=OnFocusChanged.true.end proc=py
+[6.6] ActivateProfile(doubao, 0x0804, FORPROCESS) hr=0x00000000
+[7] QI(ITfKeyEventSink) hr=0x80004002 ptr=None
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=682 head=544c4f47010000009e02000003000000690000005b323032362d30392d31332031393a32313a33392e3636335d5b7069
+      text=TLOG............i...[2026-09-13 19:21:39.663][pid=19320 tid=29372] ReportEditFocusState caret pending, retry scheduled left=2....[2026-09-13 19:21:39.663][pid=19320 tid=29372] TSF_STATE tag=Activate.e
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=94 head=544c4f470100000052000000010000004a0000005b323032362d30392d31332031393a32313a33392e3638395d5b7069
+      text=TLOG....R.......J...[2026-09-13 19:21:39.689][pid=19320 tid=29372] OnFocusChanged(true) begin.
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501001b0002000000
+      text=OMPE........
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\pipe\ObricIme\oime-server len=2 head=0801
+      text=..
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=000000000000000039fd9b72f87f0000
+      text=........9..r....
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100060016000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=22 head=784b0000010000000a000000707974686f6e2e657865
+      text=xK..........python.exe
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=30db3ef8cc0000001000000000000000
+      text=0.>.............
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=504 head=544c4f4701000000ec01000001000000e40100005b323032362d30392d31332031393a32313a33392e3638395d5b7069
+      text=TLOG................[2026-09-13 19:21:39.689][pid=19320 tid=29372] TSF_STATE tag=OnFocusChanged.true.begin proc=python.exe pid=19320 tid=29372 thread_hkl=0x0000000008040804 fg_hkl=0x0000000008040804 f
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501000c0005000000
+      text=OMPE........
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\pipe\ObricIme\oime-server len=5 head=08f8071801
+      text=.....
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=000000000000000030db3ef8cc000000
+      text=........0.>.....
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100160010000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=16 head=400c33000000000001000000628f4ddf
+      text=@.3.........b.M.
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=c0dc3ef8cc000000feffffffffffffff
+      text=..>.............
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=138 head=544c4f47010000007e00000001000000760000005b323032362d30392d31332031393a32313a33392e3639305d5b7069
+      text=TLOG....~.......v...[2026-09-13 19:21:39.690][pid=19320 tid=29372] RegisterNotifySinkWithServer: Parent changed, recreating notify window.
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100150010000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=16 head=400c34000000000001000000628f4ddf
+      text=@.4.........b.M.
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=784b000000000000bc72000000000000
+      text=xK.......r......
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=196 head=544c4f4701000000b800000002000000580000005b323032362d30392d31332031393a32313a33392e3639325d5b7069
+      text=TLOG............X...[2026-09-13 19:21:39.692][pid=19320 tid=29372] UpdateCursorPos context ok=0 rc=(0,0,0,0)T...[2026-09-13 19:21:39.692][pid=19320 tid=29372] UpdateCursorPos gui ok=0 rc=(0,0,0,0)
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=717 head=544c4f4701000000c102000003000000e20100005b323032362d30392d31332031393a32313a33392e3639325d5b7069
+      text=TLOG................[2026-09-13 19:21:39.692][pid=19320 tid=29372] TSF_STATE tag=OnFocusChanged.true.end proc=python.exe pid=19320 tid=29372 thread_hkl=0x0000000008040804 fg_hkl=0x0000000008040804 fg_
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=125 head=544c4f47010000007100000001000000690000005b323032362d30392d31332031393a32313a33392e3639335d5b7069
+      text=TLOG....q.......i...[2026-09-13 19:21:39.693][pid=19320 tid=29372] ReportEditFocusState caret pending, retry scheduled left=2
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501001b0000000000
+      text=OMPE........
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=000000000000000039fd9b72f87f0000
+      text=........9..r....
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100060016000000
+      text=OMPE........
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server len=22 head=784b0000010000000a000000707974686f6e2e657865
+      text=xK..........python.exe
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=582 head=544c4f47010000003a020000020000004a0000005b323032362d30392d31332031393a32313a33392e3639335d5b7069
+      text=TLOG....:.......J...[2026-09-13 19:21:39.693][pid=19320 tid=29372] OnFocusChanged(true) begin.....[2026-09-13 19:21:39.693][pid=19320 tid=29372] TSF_STATE tag=OnFocusChanged.true.begin proc=python.exe
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=30db3ef8cc0000001000000000000000
+      text=0.>.............
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501000c0005000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=5 head=08f8071801
+      text=.....
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=000000000000000030db3ef8cc000000
+      text=........0.>.....
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100160010000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=16 head=1a0e18000000000002000000628f4ddf
+      text=............b.M.
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=c0dc3ef8cc000000feffffffffffffff
+      text=..>.............
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=138 head=544c4f47010000007e00000001000000760000005b323032362d30392d31332031393a32313a33392e3639345d5b7069
+      text=TLOG....~.......v...[2026-09-13 19:21:39.694][pid=19320 tid=29372] RegisterNotifySinkWithServer: Parent changed, recreating notify window.
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100150010000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=16 head=1a0e19000000000002000000628f4ddf
+      text=............b.M.
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=784b000000000000bc72000000000000
+      text=xK.......r......
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=108 head=544c4f47010000006000000001000000580000005b323032362d30392d31332031393a32313a33392e3639355d5b7069
+      text=TLOG....`.......X...[2026-09-13 19:21:39.695][pid=19320 tid=29372] UpdateCursorPos context ok=0 rc=(0,0,0,0)
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=805 head=544c4f47010000001903000004000000540000005b323032362d30392d31332031393a32313a33392e3639355d5b7069
+      text=TLOG............T...[2026-09-13 19:21:39.695][pid=19320 tid=29372] UpdateCursorPos gui ok=0 rc=(0,0,0,0)....[2026-09-13 19:21:39.696][pid=19320 tid=29372] TSF_STATE tag=OnFocusChanged.true.end proc=py
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=125 head=544c4f47010000007100000001000000690000005b323032362d30392d31332031393a32313a33392e3639365d5b7069
+      text=TLOG....q.......i...[2026-09-13 19:21:39.696][pid=19320 tid=29372] ReportEditFocusState caret pending, retry scheduled left=2
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[7.5] host window 0x260DCC created and focused
+[hook] NtCreateFile('\??\PIPE\UIA_PIPE_19320_49a04e44')
+[hook] CreateFile('\\.\PIPE\UIA_PIPE_19320_49a04e44')
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=29 head=08013a1908011a08080012040a0251521a0b080112070a055354555657
+      text=..:...........QR........STUVW
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=0000000000000000000000000000000000000000000000000000000000000080000000ff000000ff000000ff000000ff
+      text=...............................................................................................................................................`........................................................
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      text=........................................................................................................................................................................................................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=264 head=544c4f4701000000fc00000002000000870000005b323032362d30392d31332031393a32313a33392e3735395d5b7069
+      text=TLOG................[2026-09-13 19:21:39.759][pid=19320 tid=29372] ReportEditFocusState gui caret probe ok=0 rect_ok=0 hwnd=0x0000000000000000 rc=(0,0,0,0)i...[2026-09-13 19:21:39.759][pid=19320 tid=2
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=74 head=4a00000008645a420a400a3e0801120b0a070a0508cc9b98012a001a24121a0a180802120b0a070a0508cc9b98012a00
+      text=J....dZB.@.>.............*..$.................*.....*...."...(.0."...*....
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=52000000086410e0d4035a465a440a070a0508cc9b98011001200128fcffffffffffffffff01420c08011080801c18d0
+      text=R....d....ZFZD........... .(..........B.......... ..J.X...b...p.y.t.h.o.n...e.x.e.......................................................................................................................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=10000000086510e0d4035a04720210020a0508cc9b98011001200128fcffffffffffffffff01420c08011080801c18d0
+      text=.....e....Z.r............ .(..........B.......... ..J.X...b...p.y.t.h.o.n...e.x.e.......................................................................................................................
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=264 head=544c4f4701000000fc00000002000000870000005b323032362d30392d31332031393a32313a33392e3735395d5b7069
+      text=TLOG................[2026-09-13 19:21:39.759][pid=19320 tid=29372] ReportEditFocusState gui caret probe ok=0 rect_ok=0 hwnd=0x0000000000000000 rc=(0,0,0,0)i...[2026-09-13 19:21:39.759][pid=19320 tid=2
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=74 head=4a00000008665a420a400a3e0803120b0a070a0508cc9b98012a001a24121a0a180804120b0a070a0508cc9b98012a00
+      text=J....fZB.@.>.............*..$.................*.....*...."...(.0."...*....
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      text=........................................................................................................................................................................................................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=264 head=544c4f4701000000fc00000002000000870000005b323032362d30392d31332031393a32313a33392e3834335d5b7069
+      text=TLOG................[2026-09-13 19:21:39.843][pid=19320 tid=29372] ReportEditFocusState gui caret probe ok=0 rect_ok=0 hwnd=0x0000000000000000 rc=(0,0,0,0)i...[2026-09-13 19:21:39.843][pid=19320 tid=2
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=74 head=4a00000008675a420a400a3e0805120b0a070a0508cc9b98012a001a24121a0a180806120b0a070a0508cc9b98012a00
+      text=J....gZB.@.>.............*..$.................*.....*...."...(.0."...*....
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      text=........................................................................................................................................................................................................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=264 head=544c4f4701000000fc00000002000000870000005b323032362d30392d31332031393a32313a33392e3834335d5b7069
+      text=TLOG................[2026-09-13 19:21:39.843][pid=19320 tid=29372] ReportEditFocusState gui caret probe ok=0 rect_ok=0 hwnd=0x0000000000000000 rc=(0,0,0,0)i...[2026-09-13 19:21:39.843][pid=19320 tid=2
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=20 head=140000000868620c7a0a0a081a02100122021200
+      text=.....hb.z......."...
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=4a00000008675a420a400a3e0805120b0a070a0508cc9b98012a001a24121a0a180806120b0a070a0508cc9b98012a00
+      text=J....gZB.@.>.............*..$.................*.....*...."...(.0."...*....e.x.e.e.......................................................................................................................
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=10000000086910e0d4035a04720210040a070a0508cc9b98012a001a24121a0a180806120b0a070a0508cc9b98012a00
+      text=.....i....Z.r............*..$.................*.....*...."...(.0."...*....e.x.e.e.......................................................................................................................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=20 head=14000000086a620c7a0a0a081a02100122021200
+      text=.....jb.z......."...
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=cd000000086a10e0d40362c00108037abb0132b8010a6008056a5c0a5a08025a560a500a4e0a4c7b0039003500660033
+      text=.....j....b....z..2...`..j\.Z..ZV.P.N.L{.9.5.f.3.5.0.8.5.-.a.b.c.c.-.4.a.f.d.-.a.5.f.4.-.d.b.b.4.6.c.2.3.0.f.d.b.}........P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=10000000086b10e0d4035a0472021006bb0132b8010a6008056a5c0a5a08025a560a500a4e0a4c7b0039003500660033
+      text=.....k....Z.r.....2...`..j\.Z..ZV.P.N.L{.9.5.f.3.5.0.8.5.-.a.b.c.c.-.4.a.f.d.-.a.5.f.4.-.d.b.b.4.6.c.2.3.0.f.d.b.}........P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=20 head=14000000086c620c7a0a0a081a02100122021200
+      text=.....lb.z......."...
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=14000000086a620c7a0a0a081a0210012202120008cc9b98012a001a24121a0a180804120b0a070a0508cc9b98012a00
+      text=.....jb.z......."........*..$.................*.....*...."...(.0."...*..................................................................................................................................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=14 head=0e000000086d62065a040a026a00
+      text=.....mb.Z...j.
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=cd000000086c10e0d40362c00108057abb0132b8010a6008056a5c0a5a08025a560a500a4e0a4c7b0039003500660033
+      text=.....l....b....z..2...`..j\.Z..ZV.P.N.L{.9.5.f.3.5.0.8.5.-.a.b.c.c.-.4.a.f.d.-.a.5.f.4.-.d.b.b.4.6.c.2.3.0.f.d.b.}........P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=14 head=0e000000086e62065a040a026a00
+      text=.....nb.Z...j.
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=0e000000086d62065a040a026a000a070a0508cc9b9801200128fcffffffffffffffff01420c08011080801c18d00f20
+      text=.....mb.Z...j.......... .(..........B.......... ..J.X...b...p.y.t.h.o.n...e.x.e.........................................................................................................................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=14 head=0e000000086f62065a040a026a00
+      text=.....ob.Z...j.
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=14000000086c620c7a0a0a081a02100122021200010a6008056a5c0a5a08025a560a500a4e0a4c7b0039003500660033
+      text=.....lb.z.......".....`..j\.Z..ZV.P.N.L{.9.5.f.3.5.0.8.5.-.a.b.c.c.-.4.a.f.d.-.a.5.f.4.-.d.b.b.4.6.c.2.3.0.f.d.b.}........P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=22 head=160000000870620ea2020b0a092a070a052acc9b9801
+      text=.....pb......*...*....
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501000c0003000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=3 head=08f907
+      text=...
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=feffffffffffffffb002584b7f020000
+      text=..........XK....
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=0e000000086e62065a040a026a005a580890c00110011a500a4e0a4c7b00390035006600330035003000380035002d00
+      text=.....nb.Z...j.ZX.......P.N.L{.9.5.f.3.5.0.8.5.-.a.b.c.c.-.4.a.f.d.-.a.5.f.4.-.d.b.b.4.6.c.2.3.0.f.d.b.}.................................................................................................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501000c0003000000
+      text=OMPE........
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server len=3 head=08f907
+      text=...
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=feffffffffffffffb002584b7f020000
+      text=..........XK....
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=155 head=544c4f47010000008f00000001000000870000005b323032362d30392d31332031393a32313a33392e3931385d5b7069
+      text=TLOG................[2026-09-13 19:21:39.918][pid=19320 tid=29372] ReportEditFocusState gui caret probe ok=0 rect_ok=0 hwnd=0x0000000000000000 rc=(0,0,0,0)
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=22 head=160000000871620ea2020b0a092a070a052acc9b9801
+      text=.....qb......*...*....
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=69000000087110e0d403625d0803a202580890c00110011a500a4e0a4c7b00610033003900650065006200660061002d
+      text=i....q....b]....X.......P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0.}................................................................................................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=425 head=544c4f47010000009d01000003000000830000005b323032362d30392d31332031393a32313a33392e3931385d5b7069
+      text=TLOG................[2026-09-13 19:21:39.918][pid=19320 tid=29372] ReportEditFocusState editable=0 has_ctx=1 readonly=0 caret=0 src=0 static=0x00000000....[2026-09-13 19:21:39.918][pid=19320 tid=29372
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=22 head=160000000872620ea2020b0a092a070a052acc9b9801
+      text=.....rb......*...*....
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=69000000087210e0d403625d0805a202580890c00110011a500a4e0a4c7b00610033003900650065006200660061002d
+      text=i....r....b]....X.......P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0.}................................................................................................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=18 head=120000000873620a5a080a060a0408f89601
+      text=.....sb.Z.........
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=160000000871620ea2020b0a092a070a052acc9b98011a500a4e0a4c7b00390035006600330035003000380035002d00
+      text=.....qb......*...*.....P.N.L{.9.5.f.3.5.0.8.5.-.a.b.c.c.-.4.a.f.d.-.a.5.f.4.-.d.b.b.4.6.c.2.3.0.f.d.b.}..0.f.d.b.}........P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=18 head=120000000874620a5a080a060a0408f89601
+      text=.....tb.Z.........
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=68000000087410e0d403625c08035a580890c00110011a500a4e0a4c7b00340030003400390039003900390038002d00
+      text=h....t....b\..ZX.......P.N.L{.4.0.4.9.9.9.9.8.-.9.c.3.1.-.4.2.4.5.-.a.4.0.3.-.8.7.3.2.0.e.5.9.e.a.f.6.}..0.f.d.b.}........P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=18 head=120000000875620a5a080a060a0408f89601
+      text=.....ub.Z.........
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=68000000087510e0d403625c08055a580890c00110011a500a4e0a4c7b00340030003400390039003900390038002d00
+      text=h....u....b\..ZX.......P.N.L{.4.0.4.9.9.9.9.8.-.9.c.3.1.-.4.2.4.5.-.a.4.0.3.-.8.7.3.2.0.e.5.9.e.a.f.6.}..0.f.d.b.}........P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=14 head=0e000000087662065a040a026a00
+      text=.....vb.Z...j.
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=68000000086f10e0d403625c08055a580890c00110011a500a4e0a4c7b00390035006600330035003000380035002d00
+      text=h....o....b\..ZX.......P.N.L{.9.5.f.3.5.0.8.5.-.a.b.c.c.-.4.a.f.d.-.a.5.f.4.-.d.b.b.4.6.c.2.3.0.f.d.b.}.................................................................................................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=14 head=0e000000087762065a040a026a00
+      text=.....wb.Z...j.
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=68000000087710e0d403625c08035a580890c00110011a500a4e0a4c7b00630061003700370034006600650061002d00
+      text=h....w....b\..ZX.......P.N.L{.c.a.7.7.4.f.e.a.-.2.8.a.c.-.4.b.c.2.-.9.4.c.a.-.a.c.e.c.6.d.6.c.1.0.a.3.}.................................................................................................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=14 head=0e000000087862065a040a026a00
+      text=.....xb.Z...j.
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=68000000087810e0d403625c08055a580890c00110011a500a4e0a4c7b00630061003700370034006600650061002d00
+      text=h....x....b\..ZX.......P.N.L{.c.a.7.7.4.f.e.a.-.2.8.a.c.-.4.b.c.2.-.9.4.c.a.-.a.c.e.c.6.d.6.c.1.0.a.3.}.................................................................................................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=12 head=0c0000000879620462020a00
+      text=.....yb.b...
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=0e000000087862065a040a026a0008f89601c00110011a500a4e0a4c7b00340030003400390039003900390038002d00
+      text=.....xb.Z...j..........P.N.L{.4.0.4.9.9.9.9.8.-.9.c.3.1.-.4.2.4.5.-.a.4.0.3.-.8.7.3.2.0.e.5.9.e.a.f.6.}.................................................................................................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=149 head=544c4f47010000008900000001000000810000005b323032362d30392d31332031393a32313a34302e3030335d5b7069
+      text=TLOG................[2026-09-13 19:21:40.003][pid=19320 tid=18256] ReportEditFocusState uia probe result verdict=2 ct=50033 pid_match=1 elapsed=313ms
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=12 head=0c000000087a620462020a00
+      text=.....zb.b...
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=62000000087a10e0d4036256080362520a500a4e0a4c7b00340039003800340037003900610032002d00350062003200
+      text=b....z....bV..bR.P.N.L{.4.9.8.4.7.9.a.2.-.5.b.2.2.-.4.4.8.d.-.b.6.e.4.-.6.4.7.4.9.0.8.6.0.6.9.8.}.f.6.}.................................................................................................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=148 head=544c4f47010000008800000001000000800000005b323032362d30392d31332031393a32313a34302e3031335d5b7069
+      text=TLOG................[2026-09-13 19:21:40.013][pid=19320 tid=9460] ReportEditFocusState uia probe result verdict=2 ct=50033 pid_match=1 elapsed=359ms
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=12 head=0c000000087b620462020a00
+      text=.....{b.b...
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=0c000000087a620462020a0008015a580890c00110011a500a4e0a4c7b00630061003700370034006600650061002d00
+      text=.....zb.b.....ZX.......P.N.L{.c.a.7.7.4.f.e.a.-.2.8.a.c.-.4.b.c.2.-.9.4.c.a.-.a.c.e.c.6.d.6.c.1.0.a.3.}..0.f.d.b.}........P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=10000000087c10e0d4035a04720210010890c00110011a500a4e0a4c7b00630061003700370034006600650061002d00
+      text=.....|....Z.r..........P.N.L{.c.a.7.7.4.f.e.a.-.2.8.a.c.-.4.b.c.2.-.9.4.c.a.-.a.c.e.c.6.d.6.c.1.0.a.3.}..0.f.d.b.}........P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=10000000087d10e0d4035a04720210030890c00110011a500a4e0a4c7b00630061003700370034006600650061002d00
+      text=.....}....Z.r..........P.N.L{.c.a.7.7.4.f.e.a.-.2.8.a.c.-.4.b.c.2.-.9.4.c.a.-.a.c.e.c.6.d.6.c.1.0.a.3.}..0.f.d.b.}........P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0
+[readfile] \\.\PIPE\UIA_PIPE_19320_49a04e44 len=4096 head=10000000087e10e0d4035a04720210050890c00110011a500a4e0a4c7b00630061003700370034006600650061002d00
+      text=.....~....Z.r..........P.N.L{.c.a.7.7.4.f.e.a.-.2.8.a.c.-.4.b.c.2.-.9.4.c.a.-.a.c.e.c.6.d.6.c.1.0.a.3.}..0.f.d.b.}........P.N.L{.a.3.9.e.e.b.f.a.-.7.f.b.a.-.4.c.8.9.-.b.4.d.4.-.b.9.9.e.2.d.e.7.d.1.6.0
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=148 head=544c4f47010000008800000001000000800000005b323032362d30392d31332031393a32313a34302e3032335d5b7069
+      text=TLOG................[2026-09-13 19:21:40.023][pid=19320 tid=8080] ReportEditFocusState uia probe result verdict=2 ct=50033 pid_match=1 elapsed=312ms
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=140 head=544c4f47010000008000000001000000780000005b323032362d30392d31332031393a32313a34302e3636325d5b7069
+      text=TLOG............x...[2026-09-13 19:21:40.662][pid=19320 tid=29372] ActivateProbe beat=1 has_focus=1 has_ctx=1 openclose_vt=3 openclose_val=1
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=140 head=544c4f47010000008000000001000000780000005b323032362d30392d31332031393a32313a34302e3636325d5b7069
+      text=TLOG............x...[2026-09-13 19:21:40.662][pid=19320 tid=29372] ActivateProbe beat=1 has_focus=1 has_ctx=1 openclose_vt=3 openclose_val=1
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=140 head=544c4f47010000008000000001000000780000005b323032362d30392d31332031393a32313a34322e3636305d5b7069
+      text=TLOG............x...[2026-09-13 19:21:42.660][pid=19320 tid=29372] ActivateProbe beat=2 has_focus=1 has_ctx=1 openclose_vt=3 openclose_val=1
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=140 head=544c4f47010000008000000001000000780000005b323032362d30392d31332031393a32313a34322e3636305d5b7069
+      text=TLOG............x...[2026-09-13 19:21:42.660][pid=19320 tid=29372] ActivateProbe beat=2 has_focus=1 has_ctx=1 openclose_vt=3 openclose_val=1
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[7.7] message loop finished
+[11] store text=''
+[summary] pipe opens observed: 98
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\pyvenv.cfg
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\pyvenv.cfg
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python312._pth
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python._pth
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\pybuilddir.txt
+[summary]   \??\C:\WINDOWS\SYSTEM32\tzres.dll
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\aliases.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\utf_8.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\distutils-precedence.pth
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\utf_8_sig.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\_distutils_hack\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\ctypes\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\types.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\struct.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\ctypes\__pycache__\_endian.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\ctypes\__pycache__\wintypes.cpython-312.pyc
+[summary]   \??\pipe\ObricIme\oime-server
+[summary]   \\.\pipe\ObricIme\oime-server
+[summary]   \??\pipe\ObricIme\oime-server-tsf-log
+[summary]   \\.\pipe\ObricIme\oime-server-tsf-log
+[summary]   \??\C:\WINDOWS\SYSTEM32\OLEACCRC.DLL
+[summary]   \??\PIPE\UIA_PIPE_19320_49a04e44
+[summary]   \\.\PIPE\UIA_PIPE_19320_49a04e44

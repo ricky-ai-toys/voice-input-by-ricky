@@ -79,13 +79,34 @@ ole32.CoCreateInstance.argtypes = [ctypes.POINTER(GUID), ctypes.c_void_p, wt.DWO
 ole32.CoCreateInstance.restype = ctypes.c_long
 ole32.CLSIDFromString.argtypes = [wt.LPCWSTR, ctypes.POINTER(GUID)]
 user32 = ctypes.windll.user32
+user32.DefWindowProcW.argtypes = [wt.HWND, wt.UINT, wt.WPARAM, wt.LPARAM]
+user32.DefWindowProcW.restype = ctypes.c_ssize_t
+user32.PostMessageW.argtypes = [wt.HWND, wt.UINT, wt.WPARAM, wt.LPARAM]
+user32.PostMessageW.restype = wt.BOOL
+user32.SendMessageW.argtypes = [wt.HWND, wt.UINT, wt.WPARAM, wt.LPARAM]
+user32.SendMessageW.restype = ctypes.c_ssize_t
+user32.CreateWindowExW.restype = wt.HWND
+user32.CreateWindowExW.argtypes = [wt.DWORD, wt.LPCWSTR, wt.LPCWSTR, wt.DWORD,
+                                   ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.c_int,
+                                   wt.HWND, wt.HMENU, wt.HINSTANCE, ctypes.c_void_p]
+user32.RegisterClassW.argtypes = [ctypes.c_void_p]
+user32.GetForegroundWindow.restype = wt.HWND
+user32.GetWindowThreadProcessId.argtypes = [wt.HWND, ctypes.c_void_p]
+user32.GetWindowThreadProcessId.restype = wt.DWORD
+user32.AttachThreadInput.argtypes = [wt.DWORD, wt.DWORD, wt.BOOL]
+user32.SetForegroundWindow.argtypes = [wt.HWND]
+user32.SetFocus.argtypes = [wt.HWND]
+user32.SetTimer.argtypes = [wt.HWND, ctypes.c_size_t, wt.UINT, ctypes.c_void_p]
+user32.KillTimer.argtypes = [wt.HWND, ctypes.c_size_t]
+user32.SetFocus.argtypes = [wt.HWND]
 
 
 class TextStoreACP:
     """Minimal ITextStoreACP: an in-memory UTF-16 string plus a selection."""
 
-    def __init__(self) -> None:
+    def __init__(self, hwnd: int = 0) -> None:
         self.text = ""
+        self.hwnd = hwnd
         self.sel = (0, 0)
         self.sink = None
         self.lock_flags = 0
@@ -241,20 +262,20 @@ class TextStoreACP:
 
         def get_text_ext(this, pview, start, end, prc, clipped):
             rc = ctypes.cast(prc, ctypes.POINTER(RECT)).contents
-            rc.left, rc.top, rc.right, rc.bottom = 100, 100, 200, 120
+            rc.left, rc.top, rc.right, rc.bottom = 200, 200, 260, 220
             if clipped:
                 ctypes.cast(clipped, ctypes.POINTER(wt.BOOL))[0] = 0
             return S_OK
 
         def get_screen_ext(this, pview, prc):
             rc = ctypes.cast(prc, ctypes.POINTER(RECT)).contents
-            rc.left, rc.top, rc.right, rc.bottom = 0, 0, 1920, 1080
+            rc.left, rc.top, rc.right, rc.bottom = -2000, -2000, -1800, -1900
             return S_OK
 
         def get_wnd(this, pview, phwnd):
-            hwnd = ctypes.c_void_p()
-            user32.GetCursorPos(ctypes.byref(wt.POINT()))
-            ctypes.cast(phwnd, ctypes.POINTER(ctypes.c_void_p))[0] = None
+            # the IME positions its UI relative to this window; returning NULL made the core
+            # log "UpdateCursorPos GetFocus failed" and never engage
+            ctypes.cast(phwnd, ctypes.POINTER(ctypes.c_void_p))[0] = self.hwnd or None
             return S_OK
 
         # ITextStoreACP slots start at index 3
@@ -306,6 +327,100 @@ def vcall(ptr: int, slot: int, restype, argtypes, *args):
     return ctypes.WINFUNCTYPE(restype, ctypes.c_void_p, *argtypes)(fn)(ptr, *args)
 
 
+# --------------------------------------------------------------------------- #
+# a real (offscreen) window + message loop, so TSF delivers keystrokes to us
+# --------------------------------------------------------------------------- #
+WM_DESTROY = 0x0002
+WM_TIMER = 0x0113
+WM_SYSKEYDOWN = 0x0104
+WM_SYSKEYUP = 0x0105
+WM_KEYDOWN = 0x0100
+WM_KEYUP = 0x0101
+SW_SHOWNOACTIVATE = 4
+WS_POPUP = 0x80000000
+
+
+class MSG(ctypes.Structure):
+    _fields_ = [("hwnd", wt.HWND), ("message", wt.UINT), ("wParam", wt.WPARAM),
+                ("lParam", wt.LPARAM), ("time", wt.DWORD), ("pt", wt.POINT)]
+
+
+class WNDCLASS(ctypes.Structure):
+    _fields_ = [("style", wt.UINT), ("lpfnWndProc", ctypes.c_void_p), ("cbClsExtra", ctypes.c_int),
+                ("cbWndExtra", ctypes.c_int), ("hInstance", wt.HINSTANCE), ("hIcon", wt.HICON),
+                ("hCursor", wt.HANDLE), ("hbrBackground", wt.HBRUSH), ("lpszMenuName", wt.LPCWSTR),
+                ("lpszClassName", wt.LPCWSTR)]
+
+
+WNDPROC = ctypes.WINFUNCTYPE(ctypes.c_ssize_t, wt.HWND, wt.UINT, wt.WPARAM, wt.LPARAM)
+user32.PeekMessageW.argtypes = [ctypes.POINTER(MSG), wt.HWND, wt.UINT, wt.UINT, wt.UINT]
+user32.PeekMessageW.restype = wt.BOOL
+_state = {"deadline": 0.0, "alt_down": False}
+
+
+def _wndproc(hwnd, msg, wparam, lparam):
+    if msg == WM_TIMER:
+        if _state["alt_down"] and time.time() >= _state["deadline"]:
+            user32.PostMessageW(hwnd, WM_SYSKEYUP, VK_RMENU, 0xC0380001)
+            _state["alt_down"] = False
+        if not _state["alt_down"] and time.time() >= _state["deadline"] + 3.0:
+            user32.KillTimer(hwnd, 1)
+            user32.PostQuitMessage(0)
+        return 0
+    return user32.DefWindowProcW(hwnd, msg, wparam, lparam)
+
+
+_wndproc_ref = WNDPROC(_wndproc)
+
+
+def create_host_window():
+    hinst = ctypes.windll.kernel32.GetModuleHandleW(None)
+    wc = WNDCLASS()
+    wc.lpfnWndProc = ctypes.cast(_wndproc_ref, ctypes.c_void_p)
+    wc.hInstance = hinst
+    wc.lpszClassName = "DoubaoHarnessHostWnd"
+    user32.RegisterClassW(ctypes.byref(wc))
+    hwnd = user32.CreateWindowExW(0, "DoubaoHarnessHostWnd", "DoubaoHarnessHost",
+                                  WS_POPUP, -2000, -2000, 200, 100, None, None, hinst, None)
+    return hwnd
+
+
+def focus_window(hwnd: int) -> None:
+    fg = user32.GetForegroundWindow()
+    t1 = user32.GetWindowThreadProcessId(fg, None)
+    t2 = ctypes.windll.kernel32.GetCurrentThreadId()
+    user32.AttachThreadInput(t1, t2, True)
+    try:
+        user32.ShowWindow(hwnd, SW_SHOWNOACTIVATE)
+        user32.SetForegroundWindow(hwnd)
+        user32.SetFocus(hwnd)
+    finally:
+        user32.AttachThreadInput(t1, t2, False)
+
+
+def post_alt_sequence(hwnd: int, hold: float) -> None:
+    user32.PostMessageW(hwnd, WM_SYSKEYDOWN, VK_RMENU, 0x00380001)
+    _state["alt_down"] = True
+    _state["deadline"] = time.time() + hold
+    user32.SetTimer(hwnd, 1, 200, None)
+
+
+def pump_messages(seconds: float) -> int:
+    msg = MSG()
+    end = time.time() + seconds
+    handled = 0
+    while time.time() < end:
+        if user32.PeekMessageW(ctypes.byref(msg), None, 0, 0, 1):
+            if msg.message == 0x0012:  # WM_QUIT
+                break
+            user32.TranslateMessage(ctypes.byref(msg))
+            user32.DispatchMessageW(ctypes.byref(msg))
+            handled += 1
+        else:
+            time.sleep(0.01)
+    return handled
+
+
 def main() -> int:
     hold = 6.0
     for arg in sys.argv[1:]:
@@ -331,7 +446,8 @@ def main() -> int:
                ctypes.byref(GUID.parse("{AA80E7F4-2021-11D2-93E0-0060B067B86E}")), ctypes.byref(check))
     print(f"[2.2] docmgr vtable=0x{dm_vtable:X} QI(ITfDocumentMgr) hr=0x{hr & 0xFFFFFFFF:08X}", flush=True)
 
-    store = TextStoreACP()
+    host_hwnd = create_host_window()          # created first: the IME needs a window handle
+    store = TextStoreACP(host_hwnd)
     print(f"[2.5] text store built, vtable=0x{store._self_ptr:X}", flush=True)
     raw = [ctypes.c_void_p.from_address(store._self_ptr + i * 8).value for i in range(4)]
     print("[2.55] vtable[0..3] = " + ", ".join(f"0x{v:X}" if v else "0" for v in raw), flush=True)
@@ -388,18 +504,17 @@ def main() -> int:
                ctypes.byref(GUID.parse(IID_ITfKeyEventSink)), ctypes.byref(kev))
     print(f"[7] QI(ITfKeyEventSink) hr=0x{hr & 0xFFFFFFFF:08X} ptr={kev.value}", flush=True)
 
-    # The service does not expose ITfKeyEventSink; the core very likely reads the
-    # push-to-talk key through a low-level keyboard hook inside this process, so also try
-    # synthesized Right Alt keystrokes.
-    print("[7.5] sending synthesized Right Alt (low-level hook path) ...", flush=True)
-    KEYEVENTF_EXTENDEDKEY = 0x0001
-    KEYEVENTF_KEYUP = 0x0002
-    user32.keybd_event(VK_RMENU, 0x38, KEYEVENTF_EXTENDEDKEY, None)
-    print("[7.6] Right Alt down, holding ...", flush=True)
-    time.sleep(hold)
-    user32.keybd_event(VK_RMENU, 0x38, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, None)
-    print("[7.7] Right Alt up", flush=True)
-    time.sleep(4)
+    # TSF only routes keystrokes for a host that owns a real window with keyboard focus and
+    # pumps messages, so build one and post Right Alt into our own queue.
+    hwnd = host_hwnd
+    if hwnd:
+        focus_window(hwnd)
+        print(f"[7.5] host window 0x{hwnd:X} created and focused", flush=True)
+        post_alt_sequence(hwnd, hold)
+        pump_messages(hold + 6.0)
+        print("[7.7] message loop finished", flush=True)
+    else:
+        print("[7.5] could not create a host window", flush=True)
 
     if kev.value:
         eaten = wt.BOOL(0)

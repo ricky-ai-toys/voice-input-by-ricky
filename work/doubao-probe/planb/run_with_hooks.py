@@ -76,6 +76,26 @@ try {
     }
   });
 } catch (e) { send({ kind: 'warn', message: 'ntdll hook failed: ' + e.message }); }
+
+// how does the IME intend to see the push-to-talk key?
+for (const api of ['SetWindowsHookExW', 'SetWindowsHookExA', 'UnhookWindowsHookEx',
+                   'RegisterHotKey', 'UnregisterHotKey', 'GetAsyncKeyState', 'GetKeyState']) {
+  try {
+    const addr = k32.getExportByName(api);
+    if (!addr) continue;
+    Interceptor.attach(addr, {
+      onEnter(args) {
+        if (api === 'GetAsyncKeyState' || api === 'GetKeyState') return;   // too noisy
+        const info = { kind: 'api', api: api };
+        try { info.a0 = args[0].toString(); } catch (e) {}
+        try { info.a1 = args[1].toString(); } catch (e) {}
+        try { info.a2 = args[2].toString(); } catch (e) {}
+        try { info.a3 = args[3].toString(); } catch (e) {}
+        send(info);
+      }
+    });
+  } catch (e) { /* ignore */ }
+}
 send({ kind: 'hooked' });
 """
 
@@ -106,6 +126,9 @@ def main() -> int:
             text = "".join(chr(b) if 32 <= b < 127 else "." for b in raw[:200])
             print(f"[{payload['kind']}] {payload['name']} len={payload['len']} "
                   f"head={payload['hex'][:96]}\n      text={text}", flush=True)
+        elif payload.get("kind") == "api":
+            extra = " ".join(f"{k}={v}" for k, v in payload.items() if k.startswith("a"))
+            print(f"[api] {payload['api']}({extra})", flush=True)
 
     script.on("message", on_message)
     script.load()

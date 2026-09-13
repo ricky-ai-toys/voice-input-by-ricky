@@ -347,3 +347,34 @@ Next step (bounded): give the harness a real hidden/offscreen Win32 window + mes
 implement `ITfMessagePump` and advise it to the thread manager, then send keys to that window
 and watch the TLOG stream for `voice_start`-style entries. If the TIP still exposes no key
 sink, the fallback is to hook the core's key handler directly and call it.
+
+### Milestone 8 - real window + message loop; the hotkey is not in the TSF path at all
+
+The harness now creates a real (offscreen) window, focuses it, posts Right Alt into its own
+message queue and pumps messages. The core reacts to the host (TLOG):
+
+```
+OnFocusChanged(true) begin.
+UpdateCursorPos GetFocus failed.            <-- because our store returned no HWND
+ReportEditFocusState caret pending, retry scheduled left=2
+```
+
+After `ITextStoreACP::GetWnd` was changed to return the real window handle, the host is a
+properly focused TSF host - and yet:
+
+* the core log still contains **zero** key/voice entries after posting Right Alt;
+* hooking `SetWindowsHookExW/A`, `RegisterHotKey`, `UnhookWindowsHookEx` shows the core makes
+  **0 calls** to any of them inside our host process.
+
+Conclusion: the push-to-talk key is **not captured in the TSF/key-sink path**. It must live in
+the IME's UI/shell layer (or the engine), which a synthetic host does not initialise - that is
+also why the standalone server's `shell init` mattered earlier.
+
+Two routes remain, in order of cost:
+1. drive voice **directly over the RPC pipe** (`OMPE` framing) - we already capture frames and
+   can identify the "start/stop voice" op by recording one real session, then replay it from a
+   minimal client (no TSF host needed at all);
+2. initialise the IME's UI/shell inside our host (bigger surface: status bar, candidate
+   window, caret tracking) so the shell installs its own hotkey handling.
+
+Given the evidence, route 1 is the cheaper and more robust target for the fork.

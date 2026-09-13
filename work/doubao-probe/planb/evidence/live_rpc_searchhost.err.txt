@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\capture_live_rpc.py", line 114, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\capture_live_rpc.py", line 106, in main
+    script.unload()
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1593, in unload
+    return _invoke(self._impl.unload, ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 240, in _invoke
+    raise error
+frida.InvalidOperationError: script is destroyed

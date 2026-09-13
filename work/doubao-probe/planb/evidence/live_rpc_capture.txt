@@ -1,0 +1,4 @@
+[info] attaching to pid 9824
+[info] hooking 25 exports in Explorer.EXE
+[info] capturing for 20s - switch focus between windows to trigger IME RPCs
+[summary] 0 call(s): 

@@ -477,3 +477,27 @@
 
 [2026-09-13 19:02:07.683] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
 
+[2026-09-13 19:02:12.684] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:02:12.684] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:02:12.684] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:02:12.684] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:02:17.694] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:02:17.694] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:02:17.694] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:02:17.695] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:02:22.699] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:02:22.699] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:02:22.699] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:02:22.699] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+

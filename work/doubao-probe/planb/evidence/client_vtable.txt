@@ -1,0 +1,119 @@
+[info] object=0x1355CA10B60 vtable=0x7FF808F143B0 rpc.dll base=0x7FF808CC0000
+======================================================================
+[vtable  0] 0x7FF808CD27F0  rpc.dll+0x127F0
+   call qword ptr [rip + 0x240857]
+   call 0x7ff808e23158
+   call 0x7ff808e23158
+   call 0x7ff808e5fbcc
+   call qword ptr [rip + 0x24093f]
+   call 0x7ff808e53310
+   jmp 0x7ff808cd296b
+   call 0x7ff808cc2390
+======================================================================
+[vtable  1] 0x7FF808CD6FC0  rpc.dll+0x16FC0
+   call 0x7ff808cd6650
+   call 0x7ff808e23158
+   call 0x7ff808e23158
+   call 0x7ff808e23400
+   call 0x7ff808e5fbcc
+   call 0x7ff808e5fbcc
+   call 0x7ff808ce9250
+   call 0x7ff808cf32e0
+======================================================================
+[vtable  2] 0x7FF808CD2BD0  rpc.dll+0x12BD0
+   call 0x7ff808cd6650
+   call 0x7ff808e23158
+   call 0x7ff808e23158
+   call 0x7ff808e23400
+   call 0x7ff808e5fbcc
+   call 0x7ff808e5fbcc
+   call 0x7ff808ce9030
+   jmp 0x7ff808cd2d3c
+======================================================================
+[vtable  3] 0x7FF808CD2EA0  rpc.dll+0x12EA0
+   call qword ptr [rip + 0x240340]
+   call 0x7ff808e53310
+   jmp 0x7ff808cd2f6a
+   call 0x7ff808cc2390
+   call 0x7ff808cd6650
+   call 0x7ff808e23158
+   call 0x7ff808e23158
+   call 0x7ff808e23400
+======================================================================
+[vtable  4] 0x7FF808CD4DB0  rpc.dll+0x14DB0
+   call 0x7ff808ce9730
+   jmp 0x7ff808cd4e2a
+   call 0x7ff808cf0aa0
+   call 0x7ff808cf32e0
+   call 0x7ff808cd6650
+   call 0x7ff808e23158
+   call 0x7ff808e23158
+   call 0x7ff808cea120
+======================================================================
+[vtable  5] 0x7FF808CD5F60  rpc.dll+0x15F60
+   call 0x7ff808ce9730
+   call 0x7ff808cf32e0
+   call 0x7ff808cd6650
+   jmp 0x7ff808cd603c
+   call 0x7ff808ce9880
+   call 0x7ff808cf2930
+   call 0x7ff808cea1a0
+   call 0x7ff808e23158
+======================================================================
+[vtable  6] 0x7FF808CD3070  rpc.dll+0x13070
+   call qword ptr [rip + 0x24016a]
+   call 0x7ff808e53310
+   jmp 0x7ff808cd3140
+   call 0x7ff808cc2390
+   call 0x7ff808e53310
+   jmp 0x7ff808cd31a8
+   call 0x7ff808cc2390
+======================================================================
+[vtable  7] 0x7FF808CD3360  rpc.dll+0x13360
+   call qword ptr [rax + 0x30]
+   call 0x7ff808e23158
+   call 0x7ff808e23400
+   call 0x7ff808e5fbcc
+   call qword ptr [rip + 0x23fdf0]
+   call 0x7ff808e53310
+   jmp 0x7ff808cd34ba
+   call 0x7ff808cc2390
+======================================================================
+[vtable  8] 0x7FF808CD33F0  rpc.dll+0x133F0
+   call qword ptr [rip + 0x23fdf0]
+   call 0x7ff808e53310
+   jmp 0x7ff808cd34ba
+   call 0x7ff808cc2390
+   call 0x7ff808cd6650
+   call 0x7ff808e23158
+   call 0x7ff808e23158
+   call 0x7ff808e23400
+======================================================================
+[vtable  9] 0x7FF808CD70C0  rpc.dll+0x170C0
+   call 0x7ff808ce9250
+   call 0x7ff808cf32e0
+   call 0x7ff808cd6650
+   call 0x7ff808e23158
+   call 0x7ff808e23158
+   call 0x7ff808ce9f60
+   call 0x7ff808e23400
+   call 0x7ff808e5fbcc
+======================================================================
+[vtable 10] 0x7FF808CD7D00  rpc.dll+0x17D00
+   call 0x7ff808cd9360
+   call 0x7ff808e53310
+   jmp 0x7ff808cd7e1c
+   call 0x7ff808cc2390
+   call 0x7ff808e53310
+   jmp 0x7ff808cd7e7f
+   call 0x7ff808cc2390
+======================================================================
+[vtable 11] 0x7FF808CD3D40  rpc.dll+0x13D40
+   call qword ptr [rip + 0x23f4a7]
+   call 0x7ff808e53310
+   jmp 0x7ff808cd3e03
+   call 0x7ff808cc2390
+   call 0x7ff808cd6650
+   jmp 0x7ff808cd3e96
+   call 0x7ff808ce8f00
+   call 0x7ff808cf2930

@@ -1,0 +1,9 @@
+RpcPipe_EnsureServerRunning imported from rpc.dll, IAT slot VA=0x1801587D8
+direct call sites: 0, IAT load sites: 0
+delay-load thunks (jmp [IAT]): 1
+callers of the thunk: 1
+========================================================================
+--- setup before call to thunk at 0x180004F06 ---
+  0x180004E86: adc       byte ptr [r8 - 0x77], r9b
+  0x180004E8A: push      rsi
+  0x180004E8B: or        byte ptr [rcx - 0x77], cl

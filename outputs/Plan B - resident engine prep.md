@@ -192,3 +192,27 @@ Open questions for the next session (in order):
    True even for a non-existent name, so it is not proof of connection).
 3. Which call performs the actual `CreateFile` on the pipe - hooking `CreateFileW` inside a
    probe process while calling the API will answer this in one step.
+
+### Milestone 4 - the client is a C++ object, not the exported RpcPipe_* functions
+
+Evidence gathered this session (all reproducible with the scripts in `planb/`):
+
+1. **The client never opens the pipe.** With `CreateFileW`, `CreateFileA` and `ntdll!NtCreateFile`
+   hooked inside the probe process (`run_with_hooks.py`), a full sequence of
+   `CreateRpcClient` / `EnsureServerRunning` / `PeekVoiceCommitUtf8` / `GetInputState` /
+   `SimpleMessage` produced **42 opens, all of them ordinary Python files - zero pipes**
+   (`evidence/client_opens_all.txt`). So the exported `RpcPipe_*` entry points are *not* the
+   client API - they match the server-side dispatch logging seen in `rpc_server_impl.cpp`
+   ("PipeDispatch no callback op={}").
+2. **`CreateRpcClient(name)` returns a C++ object with a vtable** (`inspect_client_object.py`):
+   12+ method pointers, plus a heap pointer as the second word. That vtable is the real client
+   API (`evidence/client_vtable.txt`).
+3. **Our private pipe is reachable from user code**: `CreateFileW('\\.\pipe\ObricIme\oime-serveR')`
+   succeeds against our resident copy (handle returned), i.e. the server side is ready; only
+   the client side is still unidentified.
+4. Passing a raw pipe handle where a client object is expected crashes with
+   `access violation reading 0x18C` - confirming the first argument is a client object.
+
+Next concrete step: resolve the `call qword ptr [rip+disp]` targets inside each vtable method at
+runtime (read the IAT slot) to find which method calls `kernel32!CreateFileW` - that method is
+`Connect(pipe_name)`. Then drive it from Python together with the send/peek methods.

@@ -1,0 +1,39 @@
+RpcPipe_FocusIn imported from rpc.dll, IAT slot VA=0x1801587B0
+direct call sites: 0, IAT load sites: 0
+delay-load thunks (jmp [IAT]): 1
+callers of the thunk: 1
+========================================================================
+--- setup before call to thunk at 0x180014141 ---
+  0x1800140C1: cmp       qword ptr [rbx + 0x3d8], rsi
+  0x1800140C8: je        0x180014107
+  0x1800140CA: mov       edi, dword ptr [rbx + 0x3e0]
+  0x1800140D0: shr       edi, 2
+  0x1800140D3: lea       rcx, [rip + 0x1497de]
+  0x1800140DA: call      0x18000c3c0
+  0x1800140DF: cmp       qword ptr [rip + 0x1a4f2a], rsi
+  0x1800140E6: je        0x180014107
+  0x1800140E8: mov       rcx, r14
+  0x1800140EB: cmp       qword ptr [rip + 0x1a4f25], 0x10
+  0x1800140F3: cmovae    rcx, qword ptr [rip + 0x1a4f05]
+  0x1800140FB: not       edi
+  0x1800140FD: and       edi, 1
+  0x180014100: mov       edx, edi
+  0x180014102: call      0x18006e193
+  0x180014107: lea       rcx, [rip + 0x149222]
+  0x18001410E: call      0x18000c3c0
+  0x180014113: cmp       qword ptr [rip + 0x1a4ef6], rsi
+  0x18001411A: je        0x180014171
+  0x18001411C: call      0x18000fae0
+  0x180014121: cmp       qword ptr [rax + 0x18], 0x10
+  0x180014126: jb        0x18001412b
+  0x180014128: mov       rax, qword ptr [rax]
+  0x18001412B: mov       rcx, r14
+  0x18001412E: cmp       qword ptr [rip + 0x1a4ee2], 0x10
+  0x180014136: cmovae    rcx, qword ptr [rip + 0x1a4ec2]
+  0x18001413E: mov       rdx, rax
+  0x180014141: call      0x18006e12d   <== call thunk
+  0x180014146: cmp       byte ptr [rbx + 0x61], sil
+  0x18001414A: setne     sil
+  0x18001414E: cmp       qword ptr [rip + 0x1a4ec2], 0x10
+  0x180014156: cmovae    r14, qword ptr [rip + 0x1a4ea2]
+  0x18001415E: xor       r9d, r9d

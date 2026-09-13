@@ -1,0 +1,3 @@
+[info] attaching to pid 11968
+[info] hooking 25 exports in SearchHost.exe
+[info] capturing for 16s - switch focus between windows to trigger IME RPCs

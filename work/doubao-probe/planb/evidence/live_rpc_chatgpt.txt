@@ -1,0 +1,4 @@
+[info] attaching to pid 12520
+[info] hooking 25 exports in ChatGPT.exe
+[info] capturing for 15s - switch focus between windows to trigger IME RPCs
+[summary] 0 call(s): 

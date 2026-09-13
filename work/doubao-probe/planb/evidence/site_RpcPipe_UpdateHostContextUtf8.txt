@@ -1,0 +1,106 @@
+RpcPipe_UpdateHostContextUtf8 imported from rpc.dll, IAT slot VA=0x180158768
+direct call sites: 0, IAT load sites: 0
+delay-load thunks (jmp [IAT]): 1
+callers of the thunk: 3
+========================================================================
+--- setup before call to thunk at 0x180007F2F ---
+  0x180007EAF: or        eax, 0x154c1c
+  0x180007EB4: mov       edx, 0x100
+  0x180007EB9: mov       r8, 0xffffffffffffffff
+  0x180007EC0: lea       rcx, [rbp + 0x50]
+  0x180007EC4: call      0x18001fbe0
+  0x180007EC9: lea       rcx, [rbp + 0x50]
+  0x180007ECD: call      0x18001c630
+  0x180007ED2: call      0x18000fae0
+  0x180007ED7: cmp       qword ptr [rax + 0x18], 0x10
+  0x180007EDC: jb        0x180007ee1
+  0x180007EDE: mov       rax, qword ptr [rax]
+  0x180007EE1: lea       r8, [rsp + 0x48]
+  0x180007EE6: cmp       qword ptr [rsp + 0x60], 0x10
+  0x180007EEC: cmovae    r8, qword ptr [rsp + 0x48]
+  0x180007EF2: lea       rdx, [rsp + 0x68]
+  0x180007EF7: cmp       qword ptr [rbp - 0x80], 0x10
+  0x180007EFC: cmovae    rdx, qword ptr [rsp + 0x68]
+  0x180007F02: lea       rcx, [rip + 0x1b10f7]
+  0x180007F09: cmp       qword ptr [rip + 0x1b1107], 0x10
+  0x180007F11: cmovae    rcx, qword ptr [rip + 0x1b10e7]
+  0x180007F19: mov       qword ptr [rsp + 0x30], rax
+  0x180007F1E: mov       qword ptr [rsp + 0x28], rsi
+  0x180007F23: mov       qword ptr [rsp + 0x20], rbx
+  0x180007F28: lea       r9, [rip + 0x151ed2]
+  0x180007F2F: call      0x18006e163   <== call thunk
+  0x180007F34: nop       
+  0x180007F35: mov       rdx, qword ptr [rsp + 0x60]
+  0x180007F3A: cmp       rdx, 0x10
+  0x180007F3E: jb        0x180007f6e
+  0x180007F40: inc       rdx
+  0x180007F43: mov       rcx, qword ptr [rsp + 0x48]
+  0x180007F48: mov       rax, rcx
+========================================================================
+--- setup before call to thunk at 0x180016499 ---
+  0x180016419: and       al, 0x28
+  0x18001641C: cmovne    rsi, rbp
+  0x180016420: lea       rcx, [rsp + 0x40]
+  0x180016425: mov       qword ptr [rsp + 0x20], rsi
+  0x18001642A: mov       r8, 0xffffffffffffffff
+  0x180016431: mov       r14, rax
+  0x180016434: call      0x18001fbe0
+  0x180016439: lea       rcx, [rsp + 0x40]
+  0x18001643E: call      0x18001c630
+  0x180016443: call      0x18000fae0
+  0x180016448: cmp       qword ptr [rax + 0x18], 0x10
+  0x18001644D: jb        0x180016452
+  0x18001644F: mov       rax, qword ptr [rax]
+  0x180016452: cmp       qword ptr [rbx + 0x18], 0x10
+  0x180016457: jb        0x18001645c
+  0x180016459: mov       rbx, qword ptr [rbx]
+  0x18001645C: cmp       qword ptr [rdi + 0x18], 0x10
+  0x180016461: jb        0x180016466
+  0x180016463: mov       rdi, qword ptr [rdi]
+  0x180016466: cmp       qword ptr [rip + 0x1a2baa], 0x10
+  0x18001646E: lea       rcx, [rip + 0x1a2b8b]
+  0x180016475: mov       qword ptr [rsp + 0x30], rax
+  0x18001647A: lea       r9, [rip + 0x143980]
+  0x180016481: cmovae    rcx, qword ptr [rip + 0x1a2b77]
+  0x180016489: mov       r8, rbx
+  0x18001648C: mov       qword ptr [rsp + 0x28], rsi
+  0x180016491: mov       rdx, rdi
+  0x180016494: mov       qword ptr [rsp + 0x20], r14
+  0x180016499: call      0x18006e163   <== call thunk
+  0x18001649E: mov       r14, qword ptr [rsp + 0x150]
+  0x1800164A6: mov       rsi, qword ptr [rsp + 0x158]
+  0x1800164AE: mov       rcx, qword ptr [rsp + 0x140]
+  0x1800164B6: xor       rcx, rsp
+========================================================================
+--- setup before call to thunk at 0x1800165E3 ---
+  0x180016563: cmovne    esi, edi
+  0x180016566: mov       dword ptr [rsp + 0x28], eax
+  0x18001656A: mov       qword ptr [rsp + 0x20], rsi
+  0x18001656F: call      0x18001fbe0
+  0x180016574: lea       rcx, [rsp + 0x40]
+  0x180016579: call      0x18001c630
+  0x18001657E: call      0x18000fae0
+  0x180016583: cmp       qword ptr [rax + 0x18], 0x10
+  0x180016588: jb        0x18001658d
+  0x18001658A: mov       rax, qword ptr [rax]
+  0x18001658D: mov       r10, qword ptr [rbx + 0x280]
+  0x180016594: lea       r8, [rbx + 0x260]
+  0x18001659B: cmp       qword ptr [r8 + 0x18], 0x10
+  0x1800165A0: jb        0x1800165a5
+  0x1800165A2: mov       r8, qword ptr [r8]
+  0x1800165A5: lea       rdx, [rbx + 0x240]
+  0x1800165AC: cmp       qword ptr [rdx + 0x18], 0x10
+  0x1800165B1: jb        0x1800165b6
+  0x1800165B3: mov       rdx, qword ptr [rdx]
+  0x1800165B6: cmp       qword ptr [rip + 0x1a2a5a], 0x10
+  0x1800165BE: lea       rcx, [rip + 0x1a2a3b]
+  0x1800165C5: mov       qword ptr [rsp + 0x30], rax
+  0x1800165CA: lea       r9, [rip + 0x143830]
+  0x1800165D1: cmovae    rcx, qword ptr [rip + 0x1a2a27]
+  0x1800165D9: mov       qword ptr [rsp + 0x28], rsi
+  0x1800165DE: mov       qword ptr [rsp + 0x20], r10
+  0x1800165E3: call      0x18006e163   <== call thunk
+  0x1800165E8: mov       rsi, qword ptr [rsp + 0x170]
+  0x1800165F0: mov       rcx, qword ptr [rsp + 0x140]
+  0x1800165F8: xor       rcx, rsp
+  0x1800165FB: call      0x18009dcb0

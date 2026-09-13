@@ -100,6 +100,11 @@ function hookStdout() {
         const len = args[2].toInt32();
         if (len <= 0 || len > 65536) return;
         const t = args[1].readUtf8String(len);
+        // the engine logs every frame it consumes; that is our read pointer
+        if (t && t.indexOf('sami feed chunk bytes=') >= 0) {
+          const m = /sami feed chunk bytes=(\d+)/.exec(t);
+          if (m) send({ kind: 'feed', bytes: parseInt(m[1], 10) });
+        }
         if (t && /sami test result valid=|SessionStarted|sami asr session stopped/.test(t)) {
           send({ kind: 'log', text: t.trim().slice(0, 240) });
         }

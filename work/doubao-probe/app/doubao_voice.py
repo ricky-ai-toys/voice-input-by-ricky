@@ -34,6 +34,11 @@ SAMPLE_RATE = 16000
 BYTES_PER_SEC = SAMPLE_RATE * 2
 WAV_HEADER_BYTES = 44
 MAX_SESSION_SECONDS = 55.0
+WARM_FILE_SECONDS = 45.0      # pre-allocated silence for a pre-warmed session
+WARM_MAX_AGE_SEC = 15.0       # recycle before the cloud drops the idle stream (~29s)
+WARM_REFRESH_SEC = 2.0
+LEAD_SEC = 0.25               # write this far ahead of the engine's read pointer
+TAIL_SEC = 0.40               # silence kept after the utterance before EOF
 
 
 def find_extract_script() -> str:
@@ -121,6 +126,8 @@ kernel32.GlobalLock.argtypes = [wintypes.HGLOBAL]
 kernel32.GlobalLock.restype = wintypes.LPVOID
 kernel32.GlobalUnlock.argtypes = [wintypes.HGLOBAL]
 kernel32.GlobalUnlock.restype = wintypes.BOOL
+kernel32.SetStdHandle.argtypes = [wintypes.DWORD, wintypes.HANDLE]
+kernel32.SetStdHandle.restype = wintypes.BOOL
 user32.keybd_event.argtypes = [wintypes.BYTE, wintypes.BYTE, wintypes.DWORD, ctypes.c_void_p]
 user32.keybd_event.restype = None
 
@@ -203,21 +210,53 @@ class MicSource:
         self._sd = sd
         self.sample_rate = sample_rate
         self.chunks: queue.Queue[bytes] = queue.Queue()
-        self._stream = sd.RawInputStream(
-            samplerate=sample_rate, channels=1, dtype="int16", callback=self._cb
+        self._stream = None
+        self._open()
+
+    def _open(self) -> None:
+        self._stream = self._sd.RawInputStream(
+            samplerate=self.sample_rate, channels=1, dtype="int16", callback=self._cb
         )
 
     def _cb(self, indata, frames, time_info, status) -> None:  # noqa: ANN001
         self.chunks.put(bytes(indata), block=False)
 
     def start(self) -> None:
-        self._stream.start()
+        self._drain()
+        if self._stream is None:
+            self._open()
+        try:
+            self._stream.start()
+        except Exception:
+            # a device change or a previous hard stop can leave the stream unusable
+            self.close()
+            self._open()
+            self._stream.start()
 
     def stop(self) -> None:
+        # NOTE: only pause here. Closing the PortAudio stream would make every
+        # subsequent start() fail, which is what broke the second hotkey press.
         try:
             self._stream.stop()
-            self._stream.close()
         except Exception:
+            pass
+        self._drain()
+
+    def close(self) -> None:
+        try:
+            if self._stream is not None:
+                self._stream.stop()
+                self._stream.close()
+        except Exception:
+            pass
+        finally:
+            self._stream = None
+
+    def _drain(self) -> None:
+        try:
+            while True:
+                self.chunks.get_nowait()
+        except queue.Empty:
             pass
 
 
@@ -245,10 +284,67 @@ class FileSource:
     def stop(self) -> None:
         pass
 
+    def close(self) -> None:
+        pass
+
 
 # --------------------------------------------------------------------------- #
 # streaming ASR session against the vendor engine
 # --------------------------------------------------------------------------- #
+def _engine_pid_file() -> str:
+    return os.path.join(DEFAULT_ROOT, "data", "engines.txt")
+
+
+def remember_engine_pid(pid: int | None) -> None:
+    if not pid:
+        return
+    try:
+        path = _engine_pid_file()
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write(f"{pid}\n")
+    except Exception:
+        pass
+
+
+def forget_engine_pid(pid: int | None) -> None:
+    if not pid:
+        return
+    try:
+        path = _engine_pid_file()
+        if not os.path.exists(path):
+            return
+        with open(path, "r", encoding="utf-8") as fh:
+            keep = [line for line in fh if line.strip().isdigit() and int(line) != pid]
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.writelines(keep)
+    except Exception:
+        pass
+
+
+def reap_stale_engines() -> int:
+    """Kill engine processes left behind by a previous (crashed) run."""
+    path = _engine_pid_file()
+    if not os.path.exists(path):
+        return 0
+    killed = 0
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            pids = {int(x) for x in fh.read().split() if x.strip().isdigit()}
+        for pid in pids:
+            out = subprocess.run(["tasklist", "/FI", f"PID eq {pid}", "/NH"],
+                                 capture_output=True, text=True,
+                                 creationflags=0x08000000).stdout
+            if str(pid) in out:
+                subprocess.run(["taskkill", "/PID", str(pid), "/F"],
+                               capture_output=True, creationflags=0x08000000)
+                killed += 1
+        os.remove(path)
+    except Exception:
+        pass
+    return killed
+
+
 class StreamSession:
     """Spawns the engine on a live-growing WAV and collects streamed results."""
 
@@ -267,6 +363,9 @@ class StreamSession:
         self._session = None
         self._script = None
         self._timings: dict[str, float] = {}
+        self.reader_bytes = 0          # bytes the engine has actually consumed
+        self.cursor = 0                # where the current utterance is written
+        self._pending = b""            # stdout line buffer
 
     # -- lifecycle ---------------------------------------------------------- #
     def _prepare_wav(self) -> None:
@@ -290,14 +389,34 @@ class StreamSession:
         self._script.on("message", self._on_message)
         self._script.load()
         frida.resume(self._pid)
+        remember_engine_pid(self._pid)
         self._timings["spawn_ms"] = (time.time() - t0) * 1000
         self._t0 = time.time()
+        self._t_start = self._t0
+
+    def live_edge_bytes(self) -> int:
+        """Reader position, or a time-based fallback before the first frame log."""
+        if self.reader_bytes:
+            return self.reader_bytes
+        elapsed = max(0.0, time.time() - self._t_start - 1.6)   # ~handshake before reading
+        return int(elapsed * BYTES_PER_SEC)
+
+    def begin_utterance(self, lead_sec: float = 0.25) -> int:
+        """Start writing at the live edge (never behind the reader)."""
+        self._t0 = time.time()          # utterance-relative timings from here on
+        self._timings.pop("first_text_ms", None)
+        self.cursor = self.live_edge_bytes() + int(lead_sec * BYTES_PER_SEC)
+        return self.cursor
 
     def _on_message(self, message, data):  # noqa: ANN001
         if message.get("type") != "send":
             return
         payload = message.get("payload") or {}
-        if payload.get("kind") != "json":
+        kind = payload.get("kind")
+        if kind == "feed":
+            self.reader_bytes += int(payload.get("bytes") or 0)
+            return
+        if kind != "json":
             return
         try:
             doc = json.loads(base64.b64decode(payload.get("b64") or "").decode("utf-8"))
@@ -319,11 +438,12 @@ class StreamSession:
     # -- audio -------------------------------------------------------------- #
     def feed(self, pcm: bytes) -> None:
         with self._lock:
-            if self._written + len(pcm) > int(self.max_seconds * BYTES_PER_SEC):
+            if self.cursor + len(pcm) > int(self.max_seconds * BYTES_PER_SEC):
                 return
             with open(self.wav_path, "r+b") as fh:
-                fh.seek(WAV_HEADER_BYTES + self._written)
+                fh.seek(WAV_HEADER_BYTES + self.cursor)
                 fh.write(pcm)
+            self.cursor += len(pcm)
             self._written += len(pcm)
 
     @property
@@ -350,7 +470,7 @@ class StreamSession:
         release makes the reader hit EOF, which is what ends the session quickly
         (otherwise it would keep reading the silence padding).
         """
-        data_len = self._written
+        data_len = max(self.cursor, self.reader_bytes)
         try:
             with open(self.wav_path, "r+b") as fh:
                 fh.seek(0)
@@ -376,12 +496,15 @@ class StreamSession:
         except Exception:
             pass
         try:
-            if self._pid is not None and self.alive():
+            if self._pid is not None:
                 import frida
 
-                frida.kill(self._pid)
+                if self.alive():
+                    frida.kill(self._pid)
         except Exception:
             pass
+        forget_engine_pid(self._pid)
+        self._pid = None
 
     @property
     def timings(self) -> dict:
@@ -537,6 +660,11 @@ class App:
         self._lock = threading.Lock()
         self._collected: list[str] = []
         self.last_text = ""
+        self._generation = 0
+        self._session_seq = 0
+        self.warm: StreamSession | None = None
+        self.warm_started_at = 0.0
+        self._stopping = False
 
     # ---- streaming -------------------------------------------------------- #
     def on_press(self) -> None:
@@ -548,7 +676,10 @@ class App:
         try:
             self.source.start()
             self._open_session()
-            threading.Thread(target=self._pump_audio, daemon=True).start()
+            with self._lock:
+                self._generation += 1
+                generation = self._generation
+            threading.Thread(target=self._pump_audio, args=(generation,), daemon=True).start()
             if self.show_overlay:
                 self.overlay.show("● Listening...  (release Right Alt to insert)")
         except Exception as exc:  # noqa: BLE001
@@ -558,22 +689,78 @@ class App:
                 self.overlay.hide()
 
     def _open_session(self) -> None:
-        index = len(self._collected)
-        wav_path = os.path.join(self.data_dir, f"live_{index}.wav")
-        self.session = StreamSession(self.exe, self.server_script(), wav_path)
-        self.session.start()
-        print(f"[app] session {index} started (spawn {self.session.timings.get('spawn_ms', 0):.0f} ms)",
-              flush=True)
+        """Take the pre-warmed session if one is ready, else create one now."""
+        session = self.warm
+        self.warm = None
+        if session is None or session.finished() or not session.alive():
+            if session is not None:
+                session.close()
+            session = self._new_session()
+        self._session_seq += 1
+        self.session = session
+        self.session.begin_utterance(LEAD_SEC)
+        print(f"[app] session {self._session_seq} started "
+              f"(spawn {session.timings.get('spawn_ms', 0):.0f} ms, warm={'Y' if session.reader_bytes else 'N'}, "
+              f"edge={session.live_edge_bytes()/BYTES_PER_SEC:.2f}s)", flush=True)
+
+    def _new_session(self) -> StreamSession:
+        wav_path = os.path.join(self.data_dir, f"live_{self._session_seq}_{int(time.time()*1000)}.wav")
+        session = StreamSession(self.exe, self.server_script(), wav_path,
+                                max_seconds=WARM_FILE_SECONDS)
+        session.start()
+        return session
+
+    # ---- pre-warming ------------------------------------------------------ #
+    def start_warm_now(self) -> None:
+        """Create the first pre-warmed session right away (no waiting)."""
+        try:
+            session = self._new_session()
+            self.warm = session
+            self.warm_started_at = time.time()
+            print(f"[app] pre-warmed a session (spawn {session.timings.get('spawn_ms', 0):.0f} ms)",
+                  flush=True)
+        except Exception as exc:  # noqa: BLE001
+            print(f"[warn] initial warm-up failed: {exc}", flush=True)
+
+    def _warm_worker(self) -> None:
+        """Keep a connected-but-silent engine session ready between utterances."""
+        self.start_warm_now()
+        while not self._stopping:
+            try:
+                with self._lock:
+                    busy = self.recording or self.busy.is_set()
+                if busy:
+                    time.sleep(WARM_REFRESH_SEC)
+                    continue
+                stale = (self.warm is None
+                         or time.time() - self.warm_started_at > WARM_MAX_AGE_SEC
+                         or self.warm.finished()
+                         or not self.warm.alive())
+                if not stale:
+                    time.sleep(WARM_REFRESH_SEC)
+                    continue
+                old = self.warm
+                self.warm = None
+                if old is not None:
+                    old.close()
+                session = self._new_session()
+                self.warm = session
+                self.warm_started_at = time.time()
+                print(f"[app] pre-warmed a session (spawn {session.timings.get('spawn_ms', 0):.0f} ms)",
+                      flush=True)
+            except Exception as exc:  # noqa: BLE001
+                print(f"[warn] warm refresh failed: {exc}", flush=True)
+            time.sleep(WARM_REFRESH_SEC)
 
     def server_script(self) -> str:
         return self.script_src
 
-    def _pump_audio(self) -> None:
+    def _pump_audio(self, generation: int) -> None:
         """Feed microphone chunks into the live WAV while the key is held."""
         last_ui = 0.0
         while True:
             with self._lock:
-                if not self.recording:
+                if not self.recording or generation != self._generation:
                     break
             try:
                 chunk = self.source.chunks.get(timeout=0.2)
@@ -626,6 +813,7 @@ class App:
                 text = session.finish(self.cfg.get("final_timeout_sec", 8.0))
                 timings = session.timings
                 session.close()
+                self.warm_started_at = 0.0     # force the warmer to build a fresh one
             else:
                 timings = {}
             if self._collected and text and self._collected[-1] != text:
@@ -656,16 +844,23 @@ class App:
         hook = HotkeyHook(VK_NAMES[hotkey], self.on_press, self.on_release,
                           suppress=bool(self.cfg.get("suppress_hotkey", False)))
         print(f"[app] ready - hold '{hotkey}' to talk, release to insert text", flush=True)
+        threading.Thread(target=self._warm_worker, daemon=True).start()
         if self.show_overlay:
             self.overlay.show("Ready - hold Right Alt and speak")
             self.overlay.root.after(1400, self.overlay.hide)
         self.overlay.run()
         hook.close()
+        self.source.close()
+        self._stopping = True
+        if self.warm is not None:
+            self.warm.close()
 
 
 def simulate(cfg: dict, wav_path: str, paste: bool) -> int:
     """Run one streaming session from a wav file (no mic, no hotkey)."""
     app = App(cfg, source=FileSource(wav_path))
+    app.start_warm_now()
+    time.sleep(2.5)          # let the pre-warmed session start reading
     app.on_press()
     with wave.open(wav_path, "rb") as fh:
         duration = fh.getnframes() / fh.getframerate()
@@ -751,7 +946,20 @@ def main() -> int:
     if sys.stdout is None or sys.stderr is None:  # windowed build: log to file
         log_dir = os.path.join(cfg["data_dir"], "logs")
         os.makedirs(log_dir, exist_ok=True)
-        log_file = open(os.path.join(log_dir, "app.log"), "a", encoding="utf-8", buffering=1)
+        log_path = os.path.join(log_dir, "app.log")
+        log_file = open(log_path, "a", encoding="utf-8", buffering=1)
+        # give the child engine a real stdout handle too: its own logging (which we
+        # read the read-pointer from) is disabled when the handle is invalid.
+        try:
+            import msvcrt
+
+            fd = os.open(log_path, os.O_WRONLY | os.O_APPEND | os.O_CREAT)
+            os.set_inheritable(fd, True)
+            handle = msvcrt.get_osfhandle(fd)
+            kernel32.SetStdHandle(-11, handle)   # STD_OUTPUT_HANDLE
+            kernel32.SetStdHandle(-12, handle)   # STD_ERROR_HANDLE
+        except Exception:
+            pass
         if sys.stdout is None:
             sys.stdout = log_file
         if sys.stderr is None:
@@ -772,6 +980,9 @@ def main() -> int:
     if not os.path.isdir(cfg["runtime_dir"]):
         print(f"[fatal] runtime dir not found: {cfg['runtime_dir']}", file=sys.stderr)
         return 2
+    stale = reap_stale_engines()
+    if stale:
+        print(f"[app] cleaned up {stale} engine process(es) left by a previous run", flush=True)
     App(cfg).run()
     return 0
 

@@ -1,0 +1,18 @@
+[20684:30412:0913/175700.272:ERROR:tt_frontier_client_sdk.cc(2398)] FindAvailableStream service id: 1, service is not ready.
+[20684:30648:0913/175700.363:ERROR:quic_stream_id_manager.cc(138)] Attempt to allocate a new outgoing stream that would exceed the limit (0)
+[20684:30648:0913/175701.078:ERROR:transport_parameters.cc(776)] Serializing custom_parameters with GREASE ID 2631 is not allowed
+[*** LOG ERROR #0001 ***] [2026-09-13 17:57:11] [] {bad_weak_ptr [C:\Workfolder\oime\obric-ime4\src\ime_ui\voice_wave_model.cpp(290)]}
+[13624:32804:0913/175712.601:ERROR:tt_frontier_client_sdk.cc(2398)] FindAvailableStream service id: 1, service is not ready.
+[13624:5684:0913/175712.605:ERROR:quic_stream_id_manager.cc(138)] Attempt to allocate a new outgoing stream that would exceed the limit (0)
+[13624:5684:0913/175713.326:ERROR:transport_parameters.cc(776)] Serializing custom_parameters with GREASE ID 2848 is not allowed
+[*** LOG ERROR #0001 ***] [2026-09-13 17:57:27] [] {bad_weak_ptr [C:\Workfolder\oime\obric-ime4\src\ime_ui\voice_wave_model.cpp(290)]}
+[8168:19876:0913/175729.132:ERROR:tt_frontier_client_sdk.cc(2398)] FindAvailableStream service id: 1, service is not ready.
+[8168:17864:0913/175729.135:ERROR:quic_stream_id_manager.cc(138)] Attempt to allocate a new outgoing stream that would exceed the limit (0)
+[8168:17864:0913/175729.817:ERROR:transport_parameters.cc(776)] Serializing custom_parameters with GREASE ID 802 is not allowed
+[8168:19876:0913/175806.435:ERROR:tt_frontier_client_sdk.cc(2398)] FindAvailableStream service id: 1, service is not ready.
+[8168:17864:0913/175806.436:ERROR:quic_stream_id_manager.cc(138)] Attempt to allocate a new outgoing stream that would exceed the limit (0)
+[8168:17864:0913/175807.237:ERROR:transport_parameters.cc(776)] Serializing custom_parameters with GREASE ID 2011 is not allowed
+[8168:19876:0913/175810.731:ERROR:tt_frontier_client_sdk.cc(2398)] FindAvailableStream service id: 1, service is not ready.
+[8168:17864:0913/175810.731:ERROR:quic_stream_id_manager.cc(138)] Attempt to allocate a new outgoing stream that would exceed the limit (0)
+[8168:17864:0913/175811.427:ERROR:transport_parameters.cc(776)] Serializing custom_parameters with GREASE ID 1856 is not allowed
+[*** LOG ERROR #0001 ***] [2026-09-13 17:58:16] [] {bad_weak_ptr [C:\Workfolder\oime\obric-ime4\src\ime_ui\voice_wave_model.cpp(290)]}

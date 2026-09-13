@@ -1,0 +1,6 @@
+[driver] spawning C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\runtime\v0.9.0.0\ImeService.exe ['--test-sami', '--wav', 'C:\\Users\\Ricky\\Documents\\Codex\\2026-09-13\\wo\\work\\doubao-probe\\audio\\tts_zh_16k.wav']
+[driver] pid=34288
+[driver] script loaded
+[driver] resumed
+[frida] {'type': 'send', 'payload': {'kind': 'feed-site', 'rcx': '0xe544efe250', 'rdx': '0x25052680240', 'r8': '0x7ffffffffffffffc', 'r9': '0x7ff716b90000', 'r10': '0x25054fa0960', 'r11': '0x25054fa0460', 'rsi': '0x7ff717b824b0', 'rdi': '0xe544efe240', 'rbx': '0x25054f90ae0', 'r12': '0x7ff717b82b50', 'r13': '0x25054fa0460', 'r14': '0x25054f90af8', 'r15': '0x25054f90ae0', 'rbp': '0xe544efdfe9', 'rsp': '0xe544efdf60'}}
+[driver] process 34288 exited

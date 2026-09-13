@@ -16,9 +16,9 @@ to Windows input methods.**
    - The finished text is pasted at the cursor.
 4. To quit: end `DoubaoVoice.exe` in Task Manager.
 
-Latency measured on a ~4 s utterance: text starts appearing **~2.2 s after you start
-speaking** (the cloud connection is set up while you talk, and results stream in), and the
-final text lands **~4.3-5.7 s after you release** (three runs). See "Latency notes" below.
+Latency measured on a ~4 s utterance: text starts appearing **~1.5 s after you start
+speaking**, and the final text lands **~1.1-1.7 s after you release** (measured 1.7 s for
+Chinese and 1.5 s for English with the packaged build). See "Latency notes" below.
 
 ---
 
@@ -111,17 +111,22 @@ in-place to `false` (same byte length), which is why the program must use its ow
 
 Measured on this machine, 4.5 s Chinese utterance:
 
-| Stage | v1 (one-shot file) | v2 (streaming, current) |
-| --- | --- | --- |
-| connection setup | paid after release (~1.7 s) | **overlapped with speech** |
-| first text visible | after release | **~2.2 s after you start speaking** |
-| final text after release | ~5 s | ~4.3-5.7 s (measured) |
+| Stage | v1 (one-shot) | v2 (streaming) | v3 (pre-warmed, current) |
+| --- | --- | --- | --- |
+| connection setup | after release (~1.7 s) | overlapped with speech | **already done before you press** |
+| first text visible | after release | ~2.2 s after speech start | **~1.5 s after speech start** |
+| final text after release | ~5 s | ~4.3-5.7 s | **~1.1-1.7 s** |
 
-Why the tail is still ~4-5 s: the engine consumes the WAV at roughly 1x real time and only
-starts ~1.5 s after launch (cloud handshake), so it stays about 1.5-2 s behind the live
-edge; on top of that it runs a VAD finish plus a second recognition pass (~1 s). Cutting
-this needs the engine to be pre-warmed (iteration 3): keep one session alive with a hot
-connection and let the reader sit at the live edge, so only the finalize step remains.
+How the tail was cut: the program keeps a **pre-warmed engine session** connected in the
+background (a long silent WAV the engine reads at ~1x). It watches the engine's own
+"frames consumed" log to know the exact read position, and when you press the key it
+writes your audio *at that live edge* instead of at the beginning of the file. On release
+the file is cut just after your audio, so the engine hits end-of-stream almost immediately
+and only the finalize step (VAD + second pass, ~1 s) is left.
+
+Known variance: if the cloud connection stalls, the reader can fall behind and the tail
+grows to ~5 s; and with pure silence (no speech at all) there is no VAD event, so the
+session ends only at end-of-stream.
 
 ---
 

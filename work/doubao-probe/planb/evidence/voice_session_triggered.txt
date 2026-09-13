@@ -1,0 +1,19 @@
+[2026-09-13 20:33:09.383] [info] [voice_wave_model.cpp:290] [voice-wave] top_target=0.0000 peak_idx=1
+[2026-09-13 20:33:10.073] [info] [voice_key_hook.cpp:28] [VHK][Key] vk=0xA5(165) down=1 up=0 allowed=1 wParam=0x0104
+[2026-09-13 20:33:10.073] [info] [voice_key_hook.cpp:28] [VHK][Trig] ACTIVATION long press
+[2026-09-13 20:33:10.085] [info] [audio_device_enumerator_win.cpp:188] [MicList] enumerated 1 capture device(s), default_id={0.0.1.00000000}.{0294953e-78e4-42e1-9d1c-2f4f9f9430ca}
+[2026-09-13 20:33:10.092] [info] [sami_asr_client_win.cpp:372] sami asr session started business=oime_windows task_id=ime_win_886d1a31-8f6f-4cc0-88c4-243bf21db20e sample_rate=16000 channel=1 frame_time_ms=40 chunk_bytes=1280 reused_pool=1 pending_bytes=0
+[2026-09-13 20:33:10.110] [info] [audio_device_enumerator_win.cpp:203] [MicPick] resolved endpoint_id to waveIn index=0
+[2026-09-13 20:33:10.137] [info] [controller.cpp:3652] voice record start ok=1 asr_ok=1 path=
+[2026-09-13 20:33:10.137] [info] [controller.cpp:2691] voice no-speech timer armed reason=record_start timeout_ms=300000
+[2026-09-13 20:33:10.237] [info] [voice_key_hook.cpp:28] [VHK][Trig] ACTIVATION long --- hold time consumed_=1, combo_consumed_=0, prestarted_=1, wave_shown_=0
+[2026-09-13 20:33:10.237] [info] [voice_key_hook.cpp:28] [VHK][Trig] ACTIVATION long --- post show wave 0
+[2026-09-13 20:33:10.487] [info] [controller.cpp:2947] voice startfrom reported reason=shortcut start_method=long_click task_id=ime_win_886d1a31-8f6f-4cc0-88c4-243bf21db20e start_ts_ms=1789302790073
+[2026-09-13 20:33:10.493] [info] [voice_input_tracker.cpp:290] voice input success reported reason=finalize task_id=ime_win_886d1a31-8f6f-4cc0-88c4-243bf21db20e start_method=long_click record_start_duration_ms=62 ui_show_duration_ms=156 audio_started_before_ui=1 vpn_on=false
+[2026-09-13 20:33:10.690] [info] [voice_wave_model.cpp:290] [voice-wave] top_target=1.0000 peak_idx=1
+[2026-09-13 20:33:12.960] [info] [controller.cpp:2691] voice no-speech timer armed reason=asr_result timeout_ms=300000
+[2026-09-13 20:33:14.276] [info] [voice_wave_model.cpp:290] [voice-wave] top_target=0.9898 peak_idx=1
+[2026-09-13 20:33:16.690] [info] [voice_wave_model.cpp:290] [voice-wave] top_target=0.7262 peak_idx=1
+[2026-09-13 20:33:17.875] [info] [voice_wave_model.cpp:290] [voice-wave] top_target=0.9136 peak_idx=1
+[2026-09-13 20:33:19.493] [info] [voice_wave_model.cpp:290] [voice-wave] top_target=0.7291 peak_idx=1
+[2026-09-13 20:33:19.880] [info] [voice_wave_model.cpp:290] [voice-wave] top_target=0.3555 peak_idx=1

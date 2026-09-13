@@ -25,6 +25,9 @@ ASCII_PAIRS = [
 ]
 UTF16_PAIRS = [
     ("ObricImeServerSingleInstance", "ObricImeServerSingleInstanc"),
+    # the settings channel is a *wide* string literal; the ASCII copy above is only the log
+    # message, so without this pair the copy still adds instances to the installed IME's pipe
+    ("\\\\.\\pipe\\DoubaoIme\\settings-rpc", "\\\\.\\pipe\\DoubaoIme\\settings-rp"),
 ]
 TARGETS = ("ImeService.exe", "rpc.dll")
 

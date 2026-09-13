@@ -32,6 +32,11 @@ def lp(text: str) -> bytes:
     return len(raw).to_bytes(4, "little") + raw
 
 
+# ctypes callbacks must outlive the window they are registered for, otherwise Windows calls
+# into freed memory as soon as the window receives a message
+_KEEP_ALIVE: list = []
+
+
 def make_foreground_window() -> int:
     """A real window + EDIT control, brought to the foreground.
 
@@ -66,6 +71,7 @@ def make_foreground_window() -> int:
                                        wt.HWND, wt.HANDLE, wt.HINSTANCE, ctypes.c_void_p]
     cls = WNDCLASSW()
     cls.lpfnWndProc = ctypes.cast(proc, ctypes.c_void_p)
+    _KEEP_ALIVE.extend([proc, cls])
     cls.hInstance = hinst
     cls.lpszClassName = "RickyVoicePlanBHost"
     user32.RegisterClassW(ctypes.byref(cls))
@@ -73,7 +79,25 @@ def make_foreground_window() -> int:
                                   wt.DWORD(0x00CF0000), 200, 200, 520, 180,
                                   None, None, hinst, None)
     user32.ShowWindow(hwnd, 5)          # SW_SHOW
+    # Windows only lets the *foreground* process steal focus, so borrow the current
+    # foreground thread's input queue for a moment (the classic AttachThreadInput trick).
+    user32.GetForegroundWindow.restype = wt.HWND
+    user32.GetWindowThreadProcessId.argtypes = [wt.HWND, ctypes.c_void_p]
+    user32.GetWindowThreadProcessId.restype = wt.DWORD
+    user32.AttachThreadInput.argtypes = [wt.DWORD, wt.DWORD, wt.BOOL]
+    user32.SetForegroundWindow.argtypes = [wt.HWND]
+    user32.BringWindowToTop.argtypes = [wt.HWND]
+    fg = user32.GetForegroundWindow()
+    fg_tid = user32.GetWindowThreadProcessId(fg, None)
+    my_tid = ctypes.windll.kernel32.GetCurrentThreadId()
+    attached = False
+    if fg_tid and fg_tid != my_tid:
+        attached = bool(user32.AttachThreadInput(fg_tid, my_tid, True))
+    user32.BringWindowToTop(hwnd)
     user32.SetForegroundWindow(hwnd)
+    user32.SetFocus(hwnd)
+    if attached:
+        user32.AttachThreadInput(fg_tid, my_tid, False)
     edit = user32.CreateWindowExW(0, "EDIT", "", wt.DWORD(0x50010000), 10, 10, 480, 120,
                                  hwnd, None, hinst, None)
     user32.SetFocus(edit)
@@ -89,9 +113,24 @@ def main() -> int:
         fields = args[args.index("--fields") + 1].split(",")
     if "--key" in args:
         key = int(args[args.index("--key") + 1], 0)
+    arm_tryout = "--arm-tryout" in sys.argv
 
     proc = start_server(runtime)
     print(f"[info] engine pid={proc.pid}")
+    if arm_tryout:
+        # the voice hotkey stays disabled until the settings channel reports "voice tryout
+        # active"; a plain client can say so itself (captured protocol, see
+        # settings_ipc_client.py)
+        try:
+            from settings_ipc_client import SettingsPipe, request
+            # the settings server consumes one pipe instance per connection, so reconnect
+            sp = SettingsPipe()
+            response = sp.call(request("settings.setVoiceTryoutActive",
+                                       {"active": True, "cookie": int(time.time())}))
+            print(f"[arm] setVoiceTryoutActive(True) -> {response}")
+            sp.close()
+        except Exception as exc:  # noqa: BLE001
+            print(f"[warn] could not arm voice tryout: {exc}")
     hwnd = make_foreground_window()
     print(f"[info] host window=0x{hwnd:X} (foreground)")
     try:

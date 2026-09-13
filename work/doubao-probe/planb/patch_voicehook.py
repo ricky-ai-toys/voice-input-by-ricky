@@ -20,6 +20,9 @@ import pefile
 
 # 1) injected-key filter: test byte ptr [r8+8],0x10 ; jne +0x11
 INJECTED = bytes.fromhex("41f64008107511")
+# 1b) the *voice* path has its own injected-key filter:
+#     test byte ptr [rdi+8],0x10 ; jne +0x113
+VOICE_PATH_INJECTED = bytes.fromhex("f64708100f8513010000")
 # 2) state gates in front of the key handler; each `je/jne 0x1407427fc` is NOPed so the
 #    hook always reaches HandleKey (our copy only)
 GATES = bytes.fromhex(
@@ -67,7 +70,7 @@ def patch(path: str, mode: str = "bypass") -> int:
         count += hits
 
         idx = chunk.find(GATES)
-        if idx >= 0:
+        if idx >= 0 and mode != "none":
             patched = bytearray(GATES)
             if mode == "voice":
                 # always take the hook's voice-matching path: je 0x1407427fc -> jmp
@@ -79,6 +82,19 @@ def patch(path: str, mode: str = "bypass") -> int:
             blob[start + idx:start + idx + len(GATES)] = patched
             print(f"[ok] voice-hook state gates patched ({mode}) at VA 0x{base + vaddr + idx:X}")
             count += 1
+
+        pos = 0
+        while True:
+            idx = chunk.find(VOICE_PATH_INJECTED, pos)
+            if idx < 0:
+                break
+            # keep the `test`, drop the conditional jump
+            patched = bytearray(VOICE_PATH_INJECTED)
+            patched[4:] = b"\x90" * (len(VOICE_PATH_INJECTED) - 4)
+            blob[start + idx:start + idx + len(VOICE_PATH_INJECTED)] = patched
+            print(f"[ok] voice-path injected filter patched at VA 0x{base + vaddr + idx:X}")
+            count += 1
+            pos = idx + len(VOICE_PATH_INJECTED)
     if count:
         backup = path + ".orig"
         if not os.path.exists(backup):
@@ -95,7 +111,11 @@ def patch(path: str, mode: str = "bypass") -> int:
 
 def main() -> int:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    mode = "voice" if "--mode=voice" in sys.argv else "bypass"
+    mode = "bypass"
+    for flag, name in (("--mode=voice", "voice"), ("--mode=none", "none"),
+                       ("--mode=bypass", "bypass")):
+        if flag in sys.argv:
+            mode = name
     runtime = os.path.abspath(args[0])
     path = os.path.join(runtime, "ImeService.exe")
     if not os.path.exists(path):

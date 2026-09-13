@@ -562,3 +562,62 @@ Methods seen: `settings.get`, `settings.getMicrophoneList`, `settings.getRuntime
 `planb/evidence/settings_ipc_response.txt`), so a plain user-level process can set the
 voice-tryout state - which is the last gate in front of the engine's voice session. Our copy
 already renames its settings pipe (`settings-rp1`) so it never fights the installed IME for it.
+
+### Milestone 18 - the two gates in front of the voice hotkey are both open now
+
+Two details were all that separated "the hook sees my key" from "the engine starts recording":
+
+1. **The real settings pipe is a wide string.** `ImeService.exe` stores
+   `\\.\pipe\DoubaoIme\settings-rpc` as UTF-16; the ASCII copy is only the log message. After
+   adding the UTF-16 pair to `patch_names.py`, our copy owns `settings-rp1` and
+   `settings.setVoiceTryoutActive(true)` reaches *our* engine
+   (`[settings-ipc] setVoiceTryoutActive active=1`).
+2. **`FocusIn` carries the requester's pid.** `rpc.dll` stores the first u32 of the FocusIn
+   body as the "focus owner" (`[r13+0x84]`, global `0x1802FD154`) and the next u32 as its
+   caps. Our first attempts replayed the harness capture verbatim, which still contained the
+   *harness's* pid, so the engine thought someone else was focused and kept answering
+   `[... ] ACTIVATION but not allowed (ime not foreground-active)`. Sending our own pid turns
+   that line into `allowed=1`.
+
+The host window also has to genuinely own the foreground: plain `SetForegroundWindow` is
+ignored unless the caller is the foreground process, so `make_foreground_window()` borrows the
+current foreground thread's input queue (`AttachThreadInput`) and then calls
+`SetForegroundWindow`/`SetWindowPos`. Loading the vendor TIP into our process
+(`tsf_activate.py`) keeps the app looking like a normal IME client.
+
+### Milestone 19 - the engine now records and streams on command (end to end, user level)
+
+`planb/voice_session_test.py` runs the whole chain against the private copy:
+
+```
+[arm]   settings.setVoiceTryoutActive(True)            -> {"ok": true}
+[host]  window 0x... foreground, Doubao profile active for this process
+[ctx]   Activate / ImeChanged / SetUIElementShowState / FocusIn(pid) /
+        RegisterTsfNotifySink(hwnd) / UpdateHostContext        -> all status 0
+[key]   injected Right Alt down (no keyboard touches anything)
+```
+
+Engine side (evidence: `planb/evidence/voice_session_triggered.txt`):
+
+```
+[VHK][Key]      vk=0xA5(165) down=1 up=0 allowed=1 wParam=0x0104
+[VHK][Trig]     ACTIVATION long press
+[VHK][Trig]     ACTIVATION long --- post show wave 0
+[MicList]       enumerated 1 capture device(s), default_id={0.0.1.00000000}.{...}
+[MicPick]       resolved endpoint_id to waveIn index=0
+[sami_asr]      asr session started business=oime_windows task_id=ime_win_... sample_rate=16000
+[controller]    voice record start ok=1 asr_ok=1 path=
+[controller]    voice startfrom reported reason=shortcut start_method=long_click
+[sami_asr]      sami feed chunk bytes=1280        (continuous, real time)
+```
+
+That is the missing trigger: **our own client can start the engine's own push-to-talk voice
+session, which captures the microphone and streams to the vendor cloud ASR**, with no TSF
+registration, no admin rights and no file-based `--test-sami` detour.
+
+What is still open is only the *return* path: a raw pipe client polling `PeekVoiceCommit`
+gets `session=0 bytes=0`, because the transcript is handed to the **TSF notify sink / core**
+that lives in the host process (the engine posts to the registered hwnd). Milestone 11 already
+proved the receiving half - a hosted text store receives the committed text through the core -
+so the next step is to run the text-store host in the same process as this trigger, and the
+loop is closed.

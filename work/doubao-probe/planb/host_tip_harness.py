@@ -484,8 +484,15 @@ def main() -> int:
     print(f"[3] CreateContext done", flush=True)
     print(f"[3] CreateContext(store) hr=0x{hr & 0xFFFFFFFF:08X} pic={pic.value}", flush=True)
 
+    # associate the document manager with our window: without this the thread manager does not
+    # know which window the context belongs to, and key events are not routed to the IME
+    prev = ctypes.c_void_p()
+    hr_assoc = vcall(tm.value, 9, ctypes.c_long,
+                     [wt.HWND, ctypes.c_void_p, ctypes.POINTER(ctypes.c_void_p)],
+                     host_hwnd, pdm.value, ctypes.byref(prev))
+    print(f"[4] AssociateFocus(hwnd, docmgr) hr=0x{hr_assoc & 0xFFFFFFFF:08X}", flush=True)
     hr = vcall(tm.value, 8, ctypes.c_long, [ctypes.c_void_p], pdm.value)
-    print(f"[4] SetFocus(docmgr) hr=0x{hr & 0xFFFFFFFF:08X}", flush=True)
+    print(f"[4b] SetFocus(docmgr) hr=0x{hr & 0xFFFFFFFF:08X}", flush=True)
 
     tip = ctypes.c_void_p()
     hr = ole32.CoCreateInstance(ctypes.byref(GUID.parse(CLSID_DOUBAO_TIP)), None, 1,
@@ -510,6 +517,13 @@ def main() -> int:
                    TF_PROFILETYPE_INPUTPROCESSOR, LANGID_CHS, ctypes.byref(clsid),
                    ctypes.byref(profile), None, TF_IPPMF_FORPROCESS)
         print(f"[6.6] ActivateProfile(doubao, 0x0804, FORPROCESS) hr=0x{hr & 0xFFFFFFFF:08X}", flush=True)
+
+    # Switching the thread's keyboard layout is what the language bar does when the user picks
+    # Chinese; the Doubao TIP substitutes layout 0x08040804, so this should make CTF activate it.
+    hkl = user32.LoadKeyboardLayoutW("00000804", 0x00000001)  # KLF_ACTIVATE
+    old_hkl = user32.ActivateKeyboardLayout(hkl, 0) if hkl else None
+    print(f"[6.7] LoadKeyboardLayout('00000804') -> 0x{hkl & 0xFFFFFFFFFFFFFFFF if hkl else 0:X} "
+          f"ActivateKeyboardLayout -> {old_hkl}", flush=True)
 
     kev = ctypes.c_void_p()
     hr = vcall(tip.value, 0, ctypes.c_long, [ctypes.POINTER(GUID), ctypes.POINTER(ctypes.c_void_p)],

@@ -21,6 +21,7 @@ import sys
 
 ASCII_PAIRS = [
     (b"\\\\.\\pipe\\ObricIme\\oime-server", b"\\\\.\\pipe\\ObricIme\\oime-serve"),
+    (b"\\\\.\\pipe\\DoubaoIme\\settings-rpc", b"\\\\.\\pipe\\DoubaoIme\\settings-rp"),
 ]
 UTF16_PAIRS = [
     ("ObricImeServerSingleInstance", "ObricImeServerSingleInstanc"),

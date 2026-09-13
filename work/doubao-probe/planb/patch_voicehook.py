@@ -43,7 +43,7 @@ def _patch_all(blob: bytearray, signature: bytes, patch: bytes, label: str) -> i
         pos = idx + len(signature)
 
 
-def patch(path: str) -> int:
+def patch(path: str, mode: str = "bypass") -> int:
     pe = pefile.PE(path)
     base = pe.OPTIONAL_HEADER.ImageBase
     original = open(path, "rb").read()
@@ -69,11 +69,15 @@ def patch(path: str) -> int:
         idx = chunk.find(GATES)
         if idx >= 0:
             patched = bytearray(GATES)
-            for jump in GATE_JUMPS:
-                j = GATES.find(bytes.fromhex(jump))
-                patched[j:j + 6] = b"\x90" * 6
+            if mode == "voice":
+                # always take the hook's voice-matching path: je 0x1407427fc -> jmp
+                patched[3:9] = bytes.fromhex("e9e800000090")
+            else:
+                for jump in GATE_JUMPS:
+                    j = GATES.find(bytes.fromhex(jump))
+                    patched[j:j + 6] = b"\x90" * 6
             blob[start + idx:start + idx + len(GATES)] = patched
-            print(f"[ok] voice-hook state gates patched at VA 0x{base + vaddr + idx:X}")
+            print(f"[ok] voice-hook state gates patched ({mode}) at VA 0x{base + vaddr + idx:X}")
             count += 1
     if count:
         backup = path + ".orig"
@@ -90,12 +94,14 @@ def patch(path: str) -> int:
 
 
 def main() -> int:
-    runtime = os.path.abspath(sys.argv[1])
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    mode = "voice" if "--mode=voice" in sys.argv else "bypass"
+    runtime = os.path.abspath(args[0])
     path = os.path.join(runtime, "ImeService.exe")
     if not os.path.exists(path):
         print(f"[fail] {path} not found")
         return 1
-    patch(path)
+    patch(path, mode)
     return 0
 
 

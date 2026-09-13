@@ -251,3 +251,20 @@ Remaining work, in order:
 3. **Productise**: register the CLSID per-user (`HKCU\Software\Classes\CLSID\{9D2B2E2B-...}`)
    pointing at our portable copy, redirect the core's `VersionDir` (HKCU or a patched stub) and
    rename the pipe in the copy so it talks to *our* resident engine - all without admin rights.
+
+Interface ids for the harness (`planb/tsf_iids.txt`, extracted by `fetch_tsf_iids.py` from
+Wine's msctf.idl because this machine has no Windows SDK):
+
+```
+ITfThreadMgr                     {AA80E801-2021-11D2-93E0-0060B067B86E}
+ITfDocumentMgr                   {AA80E7F4-2021-11D2-93E0-0060B067B86E}
+ITfContext                       {AA80E7FD-2021-11D2-93E0-0060B067B86E}
+ITfTextInputProcessor            {AA80E7F7-2021-11D2-93E0-0060B067B86E}
+ITfKeyEventSink                  {AA80E7F5-2021-11D2-93E0-0060B067B86E}
+ITfThreadMgrEventSink            {AA80E80E-2021-11D2-93E0-0060B067B86E}
+ITfContextOwnerCompositionSink   {5F20AA40-B57A-4F34-96AB-3576F377CC79}
+ITfInputProcessorProfiles        {1F02B6C5-7842-4EE6-8A0B-9A24183A95CA}
+```
+
+`ITextStoreACP` is not in that IDL; its documented id is `{28888FE3-C2A0-483A-A3EA-8CB1CE51FF3E}`
+and it is the next piece to implement.

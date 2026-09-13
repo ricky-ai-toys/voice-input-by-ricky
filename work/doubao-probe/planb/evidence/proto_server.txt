@@ -1,0 +1,92 @@
+[info] FileDescriptorProto at file offset 0x254950, 1905 bytes
+       name=server.proto package=oime syntax=proto3
+
+  message Empty
+
+  message KeyCode
+    int32 keycode = 1;
+    uint64 perfstart = 2;
+    string process_name = 3;
+
+  message CursorPos
+    int32 x = 1;
+    int32 y = 2;
+    int32 height = 3;
+    bool relative_pos = 4;
+    bool wait_cursor_pos = 5;
+
+  message KeyProcessResult
+    int32 result = 1;
+
+  message Int32Type
+    int32 value = 1;
+
+  message StringType
+    string value = 1;
+
+  message BoolType
+    bool value = 1;
+
+  message SimpleMsgType
+    int32 message = 1;
+    int32 lparam = 2;
+    int32 wparam = 3;
+    string process_name = 4;
+
+  message InputState
+    int32 input_type = 1;
+    bool state = 2;
+
+  message ConfigType
+    string config = 1;
+    bool use_default = 2;
+
+  message ReportEventType
+    string event_name = 1;
+    string josn_value = 2;
+
+  message ImeChangedType
+    string ime_last = 1;
+    string ime_current = 2;
+    string from = 3;
+
+  message CompTextType
+    string inline_text = 1;
+    int32 inline_cursor = 2;
+
+  message CandidateListType
+    string candidates = 1;  (repeated)
+    int32 selection = 2;
+    bool has_prev_page = 3;
+    bool has_next_page = 4;
+
+  message ContextMenuRequest
+    int32 x = 1;
+    int32 y = 2;
+    bool has_anchor = 3;
+    int32 anchor_left = 4;
+    int32 anchor_top = 5;
+    int32 anchor_right = 6;
+    int32 anchor_bottom = 7;
+
+service ImeService
+  [ 1] SendHeart                    .oime.Empty                  -> .oime.Empty
+  [ 2] Activate                     .oime.Empty                  -> .oime.Empty
+  [ 3] DeActivate                   .oime.Empty                  -> .oime.Empty
+  [ 4] KeyDown                      .oime.KeyCode                -> .oime.KeyProcessResult
+  [ 5] KeyUp                        .oime.KeyCode                -> .oime.KeyProcessResult
+  [ 6] FocusIn                      .oime.Empty                  -> .oime.Empty
+  [ 7] FocusOut                     .oime.Empty                  -> .oime.Empty
+  [ 8] SetCursorPos                 .oime.CursorPos              -> .oime.Empty
+  [ 9] GetCompText                  .oime.Empty                  -> .oime.CompTextType
+  [10] GetCommitText                .oime.Empty                  -> .oime.StringType
+  [11] GetCandidateList             .oime.Empty                  -> .oime.CandidateListType
+  [12] SetUIElementShowState        .oime.Int32Type              -> .oime.Empty
+  [13] ReloadConfig                 .oime.Int32Type              -> .oime.Empty
+  [14] SimpleMessage                .oime.SimpleMsgType          -> .oime.Int32Type
+  [15] GetInputState                .oime.Int32Type              -> .oime.BoolType
+  [16] SetInputState                .oime.InputState             -> .oime.Empty
+  [17] ConfigChanged                .oime.ConfigType             -> .oime.Empty
+  [18] LogEvent                     .oime.ReportEventType        -> .oime.Int32Type
+  [19] ImeChanged                   .oime.ImeChangedType         -> .oime.Empty
+

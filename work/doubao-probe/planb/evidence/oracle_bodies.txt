@@ -1,0 +1,14 @@
+
+[call] RpcPipe_KeyDown('\\\\.\\pipe\\ObricIme\\oime-serve1', '1111', '2222', '3333', 'NULL', '4444', '5555')
+   op=0x04 len=24 body=08d0b6f58cf8ffffffff0110b0b7f58cd8411a0433333333 text=None
+[call] RpcPipe_FocusIn('\\\\.\\pipe\\ObricIme\\oime-serve1', '1111', '2222', '3333', 'NULL', '4444', '5555')
+   op=0x06 len=16 body=f0230000010000000400000031313131 text=None
+[call] RpcPipe_UpdateHostContextUtf8('\\\\.\\pipe\\ObricIme\\oime-serve1', '1111', '2222', '3333', 'NULL', '4444', '5555')
+   op=0x14 len=48 body=040000003131313104000000323232320400000033333333000000000000000004000000343434340400000035353535 text=None
+[call] RpcPipe_RegisterTsfNotifySink('\\\\.\\pipe\\ObricIme\\oime-serve1', '1111', '2222', '3333', 'NULL', '4444', '5555')
+   op=0x15 len=16 body=00cbe0665c010000907bf5665c010000 text=None
+[call] RpcPipe_PeekVoiceCommitUtf8('\\\\.\\pipe\\ObricIme\\oime-serve1', '1111', '2222', '3333', 'NULL', '4444', '5555')
+   op=0x17 len=4 body=b02d0000 text=None
+[call] RpcPipe_SetUIElementShowState('\\\\.\\pipe\\ObricIme\\oime-serve1', '1111', '2222', '3333', 'NULL', '4444', '5555')
+   op=0x1B len=11 body=0880968f8dffffffffff01 text=None
+

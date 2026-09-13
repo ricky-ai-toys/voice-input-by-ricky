@@ -1,0 +1,24 @@
+[2026-09-13 20:05:34.190] [info] [server_main.cpp:728] voice mouse hook installed on dedicated thread (left/right click stops voice)
+[2026-09-13 20:05:34.190] [info] [server_main.cpp:370] voice key hook installed (ref=1) on dedicated thread
+[2026-09-13 20:05:34.193] [info] [controller.cpp:2370] slot_SetUIElementShowState: prev=1, new=1
+[2026-09-13 20:05:34.203] [info] [controller.cpp:1963] ime_net connect trigger source=slot_FocusIn env_enable_cloud=1 initialized=1 last_state=0
+[2026-09-13 20:05:34.203] [info] [controller.cpp:2535] voice connection pool warmup trigger source=slot_FocusIn env_enable_cloud=1 client_ready=1
+[2026-09-13 20:05:34.224] [info] [controller.cpp:4214] Register TSF notify sink hwnd=0x2B0CBA cookie=15366637693614161921 total=1
+[2026-09-13 20:05:34.234] [info] [controller.cpp:2088] [context][controller] receive-context tick=8587922 reason=planb app=python.exe before_len=0 after_len=0 selected_len=0 before='<size=0>' after='<size=0>' selected='<size=0>'
+[2026-09-13 20:05:34.245] [info] [voice_key_hook.cpp:28] [VHK][Key] passthrough state sync vk=0xA5 down=1 up=0 down_cn=1
+[2026-09-13 20:05:34.245] [info] [server_main.cpp:488] [VHK] bypass all keys: settings ui focused, voice tryout inactive
+[2026-09-13 20:05:34.646] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:35.057] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:35.467] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:35.878] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:36.289] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:36.700] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:37.110] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:37.521] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:37.532] [info] [voice_key_hook.cpp:28] [VHK][Key] passthrough state sync vk=0xA5 down=0 up=1 down_cn=0
+[2026-09-13 20:05:38.032] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:38.543] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:39.054] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:39.565] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+[2026-09-13 20:05:39.575] [info] [controller.cpp:1615] [context][controller] apply-before-input key=165 tick=8587922 before_len=0 after_len=0 selected_len=0 before='<size=0>' after='<size=0>' selected='<size=0>'
+[2026-09-13 20:05:39.575] [info] [rpc_signal_win.cpp:63] Server keydown trace: wait_us=24 slot_us=98 key=165

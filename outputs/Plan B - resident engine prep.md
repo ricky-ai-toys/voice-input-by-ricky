@@ -463,3 +463,80 @@ needed from a human is a **single real voice session with the IME actually selec
 (Win+Space until the input indicator shows Doubao, then hold Right Alt and speak). That capture
 yields the op codes that start/stop voice; combined with milestone 11 (our host already picks
 up committed text through `PeekVoiceCommitText`) that is enough to build the client.
+
+### Milestone 13 - the whole pipe protocol is now readable (op table + wire formats)
+
+Two tools replaced guesswork with ground truth:
+
+* `planb/dump_ops.py` walks the dispatch jump table inside `rpc.dll`
+  (`movzx eax, dx; dec eax; cmp eax, 0x1b; mov ecx,[rdx+rax*4+0x25688]; jmp rcx`) and lists
+  all 28 op handlers; `planb/dump_proto.py` decodes the `server.proto` FileDescriptorProto
+  embedded in `rpc.dll`, which names the messages (`KeyCode`, `CursorPos`, `CompTextType`, ...).
+* `planb/oracle_client.py` loads the vendor's own `rpc.dll`, hooks the single function that
+  frames every request (`rpc.dll+0x16650`) and calls the exported `RpcPipe_*` wrappers, so the
+  *exact* op and body each call produces is captured instead of inferred.
+
+Result: `planb/op_map.md`. Highlights - `0x04/0x05` KeyDown/KeyUp take a protobuf `KeyCode`;
+`0x14` UpdateHostContext takes `(len+text)*3, u64 tick, (len+text)*2` (before/after/selected
+text, reason, app); `0x17` PeekVoiceCommit / `0x18` AckVoiceCommit are the text pickup pair;
+the handler for op *n* is vtable entry *n* in `ImeService.exe` (vtable at `+0x1009E78`).
+
+### Milestone 14 - we can create a valid host context from a plain process
+
+`planb/pipe_client.py` speaks the wire protocol over the private pipe
+(`\\.\pipe\ObricIme\oime-serve1`) without loading any vendor DLL. Sending `KeyDown` alone left
+the engine logging
+
+```
+[context][controller] apply-before-input key=165 no-valid-context
+```
+
+After sending `UpdateHostContext` (op 0x14, with the same field layout the oracle showed) plus
+`FocusIn` and `RegisterTsfNotifySink`, the controller accepts the same key press - the
+`no-valid-context` line is gone and `apply-before-input`/`cache-context` run normally. A plain
+user-level process can therefore register itself as a *host* for the engine.
+
+Note on the earlier "private" identity: `oime-server` -> `oime-serveR` only changes case, and
+Windows resolves pipe/mutex names case-insensitively, so that copy collided with the installed
+IME. `patch_names.py` now uses a digit (`oime-serve1`), and `--from-orig` re-applies the whole
+chain (restore -> name -> manifest -> voice hook).
+
+### Milestone 15 - the voice hotkey is inside the engine, and it is guarded twice
+
+The voice key never travels over the pipe: `ImeService.exe` installs its own
+`WH_KEYBOARD_LL` hook (`server_main.cpp:370 voice key hook installed`) whose callback is
+`VoiceKeyHookProc` (`ImeService.exe+0x7426C0`). Two guards stop a client from triggering it:
+
+1. **Injected input is dropped** (`test byte [lParam+8], 0x10; jne bypass` at
+   `+0x742743`) - `keybd_event`/`SendInput` never reaches the voice logic.
+2. **A state gate** in front of the handler (`+0x74270C..+0x742734`) that consults a global
+   state object: the hook only takes the voice path when the *settings UI* state allows it;
+   otherwise it logs `[VHK] bypass all keys: settings ui focused, voice tryout inactive`.
+   The same binary contains the settings IPC commands that flip that state
+   (`ime::settings::SettingsIpcServer::HandleSetVoiceTryoutActive`,
+   `settings.startShortcutRecording`, `[settings-ipc] startMicMeter ...`).
+
+`planb/patch_voicehook.py` NOPs both guards in our private copy (only our copy), which makes
+the hook consume an injected Right Alt and run its state machine:
+`[VHK][Key] passthrough state sync vk=0xA5 down=1 up=0 down_cn=1`. It still ends in the
+"bypass all keys" branch, so the missing piece is now precisely the settings-IPC side: the
+engine expects `setVoiceTryoutActive(true)` (from `DoubaoImeSettings.exe`, via
+`DoubaoIme.Settings.NativeRuntime.dll` -> same pipe) before the hotkey starts a session.
+
+### Milestone 16 - what is left, and the two ways to finish it locally
+
+Everything except the voice *trigger* is now proven with our own user-level code: private
+engine instance, host context, key handling, and the `PeekVoiceCommit`/`AckVoiceCommit` text
+pair (`[controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1` answers every
+poll). Two concrete triggers remain to be closed, both local:
+
+1. **Settings-IPC route** - patch `DoubaoIme.Settings.NativeRuntime.dll` to the private pipe,
+   launch the settings UI, and let its voice page call `setVoiceTryoutActive(true)`; then the
+   hook path becomes active and (with the injected-key patch) our client can drive it.
+2. **Call the in-engine start path** - find the message `VoiceKeyHookProc` posts to the main
+   thread (`[VHK][proc] PostToMainThread msg = %d, wp = %d, lp=%d`) and post it from our
+   client, or call the `Controller` voice-start entry directly.
+
+Either way the output half is already settled: `PeekVoiceCommit` on the private pipe is the
+text channel, and it is exactly what the v0.1.0 product would poll instead of the file-based
+`--test-sami` path.

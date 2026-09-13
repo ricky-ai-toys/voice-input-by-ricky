@@ -1,0 +1,90 @@
+=== op 0x01  handler 0x180023870 (+10 bytes) ===
+
+=== op 0x02  handler 0x18002387A (+18 bytes) ===
+
+=== op 0x03  handler 0x18002388C (+174 bytes) ===
+   strings: 'DeActivate'
+   calls:   0x180166090 0x180166F70 0x180027740 0x18016610C 0x180025720
+
+=== op 0x04  handler 0x18002393A (+340 bytes) ===
+   strings: 'PipeServer KeyDown parse failed size={}' | 'C:\\Workfolder\\oime\\obric-ime4\\src\\rpc\\rpc_server_impl.cpp' | 'rpc::PipeRpcServer::Dispatch'
+   calls:   0x180029730 0x180032930 0x180152C40 0x18001D850 0x18000FED0 0x180029880 0x1800332E0 0x18002A1A0 0x18002A120
+
+=== op 0x12  handler 0x180023A8E (+902 bytes) ===
+   calls:   0x180029730 0x1800327C0 0x180029250 0x180029F60 0x18000FED0 0x180019360 0x1800235E0 0x18001BF30 0x180163158 0x18002A120
+
+=== op 0x05  handler 0x180023E14 (+309 bytes) ===
+   strings: 'PipeServer KeyUp parse failed size={}' | 'C:\\Workfolder\\oime\\obric-ime4\\src\\rpc\\rpc_server_impl.cpp' | 'rpc::PipeRpcServer::Dispatch'
+   calls:   0x180029730 0x180032930 0x180152C40 0x18001D850 0x180029880 0x1800332E0 0x18002A1A0 0x18002A120
+
+=== op 0x06  handler 0x180023F49 (+594 bytes) ===
+   calls:   0x180166090 0x180166F70 0x18001C490 0x18016610C 0x180018AD0 0x180018980
+
+=== op 0x07  handler 0x18002419B (+49 bytes) ===
+   strings: 'FocusOut'
+   calls:   0x180025720
+
+=== op 0x08  handler 0x1800241CC (+119 bytes) ===
+   calls:   0x180029250 0x180032930 0x180029F60
+
+=== op 0x14  handler 0x180024243 (+948 bytes) ===
+   calls:   0x180018AD0 0x180027A50 0x180021830 0x1800103F0
+
+=== op 0x15  handler 0x1800245F7 (+284 bytes) ===
+
+=== op 0x16  handler 0x180024713 (+284 bytes) ===
+
+=== op 0x1A  handler 0x18002482F (+359 bytes) ===
+   calls:   0x180028DA0 0x180035DD0 0x180018AD0 0x1800332E0 0x180029D80 0x180023440 0x180163158
+
+=== op 0x1B  handler 0x180024996 (+79 bytes) ===
+   calls:   0x180029670 0x180032930 0x18002A0C0
+
+=== op 0x1C  handler 0x1800249E5 (+127 bytes) ===
+   calls:   0x180029160 0x180032930 0x180029F00
+
+=== op 0x09  handler 0x180024A64 (+342 bytes) ===
+   strings: 'GetCompText'
+   calls:   0x180025720 0x180028F00 0x180030970 0x1800103F0 0x1800332E0 0x180029E00 0x180030AA0
+
+=== op 0x0A  handler 0x180024BBA (+561 bytes) ===
+   strings: 'GetCommitText denied non-focus requester_pid={} foreground_pid={}' | 'C:\\Workfolder\\oime\\obric-ime4\\src\\rpc\\rpc_server_impl.cpp' | 'rpc::PipeRpcServer::Dispatch'
+   calls:   0x180152C40 0x18001DB20 0x180029BF0 0x180030970 0x1800103F0 0x1800332E0 0x18002A390 0x180030AA0
+
+=== op 0x19  handler 0x180024DEB (+354 bytes) ===
+   strings: 'GetInlineCommitText'
+   calls:   0x180025720 0x180029BF0 0x180030970 0x1800103F0 0x1800332E0 0x18002A390 0x180030AA0
+
+=== op 0x17  handler 0x180024F4D (+201 bytes) ===
+   strings: 'PeekVoiceCommit'
+   calls:   0x180025720 0x180023670 0x1800235E0 0x18001BF30 0x1800103F0
+
+=== op 0x18  handler 0x180025016 (+313 bytes) ===
+   strings: 'AckVoiceCommit'
+   calls:   0x180025720
+
+=== op 0x0B  handler 0x18002514F (+97 bytes) ===
+   calls:   0x180029670 0x180032930 0x18002A0C0
+
+=== op 0x0C  handler 0x1800251B0 (+195 bytes) ===
+   calls:   0x180029AA0 0x180032930 0x180029670 0x1800332E0 0x18002A0C0 0x18002A310
+
+=== op 0x0D  handler 0x180025273 (+190 bytes) ===
+   calls:   0x180029670 0x180032930 0x180028CD0 0x1800332E0 0x180029D20 0x18002A0C0
+
+=== op 0x0E  handler 0x180025331 (+105 bytes) ===
+   calls:   0x1800295A0 0x180032930 0x18002A060
+
+=== op 0x0F  handler 0x18002539A (+110 bytes) ===
+   calls:   0x180029030 0x180032930 0x180029E80
+
+=== op 0x10  handler 0x180025408 (+165 bytes) ===
+   calls:   0x180029940 0x180032930 0x180029670 0x1800332E0 0x18002A0C0 0x18002A280
+
+=== op 0x11  handler 0x1800254AD (+124 bytes) ===
+   calls:   0x1800293F0 0x180032930 0x180029FC0
+
+=== op 0x13  handler 0x180025529 (+96 bytes) ===
+   strings: 'PipeServer UploadModifyPair received json_size={}'
+   calls:   0x180029BF0 0x180032930
+

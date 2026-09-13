@@ -1,15 +1,19 @@
 """Plan B prep: give the vendor engine a private identity inside our copy.
 
-Two names keep a second engine instance from coexisting with the official Doubao IME:
+Two names keep a second engine instance from colliding with the official Doubao IME:
 
 * the RPC pipe        `\\\\.\\pipe\\ObricIme\\oime-server`  (ASCII literal)
 * the single instance `ObricImeServerSingleInstance`         (UTF-16LE literal)
 
-Both are rewritten to a private name of **identical length** (one character swapped),
-which keeps the PE layout untouched and needs no code caves.
+Both are rewritten to a private name of **identical length** (the final character is
+replaced), which keeps the PE layout untouched and needs no code caves.
+
+The replacement character must differ by more than case: Windows resolves pipe and mutex
+names case-insensitively, so a variant such as `oime-serveR` is the *same* object as
+`oime-server` and the copy silently collides with the installed IME. Digits avoid that.
 
 Usage:
-    python patch_names.py <dir-with-runtime> [--suffix R]
+    python patch_names.py <dir-with-runtime> [--suffix 1]
 """
 import argparse
 import os
@@ -61,7 +65,9 @@ def patch(path: str, suffix: str) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("runtime_dir")
-    ap.add_argument("--suffix", default="R")
+    ap.add_argument("--suffix", default="1")
+    ap.add_argument("--from-orig", action="store_true",
+                    help="restore each target from its .orig before patching")
     args = ap.parse_args()
 
     total = 0
@@ -70,6 +76,16 @@ def main() -> int:
         if not os.path.exists(path):
             print(f"[skip] {name} not found")
             continue
+        if args.from_orig:
+            backup = path + ".orig"
+            if os.path.exists(backup):
+                with open(backup, "rb") as fh:
+                    data = fh.read()
+                with open(path, "wb") as fh:
+                    fh.write(data)
+                print(f"[restore] {name} <- {os.path.basename(backup)}")
+            else:
+                print(f"[warn] {name}: no .orig backup, patching in place")
         found = 0
         with open(path, "rb") as fh:
             text = fh.read()

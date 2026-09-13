@@ -1,0 +1,44 @@
+[info] engine pid=35836
+[info] host window=0x3510DA (foreground)
+[editable/state] op=0x1B -> 0
+[FocusIn(host)] op=0x06 -> 0
+[SetUIElementShowState] op=0x0C -> 0
+[op15] op=0x15 -> 0
+[UpdateHostContext] op=0x14 -> 0
+[key] Right Alt held (physical)
+   [peek 0] (0, '000000000000000000000000')
+   [peek 1] (0, '000000000000000000000000')
+   [peek 2] (0, '000000000000000000000000')
+   [peek 3] (0, '000000000000000000000000')
+   [peek 4] (0, '000000000000000000000000')
+   [peek 5] (0, '000000000000000000000000')
+   [peek 6] (0, '000000000000000000000000')
+   [peek 7] (0, '000000000000000000000000')
+[key] Right Alt released
+   [peek after 0] (0, '000000000000000000000000')
+   [peek after 1] (0, '000000000000000000000000')
+   [peek after 2] (0, '000000000000000000000000')
+   [peek after 3] (0, '000000000000000000000000')
+[keydown rpc 165] -> 0
+[keyup rpc 165] -> 0
+--- 97 matching server log lines (last 20) ---
+   [2026-09-13 20:08:06.026] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: onBinaryMessageReceived@SAMIConnectPoolClient.cpp:123] receive auth pong
+   [2026-09-13 20:08:06.026] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: CreateOneClient@SAMIConnectPoolClient.cpp:76] create a resource and add to connect pool 19cfbe6e580, client type: 0
+   [2026-09-13 20:08:06.026] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:203] oime_windows create one client
+   [2026-09-13 20:08:06.026] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+   [2026-09-13 20:08:06.026] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+   [2026-09-13 20:08:06.026] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+   [2026-09-13 20:08:06.026] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+   [2026-09-13 20:08:06.293] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+   [2026-09-13 20:08:06.704] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+   [2026-09-13 20:08:07.115] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+   [2026-09-13 20:08:07.526] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+   [2026-09-13 20:08:07.936] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+   [2026-09-13 20:08:07.946] [info] [voice_key_hook.cpp:28] [VHK][Key] passthrough state sync vk=0xA5 down=0 up=1 down_cn=0
+   [2026-09-13 20:08:08.447] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+   [2026-09-13 20:08:08.958] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+   [2026-09-13 20:08:09.468] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+   [2026-09-13 20:08:09.979] [info] [controller.cpp:2462] slot_PeekVoiceCommit session=0 bytes=0 acked=1
+   [2026-09-13 20:08:09.990] [info] [controller.cpp:1615] [context][controller] apply-before-input key=165 tick=3477722 before_len=0 after_len=0 selected_len=0 before='<size=0>' after='<size=0>' selected='<size=0>'
+   [2026-09-13 20:08:09.990] [info] [rpc_signal_win.cpp:63] Server keydown trace: wait_us=282 slot_us=99 key=165
+   [2026-09-13 20:08:09.990] [info] [rpc_signal_win.cpp:67] Server keydown total_us=395 key=165

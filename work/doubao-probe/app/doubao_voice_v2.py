@@ -688,60 +688,13 @@ def simulate(cfg: dict, wav_path: str, paste: bool) -> int:
     return 0
 
 
-# --------------------------------------------------------------------------- #
-# start-with-windows (per-user, no admin)
-# --------------------------------------------------------------------------- #
-def startup_folder() -> str:
-    return os.path.join(
-        os.environ.get("APPDATA", ""),
-        "Microsoft", "Windows", "Start Menu", "Programs", "Startup",
-    )
-
-
-def autostart_path() -> str:
-    return os.path.join(startup_folder(), "DoubaoVoice.cmd")
-
-
-def install_autostart() -> int:
-    if getattr(sys, "frozen", False):
-        exe = os.path.abspath(sys.executable)
-    else:
-        exe = os.path.abspath(__file__)
-    folder = startup_folder()
-    if not os.path.isdir(folder):
-        print(f"[error] startup folder not found: {folder}", file=sys.stderr)
-        return 2
-    cmd = f'@echo off\r\nstart "" "{exe}"\r\n'
-    with open(autostart_path(), "w", encoding="utf-8", newline="") as fh:
-        fh.write(cmd)
-    print(f"[ok] autostart installed: {autostart_path()}")
-    return 0
-
-
-def remove_autostart() -> int:
-    path = autostart_path()
-    if os.path.exists(path):
-        os.remove(path)
-        print(f"[ok] autostart removed: {path}")
-    else:
-        print("[ok] autostart was not installed")
-    return 0
-
-
 def main() -> int:
     ap = argparse.ArgumentParser(description="DoubaoVoicePortable")
     ap.add_argument("--config", default=os.path.join(DEFAULT_ROOT, "data", "config.json"))
     ap.add_argument("--transcribe-file", help="legacy one-shot mode: transcribe a wav and exit")
     ap.add_argument("--simulate", help="run one streaming session from a wav (mic bypassed)")
     ap.add_argument("--paste", action="store_true", help="with --transcribe-file/--simulate, paste result")
-    ap.add_argument("--install-autostart", action="store_true", help="start with Windows (per-user)")
-    ap.add_argument("--remove-autostart", action="store_true", help="undo --install-autostart")
     args = ap.parse_args()
-
-    if args.install_autostart:
-        return install_autostart()
-    if args.remove_autostart:
-        return remove_autostart()
 
     if not os.path.exists(args.config):
         save_config(args.config, default_config())

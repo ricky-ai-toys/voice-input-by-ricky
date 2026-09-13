@@ -1,14 +1,13 @@
 {
   "hotkey": "right alt",
   "suppress_hotkey": false,
-  "sample_rate": 16000,
-  "min_duration_sec": 0.4,
+  "record_sample_rate": 16000,
+  "min_duration_sec": 0.35,
   "runtime_dir": "runtime\\v0.9.0.0",
   "data_dir": "data",
-  "injection": "paste",
   "restore_clipboard": true,
   "show_overlay": true,
-  "language": "zh",
   "paste_delay_ms": 60,
-  "asr_timeout_sec": 60
+  "final_timeout_sec": 8.0,
+  "language_hint": "auto"
 }

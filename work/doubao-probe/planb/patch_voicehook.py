@@ -32,6 +32,18 @@ GATES = bytes.fromhex(
 )
 GATE_JUMPS = ("0f84e7000000", "0f84d8000000", "0f85c2000000")
 
+# 3) the engine synthesises its own key release when a voice hold ends
+#    (`SynthesizeMetaRelease ... injected`): it calls SendInput at ImeService.exe+0x750D50.
+#    With the injected-key filter disabled, those synthetic events come back into the hook and
+#    cancel the session instead of stopping it - so drop the injection itself.
+SYNTH_CALL_VA = 0x750D50
+SYNTH_CALL = bytes.fromhex("ff1502b68900")      # call qword ptr [rip+0x89B602]  (SendInput)
+SYNTH_PATCH = bytes.fromhex("31c090909090")      # xor eax,eax ; nop x4
+
+# 4) the mouse hook (the engine stops voice on a click) drops injected input the same way:
+#    test byte ptr [r8+0xc], 1 (LLMHF_INJECTED) ; jne +0x242
+MOUSE_INJECTED = bytes.fromhex("41f6400c010f8542020000")
+
 
 def _patch_all(blob: bytearray, signature: bytes, patch: bytes, label: str) -> int:
     count = 0
@@ -46,7 +58,7 @@ def _patch_all(blob: bytearray, signature: bytes, patch: bytes, label: str) -> i
         pos = idx + len(signature)
 
 
-def patch(path: str, mode: str = "bypass") -> int:
+def patch(path: str, mode: str = "bypass", no_synth: bool = False) -> int:
     pe = pefile.PE(path)
     base = pe.OPTIONAL_HEADER.ImageBase
     original = open(path, "rb").read()
@@ -95,6 +107,28 @@ def patch(path: str, mode: str = "bypass") -> int:
             print(f"[ok] voice-path injected filter patched at VA 0x{base + vaddr + idx:X}")
             count += 1
             pos = idx + len(VOICE_PATH_INJECTED)
+
+        if no_synth:
+            want = base + SYNTH_CALL_VA
+            idx = chunk.find(SYNTH_CALL)
+            while idx >= 0:
+                if base + vaddr + idx == want:
+                    blob[start + idx:start + idx + len(SYNTH_CALL)] = SYNTH_PATCH
+                    print(f"[ok] synthesised-key injection removed at VA 0x{want:X}")
+                    count += 1
+                idx = chunk.find(SYNTH_CALL, idx + 1)
+
+        pos = 0
+        while True:
+            idx = chunk.find(MOUSE_INJECTED, pos)
+            if idx < 0:
+                break
+            patched = bytearray(MOUSE_INJECTED)
+            patched[5:] = b"\x90" * (len(MOUSE_INJECTED) - 5)   # keep the test, drop the jump
+            blob[start + idx:start + idx + len(MOUSE_INJECTED)] = patched
+            print(f"[ok] mouse-hook injected filter patched at VA 0x{base + vaddr + idx:X}")
+            count += 1
+            pos = idx + len(MOUSE_INJECTED)
     if count:
         backup = path + ".orig"
         if not os.path.exists(backup):
@@ -116,12 +150,13 @@ def main() -> int:
                        ("--mode=bypass", "bypass")):
         if flag in sys.argv:
             mode = name
+    no_synth = "--no-synth" in sys.argv
     runtime = os.path.abspath(args[0])
     path = os.path.join(runtime, "ImeService.exe")
     if not os.path.exists(path):
         print(f"[fail] {path} not found")
         return 1
-    patch(path, mode)
+    patch(path, mode, no_synth)
     return 0
 
 

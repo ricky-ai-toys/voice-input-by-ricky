@@ -227,6 +227,11 @@ def main() -> int:
     if "--click-stop" in sys.argv:
         send_click()
         print("[mouse] synthetic left click sent (engine stops voice on click)")
+    if "--rpc-stop" in sys.argv:
+        # the vendor's own core reports the key release to the engine over RPC; try the same
+        keycode = pb_int(1, 0xA5) + pb_str(3, os.path.basename(sys.executable or "python.exe"))
+        res = pipe.call(0x05, keycode)
+        print(f"[rpc] KeyUp(0xA5) -> {res if res is None else res[2]}")
     for i in range(12):
         pump(hwnd, 0.4, "tail")
         res = pipe.call(0x17, b"")

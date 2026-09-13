@@ -243,7 +243,26 @@ def user_config_path() -> str:
 def _snapshot_user_config() -> None:
     global _CONFIG_SNAPSHOT
     path = user_config_path()
-    if _CONFIG_SNAPSHOT is None and os.path.exists(path):
+    if _CONFIG_SNAPSHOT is not None:
+        return
+    # a run that is killed (or crashes) never reaches atexit, so heal previously damaged files
+    # first: if a known-good snapshot exists and the engine has since rewritten the file, put
+    # the snapshot back before starting anything new.
+    snap_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                             "user-config-snapshot.json")
+    if os.path.exists(snap_path) and os.path.exists(path):
+        try:
+            with open(snap_path, "rb") as fh:
+                snap = fh.read()
+            with open(path, "rb") as fh:
+                current = fh.read()
+            if snap != current:
+                with open(path, "wb") as fh:
+                    fh.write(snap)
+                print(f"[guard] restored the user's {path} from {os.path.basename(snap_path)}")
+        except OSError:
+            pass
+    if os.path.exists(path):
         with open(path, "rb") as fh:
             _CONFIG_SNAPSHOT = (path, fh.read())
         atexit.register(_restore_user_config)

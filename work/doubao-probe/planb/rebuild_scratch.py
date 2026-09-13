@@ -41,7 +41,7 @@ def main() -> int:
     run(sys.executable, "patch_names.py", runtime, "--suffix", "1")
     run(sys.executable, os.path.join("..", "scripts", "patch_manifest.py"),
         os.path.join(runtime, "ImeService.exe"))
-    run(sys.executable, "patch_voicehook.py", runtime)
+    run(sys.executable, "patch_voicehook.py", runtime, "--mode=none", "--no-synth")
     return 0
 
 

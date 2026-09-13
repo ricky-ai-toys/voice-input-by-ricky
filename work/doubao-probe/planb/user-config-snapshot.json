@@ -1,0 +1,81 @@
+{
+   "_meta": {
+      "createdBy": "ImeService",
+      "updatedAtUtc": "2026-09-13T05:57:47Z"
+   },
+   "app": {
+      "hasCompletedOnboarding": true,
+      "lastOpenedTab": "voice"
+   },
+   "appearance": {
+      "fontLevel": 2,
+      "showStatus": true
+   },
+   "keyboard": {
+      "defaultChinese": true,
+      "defaultFullShape": false,
+      "defaultTraditional": false,
+      "enableCloudCandidate": true,
+      "enableCorrect": true,
+      "enableEmoji": true,
+      "enableEnglishMode": false,
+      "enableFullHalfHotkey": false,
+      "enableFuzzy": false,
+      "enableInlinePreedit": true,
+      "enableJianfanHotkey": false,
+      "enableKaomoji": true,
+      "enablePuncDirectAfterDigit": true,
+      "enablePunctuationHotkey": false,
+      "enableSmartFuzzy": true,
+      "enableWubiFifthCodeAutoCommit": false,
+      "enableWubiPinyinMix": true,
+      "fuzzyFlags": 455,
+      "fuzzyFlagsMark": true,
+      "keyboardType": "pinyin",
+      "keyboardType_v3": "pinyin",
+      "languageSwitchKey": "shift",
+      "showWubiCandidateHint": true,
+      "shuangpinScheme": "ms",
+      "shuangpinScheme_v3": "xiaohe",
+      "turnPageKeys": [
+         "comma_period",
+         "minus_equal",
+         "brackets"
+      ],
+      "useCtrl": false,
+      "useShift": true,
+      "useSlashToDunhao": false,
+      "wubiScheme": "86"
+   },
+   "schemaVersion": 7,
+   "status_bar": {
+      "enabled": true,
+      "monitor_positions": {},
+      "pos_x": -1,
+      "pos_y": -1
+   },
+   "update": {
+      "automaticUpdateEnabled": true
+   },
+   "voice": {
+      "conflictDialogDontRemind": false,
+      "enableGlobalVoiceShortcut": false,
+      "enableSpaceBetweenZhAndNum": false,
+      "enableVoiceShortcut": true,
+      "handsFreeTipDid": "2521637083956824",
+      "handsFreeTipShownCount": 3,
+      "hasShortcutConflict": false,
+      "punctuationPostProcessMode": "keep_all",
+      "selectedMicrophoneId": "{0.0.1.00000000}.{0294953e-78e4-42e1-9d1c-2f4f9f9430ca}",
+      "voiceLongPressShortcut": {
+         "keyCode": 0,
+         "modifierFlags": 2049
+      },
+      "voiceLongPressShortcutMode": null,
+      "voiceShortcut": {
+         "keyCode": 32,
+         "modifierFlags": 2049
+      },
+      "voiceShortcutMode": null
+   }
+}

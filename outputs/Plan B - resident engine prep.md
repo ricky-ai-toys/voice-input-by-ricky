@@ -832,3 +832,34 @@ Two more results from the same day:
 * **Driving the hotkey over the pipe does not work.** `planb/pipe_key_test.py` sends op 0x04/0x05
   (and the `RpcPipe_KeyDown` export) while armed: the engine accepts the frames (status 0) but
   never logs `voice record start`, so the product keeps watching the *real* key locally.
+
+### Milestone 28 - field report from a machine without Doubao IME
+
+The portable build was tried on a PC that has no Doubao installed. Report: one success out of many
+attempts, sometimes `not recognised`, sometimes the target window lost focus, sometimes the engine
+said it could not start voice. What the code changed, and why:
+
+1. **Leftovers poisoned every later run.** `TerminateProcess` on the shell leaves the engine
+   alive; the next start connects to that orphan, which may hold a half-finished session. The
+   shell now stops engines whose executable lives in its own `runtime` folder, then waits until
+   the private pipe is really gone before starting a fresh engine (`wait_pipe_gone`), with one
+   automatic retry if the handshake still lands on a dying pipe (`WriteFile err=232`).
+2. **A stale commit blocked the first press.** `clear_stale_commit()` acks whatever the engine was
+   still holding from a previous run, before the user presses anything.
+3. **The overlay could steal focus.** It is now created with `WS_EX_NOACTIVATE | WS_EX_TOOLWINDOW`,
+   and `paste_text` re-focuses the remembered target window with the `AttachThreadInput` trick
+   (a background process is otherwise refused by `SetForegroundWindow`), falling back to the
+   current foreground window when the target is gone.
+4. **The microphone was never checked.** `audio_endpoints.py` enumerates WASAPI capture endpoints
+   through `IMMDeviceEnumerator` (ctypes COM, no admin). The shell fills
+   `voice.selectedMicrophoneId` in when it is empty or points at a device that is not active.
+   Reproduced on this machine: the engine ran a whole session and the cloud reported
+   `online_twopass_result_words_size = -1` while `audio_length = 224000` - it recorded 7 s of
+   silence, which is exactly the "not recognised" symptom (`planb/evidence/stereomix.txt`).
+5. **Every session is now logged.** `data/logs/app-<date>.log` carries the foreground window at
+   press time, the engine's own decisions and the recognition counters; the engine's stdout goes
+   to `data/logs/engine-<pid>.log`. The overlay now distinguishes "engine did not start
+   recording", "engine refused (busy)", "no speech detected" and "nothing recognised" instead of
+   printing one generic message.
+6. One copy of the shell may run at a time (named mutex), so two instances cannot fight over the
+   engine and the leftover cleanup is safe.

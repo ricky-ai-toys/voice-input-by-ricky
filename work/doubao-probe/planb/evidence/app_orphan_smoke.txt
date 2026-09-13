@@ -1,0 +1,7 @@
+[Voice Input by Ricky] --- Voice Input by Ricky started (pid 23320) ---
+[Voice Input by Ricky] runtime = C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\scratch  windows = 10.26200  exe = C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python.exe
+[Voice Input by Ricky] stopped a leftover engine (pid 4868) from an earlier run
+[Voice Input by Ricky] Starting the engine...
+[Voice Input by Ricky] microphone: default={0.0.1.00000000}.{0294953e-78e4-42e1-9d1c-2f4f9f9430ca} active=1 requested=(auto)
+[Voice Input by Ricky] microphone: engine already uses {0.0.1.00000000}.{0294953e-78e4-42e1-9d1c-2f4f9f9430ca}
+[Voice Input by Ricky] stopped

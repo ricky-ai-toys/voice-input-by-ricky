@@ -1,0 +1,7 @@
+[planb] engine pid=6388, host window=0x12807F4
+[planb] armed (voice tryout + host context)
+[self-test] relaxed 4 filter(s) in the engine's memory
+[planb] listening ...
+[planb] (nothing recognised)
+[self-test] session 1/1 -> ''
+[self-test] restored 4 filter(s)

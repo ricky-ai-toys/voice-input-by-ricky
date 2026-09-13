@@ -43,6 +43,7 @@ VoiceInputByRicky\
   runtime\                   copy of the Doubao IME speech engine, with private pipe names and
                              uiAccess="false" so it runs as an ordinary user process
   data\config.json           settings, created on first run
+  data\logs\                 one log per run (app-<date>.log, engine-<pid>.log)
   Voice Input by Ricky.cmd   launcher (optional)
   README.md                  this file
 ```
@@ -67,8 +68,30 @@ The folder can be moved to another PC or a USB stick as-is.
 | `show_overlay` | `true` | show the status badge while dictating |
 | `paste` | `true` | insert the text (set to `false` to only log it) |
 | `commit_timeout` | `2.5` | seconds to wait for the final sentence after you release |
+| `microphone` | `""` | endpoint id to record from; empty means "the Windows default device". List the ids with `VoiceInputByRicky.exe --list-mics` |
 
 Edit the file, then restart the app.
+
+### Microphone
+
+The engine records from the device named in `microphone`, or from the Windows default recording
+device when that is empty. At every start the app checks that the device still exists and is
+active, fills the engine's own setting in when it is missing, and writes what it found to the log.
+If dictation returns `No speech detected`, look at **Settings > System > Sound > Input**: the
+device may be muted, unplugged, or simply not the one you are speaking into.
+
+```
+VoiceInputByRicky.exe --list-mics                     # show the ids
+VoiceInputByRicky.exe --microphone "<endpoint id>"    # run with another device
+```
+
+### Logs
+
+Every run appends to `data\logs\app-<date>.log`, and the engine's own output goes to
+`data\logs\engine-<pid>.log`. Each dictation writes a few lines there: the window that had focus
+when you pressed, what the engine decided (`voice record start ok=1`, `blocked`, `not allowed ...`),
+the speech-recognition counters, and the text that was inserted. Those two files are what to send
+when something does not work.
 
 ### Troubleshooting
 
@@ -76,9 +99,14 @@ Edit the file, then restart the app.
 | --- | --- |
 | No badge after the double-click | the console window's last lines say why; make sure the whole folder was copied (including `runtime\`) |
 | Badge appears but nothing is typed | is the target app focused when you release? windows running as administrator refuse input from a normal-privilege app |
-| `Nothing recognised` | microphone level, and that this PC can reach `*.doubao.com` |
-| Second press does nothing | it should not happen in this build: every sentence is acknowledged over the pipe. If it does, the last lines of the console show what the engine answered |
-| Nothing works any more | end every `ImeService.exe` started from this folder, then start the app again |
+| `No speech detected - check the microphone` | the engine recorded, but the cloud heard silence - check the input device and its level |
+| `Engine did not start recording - see the log` | the engine never started a session; `data\logs\engine-*.log` says why |
+| `Engine refused to record (busy) - try again` | a previous sentence was not acknowledged; the app clears that at startup, so this should be transient |
+| `Nothing recognised` | this PC cannot reach `*.doubao.com`, or the speech was unclear |
+| Nothing works any more | close the app and start it again: on startup it stops leftover `ImeService.exe` processes from this folder and clears a stale acknowledgement |
+
+Only one copy of the app can run at a time; a second double-click shows a message instead of
+fighting over the engine.
 
 ### Known limitations
 
@@ -153,6 +181,7 @@ VoiceInputByRicky\
   runtime\                   豆包输入法语音引擎的副本：管道名私有化 + uiAccess="false"，
                              因此能以普通用户身份运行
   data\config.json           配置，首次运行自动生成
+  data\logs\                 每次运行的日志（app-<日期>.log、engine-<pid>.log）
   Voice Input by Ricky.cmd   启动器（可选）
   README.md                  本文件
 ```
@@ -177,8 +206,27 @@ VoiceInputByRicky\
 | `show_overlay` | `true` | 说话时显示提示条 |
 | `paste` | `true` | 是否粘贴（设为 `false` 则只打印不粘贴） |
 | `commit_timeout` | `2.5` | 松手后等待整句结果的最长秒数 |
+| `microphone` | `""` | 指定录音设备 ID；留空表示跟随 Windows 默认录音设备。用 `VoiceInputByRicky.exe --list-mics` 查看可用 ID |
 
 改完配置后重启程序生效。
+
+### 麦克风
+
+引擎从 `microphone` 指定的设备录音；留空则使用 Windows 默认录音设备。程序每次启动都会检查该
+设备是否仍然存在且处于活动状态，缺失时自动写入引擎自己的设置，并把检查结果写进日志。
+如果提示 `No speech detected`，请到 **设置 → 系统 → 声音 → 输入** 检查：设备可能被静音、被拔出，
+或者根本不是你正在说话的那一个。
+
+```
+VoiceInputByRicky.exe --list-mics                     # 列出设备 ID
+VoiceInputByRicky.exe --microphone "<设备 ID>"         # 用别的设备跑一次
+```
+
+### 日志
+
+每次运行都会追加写入 `data\logs\app-<日期>.log`，引擎自己的输出在 `data\logs\engine-<pid>.log`。
+每次口述会留下几行记录：按下时前台窗口是哪个、引擎做了什么决定（`voice record start ok=1`、
+`blocked`、`not allowed ...`）、云端识别计数，以及最终插入的文字。**出问题时把这两个文件发我即可。**
 
 ### 常见问题
 
@@ -186,9 +234,13 @@ VoiceInputByRicky\
 | --- | --- |
 | 双击后没有提示条 | 看控制台窗口最后几行；确认整个文件夹都复制完整（包含 `runtime\`） |
 | 有提示条但不出字 | 松手时目标窗口是否处于焦点？以管理员身份运行的窗口会拒绝普通权限程序注入的文字 |
-| 显示 `Nothing recognised` | 检查麦克风音量，以及本机能否访问 `*.doubao.com` |
-| 第二次按热键没反应 | 本版本不应出现：每句话都会通过管道向引擎确认。若仍出现，控制台最后几行会显示引擎的回应 |
-| 突然完全不能用 | 结束所有**从本文件夹启动**的 `ImeService.exe`，再重新启动程序 |
+| 显示 `No speech detected - check the microphone` | 引擎已经在录音，但云端收到的是静音——检查输入设备和音量 |
+| 显示 `Engine did not start recording - see the log` | 引擎没有开始会话，`data\logs\engine-*.log` 会写明原因 |
+| 显示 `Engine refused to record (busy) - try again` | 上一句还没被确认；程序启动时会自动清理，通常只是偶发 |
+| 显示 `Nothing recognised` | 本机无法访问 `*.doubao.com`，或说话不清楚 |
+| 突然完全不能用 | 关掉程序再重新启动：启动时会自动结束**本文件夹**残留的 `ImeService.exe` 并清掉陈旧的确认状态 |
+
+程序同一时间只允许运行一个实例；重复双击会给出提示，而不是两个实例抢同一个引擎。
 
 ### 已知限制
 

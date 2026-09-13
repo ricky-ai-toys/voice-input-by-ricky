@@ -58,6 +58,45 @@ def load_commit_client(runtime: str):
     return peek, ack
 
 
+def window_pid(hwnd: int) -> int:
+    pid = wt.DWORD(0)
+    ctypes.windll.user32.GetWindowThreadProcessId(hwnd, ctypes.byref(pid))
+    return pid.value
+
+
+def window_title(hwnd: int) -> str:
+    user32 = ctypes.windll.user32
+    length = user32.GetWindowTextLengthW(hwnd)
+    buf = ctypes.create_unicode_buffer(length + 1)
+    user32.GetWindowTextW(hwnd, buf, length + 1)
+    return buf.value
+
+
+def force_foreground(hwnd: int) -> bool:
+    """Bring `hwnd` back to the front.
+
+    Windows refuses SetForegroundWindow from a background process, so borrow the foreground
+    thread's input queue for the call (the usual AttachThreadInput dance).
+    """
+    user32 = ctypes.WinDLL("user32", use_last_error=True)
+    kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+    if not hwnd or not user32.IsWindow(hwnd):
+        return False
+    if user32.GetForegroundWindow() == hwnd:
+        return True
+    fg = user32.GetForegroundWindow()
+    tid_fg = user32.GetWindowThreadProcessId(fg, None) if fg else 0
+    tid_me = kernel32.GetCurrentThreadId()
+    attached = bool(user32.AttachThreadInput(tid_me, tid_fg, True)) if tid_fg else False
+    try:
+        user32.BringWindowToTop(hwnd)
+        ok = bool(user32.SetForegroundWindow(hwnd))
+    finally:
+        if attached:
+            user32.AttachThreadInput(tid_me, tid_fg, False)
+    return ok or user32.GetForegroundWindow() == hwnd
+
+
 def paste_text(text: str, target_window: int = 0) -> None:
     """Put `text` on the clipboard and send Ctrl+V, optionally refocusing `target_window`."""
     user32 = ctypes.WinDLL("user32", use_last_error=True)
@@ -70,8 +109,10 @@ def paste_text(text: str, target_window: int = 0) -> None:
     user32.OpenClipboard.argtypes = [wt.HWND]
     user32.SetClipboardData.argtypes = [wt.UINT, wt.HANDLE]
     user32.SetClipboardData.restype = wt.HANDLE
-    if target_window:
-        user32.SetForegroundWindow(target_window)
+    hwnd = target_window if target_window and user32.IsWindow(target_window) \
+        else user32.GetForegroundWindow()
+    if hwnd:
+        force_foreground(hwnd)
         time.sleep(0.05)
     CF_UNICODETEXT = 13
     GMEM_MOVEABLE = 0x0002
@@ -195,13 +236,13 @@ class PlanBVoice:
     """Resident voice pipe: trigger by hotkey, read the text from the engine, paste it."""
 
     def __init__(self, runtime: str, paste: bool = True, verbose: bool = True,
-                 use_tsf: bool = True, proc=None) -> None:
+                 use_tsf: bool = True, proc=None, engine_log: str | None = None) -> None:
         self.runtime = runtime
         self.paste = paste
         self.verbose = verbose
         self.use_tsf = use_tsf
         # `proc` lets a caller bring the engine up itself (e.g. frida spawn-suspend auditing)
-        self.proc = proc if proc is not None else start_server(runtime)
+        self.proc = proc if proc is not None else start_server(runtime, engine_log)
         self.pipe = Pipe(timeout=35.0)
         self.hwnd = make_foreground_window(activate=False)
         self.text = ""
@@ -309,6 +350,17 @@ class PlanBVoice:
     def ack_commit(self, session: int) -> None:
         _peek, ack = self._commit_api()
         ack(PIPE_NAME.encode(), session)
+
+    def clear_stale_commit(self) -> str:
+        """Ack a commit left over from a previous run; returns the text it was holding."""
+        peek, ack = self._commit_api()
+        buf = ctypes.create_string_buffer(0x40001)
+        session = ctypes.c_uint64(0)
+        count = peek(PIPE_NAME.encode(), ctypes.byref(session), buf, 0x40001)
+        if not (count or session.value):
+            return ""
+        ack(PIPE_NAME.encode(), session.value)
+        return buf.value.decode("utf-8", "replace")
 
     def on_release(self) -> None:
         self.polling.clear()

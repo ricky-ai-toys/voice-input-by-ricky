@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\voice_input_app.py", line 571, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\voice_input_app.py", line 561, in main
+    app.arm()
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\voice_input_app.py", line 370, in arm
+    self.voice.arm()
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\planb_voice_input.py", line 275, in arm
+    self.pipe.call(op, body)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\pipe_client.py", line 138, in call
+    self.write(header + body)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\pipe_client.py", line 110, in write
+    raise OSError(f"WriteFile failed err={ctypes.get_last_error()}")
+OSError: WriteFile failed err=232

@@ -216,10 +216,11 @@ def pb_dump(body: bytes) -> str:
 # --------------------------------------------------------------------------- #
 # server control
 # --------------------------------------------------------------------------- #
-def start_server(runtime: str) -> subprocess.Popen:
+def start_server(runtime: str, log_path: str | None = None) -> subprocess.Popen:
     _snapshot_user_config()
     exe = os.path.join(runtime, "ImeService.exe")
-    log_path = os.path.join(runtime, LOG_NAME)
+    log_path = log_path or os.path.join(runtime, LOG_NAME)
+    os.makedirs(os.path.dirname(os.path.abspath(log_path)), exist_ok=True)
     log = open(log_path, "wb")
     proc = subprocess.Popen([exe], cwd=runtime, stdout=log, stderr=subprocess.STDOUT,
                             creationflags=0x00000008)  # DETACHED_PROCESS

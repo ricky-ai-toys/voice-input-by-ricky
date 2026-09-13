@@ -1,0 +1,8 @@
+[guard] restored the user's C:\Users\Ricky\AppData\Roaming\DoubaoIme\conf\config.json from user-config-snapshot.json
+[planb] engine pid=9664, host window=0x11110C
+[planb] armed (voice tryout + host context)
+[self-test] relaxed 4 filter(s) in the engine's memory
+[planb] listening ...
+[planb] (nothing recognised)
+[self-test] session 1/1 -> ''
+[self-test] restored 4 filter(s)

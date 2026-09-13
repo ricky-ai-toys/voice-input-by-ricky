@@ -708,6 +708,41 @@ therefore to run that host *against the private engine* (load the copy's patched
 `tsf-oime-core.dll` by path via `DllGetClassObject` instead of the COM-registered installed
 one), so the core is the client that receives the commit text, and we read it out of the store.
 
+### Milestone 24 - what "commit" actually is, and why the official engine cannot be used as a
+reference
+
+Four new facts from `planb/commit_probe.py`, `planb/hook_commit.py`,
+`planb/find_stop_message.py`, `planb/find_callers.py`:
+
+1. **The commit channel is two controller fields.** Disassembling
+   `server::Controller::slot_PeekVoiceCommit` (`ImeService.exe+0x7982D0`) shows it only locks the
+   controller, copies `+0x9F0` (the text string) and `+0xA80` (the session id) out, and reports
+   `acked = (+0xA88 != 0)`. Everything therefore hinges on those fields being written - and in
+   our sessions they stay zero, which is exactly the `session=0 bytes=0` we keep seeing.
+2. **`Controller::CheckCommit` never runs in our sessions.** Hooking it
+   (`planb/hook_commit.py`, `ImeService.exe+0x77D670`, the function that logs `commit len is {}`)
+   shows zero calls, so the commit is gated *upstream* of the client hand-off: with a synthetic
+   hotkey, the engine stops the session but never promotes the ASR text into a commit.
+3. **The installed engine cannot be instrumented as a reference client.** It runs with
+   `uiAccess="true"`, i.e. as a protected process: `frida.enumerate_processes()` does not list
+   it and attaching fails, so "watch the official client talk to the official server" is not
+   available at normal privilege. The private copy (uiAccess patched to false) is the only
+   instrumentable engine - which is also why the product has to carry its own copy.
+4. **The stop-by-message path is not a Windows message.** The hook's `PostToMainThread msg =
+   1007` line is an internal task id, not a `PostMessage`/`PostThreadMessage` id: hooking both
+   APIs shows no such message, and posting 1006..1023 to the engine's main thread does nothing.
+   Raising `HKCU\Control Panel\Desktop\LowLevelHooksTimeout` to 5 s also does not keep the
+   engine reacting to injected keys late in a session, so the hook quietly gives up on them
+   regardless.
+
+Together that means the next real step is not more probing of the hook, but making the engine
+treat our host as a *dictation target*: the vendor's own client gets a commit because the
+engine's controller is in the "voice input" state for it (see the strings
+`voice record start blocked by unacked commit session={} bytes={}` and
+`slot_AckVoiceCommit keep pending session={} bytes={}` - commits are kept until the client
+acks). Either the hosted TSF core must be put into exactly that state, or the state machine in
+`Controller` has to be driven the way the core drives it.
+
 ### Milestone 23 - a side effect worth fixing, and the stop window
 
 Two practical findings from running the sessions repeatedly:

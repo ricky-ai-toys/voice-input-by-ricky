@@ -1,0 +1,5 @@
+[2026-09-13 14:10:20.645] [info] [server_main.cpp:2395] start sami file test wav=C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\audio\full_16k_mono.wav
+[2026-09-13 14:10:20.646] [info] [sami_asr_client_win.cpp:936] sami extra space_between_zh_and_num enable=0 remove_space=1
+[2026-09-13 14:10:20.646] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinputsuccess: redirect_print_string_to_oslog(00007FF730E16950) idx 0
+[2026-09-13 14:10:20.646] [info] [sami_asr_client_win.cpp:936] sami extra space_between_zh_and_num enable=0 remove_space=1
+[2026-09-13 14:10:20.646] [warning] [sami_asr_client_win.cpp:283] sami start skipped because AppLog did is not ready

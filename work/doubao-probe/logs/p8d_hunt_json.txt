@@ -1,0 +1,6 @@
+[driver] spawning C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\runtime\v0.9.0.0\ImeService.exe ['--test-sami', '--wav', 'C:\\Users\\Ricky\\Documents\\Codex\\2026-09-13\\wo\\work\\doubao-probe\\audio\\full_16k_mono.wav']
+[driver] pid=11908
+[frida] {'type': 'send', 'payload': {'kind': 'ready'}}
+[driver] script loaded
+[driver] resumed
+[driver] process 11908 exited

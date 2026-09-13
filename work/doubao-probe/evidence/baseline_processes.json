@@ -1,0 +1,56 @@
+[
+  {
+    "ProcessId": 11324,
+    "ParentProcessId": 1500,
+    "Name": "RuntimeBroker.exe",
+    "ExecutablePath": "C:\\Windows\\System32\\RuntimeBroker.exe"
+  },
+  {
+    "ProcessId": 17280,
+    "ParentProcessId": 1500,
+    "Name": "ChsIME.exe",
+    "ExecutablePath": null
+  },
+  {
+    "ProcessId": 18548,
+    "ParentProcessId": 1500,
+    "Name": "RuntimeBroker.exe",
+    "ExecutablePath": "C:\\Windows\\System32\\RuntimeBroker.exe"
+  },
+  {
+    "ProcessId": 18832,
+    "ParentProcessId": 1500,
+    "Name": "RuntimeBroker.exe",
+    "ExecutablePath": "C:\\Windows\\System32\\RuntimeBroker.exe"
+  },
+  {
+    "ProcessId": 19740,
+    "ParentProcessId": 1500,
+    "Name": "RuntimeBroker.exe",
+    "ExecutablePath": "C:\\Windows\\System32\\RuntimeBroker.exe"
+  },
+  {
+    "ProcessId": 21728,
+    "ParentProcessId": 27576,
+    "Name": "ImeWatchdog.exe",
+    "ExecutablePath": "C:\\Program Files\\DoubaoIME\\bootstrap\\ImeWatchdog.exe"
+  },
+  {
+    "ProcessId": 21644,
+    "ParentProcessId": 21728,
+    "Name": "ImeService.exe",
+    "ExecutablePath": null
+  },
+  {
+    "ProcessId": 2748,
+    "ParentProcessId": 1500,
+    "Name": "RuntimeBroker.exe",
+    "ExecutablePath": "C:\\Windows\\System32\\RuntimeBroker.exe"
+  },
+  {
+    "ProcessId": 24608,
+    "ParentProcessId": 1500,
+    "Name": "RuntimeBroker.exe",
+    "ExecutablePath": "C:\\Windows\\System32\\RuntimeBroker.exe"
+  }
+]

@@ -1,0 +1,229 @@
+[driver] spawning C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\runtime\v0.9.0.0\ImeService.exe ['--test-sami', '--wav', 'C:\\Users\\Ricky\\Documents\\Codex\\2026-09-13\\wo\\work\\doubao-probe\\audio\\tts_zh_16k.wav']
+[driver] pid=18808
+[frida] {'type': 'send', 'payload': {'kind': 'ready'}}
+[driver] script loaded
+[driver] resumed
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '{"extra":{"seq_id":13,"speech_start_to_first_character_duration":492},"results":[{"end_time":0.52,"is_interim":true,"is_offline_result":0,"start_time":0,"text":"����"},{"end_time":0.52,"extra":{"seq_id":13},"is_interim":true,"start_time":0,"stream_asr_finish":false,"text":"����"}]}', 'extra': 'cand0 +0x0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'online', 'extra': 'cand0 +0x5e0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'ime_win_bfe3dced-5bc2-4555-b005-a4aa635cdb8f', 'extra': 'cand0 +0x600'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'results', 'extra': 'cand0 +0x660'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'text', 'extra': 'cand0 +0x680'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'is_vad_finished', 'extra': 'cand0 +0x6a0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '{"extra":{"seq_id":13,"speech_start_to_first_character_duration":492},"results":[{"end_time":0.52,"is_interim":true,"start_time":0,"text":"����"},{"end_time":0.52,"extra":{"seq_id":13},"is_interim":true,"start_time":0,"stream_asr_finish":false,"text":"����"}]}', 'extra': 'cand0 +0xa20'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'a266ea79-9807-4128-81d0-d4ea96d7e3eb', 'extra': 'cand0 +0xa60'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '\n,im', 'extra': 'cand0 +0xaa0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws', 'extra': 'cand3 +0x1a0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'wss://frontier-audio-ime-quic.doubao.com/api/v1/ws', 'extra': 'cand3 +0x1c0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'oime_windows', 'extra': 'cand3 +0x1e0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '{"proto-version":"v2"}', 'extra': 'cand3 +0x200'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '{"aid":"685343","app_name":"ImeService","app_version":"0.9.0","cellularProvider":"","channel":"release","device_brand":"System manufacturer","device_id":"","device_model":"System Product Name","device_platform":"windows","device_type":"Windows","os":"windows","os_version":"Windows 10.0.26200","region":"US","screen_height":"1440","screen_width":"2560","version_name":"0.9.0"}', 'extra': 'cand3 +0x220'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'OrnqKvSSrs', 'extra': 'cand3 +0x240'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '252163708395682', 'extra': 'cand3 +0x280'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '0.9.0', 'extra': 'cand3 +0x2a0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '{"app_name":"ImeService","app_version":"0.9.0","cell_compress_rate":4,"device_brand":"System manufacturer","device_model":"System Product Name","did":"empty","disable_user_words":false,"enable_asr_threepass":true,"enable_asr_twopass":true,"enable_print_chinese":false,"enable_text_filter":true,"finish_wait_offline_time":1000,"join_user_experience_improve_program":false,"max_wait_switch_offline_time":1000,"network_change":{"switch_network_ping_timeout":2000,"switch_network_quality_threshold":4,"switch_network_rtt_threshold":273},"offline_wait_online_interval_time":1000,"offline_wait_online_time":2000,"os":"windows","os_version":"Windows 10.0.26200","remove_space_between_han_eng":true,"remove_space_between_han_num":true,"retry_server_code":[40100000,40100004,50000000,50000104,50700000],"s2a_send_enable":false,"strong_ddc":false,"use_twopass_retry":true}', 'extra': 'cand3 +0x2c0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '{"device_id": "252163708395682", "aid": "685343"}', 'extra': 'cand3 +0x480'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'wss://frontier-audio-ime-quic.doubao.com/api/v1/ws;wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws', 'extra': 'cand3 +0x4c0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'C:\\Users\\Ricky\\Documents\\Codex\\2026-09-13\\wo\\work\\doubao-probe\\audio\\tts_zh_16k.wav', 'extra': 'cand3 +0xc20'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '{"extra":{"seq_id":29,"speech_start_to_first_character_duration":492},"results":[{"end_time":1.159999,"is_interim":true,"is_offline_result":0,"start_time":0,"text":"���Ѥ��a"},{"end_time":1.159999,"extra":{"seq_id":29},"is_interim":true,"start_time":0,"stream_asr_finish":false,"text":"���Ѥ��a"}]}', 'extra': 'cand0 +0x0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '���Ѥ��a', 'extra': 'cand0 +0x20'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'is_offline_result', 'extra': 'cand0 +0x640'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '{"extra":{"seq_id":29,"speech_start_to_first_character_duration":492},"results":[{"end_time":1.159999,"is_interim":true,"start_time":0,"text":"���Ѥ��a"},{"end_time":1.159999,"extra":{"seq_id":29},"is_interim":true,"start_time":0,"stream_asr_finish":false,"text":"���Ѥ��a"}]}', 'extra': 'cand0 +0xa20'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'dd9a4d88-98a6-4074-9d78-9102a3b45937', 'extra': 'cand0 +0xa60'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '{"extra":{"seq_id":35,"speech_start_to_first_character_duration":492},"results":[{"end_time":1.399999,"is_interim":true,"is_offline_result":0,"start_time":0,"text":"���Ѥ��a�ܦn"},{"end_time":1.399999,"extra":{"seq_id":35},"is_interim":true,"start_time":0,"stream_asr_finish":false,"text":"���Ѥ��a�ܦn"}]}', 'extra': 'cand0 +0x0'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '���Ѥ��a�ܦn', 'extra': 'cand0 +0x20'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '{"extra":{"seq_id":35,"speech_start_to_first_character_duration":492},"results":[{"end_time":1.399999,"is_interim":true,"start_time":0,"text":"���Ѥ��a�ܦn"},{"end_time":1.399999,"extra":{"seq_id":35},"is_interim":true,"start_time":0,"stream_asr_finish":false,"text":"���Ѥ��a�ܦn"}]}', 'extra': 'cand0 +0xa20'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '950b4a61-f2c2-4d9e-b7a0-b7365baf9565', 'extra': 'cand0 +0xa60'}}
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 241: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 76: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 219: illegal multibyte sequence
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'f7853ee8-8e3c-4dad-aa51-a28877fb6282', 'extra': 'cand0 +0xa60'}}
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 241: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 76: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 219: illegal multibyte sequence
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'c0d140bb-3600-49ac-9dd8-5cc5b318d57f', 'extra': 'cand0 +0xa60'}}
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 241: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 76: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 219: illegal multibyte sequence
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'ba96979f-2274-4e0d-8812-698651c754e6', 'extra': 'cand0 +0xa60'}}
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 241: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 76: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 219: illegal multibyte sequence
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '6930f3f6-dd9d-4781-b5f2-028757316fc1', 'extra': 'cand0 +0xa60'}}
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 241: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 76: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 219: illegal multibyte sequence
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '9003a768-6658-4a1e-8b49-f2c8cd841bef', 'extra': 'cand0 +0xa60'}}
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 241: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 76: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 219: illegal multibyte sequence
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'cb8bfa66-7dd9-4bfb-87fe-a372fd4693c8', 'extra': 'cand0 +0xa60'}}
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 241: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 76: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 219: illegal multibyte sequence
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '750876c9-e5e0-4b17-a8e3-fec4ea96f89d', 'extra': 'cand0 +0xa60'}}
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 242: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 76: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 220: illegal multibyte sequence
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '429236f3-bb87-4c75-82a1-57a7b3af2c8a', 'extra': 'cand0 +0xa60'}}
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'pong', 'extra': 'cand0 +0xa80'}}
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 242: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 220: illegal multibyte sequence
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '47f38285-6107-4d57-90bf-f19702008abb', 'extra': 'cand0 +0xa60'}}
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 264: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 242: illegal multibyte sequence
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': 'abe03def-43af-4681-9f18-d71107c56d3f', 'extra': 'cand0 +0xa60'}}
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 469: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 1705, in _on_message
+    handler(message, data)
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 61, in on_message
+    print(f"[frida] {message}", flush=True)
+UnicodeEncodeError: 'cp950' codec can't encode character '\u4eec' in position 447: illegal multibyte sequence
+[frida] {'type': 'send', 'payload': {'kind': 'obj-string', 'text': '3b71d94a-1ca3-4e37-9c8b-4199bfe31429', 'extra': 'cand0 +0xa60'}}
+[driver] process 18808 exited
+[driver] exit code = 0 (0x00000000)

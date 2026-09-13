@@ -1,0 +1,247 @@
+[
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog\\applog.cache2",
+    "Length": 409,
+    "LastWriteTime": "2026-09-13T12:48:01.0956801+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog\\applog.db2",
+    "Length": 16,
+    "LastWriteTime": "2026-09-13T14:05:00.4397978+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog\\custom.db2",
+    "Length": 16,
+    "LastWriteTime": "2026-09-13T12:47:59.7725244+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog\\monitor.db2",
+    "Length": 744,
+    "LastWriteTime": "2026-09-13T14:04:59.775374+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog\\session.db2",
+    "Length": 16,
+    "LastWriteTime": "2026-09-13T12:48:01.6766266+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog_settings\\applog.cache2",
+    "Length": 409,
+    "LastWriteTime": "2026-09-13T13:58:12.1909992+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog_settings\\applog.db2",
+    "Length": 2460,
+    "LastWriteTime": "2026-09-13T13:58:12.1939993+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog_settings\\custom.db2",
+    "Length": 16,
+    "LastWriteTime": "2026-09-13T13:58:12.1959984+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog_settings\\monitor.db2",
+    "Length": 1030,
+    "LastWriteTime": "2026-09-13T13:58:12.2010871+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog_settings\\session.db2",
+    "Length": 548,
+    "LastWriteTime": "2026-09-13T13:58:12.2060858+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\conf\\config.json",
+    "Length": 2247,
+    "LastWriteTime": "2026-09-13T13:57:47.5035823+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\conf\\setting_status_last_date.txt",
+    "Length": 10,
+    "LastWriteTime": "2026-09-13T13:57:47.5191017+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\dict\\asr_user_ner_dict.dat",
+    "Length": 90184,
+    "LastWriteTime": "2026-09-13T14:03:58.8766995+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\dict\\common_phrase_dict.dat",
+    "Length": 44088,
+    "LastWriteTime": "2026-09-13T14:03:58.8706275+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\dict\\usr_bigram.dat",
+    "Length": 140204,
+    "LastWriteTime": "2026-09-13T14:03:58.836103+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\dict\\usr_emailaddress.dat",
+    "Length": 75080,
+    "LastWriteTime": "2026-09-13T14:03:58.8516105+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\dict\\usr_enhance.dat",
+    "Length": 180200,
+    "LastWriteTime": "2026-09-13T14:03:58.828594+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\dict\\usr_history_bigram.dat",
+    "Length": 140204,
+    "LastWriteTime": "2026-09-13T14:03:58.8421012+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\dict\\usr_url.dat",
+    "Length": 75080,
+    "LastWriteTime": "2026-09-13T14:03:58.8611168+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\dict\\usr.dat",
+    "Length": 90204,
+    "LastWriteTime": "2026-09-13T14:03:58.8202485+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\log\\alog\\alog\\cache\\DoubaoImeSettings__default__00000.alog.cache",
+    "Length": 65536,
+    "LastWriteTime": "2026-09-13T12:48:02.2942757+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\log\\alog\\alog\\cache\\DoubaoImeSettings__default__00001.alog.cache",
+    "Length": 65536,
+    "LastWriteTime": "2026-09-13T12:48:02.2942757+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\log\\alog\\alog\\cache\\DoubaoImeSettings__default__00002.alog.cache",
+    "Length": 65536,
+    "LastWriteTime": "2026-09-13T12:48:02.2952759+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\log\\alog\\alog\\cache\\ImeService__default__00000.alog.cache",
+    "Length": 65536,
+    "LastWriteTime": "2026-09-13T12:48:00.0894779+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\log\\alog\\alog\\cache\\ImeService__default__00001.alog.cache",
+    "Length": 65536,
+    "LastWriteTime": "2026-09-13T12:48:00.0894779+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\log\\alog\\alog\\cache\\ImeService__default__00002.alog.cache",
+    "Length": 65536,
+    "LastWriteTime": "2026-09-13T12:48:00.0909462+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\log\\alog\\alog\\log\\2026_09_13_1789274880090__ImeService__default.alog.hot",
+    "Length": 3057401,
+    "LastWriteTime": "2026-09-13T14:05:24.5712717+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\log\\alog\\alog\\log\\2026_09_13_1789274882295__DoubaoImeSettings__default.alog.hot",
+    "Length": 2838,
+    "LastWriteTime": "2026-09-13T12:53:03.1512868+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\log\\alog\\alog\\log\\2026_09_13_1789275183151__DoubaoImeSettings__default.alog.hot",
+    "Length": 2837,
+    "LastWriteTime": "2026-09-13T13:57:36.8085196+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait\\Crash\\crash_metadata",
+    "Length": 0,
+    "LastWriteTime": "2026-09-13T12:51:00.1491412+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait\\Crash\\fulldmp_metadata",
+    "Length": 0,
+    "LastWriteTime": "2026-09-13T12:51:00.1511421+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait\\Crash\\gwpasan_metadata",
+    "Length": 0,
+    "LastWriteTime": "2026-09-13T12:51:00.1511421+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait\\Crash\\jank_metadata",
+    "Length": 0,
+    "LastWriteTime": "2026-09-13T12:51:00.1491412+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait\\Crash\\settings.dat",
+    "Length": 40,
+    "LastWriteTime": "2026-09-13T12:48:00.1389512+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait\\lock\\685343\\ImeService_21644",
+    "Length": 0,
+    "LastWriteTime": "2026-09-13T12:48:00.1419517+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait\\settings\\685343\\pft_0.9.0_\\pft_release\\2521637083956824.pftconfig",
+    "Length": 997,
+    "LastWriteTime": "2026-09-13T14:03:02.0717973+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait_settings\\Crash\\crash_metadata",
+    "Length": 0,
+    "LastWriteTime": "2026-09-13T12:51:02.3418581+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait_settings\\Crash\\fulldmp_metadata",
+    "Length": 0,
+    "LastWriteTime": "2026-09-13T12:51:02.3433696+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait_settings\\Crash\\gwpasan_metadata",
+    "Length": 0,
+    "LastWriteTime": "2026-09-13T12:51:02.3433696+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait_settings\\Crash\\jank_metadata",
+    "Length": 0,
+    "LastWriteTime": "2026-09-13T12:51:02.3418581+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait_settings\\Crash\\settings.dat",
+    "Length": 40,
+    "LastWriteTime": "2026-09-13T13:57:36.8405841+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait_settings\\lock\\685343\\DoubaoImeSettings_11908",
+    "Length": 0,
+    "LastWriteTime": "2026-09-13T13:57:36.8425894+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait_settings\\ready\\685343\\0\\0_1789279092_1_11908_0",
+    "Length": 373,
+    "LastWriteTime": "2026-09-13T13:58:12.1588364+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\parfait_settings\\settings\\685343\\pft_0.9.0_\\pft_inhouse\\2521637083956824.pftconfig",
+    "Length": 1112,
+    "LastWriteTime": "2026-09-13T13:57:37.0800423+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\ttnet\\node_race_results",
+    "Length": 0,
+    "LastWriteTime": "2026-09-13T14:05:05.8625821+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\ttnet\\server.json",
+    "Length": 1395,
+    "LastWriteTime": "2026-09-13T12:48:05.4710728+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\ttnet\\tt_net_config.config",
+    "Length": 129,
+    "LastWriteTime": "2026-09-13T13:57:36.9519306+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\ttnet\\version",
+    "Length": 4,
+    "LastWriteTime": "2026-09-13T12:48:02.3055566+08:00"
+  },
+  {
+    "FullName": "C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\ttnet\\prefs\\local_prefs.json",
+    "Length": 666,
+    "LastWriteTime": "2026-09-13T14:04:32.3695362+08:00"
+  }
+]

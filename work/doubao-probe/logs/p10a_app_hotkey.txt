@@ -1,0 +1,1 @@
+[app] ready - hold 'right alt' to talk, release to insert text

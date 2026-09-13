@@ -1,0 +1,70 @@
+
+=== style=args-only ===
+  cmdline: --test-sami --wav C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\audio\full_16k_mono.wav
+[2026-09-13 14:11:19.683] [info] [server_main.cpp:2459] server start. [pid=11416].
+  out: [2026-09-13 14:11:19.683] [info] [server_main.cpp:2459] server start. [pid=11416].
+[2026-09-13 14:11:19.684] [warning] [service_process_bootstrapper.cpp:65] update activity query server start failed
+  out: [2026-09-13 14:11:19.684] [warning] [service_process_bootstrapper.cpp:65] update activity query server start failed
+[2026-09-13 14:11:19.686] [info] [applog_runtime.cpp:154] [applog-runtime] init begin process=ImeService appid=685343 channel=release db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog app_version=0.9.0 encrypt=true event_verify=false
+[2026-09-13 14:11:19.686] [info] [applog_runtime.cpp:100] [applog-runtime] did ready: 2521637083956824
+[2026-09-13 14:11:19.686] [info] [applog_runtime.cpp:103] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog
+  out: [2026-09-13 14:11:19.686] [info] [applog_runtime.cpp:154] [applog-runtime] init begin process=ImeService appid=685343 channel=release db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog app_version=0.9.0 encrypt=true event_verify=false
+  out: [2026-09-13 14:11:19.686] [info] [applog_runtime.cpp:100] [applog-runtime] did ready: 2521637083956824
+  out: [2026-09-13 14:11:19.686] [info] [applog_runtime.cpp:103] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog
+[2026-09-13 14:11:19.687] [info] [applog_runtime.cpp:180] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog
+[2026-09-13 14:11:19.687] [info] [applog_runtime.cpp:182] [applog-runtime] current did=2521637083956824
+  out: [2026-09-13 14:11:19.687] [info] [applog_runtime.cpp:180] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog
+  out: [2026-09-13 14:11:19.687] [info] [applog_runtime.cpp:182] [applog-runtime] current did=2521637083956824
+Server Already Exists.
+Existing.
+[*** LOG ERROR #0001 ***] [2026-09-13 14:11:19] [] {async log: thread pool doesn't exist anymore [C:\Workfolder\oime\obric-ime4\src\ime_ui\voice_wave_model.cpp(290)]}
+  out: [*** LOG ERROR #0001 ***] [2026-09-13 14:11:19] [] {async log: thread pool doesn't exist anymore [C:\Workfolder\oime\obric-ime4\src\ime_ui\voice_wave_model.cpp(290)]}
+  out: Server Already Exists.
+
+Existing.
+
+=== style=with-exe ===
+  cmdline: C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\runtime\v0.9.0.0\ImeService.exe --test-sami --wav C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\audio\full_16k_mono.wav
+[2026-09-13 14:11:20.834] [info] [server_main.cpp:2395] start sami file test wav=C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\audio\full_16k_mono.wav
+  out: [2026-09-13 14:11:20.834] [info] [server_main.cpp:2395] start sami file test wav=C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\audio\full_16k_mono.wav
+[2026-09-13 14:11:20.835] [info] [sami_asr_client_win.cpp:936] sami extra space_between_zh_and_num enable=0 remove_space=1
+[2026-09-13 14:11:20.835] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinputsuccess: redirect_print_string_to_oslog(00007FF730E16950) idx 0
+  out: [2026-09-13 14:11:20.835] [info] [sami_asr_client_win.cpp:936] sami extra space_between_zh_and_num enable=0 remove_space=1
+[2026-09-13 14:11:20.835] [info] [sami_asr_client_win.cpp:936] sami extra space_between_zh_and_num enable=0 remove_space=1
+[2026-09-13 14:11:20.835] [info] [sami_asr_client_win.cpp:297] sami asr start begin reused_pool=0 frontier=0 connect_pool=0 idle_scheduled=0
+  out: [2026-09-13 14:11:20.835] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinputsuccess: redirect_print_string_to_oslog(00007FF730E16950) idx 0
+  [guard-hit] {'kind': 'guard-hit', 'didField': '0x0', 'rdi': '0x8520cfe710'}
+  [patched] {'kind': 'patched'}
+  out: [2026-09-13 14:11:20.835] [info] [sami_asr_client_win.cpp:936] sami extra space_between_zh_and_num enable=0 remove_space=1
+  out: [2026-09-13 14:11:20.835] [info] [sami_asr_client_win.cpp:297] sami asr start begin reused_pool=0 frontier=0 connect_pool=0 idle_scheduled=0
+[2026-09-13 14:11:20.837] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: createFrontierWithParams@CronetFrontierClientHelper.cpp:58] create frontier header success
+
+[2026-09-13 14:11:20.837] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: CronetFrontierClient@CronetFrontierClient.cpp:23] CronetFrontierClient()
+
+  out: [2026-09-13 14:11:20.837] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: createFrontierWithParams@CronetFrontierClientHelper.cpp:58] create frontier header success
+  out: [2026-09-13 14:11:20.837] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: CronetFrontierClient@CronetFrontierClient.cpp:23] CronetFrontierClient()
+[2026-09-13 14:11:20.839] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: initEngine@sami_core_ttnet_engine_manager.cpp:71]  sami sdk init ttnet, sdk use non-inject
+
+  out: [2026-09-13 14:11:20.839] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: initEngine@sami_core_ttnet_engine_manager.cpp:71]  sami sdk init ttnet, sdk use non-inject
+  cmdline: C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\runtime\v0.9.0.0\ImeService.exe --test-sami --wav C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\audio\full_16k_mono.wav
+[2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: getParams@CronetFrontierClientHelper.cpp:79] getParams success, url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws
+
+[2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:74] Frontier config url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws, did: , aid: 685343
+
+[2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: parseUrl@url_utils.cpp:51] frontier-audio-ime-quic.doubao.com/api/v1/ws to frontier-audio-ime-quic.doubao.com /api/v1/ws 
+
+[2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:118] frontier connect timeout: 5000
+
+[2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:133] create frontier header success
+
+[2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:146] frontier query: aid=685343&app_name=ImeService&app_version=0.9.0&cellularProvider=&channel=release&device_brand=System manufacturer&device_id=&device_model=System Product Name&device_platform=windows&device_type=Windows&os=windows&os_version=Windows 10.0.26200&region=US&screen_height=1440&screen_width=2560&version_name=0.9.0
+
+  out: [2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: getParams@CronetFrontierClientHelper.cpp:79] getParams success, url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws
+  out: [2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:74] Frontier config url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws, did: , aid: 685343
+  out: [2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: parseUrl@url_utils.cpp:51] frontier-audio-ime-quic.doubao.com/api/v1/ws to frontier-audio-ime-quic.doubao.com /api/v1/ws
+[2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:175] configParams finished
+
+[2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: updateFrontierPingInterval@CronetFrontierClientHelper.cpp:66] updatePingInterval ping_period_mills: 3000
+
+[2026-09-13 14:11:20.928] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: updatePingInterval@CronetFrontierClient.cpp:189] update ping period mills: 3000
+

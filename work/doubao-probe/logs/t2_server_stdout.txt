@@ -1,0 +1,7 @@
+[2026-09-13 14:07:24.547] [info] [server_main.cpp:2459] server start. [pid=22044].
+[2026-09-13 14:07:24.551] [warning] [service_process_bootstrapper.cpp:65] update activity query server start failed
+[2026-09-13 14:07:24.553] [info] [applog_runtime.cpp:154] [applog-runtime] init begin process=ImeService appid=685343 channel=release db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog app_version=0.9.0 encrypt=true event_verify=false
+[2026-09-13 14:07:24.553] [info] [applog_runtime.cpp:100] [applog-runtime] did ready: 2521637083956824
+[2026-09-13 14:07:24.553] [info] [applog_runtime.cpp:103] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog
+[2026-09-13 14:07:24.554] [info] [applog_runtime.cpp:180] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog
+[2026-09-13 14:07:24.554] [info] [applog_runtime.cpp:182] [applog-runtime] current did=2521637083956824

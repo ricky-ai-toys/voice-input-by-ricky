@@ -1,0 +1,17 @@
+[driver] spawning C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\runtime\v0.9.0.0\ImeService.exe ['--test-sami', '--wav', 'C:\\Users\\Ricky\\Documents\\Codex\\2026-09-13\\wo\\work\\doubao-probe\\audio\\full_16k_mono.wav']
+[driver] pid=31944
+[frida] {'type': 'send', 'payload': {'kind': 'init', 'base': '0x7ff730700000', 'guard': '0x7ff730e17762'}}
+[driver] script loaded
+[driver] resumed
+[frida] {'type': 'send', 'payload': {'kind': 'stdout', 'text': '[2026-09-13 14:10:51.301] [info] [server_main.cpp:2459] server start. [pid=31944].\r\n'}}
+[frida] {'type': 'send', 'payload': {'kind': 'stdout', 'text': '[2026-09-13 14:10:51.303] [warning] [service_process_bootstrapper.cpp:65] update activity query server start failed\r\n'}}
+[frida] {'type': 'send', 'payload': {'kind': 'stdout', 'text': '[2026-09-13 14:10:51.305] [info] [applog_runtime.cpp:154] [applog-runtime] init begin process=ImeService appid=685343 channel=release db_dir=C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog app_version=0.9.0 encrypt=true event_verify=false\r\n'}}
+[frida] {'type': 'send', 'payload': {'kind': 'stdout', 'text': '[2026-09-13 14:10:51.305] [info] [applog_runtime.cpp:100] [applog-runtime] did ready: 2521637083956824\r\n'}}
+[frida] {'type': 'send', 'payload': {'kind': 'stdout', 'text': '[2026-09-13 14:10:51.305] [info] [applog_runtime.cpp:103] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog\r\n'}}
+[frida] {'type': 'send', 'payload': {'kind': 'stdout', 'text': '[2026-09-13 14:10:51.306] [info] [applog_runtime.cpp:180] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\\Users\\Ricky\\AppData\\Roaming\\DoubaoIme\\applog\r\n'}}
+[frida] {'type': 'send', 'payload': {'kind': 'stdout', 'text': 'Server Already Exists.\r\n'}}
+[frida] {'type': 'send', 'payload': {'kind': 'stdout', 'text': '[2026-09-13 14:10:51.306] [info] [applog_runtime.cpp:182] [applog-runtime] current did=2521637083956824\r\n'}}
+[frida] {'type': 'send', 'payload': {'kind': 'stdout', 'text': 'Existing.\r\n'}}
+[frida] {'type': 'send', 'payload': {'kind': 'stdout', 'text': '[*** LOG ERROR #0001 ***] [2026-09-13 14:10:51] [] {bad_weak_ptr [C:\\Workfolder\\oime\\obric-ime4\\src\\ime_ui\\voice_wave_model.cpp(290)]}\r\n'}}
+[driver] process 31944 exited
+[driver] exit code = 1 (0x00000001)

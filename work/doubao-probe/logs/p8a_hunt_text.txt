@@ -1,0 +1,17 @@
+[driver] spawning C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\runtime\v0.9.0.0\ImeService.exe ['--test-sami', '--wav', 'C:\\Users\\Ricky\\Documents\\Codex\\2026-09-13\\wo\\work\\doubao-probe\\audio\\full_16k_mono.wav']
+Traceback (most recent call last):
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 95, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\scripts\run_sami_probe.py", line 51, in main
+    pid = frida.spawn(args.exe, argv=[args.exe] + argv, cwd=cwd, env=env, stdio="inherit")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 302, in spawn
+    return get_local_device().spawn(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 646, in spawn
+    return _invoke(self._impl.spawn, (program, options, ))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ricky\AppData\Roaming\Python\Python312\site-packages\frida\__init__.py", line 240, in _invoke
+    raise error
+frida.NotSupportedError: unable to spawn executable at 'C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\runtime\v0.9.0.0\ImeService.exe': 0x000002e4

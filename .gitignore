@@ -1,0 +1,25 @@
+# ---- build / packaging artifacts -------------------------------------------------
+work/doubao-probe/build/
+work/doubao-probe/dist/
+work/doubao-probe/*.spec
+
+# ---- third-party binaries (vendor runtime copies, bundled app) -------------------
+# not committed: large (300MB+) and belongs to Beijing Chuntian Zhiyun Technology
+work/doubao-probe/runtime/
+outputs/DoubaoVoicePortable/app/
+outputs/DoubaoVoicePortable/runtime/
+
+# ---- audio: user recordings and derived wavs -------------------------------------
+work/doubao-probe/audio/
+*.wav
+*.m4a
+
+# ---- runtime data / logs ---------------------------------------------------------
+work/doubao-probe/data/
+outputs/DoubaoVoicePortable/data/logs/
+outputs/DoubaoVoicePortable/data/last_recording.wav
+
+# ---- python ----------------------------------------------------------------------
+__pycache__/
+*.pyc
+.venv/

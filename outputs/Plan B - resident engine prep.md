@@ -66,3 +66,31 @@ pool**, and hands the recognized text to the foreground client through a **local
 
 No administrator rights are involved anywhere in Plan B: it runs the same user-owned copy of
 the engine, only driven through its local pipe instead of a temporary WAV file.
+
+---
+
+## Litmus test result (2026-09-13)
+
+```
+> python work\doubao-probe\planb\try_ensure_server.py <runtime> 0
+[call] RpcPipe_EnsureServerRunning() -> True          # no arguments needed
+> python ... <runtime> 2
+[call] RpcPipe_EnsureServerRunning('\\.\pipe\ObricIme\oime-server') -> True
+> python ... <runtime> 1
+CreateRpcClient() crashed the caller                        # not a real export shape
+```
+
+What this proves:
+* a plain Python process can load the copy's `rpc.dll` and bind its exports;
+* `RpcPipe_EnsureServerRunning()` takes **no arguments** and returns true - the client-side
+  bootstrap into the engine works, and the pipe surface is reachable from user code.
+
+What it does **not** prove yet:
+* no new engine process appeared, so the call found the *already running* installed engine
+  (PID 21644) instead of starting our copy's server. On a machine without the official IME the
+  server has to be started by us - which is exactly what `patch_pipe_name.py` enables (private
+  pipe name, then start the copy in server mode and call `EnsureServerRunning` again).
+
+Next step for the fork: patch the pipe name in a scratch copy, start that copy as a server,
+re-run the litmus test against the private pipe, then recover the signatures of
+`RpcPipe_KeyEvent`, `RpcPipe_PeekVoiceCommitUtf8` and `RpcPipe_AckVoiceCommit`.

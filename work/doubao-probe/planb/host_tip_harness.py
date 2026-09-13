@@ -338,6 +338,10 @@ WM_KEYDOWN = 0x0100
 WM_KEYUP = 0x0101
 SW_SHOWNOACTIVATE = 4
 WS_POPUP = 0x80000000
+WS_CHILD = 0x40000000
+WS_VISIBLE = 0x10000000
+ES_MULTILINE = 0x0004
+ES_AUTOVSCROLL = 0x0040
 
 
 class MSG(ctypes.Structure):
@@ -355,7 +359,7 @@ class WNDCLASS(ctypes.Structure):
 WNDPROC = ctypes.WINFUNCTYPE(ctypes.c_ssize_t, wt.HWND, wt.UINT, wt.WPARAM, wt.LPARAM)
 user32.PeekMessageW.argtypes = [ctypes.POINTER(MSG), wt.HWND, wt.UINT, wt.UINT, wt.UINT]
 user32.PeekMessageW.restype = wt.BOOL
-_state = {"deadline": 0.0, "alt_down": False}
+_state = {"deadline": 0.0, "alt_down": False, "edit": 0}
 
 
 def _wndproc(hwnd, msg, wparam, lparam):
@@ -382,6 +386,14 @@ def create_host_window():
     user32.RegisterClassW(ctypes.byref(wc))
     hwnd = user32.CreateWindowExW(0, "DoubaoHarnessHostWnd", "DoubaoHarnessHost",
                                   WS_POPUP, -2000, -2000, 200, 100, None, None, hinst, None)
+    # a real EDIT control: this makes the process look like a genuine text host, which is
+    # what the IME wants before it installs its input handling
+    edit = user32.CreateWindowExW(0, "EDIT", "",
+                                  WS_CHILD | WS_VISIBLE | ES_MULTILINE | ES_AUTOVSCROLL,
+                                  0, 0, 200, 100, hwnd, None, hinst, None)
+    _state["edit"] = edit
+    if edit:
+        user32.SetFocus(edit)
     return hwnd
 
 

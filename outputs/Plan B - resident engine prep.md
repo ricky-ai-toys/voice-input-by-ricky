@@ -411,3 +411,34 @@ conclusion for the fork is unchanged:
 * the **client side** needs either one captured real voice session (to replay the op codes) or
   the IME's own UI/shell, which engages only in a genuinely focused text host with the IME
   selected as the active language profile.
+
+### Milestone 11 - a real EDIT control makes the IME accept our host; the receiving half works
+
+Adding a genuine Win32 `EDIT` control to the host window (instead of a bare window) changed
+everything on the receiving side. The core now treats us as a real text host and runs its voice
+polling loop (TLOG):
+
+```
+ReportEditFocusState editable=1 has_ctx=1 readonly=...
+QueryServerVoiceState state=0x0
+PeekVoiceCommitText len=0 session=0
+PullCommitText len=0
+DrainServerDirtyState has_commit=0 commit_len=0
+```
+
+So **the text pickup path is live inside our host**: as soon as the engine has a voice session
+with committed text, `PeekVoiceCommitText` returns it and the core inserts it into our text
+store - exactly the half of Plan B we need for output.
+
+What is still missing is the *trigger*: `state` stays `0x0` even when we inject a real Right
+Alt (SendInput, host window focused). Module inventory of the host process shows
+`tsf-oime.dll`, `tsf-oime-core.dll`, `rpc.dll` - but **no `ui.dll`**, so the push-to-talk key
+lives in the IME's UI layer, which a hosted core does not load.
+
+Two ways forward, both small:
+
+1. capture one real voice session's RPC frames (needs the user to press Right Alt once in a
+   real app window while `capture_pipe_attached.py` is attached) - then we know the op codes
+   and can start the session from our own client;
+2. find what makes the core load `ui.dll` (candidate window / status bar creation path) and
+   host that too - bigger, more fragile.

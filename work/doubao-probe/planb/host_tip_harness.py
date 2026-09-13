@@ -27,6 +27,12 @@ CLSID_DOUBAO_TIP = "{9D2B2E2B-3C93-4D2F-9D35-6EEB85F0D2B0}"
 IID_ITfTextInputProcessor = "{AA80E7F7-2021-11D2-93E0-0060B067B86E}"
 IID_ITfKeyEventSink = "{AA80E7F5-2021-11D2-93E0-0060B067B86E}"
 IID_ITextStoreACP = "{28888FE3-C2A0-483A-A3EA-8CB1CE51FF3E}"
+IID_ITfInputProcessorProfileMgr = "{71C6E74C-0F28-11D8-A82A-00065B84435C}"
+CLSID_TF_INPUT_PROCESSOR_PROFILES = "{33C53A50-F456-4884-B049-85FD643ECFED}"
+DOUBAO_PROFILE = "{2B4D4B3A-4D4F-4C0A-8E66-7F771A2B9C10}"
+LANGID_CHS = 0x0804
+TF_PROFILETYPE_INPUTPROCESSOR = 0x1
+TF_IPPMF_FORPROCESS = 0x10000000
 
 VK_RMENU = 0xA5
 TS_LF_READWRITE = 0x6
@@ -301,7 +307,12 @@ def vcall(ptr: int, slot: int, restype, argtypes, *args):
 
 
 def main() -> int:
-    hold = float(sys.argv[1]) if len(sys.argv) > 1 else 6.0
+    hold = 6.0
+    for arg in sys.argv[1:]:
+        try:
+            hold = float(arg)
+        except ValueError:
+            continue  # run_with_hooks.py passes the runtime dir as the first argument
     ole32.CoInitialize(None)
 
     tm = ctypes.c_void_p()
@@ -355,6 +366,22 @@ def main() -> int:
     print(f"[5] CoCreateInstance(TIP) hr=0x{hr & 0xFFFFFFFF:08X}", flush=True)
     hr = vcall(tip.value, 3, ctypes.c_long, [ctypes.c_void_p, wt.DWORD], tm.value, tid.value)
     print(f"[6] Activate hr=0x{hr & 0xFFFFFFFF:08X}", flush=True)
+
+    # make our synthetic host look like a normal app that selected the Doubao profile
+    pmgr = ctypes.c_void_p()
+    hr = ole32.CoCreateInstance(ctypes.byref(GUID.parse(CLSID_TF_INPUT_PROCESSOR_PROFILES)), None, 1,
+                                ctypes.byref(GUID.parse(IID_ITfInputProcessorProfileMgr)),
+                                ctypes.byref(pmgr))
+    print(f"[6.5] ITfInputProcessorProfileMgr hr=0x{hr & 0xFFFFFFFF:08X} ptr={pmgr.value}", flush=True)
+    if pmgr.value:
+        clsid = GUID.parse(CLSID_DOUBAO_TIP)
+        profile = GUID.parse(DOUBAO_PROFILE)
+        hr = vcall(pmgr.value, 3, ctypes.c_long,
+                   [wt.DWORD, wt.DWORD, ctypes.POINTER(GUID), ctypes.POINTER(GUID),
+                    ctypes.c_void_p, wt.DWORD],
+                   TF_PROFILETYPE_INPUTPROCESSOR, LANGID_CHS, ctypes.byref(clsid),
+                   ctypes.byref(profile), None, TF_IPPMF_FORPROCESS)
+        print(f"[6.6] ActivateProfile(doubao, 0x0804, FORPROCESS) hr=0x{hr & 0xFFFFFFFF:08X}", flush=True)
 
     kev = ctypes.c_void_p()
     hr = vcall(tip.value, 0, ctypes.c_long, [ctypes.POINTER(GUID), ctypes.POINTER(ctypes.c_void_p)],

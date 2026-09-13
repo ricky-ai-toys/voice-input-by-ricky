@@ -313,3 +313,37 @@ activating the input profile so the service considers itself the active IME
 
 So the main pipe is a framed RPC channel (`OMPE`, version 1, u16 op, u32 length), and the
 `-tsf-log` pipe carries `TLOG` records (the core's own log stream - useful as a debug feed).
+
+### Milestone 7 - profile activated, core log readable, keystrokes still not delivered
+
+`host_tip_harness.py` now also activates the input profile for our own process only:
+
+```
+[6.5] ITfInputProcessorProfileMgr hr=0x00000000
+[6.6] ActivateProfile(doubao, 0x0804, FORPROCESS) hr=0x00000000
+[7]   QI(ITfKeyEventSink) hr=0x80004002          <-- still no key sink on the TIP object
+```
+
+`dwFlags = TF_IPPMF_FORPROCESS (0x10000000)` keeps this local: the user's system-wide IME
+selection is untouched.
+
+The `-tsf-log` pipe turned out to be a **readable log stream** from the core, which is the
+observability we were missing (`decode_tlog.py` parses captures):
+
+```
+DllMain PROCESS_ATTACH
+TSF_STATE tag=DllMain.PROCESS_ATTACH proc=python.exe
+LangBar AddItem ok
+OnFocusChanged(true) begin.
+```
+
+So the service *does* see our context and installs its UI plumbing. But after injecting
+synthesized Right Alt, the core log contains **zero** key/voice entries - the keystroke never
+reaches TSF. That is expected for a synthetic host: TSF only routes keys (and only installs
+per-process key handling) when the host has a **real window with keyboard focus and a message
+loop**, and the app must also expose `ITfMessagePump` to the thread manager.
+
+Next step (bounded): give the harness a real hidden/offscreen Win32 window + message loop,
+implement `ITfMessagePump` and advise it to the thread manager, then send keys to that window
+and watch the TLOG stream for `voice_start`-style entries. If the TIP still exposes no key
+sink, the fallback is to hook the core's key handler directly and call it.

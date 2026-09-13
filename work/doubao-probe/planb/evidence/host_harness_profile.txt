@@ -1,0 +1,24 @@
+[1] ITfThreadMgr hr=0x00000000
+[2] tid=32 pdm=2786322506848
+[2.2] docmgr vtable=0x7FF8F02891A0 QI(ITfDocumentMgr) hr=0x00000000
+[2.5] text store built, vtable=0x288BE049898
+[2.55] vtable[0..3] = 0x288BDC85110, 0, 0, 0x1
+[qi] QueryInterface({28888FE3-C2A0-483A-A3EA-8CB1CE51FF3E})
+[2.6] store self-test: QI hr=0x00000000 ptr=2786326780056 GetEndACP hr=0x00000000 end=0
+[qi] QueryInterface({9B2077B0-5F18-4DEC-BEE9-3CC722F5DFE0})
+[qi] QueryInterface({28888FE3-C2A0-483A-A3EA-8CB1CE51FF3D})
+[qi] QueryInterface({F86AD89F-5FE4-4B8D-BB9F-EF3797A84F1F})
+[qi] QueryInterface({5F20AA40-B57A-4F34-96AB-3576F377CC79})
+[qi] QueryInterface({86B4403F-C187-4A8B-B13E-C93C4AD1078C})
+[3] CreateContext done
+[3] CreateContext(store) hr=0x00000000 pic=2786322507120
+[4] SetFocus(docmgr) hr=0x00000000
+[5] CoCreateInstance(TIP) hr=0x00000000
+[6] Activate hr=0x00000000
+[6.5] ITfInputProcessorProfileMgr hr=0x00000000 ptr=2786328603696
+[6.6] ActivateProfile(doubao, 0x0804, FORPROCESS) hr=0x00000000
+[7] QI(ITfKeyEventSink) hr=0x80004002 ptr=None
+[7.5] sending synthesized Right Alt (low-level hook path) ...
+[7.6] Right Alt down, holding ...
+[7.7] Right Alt up
+[11] store text=''

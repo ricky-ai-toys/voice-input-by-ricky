@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py", line 426, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py", line 310, in main
+    hold = float(sys.argv[1]) if len(sys.argv) > 1 else 6.0
+           ^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'C:\\Users\\Ricky\\Documents\\Codex\\2026-09-13\\wo\\work\\doubao-probe\\planb\\scratch'
+[summary] pipe opens observed: 23
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\pyvenv.cfg
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\pyvenv.cfg
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python312._pth
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python._pth
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\pybuilddir.txt
+[summary]   \??\C:\WINDOWS\SYSTEM32\tzres.dll
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\aliases.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\utf_8.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\distutils-precedence.pth
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\utf_8_sig.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\_distutils_hack\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\ctypes\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\types.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\struct.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\ctypes\__pycache__\_endian.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\ctypes\__pycache__\wintypes.cpython-312.pyc

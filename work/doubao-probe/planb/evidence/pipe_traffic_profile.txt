@@ -1,0 +1,138 @@
+[1] ITfThreadMgr hr=0x00000000 ptr=2226445335552
+[2] ITfThreadMgr::Activate hr=0x00000000 tid=32
+[3] CreateDocumentMgr hr=0x00000000 ptr=2226408814352
+[4] CoCreateInstance(ITfTextInputProcessorEx) hr=0x80004002 ptr=None
+[4b] base ITfTextInputProcessor hr=0x00000000 ptr=2226445745568
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=2335 head=544c4f47010000001309000013000000470000005b323032362d30392d31332031393a31383a30312e3937305d5b7069
+      text=TLOG............G...[2026-09-13 19:18:01.970][pid=34312 tid=28016] DllMain PROCESS_ATTACH2./...[2026-09-13 19:18:01.970][pid=34312 tid=28016] TSF_STATE tag=DllMain.PROCESS_ATTACH proc=python.exe pid=3
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server')
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501001b0000000000
+      text=OMPE........
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=000000000000000039fd9b72f87f0000
+      text=........9..r....
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=668 head=544c4f47010000009002000003000000410000005b323032362d30392d31332031393a31383a30312e3937335d5b7069
+      text=TLOG............A...[2026-09-13 19:18:01.973][pid=34312 tid=28016] LangBar AddItem okJ...[2026-09-13 19:18:01.973][pid=34312 tid=28016] OnFocusChanged(true) begin.....[2026-09-13 19:18:01.974][pid=343
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100060016000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=22 head=08860000010000000a000000707974686f6e2e657865
+      text=............python.exe
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=d0e95ed1cf0000001000000000000000
+      text=..^.............
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d504501000c0005000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=5 head=08f8071801
+      text=.....
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=0000000000000000d0e95ed1cf000000
+      text=..........^.....
+[writefile] \\.\pipe\ObricIme\oime-server len=12 head=4f4d50450100150010000000
+      text=OMPE........
+[writefile] \\.\pipe\ObricIme\oime-server len=16 head=1a0e15000000000002000000d78e23c8
+      text=..............#.
+[readfile] \\.\pipe\ObricIme\oime-server len=16 head=01000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[5] Activate hr=0x00000000
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=99 head=544c4f470100000057000000010000004f0000005b323032362d30392d31332031393a31383a30312e3937355d5b7069
+      text=TLOG....W.......O...[2026-09-13 19:18:01.975][pid=34312 tid=28016] UpdateCursorPos GetFocus failed.
+[6] keeping the service alive for 8s (watch for pipe opens)
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=702 head=544c4f4701000000b202000003000000f30100005b323032362d30392d31332031393a31383a30312e3937355d5b7069
+      text=TLOG................[2026-09-13 19:18:01.975][pid=34312 tid=28016] TSF_STATE tag=OnFocusChanged.true.end proc=python.exe pid=34312 tid=28016 thread_hkl=0x0000000004040404 fg_hkl=0x0000000004040404 fg_
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[hook] NtCreateFile('\??\pipe\ObricIme\oime-server-tsf-log')
+[hook] CreateFile('\\.\pipe\ObricIme\oime-server-tsf-log')
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=589 head=544c4f47010000004102000002000000e80100005b323032362d30392d31332031393a31383a30312e3937355d5b7069
+      text=TLOG....A...........[2026-09-13 19:18:01.975][pid=34312 tid=28016] TSF_STATE tag=Activate.end proc=python.exe pid=34312 tid=28016 thread_hkl=0x0000000004040404 fg_hkl=0x0000000004040404 fg_tid=12040 f
+[readfile] \\.\pipe\ObricIme\oime-server-tsf-log len=16 head=00000000000000000000000000000000
+      text=................
+[done]
+[summary] pipe opens observed: 86
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\pyvenv.cfg
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\pyvenv.cfg
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python312._pth
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python._pth
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\pybuilddir.txt
+[summary]   \??\C:\WINDOWS\SYSTEM32\tzres.dll
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\aliases.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\utf_8.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\distutils-precedence.pth
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\encodings\__pycache__\utf_8_sig.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\_distutils_hack\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\probe_activate_tip.py
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\ctypes\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\types.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\struct.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\ctypes\__pycache__\_endian.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\ctypes\__pycache__\wintypes.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\logging\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\re\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\enum.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\operator.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\functools.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\collections\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\keyword.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\reprlib.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\re\__pycache__\_compiler.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\re\__pycache__\_parser.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\re\__pycache__\_constants.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\re\__pycache__\_casefix.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\copyreg.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\traceback.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\collections\__pycache__\abc.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\linecache.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\tokenize.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\token.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\textwrap.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\contextlib.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\warnings.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\weakref.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\_weakrefset.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\string.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\threading.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\typing.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\patcher.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\_npsupport.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\_tlib_version_checker.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\GUID.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\_memberspec.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\_post_coinit\__pycache__\__init__.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\_post_coinit\__pycache__\unknwn.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\_post_coinit\__pycache__\_cominterface_meta_patcher.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\hresult.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\_post_coinit\__pycache__\instancemethod.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\_post_coinit\__pycache__\bstr.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\_post_coinit\__pycache__\misc.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\automation.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\datetime.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\decimal.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\numbers.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\_safearray.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\safearray.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\_post_coinit\__pycache__\activeobj.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\_comobject.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\queue.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\__pycache__\heapq.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\_vtbl.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\errorinfo.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\typeinfo.cpython-312.pyc
+[summary]   \??\C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\__pycache__\_meta.cpython-312.pyc
+[summary]   \??\pipe\ObricIme\oime-server-tsf-log
+[summary]   \\.\pipe\ObricIme\oime-server-tsf-log
+[summary]   \??\pipe\ObricIme\oime-server
+[summary]   \\.\pipe\ObricIme\oime-server

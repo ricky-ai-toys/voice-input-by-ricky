@@ -48,9 +48,9 @@ for (const api of ['WriteFile', 'ReadFile']) {
       try {
         const len = args[2].toInt32();
         if (len <= 0 || len > 65536) return;
-        const bytes = new Uint8Array(args[1].readByteArray(len));
+        const bytes = new Uint8Array(args[1].readByteArray(Math.min(len, 1024)));
         let hex = '';
-        for (let i = 0; i < Math.min(bytes.length, 64); i++) {
+        for (let i = 0; i < bytes.length; i++) {
           hex += bytes[i].toString(16).padStart(2, '0');
         }
         send({ kind: api.toLowerCase(), name: name, len: len, hex: hex });
@@ -102,8 +102,10 @@ def main() -> int:
             if "pipe" in name.lower() or "oime" in name.lower():
                 print(f"[hook] {payload.get('api')}('{name}')", flush=True)
         elif payload.get("kind") in ("writefile", "readfile"):
+            raw = bytes.fromhex(payload["hex"])
+            text = "".join(chr(b) if 32 <= b < 127 else "." for b in raw[:200])
             print(f"[{payload['kind']}] {payload['name']} len={payload['len']} "
-                  f"head={payload['hex']}", flush=True)
+                  f"head={payload['hex'][:96]}\n      text={text}", flush=True)
 
     script.on("message", on_message)
     script.load()

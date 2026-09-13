@@ -1,0 +1,1297 @@
+[frida:ready] {'kind': 'ready'}
+[2026-09-13 18:25:43.520] [info] [server_main.cpp:2395] start sami file test wav=C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\audio\three_zh_16k.wav
+[2026-09-13 18:25:43.522] [info] [sami_asr_client_win.cpp:936] sami extra space_between_zh_and_num enable=0 remove_space=1
+[2026-09-13 18:25:43.522] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinputsuccess: redirect_print_string_to_oslog(00007FF7172A6950) idx 0
+[2026-09-13 18:25:43.522] [info] [sami_asr_client_win.cpp:936] sami extra space_between_zh_and_num enable=0 remove_space=1
+[2026-09-13 18:25:43.522] [info] [sami_asr_client_win.cpp:297] sami asr start begin reused_pool=0 frontier=0 connect_pool=0 idle_scheduled=0
+[2026-09-13 18:25:43.522] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: createFrontierWithParams@CronetFrontierClientHelper.cpp:58] create frontier header success
+
+[2026-09-13 18:25:43.522] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: CronetFrontierClient@CronetFrontierClient.cpp:23] CronetFrontierClient()
+
+[2026-09-13 18:25:43.522] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: initEngine@sami_core_ttnet_engine_manager.cpp:71]  sami sdk init ttnet, sdk use non-inject
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: getParams@CronetFrontierClientHelper.cpp:79] getParams success, url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:74] Frontier config url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws, did: 252163708395682, aid: 685343
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: parseUrl@url_utils.cpp:51] frontier-audio-ime-quic.doubao.com/api/v1/ws to frontier-audio-ime-quic.doubao.com /api/v1/ws 
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:118] frontier connect timeout: 5000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:133] create frontier header success
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:146] frontier query: aid=685343&app_name=ImeService&app_version=0.9.0&cellularProvider=&channel=release&device_brand=System manufacturer&device_id=&device_model=System Product Name&device_platform=windows&device_type=Windows&os=windows&os_version=Windows 10.0.26200&region=US&screen_height=1440&screen_width=2560&version_name=0.9.0
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:175] configParams finished
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: updateFrontierPingInterval@CronetFrontierClientHelper.cpp:66] updatePingInterval ping_period_mills: 3000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: updatePingInterval@CronetFrontierClient.cpp:189] update ping period mills: 3000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StartThreadRunner@IBaseThreadRunner.cpp:25]  ******* SAMIConnectPoolService StartThreadRunner
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@SAMIConnectPoolContext.cpp:28] ConnectPool params protocol_type: 3, timeout: 5000, url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws;wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws, appKey: OrnqKvSSrs
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: addConnectClient@SAMIConnectPoolService.cpp:37] addConnectClient oime_windows wss://frontier-audio-ime-quic.doubao.com/api/v1/ws;wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws 2
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMICoreCreateHandleByIdentify@sami_core.cpp,766]  create handle by 670
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMICoreCreateHandleByIdentify@sami_core.cpp,768]  version: sami_core vwin_14.92.1-alpha.10-oinput-8b72bf47170117351a094eaf2943f37bf3922da5 (2026-07-17 14:42:31 +0800)
+
+
+
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: AsrProcessor@asr_processor.cpp:47] AsrProcessor() 000001D583E6E510
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_processor.cpp:803] AsrProcessor::Init 000001D583E6E510
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: operator ()@IBaseThreadRunner.cpp:32]  SAMIConnectPoolService StartThreadRunner begin running
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIConnectPoolClientManager@SAMIConnectPoolClientManager.cpp:14] SAMIConnectPoolClientManager
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_processor.cpp:928] finish_wait_offline_time: 1000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_processor.cpp:929] offline_wait_online_time: 2000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_processor.cpp:930] offline_wait_online_interval_time: 1000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIConnectPoolClient@SAMIConnectPoolClient.cpp:22] SAMIConnectPoolClient
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 0, client count: 2
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:131] oime_windows start maintain
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: buildTransportClient@TransportClientFactory.cpp:27] buildTransportClient create frontier client, url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: AsrOnWorker@asr_on_worker.cpp:89] AsrOnWorker()
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIFrontierClientCallback@SAMIFrontierClientCallback.cpp:17] SAMIFrontierClientCallback() 000001D5838B3B00 maps 000001D58194EC80
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIFrontierClient@SAMIFrontierClient.cpp:21] network type: 0, enable reuse: 1
+
+[2026-09-13 18:25:43.584] [error] [sami_asr_client_win.cpp:681] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIFrontierClient@SAMIFrontierClient.cpp:22] client 1d583e386e0 bind 1d5838b3b00, cb 1d58194ec80
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:166] work_mode_: 1
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: registerService@CronetFrontierClient.cpp:287] registerService available_service_queue_: 10
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:206] retry_interval_time_array[0]: 200
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:206] retry_interval_time_array[1]: 400
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:206] retry_interval_time_array[2]: 800
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:206] retry_interval_time_array[3]: 1000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:206] retry_interval_time_array[4]: 1000
+
+[16704:25304:0913/182543.584:ERROR:tt_frontier_client_sdk.cc(2398)] FindAvailableStream service id: 1, service is not ready.
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:206] retry_interval_time_array[5]: 1000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:206] retry_interval_time_array[6]: 1000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:221] asr parameter url: wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws, appkey: OrnqKvSSrs, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, connect timeout: 5000, retry mode: 1, retry count: 7, max buffer count: 6000, finish wait timeout: 2000, max retry time: 9500, multi connection: 0, frame_time_ms: 40
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: registerService@CronetFrontierClient.cpp:322] register d280026d540 id 1 delegate d2800248960
+
+[2026-09-13 18:25:43.584] [error] [sami_asr_client_win.cpp:681] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: startConnection@SAMIFrontierClient.cpp:75] register d280026d540 with 1d583e386e0
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: sendAuth@SAMIConnectPoolClient.cpp:154] send auth ping
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:368] switch network quality threshold: 4
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:369] switch network rtt threshold: 273
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:370] switch network ping timeout: 2000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:371] cell compress rate: 4
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:373] retry server code: 40100000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:373] retry server code: 40100004
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:373] retry server code: 50000000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:373] retry server code: 50000104
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_on_worker.cpp:373] retry server code: 50700000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@sami_core_common_encode_processor.cpp:80] init encode processor ret: 0, rate: 64000, opus type: speech_opus, frame time: 40: 
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ServiceWrapper@service_wrapper.cpp:17] ServiceWrapper()
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: getAvailableTransporter@SAMIConnectPoolService.cpp:63] pool[oime_windows] get client get client
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: getAvailableTransportClient@SAMIConnectPoolClientManager.cpp:131] getAvailableTransportClient transport_resources_ empty
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: getAvailableTransporter@SAMIConnectPoolService.cpp:70] pool[oime_windows] get client failed
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@service_wrapper.cpp:180] connect pool is not available, will create new connection
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: InitConnection@service_wrapper.cpp:227] InitConnection, client type: 0, network type: 0
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIWebsocketTTNetCallback@SAMIWebsocketTTNetCallback.cpp:15] SAMIWebsocketTTNetCallback 000001D5838B3DC0 ref: 000001D583E50870
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@sami_core_ttnet_websocket.cpp:56] websocket init begin, url: wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws, ping pong timeout: 0, network_type: 0, connect timeout: 5000
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: report@sami_core_applog_tracker.cpp:36] [event tracking] event: sami_core_api, param: {"SAMICoreSDKVersion":"win_14.92.1-alpha.10-oinput","algo_name":"","algo_source":"oime_windows","algo_param":"","algo_result":0,"asr_format":"speech_opus","asr_bit_rate":64000.000000}, event_type: behavior
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@sami_core_ttnet_websocket.cpp:68] websocket init url: wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws?aid=685343&app_name=ImeService&app_version=0.9.0&cellularProvider=&channel=release&device_brand=System manufacturer&device_id=252163708395682&device_model=System Product Name&device_platform=windows&device_type=Windows&os=windows&os_version=Windows 10.0.26200&region=US&screen_height=1440&screen_width=2560&version_name=0.9.0
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@sami_core_ttnet_websocket.cpp:102] websocket init end
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: InitConnection@service_wrapper.cpp:248]  client init success
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: updateCallback@SAMIWebsocketTTNetCallback.cpp:22] updateCallback+ 000001D5838B3DC0 ref: 000001D583E50870
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: updateCallback@SAMIWebsocketTTNetCallback.cpp:24] updateCallback- 000001D5838B3DC0 ref: 000001D583E50870
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: NqeCallback@nqe_callback.cpp:146] NqeCallback()
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: MultiNetCallback@multi_net_callback.cpp:81] MultiNetCallback()
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: AudioMemoryPool@audio_memory_pool.h:44] AudioMemoryPool()
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Init@asr_processor.cpp:1006] asr parameter task id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, mode: 1, model_path: 
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Start@asr_processor.cpp:1022] AsrProcessor::Start 000001D583E6E510
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Start@asr_on_worker.cpp:434] start process
+
+[2026-09-13 18:25:43.584] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: UpdateNetworkQuality@asr_on_worker.cpp:1612] network quality type: 7
+
+18:25:43.585 OnFailed called: net::ERR_FAILED, ip=:0, details={"has_upload":false,"is_pending":false,"load_flags":4198400,"load_state":3,"method":"GET","net_error":-2,"network_isolation_key":"null null","request_type":16.0,"status":"FAILED","traffic_annotation":77012883,"traffic_path":"default","ttnet_scheme":true,"url":"https://multinet/get"}, attempts= , dns=-1, connect=-1, ssl=-1, send=-1, proxy=-1, wait=-1, receive=-1, total=-1, reused=0, cached=0, response_content_len=0, total_bytes=0, is_proxy=0, QuicStreamError=0, QuicCloseSource=0, H2ProtocolError=0, RFC7540Error=0
+[2026-09-13 18:25:43.585] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMICoreCreateHandleByIdentify@sami_core.cpp,1818]  create asr v2 handle 000001D583E6E510
+
+[2026-09-13 18:25:43.585] [info] [sami_asr_client_win.cpp:372] sami asr session started business=oime_windows task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 sample_rate=16000 channel=1 frame_time_ms=40 chunk_bytes=1280 reused_pool=0 pending_bytes=0
+[2026-09-13 18:25:43.585] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: report@sami_core_applog_tracker.cpp:36] [event tracking] event: sami_core_api, param: {"SAMICoreSDKVersion":"win_14.92.1-alpha.10-oinput","algo_name":"670","algo_source":"","algo_param":"","algo_result":0}, event_type: behavior
+
+[2026-09-13 18:25:43.585] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:43.585] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Run@asr_on_worker.cpp:1097] AsrOnWorker::Run+ 000001D583E582D0
+
+[2026-09-13 18:25:43.585] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StartAsr@asr_on_worker.cpp:1195] start asr
+
+[2026-09-13 18:25:43.585] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StartConnection@service_wrapper.cpp:257] StartConnection, client type: 0, network type: 0
+
+[2026-09-13 18:25:43.585] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StartConnection@service_wrapper.cpp:296] client from create, client type: 0
+
+[2026-09-13 18:25:43.585] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: startConnection@sami_core_ttnet_websocket.cpp:117] Cronet_WSClient_StartConnection
+
+[2026-09-13 18:25:43.585] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: startConnection@sami_core_ttnet_websocket.cpp:120] WaitForConnectDone+
+
+[2026-09-13 18:25:43.586] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnConnectionStateChanged@SAMIWebsocketTTNetCallback.cpp:43] client 000001D5838B3DC0: state 0, ref: 000001D583E50870
+
+[16704:32512:0913/182543.588:ERROR:quic_stream_id_manager.cc(138)] Attempt to allocate a new outgoing stream that would exceed the limit (0)
+[2026-09-13 18:25:43.626] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:43.667] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:43.707] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:43.748] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:43.789] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:43.830] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:43.870] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:43.911] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:43.951] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:43.992] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.033] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.056] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Cronet_NQEListener_OnEffectiveConnectionTypeChangedFunc@nqe_callback.cpp:227] [nqe] network quality type: 5
+
+[2026-09-13 18:25:44.056] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnNetQualityType@asr_on_worker.cpp:872] OnNetQualityType network quality type: 5
+
+[2026-09-13 18:25:44.074] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.115] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.156] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.196] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.237] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.278] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.318] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.359] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.400] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[16704:32512:0913/182544.428:ERROR:transport_parameters.cc(776)] Serializing custom_parameters with GREASE ID 3003 is not allowed
+[2026-09-13 18:25:44.429] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Cronet_NQEListener_OnRTTOrThroughputEstimatesComputedFunc@nqe_callback.cpp:248] [nqe] http_rtt_ms: 115, transport_rtt_ms: 453, rx_throughput_kbps: 1961
+
+[2026-09-13 18:25:44.429] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnNetRttAndThroughput@asr_on_worker.cpp:876] http_rtt: 115, tcp_rtt: 453, throughput: 1961
+
+[2026-09-13 18:25:44.429] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: UpdateNetworkQuality@asr_on_worker.cpp:1612] network quality type: 2
+
+[2026-09-13 18:25:44.429] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Cronet_NQEListener_OnEffectiveConnectionTypeChangedFunc@nqe_callback.cpp:227] [nqe] network quality type: 2
+
+[2026-09-13 18:25:44.429] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnNetQualityType@asr_on_worker.cpp:872] OnNetQualityType network quality type: 2
+
+[2026-09-13 18:25:44.440] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.440] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: UpdateCompressRate@asr_on_worker.cpp:1619] update compress rate from 4 to 16
+
+[2026-09-13 18:25:44.440] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@sami_core_common_encode_processor.cpp:80] init encode processor ret: 0, rate: 16000, opus type: speech_opus, frame time: 40: 
+
+[2026-09-13 18:25:44.440] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: report@sami_core_applog_tracker.cpp:36] [event tracking] event: sami_core_api, param: {"SAMICoreSDKVersion":"win_14.92.1-alpha.10-oinput","algo_name":"","algo_source":"oime_windows","algo_param":"","algo_result":0,"asr_format":"speech_opus","asr_bit_rate":16000.000000}, event_type: behavior
+
+[2026-09-13 18:25:44.444] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnServiceReady@SAMIFrontierClientCallback.cpp:34] OnServiceReady {"app_live":860.71,"bis_stream_num":1,"build_connection_time":520.454,"conn_dur":520.454,"conn_state":2,"connection_id":"3300912583172534812","decode_frame_error":0,"disconnect_times":0,"error_code":0,"extra_info":"{\"bis\":{\"connection_mode\":4,\"extra\":\"\",\"flags\":128,\"ping\":0,\"rebuild\":false,\"stream_id\":3,\"timeout\":5000,\"transport_type\":0},\"url_dispatch\":{\"action_info\":[],\"domain_merge_info\":{\"state\":0},\"effective_ratio\":0.0,\"empty_action\":true,\"epoch\":-1,\"md5\":\"\",\"source\":0,\"update_time\":\"-1\"}}","final_host":"frontier-audio-ime-quic.doubao.com","ft_state":0,"ft_type":1,"ft_version":"v1","host_port":"frontier-audio-ime-quic.doubao.com","init_time":1789295143.583183,"is_background":false,"is_conn_ready":true,"last_duration":339.782,"log_type":"frontier_all","ping_max_times":0,"ping_period":10000,"ping_timeout":5000,"rebuild_enabled":false,"rebuild_timeout":5100,"received_bytes":"372","recv_goaway":false,"retry_times":0,"rt_time":1789295144.443894,"sent_bytes":"785","server_error":0,"service":{"end_stream_timeout":5000,"is_stream_ready":true,"stream_conn_dur":339.562,"stream_id":3,"stream_num":1,"stream_server_error":0,"stream_state":2},"total_duration":339.782,"transport_info":0}
+
+[2026-09-13 18:25:44.482] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.523] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.564] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.606] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.647] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.689] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.730] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnConnectionStateChanged@SAMIWebsocketTTNetCallback.cpp:43] client 000001D5838B3DC0: state 4, ref: 000001D583E50870
+
+[2026-09-13 18:25:44.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: onConnected@service_wrapper.cpp:44] onConnected()
+
+[2026-09-13 18:25:44.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnConnectionStateChanged@asr_on_callback.cpp:29] OnConnectionStateChanged, state: 4
+
+[2026-09-13 18:25:44.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: startConnection@sami_core_ttnet_websocket.cpp:125] WaitForConnectDone-, cost time: 1154.047500ms
+
+[2026-09-13 18:25:44.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StartConnection@service_wrapper.cpp:318]  client connect success
+
+[2026-09-13 18:25:44.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ProcessNetStatus@asr_on_worker.cpp:586] recv state: 4, cur net_status: 1
+
+[2026-09-13 18:25:44.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StartConnection@service_wrapper.cpp:332] StartConnection ret: 0, cost time: 1154
+
+[2026-09-13 18:25:44.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ProcessNetStatus@asr_on_worker.cpp:612] recv state: 4, update net_status: 2
+
+[2026-09-13 18:25:44.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnNetworkChange@asr_processor.cpp:321] [000001D583E6E510] OnNetworkChange OnNetworkChange state: 4, url: wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws, message: (null)
+
+[2026-09-13 18:25:44.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendStartProtocol@asr_on_worker.cpp:1368] StartTask size: 74
+
+[2026-09-13 18:25:44.739] [info] [sami_asr_client_win.cpp:745] sami websocket state=4 url=wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws msg=
+[2026-09-13 18:25:44.740] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendStartProtocol@asr_on_worker.cpp:1370] send StartTask ,ret 0
+
+[2026-09-13 18:25:44.740] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendStartProtocol@asr_on_worker.cpp:1387] StartSession size: 1065
+
+[2026-09-13 18:25:44.740] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendStartProtocol@asr_on_worker.cpp:1389] send StartSession ,ret 0
+
+[2026-09-13 18:25:44.740] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Run@asr_on_worker.cpp:1122] Start asr success
+
+[2026-09-13 18:25:44.740] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendAudioFromBuffer@asr_on_worker.cpp:1240] online send audio size: 320, seq id: 1, cur send seq id: 30, cur update seq id: 0
+
+[2026-09-13 18:25:44.740] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendAudioFromBuffer@asr_on_worker.cpp:1240] online send audio size: 80, seq id: 26, cur send seq id: 30, cur update seq id: 0
+
+[2026-09-13 18:25:44.748] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: PingPong@asr_on_worker.cpp:936] first send ping
+
+[2026-09-13 18:25:44.748] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendPingProtocol@asr_on_worker.cpp:1415] send ping
+
+[2026-09-13 18:25:44.771] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.812] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.854] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.895] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.936] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:44.977] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.018] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.059] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.076] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.077] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: TaskStarted, payload size: 0
+
+[2026-09-13 18:25:45.077] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: TaskStarted, payload: , seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.077] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:45.078] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.078] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: SessionStarted, payload size: 0
+
+[2026-09-13 18:25:45.078] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: SessionStarted, payload: , seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.078] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:197] [Asr Processor] real asr onTaskStarted [taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329]
+
+[2026-09-13 18:25:45.078] [info] [sami_asr_client_win.cpp:1233] sami task started event=SessionStarted code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=dc59fe1f-1c77-4d0c-a5ee-c8b1becb1f1b result_len=0
+[2026-09-13 18:25:45.078] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:45.079] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.079] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:74]  receive pong
+
+[2026-09-13 18:25:45.079] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: pong, payload size: 0
+
+[2026-09-13 18:25:45.079] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:846] receive pong, rtt: 330 ms
+
+[2026-09-13 18:25:45.079] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:45.099] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.099] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 155
+
+[2026-09-13 18:25:45.099] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 0
+
+[2026-09-13 18:25:45.099] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"client_ip":"223.18.32.190","heartbeat_num":0,"log_id":"02178929514575700000000000000000000ffff0a84371b4b0e2a","packet_number":0}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.099] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:45.100] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.136] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.136] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 70
+
+[2026-09-13 18:25:45.136] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMMMM":[{"MMMM":"","MM_MMMMMMM":MMMM}],"MMMMM":{"MMM_MMMMM":MMMM}}
+
+[2026-09-13 18:25:45.136] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:157] [000001D583E6E510] online OnMessage filter event: , payload: {"results":[{"is_interim":true,"text":""}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.136] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:45.142] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.183] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: onBinaryMessageReceived@SAMIConnectPoolClient.cpp:123] receive auth pong
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: CreateOneClient@SAMIConnectPoolClient.cpp:76] create a resource and add to connect pool 1d583e386e0, client type: 1
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:203] oime_windows create one client
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 1, client count: 2
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:131] oime_windows start maintain
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: buildTransportClient@TransportClientFactory.cpp:23] buildTransportClient create websocket client, url: wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIWebsocketTTNetCallback@SAMIWebsocketTTNetCallback.cpp:15] SAMIWebsocketTTNetCallback 000001D583FFA200 ref: 000001D58194EC80
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@sami_core_ttnet_websocket.cpp:56] websocket init begin, url: wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws, ping pong timeout: 0, network_type: 0, connect timeout: 5000
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@sami_core_ttnet_websocket.cpp:68] websocket init url: wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws?aid=685343&app_name=ImeService&app_version=0.9.0&cellularProvider=&channel=release&device_brand=System manufacturer&device_id=252163708395682&device_model=System Product Name&device_platform=windows&device_type=Windows&os=windows&os_version=Windows 10.0.26200&region=US&screen_height=1440&screen_width=2560&version_name=0.9.0
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@sami_core_ttnet_websocket.cpp:102] websocket init end
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: startConnection@sami_core_ttnet_websocket.cpp:117] Cronet_WSClient_StartConnection
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: startConnection@sami_core_ttnet_websocket.cpp:120] WaitForConnectDone+
+
+[2026-09-13 18:25:45.214] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnConnectionStateChanged@SAMIWebsocketTTNetCallback.cpp:43] client 000001D583FFA200: state 0, ref: 000001D58194EC80
+
+[2026-09-13 18:25:45.224] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.265] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 63
+
+[2026-09-13 18:25:45.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 34
+
+[2026-09-13 18:25:45.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"heartbeat_num":1,"packet_number":34}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:45.306] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.347] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 211
+
+[2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: AddMessageRecvEvent@on_tracking.cpp:166] [time statistic] speech_start_to_first_asr_cost_time_: 474 ms
+
+[2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: AddMessageRecvEvent@on_tracking.cpp:170] [time statistic] start_to_first_asr_display_cost_time_: 1776 ms
+
+[2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"X"},{"MMM_MMMM":A.AA,"MMMMM":{"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"X"}]}
+
+[2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":0.47999998927116394,"is_interim":true,"text":"X"},{"end_time":0.47999998927116394,"extra":{"seq_id":12},"is_interim":true,"stream_asr_finish":false,"text":"X"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 1][type: online][finished: 0][result: X]
+
+[2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=1c37ce6d-f4d3-4fec-ab55-730aa78587d3 result_len=280
+[2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=0 text_bytes=3 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=3
+[2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:45.360] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=3
+[2026-09-13 18:25:45.388] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.429] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.470] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.511] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.551] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.592] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.634] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.634] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendAudioFromBuffer@asr_on_worker.cpp:1240] online send audio size: 80, seq id: 51, cur send seq id: 52, cur update seq id: 0
+
+[2026-09-13 18:25:45.675] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.716] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.757] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.798] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.838] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.880] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 215
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.A,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XX"},{"MMM_MMMM":A.A,"MMMMM":{"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"XX"}]}
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":0.6000000238418579,"is_interim":true,"text":"XX"},{"end_time":0.6000000238418579,"extra":{"seq_id":15},"is_interim":true,"stream_asr_finish":false,"text":"XX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 2][type: online][finished: 0][result: XX]
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=23118047-30c3-4fd7-a772-a3d1e7bc1d79 result_len=284
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=0 text_bytes=6 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=6
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 63
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 39
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":39,"heartbeat_num":2}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=6
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 229
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXX"},{"MMM_MMMM":A.AA,"MMMMM":{"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"XXXX"}]}
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":0.8399999737739563,"is_interim":true,"text":"XXXX"},{"end_time":0.8399999737739563,"extra":{"seq_id":21},"is_interim":true,"stream_asr_finish":false,"text":"XXXX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 4][type: online][finished: 0][result: XXXX]
+
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=f3ee79ea-4943-4ddb-b71b-a011ff92cca9 result_len=298
+[2026-09-13 18:25:45.920] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=0 text_bytes=12 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=12
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 63
+
+[svc] [2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=12
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 44
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":44,"heartbeat_num":3}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 252
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAAAAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXX，XX"},{"MMM_MMMM":A.AAAAAA,"MMMMM":{"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"XXXXXX"}]}
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":1.2399990558624268,"is_interim":true,"text":"XXXX，XX"},{"end_time":1.2399990558624268,"extra":{"seq_id":31},"is_interim":true,"stream_asr_finish":false,"text":"XXXXXX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 7][type: online][finished: 0][result: XXXX，XX]
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=03387b74-4752-483a-b1cc-cbafc22e575a result_len=321
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=0 text_bytes=21 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=21
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 63
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 49
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"heartbeat_num":4,"packet_number":49}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[svc] [2026-09-13 18:25:45.921] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=21
+[2026-09-13 18:25:45.962] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.003] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.044] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.086] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.116] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:46.116] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 63
+
+[2026-09-13 18:25:46.116] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 54
+
+[2026-09-13 18:25:46.116] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":54,"heartbeat_num":5}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:46.116] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:46.127] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.169] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.210] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.251] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 245
+
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXX，XX"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX"}]}
+
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":2.1519999504089355,"is_interim":true,"text":"XXXX，XX"},{"end_time":2.1519999504089355,"extra":{"seq_id":54},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 7][type: online][finished: 0][result: XXXX，XX]
+
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=518a8138-59aa-417b-9acb-060a625184bc result_len=314
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=21 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=21
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 284
+
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMMMM":[{"MMMM":"XXXXXX。","MMMMM_MMMM":A,"MMM_MMMM":A.AAA,"MM_MMMMMMM":MMMM,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM}},{"MMMM":"XXXXXX。","MMMMM_MMMM":A,"MMM_MMMM":A.AAA,"MM_MMMMMMM":MMMM,"MMMMMM_MMM_MMMMMM":MMMM,"MMMMM":{"MMM_MM":AA,"MMMMMMMMM_MMMMMM":MMMM}}]}
+
+[svc] [2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=21
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":2.1519999504089355,"extra":{"nonstream_result":true},"is_interim":true,"text":"XXXXXX。"},{"end_time":2.1519999504089355,"extra":{"nonstream_result":true,"seq_id":54},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX。"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 7][type: online][finished: 0][result: XXXXXX。]
+
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=02b86695-4273-4805-a939-159b84cb20ab result_len=306
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=21 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=21
+[2026-09-13 18:25:46.258] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:46.257] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=21
+[2026-09-13 18:25:46.292] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnConnectionStateChanged@SAMIWebsocketTTNetCallback.cpp:43] client 000001D583FFA200: state 4, ref: 000001D58194EC80
+
+[2026-09-13 18:25:46.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: startConnection@sami_core_ttnet_websocket.cpp:125] WaitForConnectDone-, cost time: 1089.158600ms
+
+[2026-09-13 18:25:46.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: sendAuth@SAMIConnectPoolClient.cpp:154] send auth ping
+
+[2026-09-13 18:25:46.318] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:46.318] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 63
+
+[2026-09-13 18:25:46.318] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 59
+
+[2026-09-13 18:25:46.318] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":59,"heartbeat_num":6}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:46.318] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:46.334] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.375] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.418] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.458] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.500] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.511] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:46.511] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 63
+
+[2026-09-13 18:25:46.511] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 62
+
+[2026-09-13 18:25:46.511] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"heartbeat_num":7,"packet_number":62}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:46.511] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:46.541] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.582] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.624] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.665] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.666] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendAudioFromBuffer@asr_on_worker.cpp:1240] online send audio size: 80, seq id: 76, cur send seq id: 77, cur update seq id: 0
+
+[2026-09-13 18:25:46.697] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: onBinaryMessageReceived@SAMIConnectPoolClient.cpp:123] receive auth pong
+
+[2026-09-13 18:25:46.697] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: CreateOneClient@SAMIConnectPoolClient.cpp:76] create a resource and add to connect pool 1d58388ac10, client type: 0
+
+[2026-09-13 18:25:46.697] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:203] oime_windows create one client
+
+[2026-09-13 18:25:46.697] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 18:25:46.697] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 18:25:46.697] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 18:25:46.697] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 18:25:46.706] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.711] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:46.711] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 63
+
+[2026-09-13 18:25:46.711] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 68
+
+[2026-09-13 18:25:46.711] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":68,"heartbeat_num":8}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:46.711] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:46.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:46.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 392
+
+[2026-09-13 18:25:46.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX。X"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM,"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX。"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A.AAA,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"X"}]}
+
+[2026-09-13 18:25:46.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":2.6019999980926514,"is_interim":true,"text":"XXXXXX。X"},{"end_time":2.1519999504089355,"extra":{"nonstream_result":true,"seq_id":54},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX。"},{"end_time":2.6019999980926514,"extra":{"seq_id":65},"is_interim":true,"start_time":2.1519999504089355,"stream_asr_finish":false,"text":"X"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:46.739] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 8][type: online][finished: 0][result: XXXXXX。X]
+
+[2026-09-13 18:25:46.739] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=d11c0e4f-3d91-4db5-8c92-c41913f6b10f result_len=461
+[2026-09-13 18:25:46.739] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:46.739] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=24 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:46.740] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=24
+[2026-09-13 18:25:46.740] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:46.740] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=24
+[2026-09-13 18:25:46.748] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.774] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:46.774] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 398
+
+[2026-09-13 18:25:46.774] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX。XX"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM,"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX。"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A.AAA,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"XX"}]}
+
+[2026-09-13 18:25:46.774] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":2.681999921798706,"is_interim":true,"text":"XXXXXX。XX"},{"end_time":2.1519999504089355,"extra":{"nonstream_result":true,"seq_id":54},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX。"},{"end_time":2.681999921798706,"extra":{"seq_id":67},"is_interim":true,"start_time":2.1519999504089355,"stream_asr_finish":false,"text":"XX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:46.774] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 9][type: online][finished: 0][result: XXXXXX。XX]
+
+[2026-09-13 18:25:46.774] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=038a3736-baca-4020-a870-7c7165044703 result_len=467
+[2026-09-13 18:25:46.774] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:46.774] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=27 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:46.775] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=27
+[2026-09-13 18:25:46.775] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:46.775] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=27
+[2026-09-13 18:25:46.789] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.831] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.873] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.909] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:46.909] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 63
+
+[2026-09-13 18:25:46.909] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 73
+
+[2026-09-13 18:25:46.909] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":73,"heartbeat_num":9}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:46.909] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:46.915] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.956] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:46.998] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.040] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.082] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.116] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:47.116] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 64
+
+[2026-09-13 18:25:47.116] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 78
+
+[2026-09-13 18:25:47.116] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":78,"heartbeat_num":10}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:47.116] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:47.117] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:47.117] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 410
+
+[2026-09-13 18:25:47.118] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX。XXXX"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM,"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX。"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A.AAA,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"XXXX"}]}
+
+[2026-09-13 18:25:47.118] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":3.0820000171661377,"is_interim":true,"text":"XXXXXX。XXXX"},{"end_time":2.1519999504089355,"extra":{"nonstream_result":true,"seq_id":54},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX。"},{"end_time":3.0820000171661377,"extra":{"seq_id":77},"is_interim":true,"start_time":2.1519999504089355,"stream_asr_finish":false,"text":"XXXX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:47.118] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 11][type: online][finished: 0][result: XXXXXX。XXXX]
+
+[2026-09-13 18:25:47.118] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=8d37d5b6-4404-4e3d-b458-d44ee6703875 result_len=479
+[2026-09-13 18:25:47.118] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:47.118] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=33 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:47.118] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=33
+[2026-09-13 18:25:47.118] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:47.118] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=33
+[2026-09-13 18:25:47.123] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.165] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.206] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.247] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.289] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.315] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:47.315] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 64
+
+[2026-09-13 18:25:47.315] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 83
+
+[2026-09-13 18:25:47.315] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":83,"heartbeat_num":11}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:47.315] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:47.330] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.371] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.413] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.454] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.495] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.522] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:47.522] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 64
+
+[2026-09-13 18:25:47.522] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 88
+
+[2026-09-13 18:25:47.522] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"heartbeat_num":12,"packet_number":88}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:47.522] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:47.536] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.539] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:47.539] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 429
+
+[2026-09-13 18:25:47.539] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAAAAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX。XAXX，XX"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM,"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX。"},{"MMM_MMMM":A.AAAAAA,"MMMMM":{"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A.AAA,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"XXXXXX"}]}
+
+[2026-09-13 18:25:47.539] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":3.481998920440674,"is_interim":true,"text":"XXXXXX。XAXX，XX"},{"end_time":2.1519999504089355,"extra":{"nonstream_result":true,"seq_id":54},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX。"},{"end_time":3.481998920440674,"extra":{"seq_id":87},"is_interim":true,"start_time":2.1519999504089355,"stream_asr_finish":false,"text":"XXXXXX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:47.539] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 14][type: online][finished: 0][result: XXXXXX。XAXX，XX]
+
+[2026-09-13 18:25:47.539] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=f6334d69-8187-4027-933c-b1e423a8c2d1 result_len=498
+[2026-09-13 18:25:47.539] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:47.539] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=40 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:47.540] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=40
+[2026-09-13 18:25:47.540] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:47.540] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=40
+[2026-09-13 18:25:47.576] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.617] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.658] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.699] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.699] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendAudioFromBuffer@asr_on_worker.cpp:1240] online send audio size: 80, seq id: 101, cur send seq id: 102, cur update seq id: 0
+
+[2026-09-13 18:25:47.709] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:47.709] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 64
+
+[2026-09-13 18:25:47.709] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 92
+
+[2026-09-13 18:25:47.709] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":92,"heartbeat_num":13}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:47.709] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:47.740] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: PingPong@asr_on_worker.cpp:948] receive pong and send ping
+
+[2026-09-13 18:25:47.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendPingProtocol@asr_on_worker.cpp:1415] send ping
+
+[2026-09-13 18:25:47.781] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.822] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.862] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.903] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.906] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:47.906] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 64
+
+[2026-09-13 18:25:47.906] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 97
+
+[2026-09-13 18:25:47.906] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":97,"heartbeat_num":14}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:47.906] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:47.944] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:47.984] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.025] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.066] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.103] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:48.103] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:48.103] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 102
+
+[2026-09-13 18:25:48.103] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":102,"heartbeat_num":15}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:48.103] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:48.106] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.118] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:48.118] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:74]  receive pong
+
+[2026-09-13 18:25:48.118] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: pong, payload size: 0
+
+[2026-09-13 18:25:48.118] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:846] receive pong, rtt: 338 ms
+
+[2026-09-13 18:25:48.118] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:48.147] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.188] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.228] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.269] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:48.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:48.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 107
+
+[2026-09-13 18:25:48.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":107,"heartbeat_num":16}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:48.303] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:48.311] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.353] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.394] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.434] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.452] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:48.452] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 424
+
+[2026-09-13 18:25:48.452] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AAA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX。XAXX，XX"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM,"MMM_MM":AA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX。"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMM_MM":AAA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A.AAA,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX"}]}
+
+[2026-09-13 18:25:48.452] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":4.3420000076293945,"is_interim":true,"text":"XXXXXX。XAXX，XX"},{"end_time":2.1519999504089355,"extra":{"nonstream_result":true,"seq_id":54},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX。"},{"end_time":4.3420000076293945,"extra":{"seq_id":109},"is_interim":true,"start_time":2.1519999504089355,"stream_asr_finish":true,"text":"XXXXXX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:48.452] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 14][type: online][finished: 0][result: XXXXXX。XAXX，XX]
+
+[2026-09-13 18:25:48.452] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=e84fe2fe-412d-4989-a065-99ece37763e1 result_len=493
+[2026-09-13 18:25:48.452] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:48.452] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=40 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:48.452] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=40
+[2026-09-13 18:25:48.452] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:48.452] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=40
+[2026-09-13 18:25:48.476] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.508] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:48.508] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:48.508] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 112
+
+[2026-09-13 18:25:48.508] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":112,"heartbeat_num":17}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:48.508] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:48.517] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.557] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.559] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:48.559] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 327
+
+[2026-09-13 18:25:48.559] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMMMM":[{"MMMM":"XXXXXX，XXXXXX。","MMMMM_MMMM":A,"MMM_MMMM":A.AAA,"MM_MMMMMMM":MMMM,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM}},{"MMMM":"XXXXXX，XXXXXX。","MMMMM_MMMM":A,"MMM_MMMM":A.AAA,"MM_MMMMMMM":MMMM,"MMMMMM_MMM_MMMMMM":MMMM,"MMMMM":{"MMM_MM":AAA,"MMMMMMMMM_MMMMMM":MMMM}}]}
+
+[2026-09-13 18:25:48.560] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":4.3420000076293945,"extra":{"nonstream_result":true},"is_interim":true,"text":"XXXXXX，XXXXXX。"},{"end_time":4.3420000076293945,"extra":{"nonstream_result":true,"seq_id":109},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX，XXXXXX。"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:48.560] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 14][type: online][finished: 0][result: XXXXXX，XXXXXX。]
+
+[2026-09-13 18:25:48.560] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=f9c2e289-8845-4b2b-b844-b0c3aca7e6da result_len=349
+[2026-09-13 18:25:48.560] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:48.560] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=42 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:48.560] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=42
+[2026-09-13 18:25:48.560] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:48.560] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=42
+[2026-09-13 18:25:48.598] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.640] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.681] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.707] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:48.707] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:48.707] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 117
+
+[2026-09-13 18:25:48.707] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":117,"heartbeat_num":18}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:48.707] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:48.723] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.723] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendAudioFromBuffer@asr_on_worker.cpp:1240] online send audio size: 80, seq id: 126, cur send seq id: 127, cur update seq id: 0
+
+[2026-09-13 18:25:48.764] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.805] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.846] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.888] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.903] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:48.903] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:48.903] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 122
+
+[2026-09-13 18:25:48.903] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":122,"heartbeat_num":19}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:48.903] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:48.929] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:48.971] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.013] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.054] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.095] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.100] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:49.100] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 437
+
+[2026-09-13 18:25:49.100] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AAA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX，XXXXXX。X"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM,"MMM_MM":AAA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX，XXXXXX。"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMM_MM":AAA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A.AAA,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"X"}]}
+
+[2026-09-13 18:25:49.100] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":4.8420000076293945,"is_interim":true,"text":"XXXXXX，XXXXXX。X"},{"end_time":4.3420000076293945,"extra":{"nonstream_result":true,"seq_id":109},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX，XXXXXX。"},{"end_time":4.8420000076293945,"extra":{"seq_id":121},"is_interim":true,"start_time":4.3420000076293945,"stream_asr_finish":false,"text":"X"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:49.100] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 15][type: online][finished: 0][result: XXXXXX，XXXXXX。X]
+
+[2026-09-13 18:25:49.100] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=67f657a9-a14a-4c28-8e3a-2b5d10de5e8e result_len=506
+[2026-09-13 18:25:49.100] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:49.100] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=45 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:49.100] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=45
+[2026-09-13 18:25:49.100] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:49.100] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=45
+[2026-09-13 18:25:49.106] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:49.106] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:49.106] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 126
+
+[2026-09-13 18:25:49.106] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"heartbeat_num":20,"packet_number":126}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:49.106] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:49.128] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:49.128] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 449
+
+[2026-09-13 18:25:49.128] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AAA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAAAAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX，XXXXXX。XX"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM,"MMM_MM":AAA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX，XXXXXX。"},{"MMM_MMMM":A.AAAAAA,"MMMMM":{"MMM_MM":AAA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A.AAA,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"XX"}]}
+
+[2026-09-13 18:25:49.128] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":4.922001838684082,"is_interim":true,"text":"XXXXXX，XXXXXX。XX"},{"end_time":4.3420000076293945,"extra":{"nonstream_result":true,"seq_id":109},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX，XXXXXX。"},{"end_time":4.922001838684082,"extra":{"seq_id":123},"is_interim":true,"start_time":4.3420000076293945,"stream_asr_finish":false,"text":"XX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:49.128] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 16][type: online][finished: 0][result: XXXXXX，XXXXXX。XX]
+
+[2026-09-13 18:25:49.128] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=762b7eb9-9a73-4f09-bce7-bedcec4d4b59 result_len=518
+[2026-09-13 18:25:49.128] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:49.128] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=48 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:49.129] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=48
+[2026-09-13 18:25:49.129] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:49.129] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=48
+[2026-09-13 18:25:49.136] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.178] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.219] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.261] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.302] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.311] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:49.311] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:49.311] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 131
+
+[2026-09-13 18:25:49.311] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":131,"heartbeat_num":21}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:49.311] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:49.343] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.384] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.426] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.427] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:49.427] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 461
+
+[2026-09-13 18:25:49.427] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AAA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAAAAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX，XXXXXX。XXXX"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM,"MMM_MM":AAA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX，XXXXXX。"},{"MMM_MMMM":A.AAAAAA,"MMMMM":{"MMM_MM":AAA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A.AAA,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"XXXX"}]}
+
+[2026-09-13 18:25:49.427] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":5.3220109939575195,"is_interim":true,"text":"XXXXXX，XXXXXX。XXXX"},{"end_time":4.3420000076293945,"extra":{"nonstream_result":true,"seq_id":109},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX，XXXXXX。"},{"end_time":5.3220109939575195,"extra":{"seq_id":133},"is_interim":true,"start_time":4.3420000076293945,"stream_asr_finish":false,"text":"XXXX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:49.427] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 18][type: online][finished: 0][result: XXXXXX，XXXXXX。XXXX]
+
+[2026-09-13 18:25:49.427] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=a93659ba-d729-44dc-9405-3489619a9454 result_len=530
+[2026-09-13 18:25:49.427] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:49.427] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=54 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:49.427] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=54
+[2026-09-13 18:25:49.427] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:49.427] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=54
+[2026-09-13 18:25:49.468] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.508] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.509] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:49.509] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:49.509] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 136
+
+[2026-09-13 18:25:49.509] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"heartbeat_num":22,"packet_number":136}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:49.509] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:49.550] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.591] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.632] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.674] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.708] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:49.708] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:49.708] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 141
+
+[2026-09-13 18:25:49.708] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":141,"heartbeat_num":23}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:49.708] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:49.715] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.756] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.757] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendAudioFromBuffer@asr_on_worker.cpp:1240] online send audio size: 80, seq id: 151, cur send seq id: 152, cur update seq id: 0
+
+[2026-09-13 18:25:49.797] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.837] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:49.837] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 474
+
+[2026-09-13 18:25:49.837] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AAA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAAAAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX，XXXXXX。XAXX，XX"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM,"MMM_MM":AAA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX，XXXXXX。"},{"MMM_MMMM":A.AAAAAA,"MMMMM":{"MMM_MM":AAA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A.AAA,"MMMMMM_MMM_MMMMMM":MMMMM,"MMMM":"XXXXXX"}]}
+
+[2026-09-13 18:25:49.837] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":5.722021102905273,"is_interim":true,"text":"XXXXXX，XXXXXX。XAXX，XX"},{"end_time":4.3420000076293945,"extra":{"nonstream_result":true,"seq_id":109},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX，XXXXXX。"},{"end_time":5.722021102905273,"extra":{"seq_id":143},"is_interim":true,"start_time":4.3420000076293945,"stream_asr_finish":false,"text":"XXXXXX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:49.837] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 21][type: online][finished: 0][result: XXXXXX，XXXXXX。XAXX，XX]
+
+[2026-09-13 18:25:49.837] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=54c54fb9-1330-430f-9c12-318215abc798 result_len=543
+[2026-09-13 18:25:49.837] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:49.837] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=61 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:49.837] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=61
+[2026-09-13 18:25:49.837] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:49.837] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=61
+[2026-09-13 18:25:49.838] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.878] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.913] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:49.913] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:49.913] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 146
+
+[2026-09-13 18:25:49.913] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":146,"heartbeat_num":24}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:49.913] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:49.918] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.959] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:49.999] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:50.041] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:50.081] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:50.112] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:50.112] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:50.112] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 150
+
+[2026-09-13 18:25:50.112] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":150,"heartbeat_num":25}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:50.112] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:50.122] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:50.162] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:50.203] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:50.243] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:50.284] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:50.315] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:50.315] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:50.315] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 156
+
+[2026-09-13 18:25:50.315] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":156,"heartbeat_num":26}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:50.315] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:50.324] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:50.365] [info] [sami_asr_client_win.cpp:432] sami feed chunk bytes=1280
+[2026-09-13 18:25:50.447] [info] [sami_asr_client_win.cpp:452] sami stop begin handle=1 accepting=0 pending_tail=110 had_result_text=1
+[2026-09-13 18:25:50.447] [info] [sami_asr_client_win.cpp:466] sami flush tail bytes=110
+[2026-09-13 18:25:50.447] [info] [sami_asr_client_win.cpp:480] sami wait full vad begin handle=1 already_received=0
+[2026-09-13 18:25:50.447] [info] [sami_asr_client_win.cpp:481] sami call Wait_Stop_V2
+[2026-09-13 18:25:50.447] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMICoreSetProperty@sami_core.cpp,3779]  asr v2 finish handle 000001D583E6E510
+
+[2026-09-13 18:25:50.447] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Finish@asr_processor.cpp:1078] AsrProcessor::Finish+, input_length = 212590, 000001D583E6E510
+
+18:25:50.447 OnFailed called: net::ERR_FAILED, ip=:0, details={"has_upload":false,"is_pending":false,"load_flags":4198400,"load_state":3,"method":"GET","net_error":-2,"network_isolation_key":"null null","request_type":16.0,"status":"FAILED","traffic_annotation":77012883,"traffic_path":"default","ttnet_scheme":true,"url":"https://multinet/get"}, attempts= , dns=-1, connect=-1, ssl=-1, send=-1, proxy=-1, wait=-1, receive=-1, total=-1, reused=0, cached=0, response_content_len=0, total_bytes=0, is_proxy=0, QuicStreamError=0, QuicCloseSource=0, H2ProtocolError=0, RFC7540Error=0
+[2026-09-13 18:25:50.447] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Finish@asr_on_worker.cpp:507] finish process
+
+[2026-09-13 18:25:50.447] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendAudioFromBuffer@asr_on_worker.cpp:1240] online send audio size: 80, seq id: 167, cur send seq id: 168, cur update seq id: 0
+
+[2026-09-13 18:25:50.447] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendAudioFromBuffer@asr_on_worker.cpp:1243] send audio sum size: 18400
+
+[2026-09-13 18:25:50.448] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Run@asr_on_worker.cpp:1160] send FinishSession
+
+[2026-09-13 18:25:50.448] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Run@asr_on_worker.cpp:1170] wait for stop with timeout 2000
+
+[2026-09-13 18:25:50.448] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Finish@asr_processor.cpp:1152] AsrProcessor::Finish-
+
+[2026-09-13 18:25:50.448] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: AsyncDestroy@asr_processor.cpp:1844] AsyncDestroy wait for finish
+
+[2026-09-13 18:25:50.528] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:50.528] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:50.528] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 161
+
+[2026-09-13 18:25:50.528] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":161,"heartbeat_num":27}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:50.528] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:50.719] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:50.719] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:50.720] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 166
+
+[2026-09-13 18:25:50.720] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"packet_number":166,"heartbeat_num":28}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:50.720] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:50.807] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: PingPong@asr_on_worker.cpp:948] receive pong and send ping
+
+[2026-09-13 18:25:50.807] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SendPingProtocol@asr_on_worker.cpp:1415] send ping
+
+[2026-09-13 18:25:50.808] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:50.808] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 470
+
+[2026-09-13 18:25:50.808] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMM_MM":AAA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AAA,"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX，XXXXXX。XAXX，XX。"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM,"MMM_MM":AAA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX，XXXXXX。"},{"MMM_MMMM":A.AAA,"MMMMM":{"MMM_MM":AAA},"MM_MMMMMMM":MMMM,"MMMMM_MMMM":A.AAA,"MMMMMM_MMM_MMMMMM":MMMM,"MMMM":"XXXXXX"}]}
+
+[2026-09-13 18:25:50.808] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":6.642000198364258,"is_interim":true,"text":"XXXXXX，XXXXXX。XAXX，XX。"},{"end_time":4.3420000076293945,"extra":{"nonstream_result":true,"seq_id":109},"is_interim":true,"stream_asr_finish":true,"text":"XXXXXX，XXXXXX。"},{"end_time":6.642000198364258,"extra":{"seq_id":166},"is_interim":true,"start_time":4.3420000076293945,"stream_asr_finish":true,"text":"XXXXXX"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:50.808] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 22][type: online][finished: 0][result: XXXXXX，XXXXXX。XAXX，XX。]
+
+[2026-09-13 18:25:50.808] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=7b63fb93-e4a0-469f-b0b5-84724456764b result_len=539
+[2026-09-13 18:25:50.808] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=1 vad_finish=0 null_seq=0
+[2026-09-13 18:25:50.808] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=0 stream_finish=1 text_bytes=64 modify_pair_count=0 client_second_pass_duration_ms=-1
+[2026-09-13 18:25:50.809] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=64
+[2026-09-13 18:25:50.809] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[svc] [2026-09-13 18:25:50.809] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=0 bytes=64
+[2026-09-13 18:25:50.917] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:50.917] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 65
+
+[2026-09-13 18:25:50.917] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:760] update heartbeat_packet_number: 167
+
+[2026-09-13 18:25:50.917] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":null,"extra":{"heartbeat_num":29,"packet_number":167}}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:50.917] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:50.952] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:69] AsrCallback::OnMessageReceived+
+
+[2026-09-13 18:25:50.952] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:731] recv event: , payload size: 545
+
+[2026-09-13 18:25:50.952] [error] [sami_asr_client_win.cpp:681] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessage@asr_on_worker.cpp:815] is_vad_finished is true, but no seq id
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: HandleOnlineResult@asr_processor.cpp:392] online result: {"MMMMM":{"MMMM_MMMMMM_MMMMM":[],"MMMMMMM_MMMMMMM":AAA,"MMMMMMM_N_MMMMMMM":A,"MMMMMMM_MMMMMMMMM_MMMMMMM":AAA,"MMMMMMM_MMM_MMMMMMM":A,"MM":"{\"MMMM_MM\":\"MMM_MMM_MMAAAMMA-AAMA-AAMM-AAMM-AAAAMAMAMAAA\"}","MMM_MM":AAA,"MMMMMM_MMMMM_MM_MMMMM_MMMMMMMMM_MMMMMMMM":AAA},"MMMMMMM":[{"MMM_MMMM":A.AA,"MM_MMMMMMM":MMMMM,"MM_MMM_MMMMMMMM":MMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX。XXXXXX。XXXXXX。"},{"MMM_MMMM":A.AA,"MMMMM":{"MMMMMMMMM_MMMMMM":MMMM},"MM_MMMMMMM":MMMMM,"MMMMM_MMMM":A,"MMMM":"XXXXXX。XXXXXX。XXXXXX。"}]}
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001D583E6E510] online OnMessage event: , payload: {"results":[{"end_time":6.679999828338623,"is_interim":false,"is_vad_finished":true,"text":"XXXXXX。XXXXXX。XXXXXX。"},{"end_time":6.679999828338623,"extra":{"nonstream_result":true},"is_interim":false,"text":"XXXXXX。XXXXXX。XXXXXX。"}]}, seq_id: 0, task_id: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329, status_code: 20000000, status_text: OK, switch_flag: 0
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:293] [Asr Processor] real asr response[taskid: ime_win_db394db9-48d5-44db-85aa-2261b8b0e329][words num: 21][type: online][finished: 1][result: XXXXXX。XXXXXX。XXXXXX。]
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:1233] sami task result event= code=20000000 status=OK task_id=ime_win_db394db9-48d5-44db-85aa-2261b8b0e329 message_id=f90204af-9eb0-4427-abed-0182f0f9b95d result_len=614
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:1258] sami result flags stream_finish=0 vad_finish=1 null_seq=0
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:1263] sami parsed result full_vad=1 stream_finish=0 text_bytes=63 modify_pair_count=0 client_second_pass_duration_ms=506
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=1 bytes=63
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:1285] sami full vad received while stopping
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:500] sami wait full vad done got_full_vad=1 handle=1 timeout_ms=7000 had_result_text=1 session_failed=0 session_finished=0
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:530] sami destroy begin handle=1 frontier=1 connect_pool=1
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMICoreDestroyHandle@sami_core.cpp,2684]  start destroy asr handle 000001D583E6E510
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~AsrProcessor@asr_processor.cpp:52] ~AsrProcessor()+ 000001D583E6E510
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnMessageReceived@asr_on_callback.cpp:108] AsrCallback::OnMessageReceived-
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: AsyncDestroy@asr_processor.cpp:1848] AsyncDestroy exit for destroying
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Destroy@asr_processor.cpp:719] AsrProcessor::Destroy+ 000001D583E6E510
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Stop@asr_on_worker.cpp:561] Stop
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: FinishSignalDone@asr_on_worker.cpp:620] FinishSignalDone
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Destroy@asr_on_worker.cpp:99] AsrOnWorker::Destroy+
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Stop@asr_on_worker.cpp:561] Stop
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: FinishSignalDone@asr_on_worker.cpp:620] FinishSignalDone
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StopConnection@service_wrapper.cpp:338] StopConnection, client type: 0, network type: 0
+
+[2026-09-13 18:25:50.953] [warning] [sami_asr_client_win.cpp:678] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: stopConnection@sami_core_ttnet_websocket.cpp:133]  stopConnection isConnected : 1
+
+[svc] [2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:627] sami test result valid=1 full_vad=1 bytes=63
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StopConnection@service_wrapper.cpp:346] StopConnection ret: 0
+
+[2026-09-13 18:25:50.953] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Destroy@asr_on_worker.cpp:108]  begin wait audio process thread finished
+
+[2026-09-13 18:25:50.959] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StopAsr@asr_on_worker.cpp:1215] stop asr
+
+[2026-09-13 18:25:50.959] [warning] [sami_asr_client_win.cpp:678] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StopAsr@asr_on_worker.cpp:1219] not send finish session.
+
+[2026-09-13 18:25:50.959] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StopConnection@service_wrapper.cpp:338] StopConnection, client type: 0, network type: 0
+
+[2026-09-13 18:25:50.959] [warning] [sami_asr_client_win.cpp:678] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: stopConnection@sami_core_ttnet_websocket.cpp:133]  stopConnection isConnected : 0
+
+[2026-09-13 18:25:50.959] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StopConnection@service_wrapper.cpp:346] StopConnection ret: 0
+
+[2026-09-13 18:25:50.959] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Run@asr_on_worker.cpp:1191] AsrOnWorker::Run- 000001D583E582D0
+
+[2026-09-13 18:25:50.959] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Destroy@asr_on_worker.cpp:113]  end wait audio process thread finished
+
+[2026-09-13 18:25:50.959] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~ServiceWrapper@service_wrapper.cpp:21] ~ServiceWrapper()+
+
+[2026-09-13 18:25:50.959] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~MultiNetCallback@multi_net_callback.cpp:136] ~MultiNetCallback()
+
+[2026-09-13 18:25:50.959] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~NqeCallback@nqe_callback.cpp:150] ~NqeCallback()+
+
+[2026-09-13 18:25:50.959] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~NqeCallback@nqe_callback.cpp:168] Cronet_Engine_RemoveNQEListener
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~NqeCallback@nqe_callback.cpp:183] ~NqeCallback()-
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~ServiceWrapper@service_wrapper.cpp:29] need delete client size: 1
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~ServiceWrapper@service_wrapper.cpp:31] need delete client type: 0
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~ServiceWrapper@service_wrapper.cpp:33] delete client type: 0
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIWebsocketTTNetClient@SAMIWebsocketTTNetClient.cpp:35] ~SAMIWebsocketTTNetClient+
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIWebsocketTTNetCallback@SAMIWebsocketTTNetCallback.cpp:19] ~SAMIWebsocketTTNetCallback 000001D5838B3DC0 ref: 000001D583E50870
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIWebsocketTTNetClient@SAMIWebsocketTTNetClient.cpp:42] ~SAMIWebsocketTTNetClient-
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~ServiceWrapper@service_wrapper.cpp:40] ~ServiceWrapper()-
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Submit@on_tracking.cpp:339] input audio length: 212590
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Submit@on_tracking.cpp:345] finish_sesion_to_session_finished_cost_time_: 504
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Submit@on_tracking.cpp:358] finish_sesion_to_last_text_not_change_cost_time: 504
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Submit@on_tracking.cpp:425] asr_effective_speech_duration: 970.000000, asr_effective_speech_ratio: 0.146009, first_asr_seq_id: 12, last_asr_seq_id: 109, input_audio_length: 212590
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Destroy@asr_on_worker.cpp:129] AsrOnWorker::Destroy-, cost time: 17
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~AsrOnWorker@asr_on_worker.cpp:93] ~AsrOnWorker()+
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Destroy@asr_on_worker.cpp:99] AsrOnWorker::Destroy+
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Destroy@asr_on_worker.cpp:101] AsrOnWorker::Destroy has been called
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~AsrOnWorker@asr_on_worker.cpp:95] ~AsrOnWorker()-
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~AudioMemoryPool@audio_memory_pool.h:64] ~AudioMemoryPool()
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: DestroyOffWorker@asr_processor.cpp:1419] Asr off worker destroy+
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: DestroyOffWorker@asr_processor.cpp:1448] Asr off worker destroy-
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: Destroy@asr_processor.cpp:779] AsrProcessor::Destroy()- 000001D583E6E510, cost: 17
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~AsrProcessor@asr_processor.cpp:65] ~AsrProcessor()- 000001D583E6E510
+
+[2026-09-13 18:25:50.970] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMICoreDestroyHandle@sami_core.cpp,2688]  finish destroy asr handle 000001D583E6E510
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: report@sami_core_applog_tracker.cpp:36] [event tracking] event: sami_core_api, param: {"SAMICoreSDKVersion":"win_14.92.1-alpha.10-oinput","algo_name":"asr_v2","algo_source":"oime_windows","algo_param":"","algo_result":0,"appkey":"OrnqKvSSrs","asr_type":"online","speech_event_name":"asr_v2","net_message":"","task_id":"ime_win_db394db9-48d5-44db-85aa-2261b8b0e329","status_text":"","asr_effective_speech_duration":970.000000,"audio_count_16_compress":146.000000,"asr_stream_end_response":1.000000,"asr_effective_speech_ratio":0.146009,"asr_final_response":1.000000,"first_connect_time":1154.000000,"has_asr_response":1.000000,"use_connect_pool":0.000000,"audio_count_4_compress":21.000000,"text_point_count":0.000000,"asr_final_result_type":1.000000,"asr_first_response":1.000000,"result_type_change_count":0.000000,"audio_count_8_compress":0.000000,"switch_to_offline":0.000000,"audio_length":212590.000000,"change_net_type":-1.000000,"finish_sesion_to_last_text_not_change_cost_time":504.000000,"connect_success_retry_count":0.000000,"stop_to_exit_cost_time":17.000000,"text_jump_avg":1.000000,"connect_total_time":1154.000000,"connected_at_last_once":1.000000,"lastpkt_threepass_latency":144.000000,"cur_network_type":-1.000000,"lastpkt_vad_latency":4.000000,"request_finished":0.000000,"enable_multi_connection":0.000000,"has_asr_first_result":1.000000,"finish_sesion_to_session_finished_cost_time":504.000000,"first_connect_ret":1.000000,"interrupt_cost_time":-1.000000,"start_to_session_started_cost_time":1494.000000,"has_asr_before_finish_session":1.000000,"receive_vad_start":1.000000,"start_session_to_session_started_cost_time":338.000000,"has_asr_model_path":0.000000,"has_text_point":0.000000,"has_text_segment":0.000000,"net_type":-1.000000,"has_token":1.000000,"net_error":0.000000,"online_stream_result_words_size":14.000000,"interrupt_type":-1.000000,"lastpkt_latency":154.000000,"net_client_type":0.000000,"online_asr":1.000000,"net_status":2.000000,"online_twopass_result_words_size":21.000000,"speech_start_to_first_asr_cost_time":474.000000,"used_connect_pool":0.000000,"pre_network_type":-1.000000,"response_interval":372.000000,"rtt":334.000000,"start_to_first_asr_display_cost_time":1776.000000,"start_to_speech_start_cost_time":1552.000000,"status_code":0.000000,"text_jump_max":3.000000,"text_segment_count":0.000000}, event_type: behavior
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:1093] sami connection pool idle shutdown worker started
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:1133] sami connection pool idle shutdown scheduled delay_ms=300000 generation=1 rescheduled=0 frontier=1 connect_pool=1 running=0 accepting_audio=0 stopping=0 handle=0
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:545] sami asr session stopped
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:1148] sami connection pool idle shutdown wait begin delay_ms=300000 generation=1 frontier=1 connect_pool=1
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: removeConnectClient@SAMIConnectPoolService.cpp:49] removeConnectClient oime_windows
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StopThreadRunner@IBaseThreadRunner.cpp:42]  ******* SAMIConnectPoolService StopThreadRunner
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StopThreadRunner@IBaseThreadRunner.cpp:51]  ******* SAMIConnectPoolService runnerStatus_ 0
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StopThreadRunner@IBaseThreadRunner.cpp:61]  ******* SAMIConnectPoolService runner finished
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIConnectPoolClientManager@SAMIConnectPoolClientManager.cpp:19] ~SAMIConnectPoolClientManager+
+
+[2026-09-13 18:25:50.971] [error] [sami_asr_client_win.cpp:681] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: stopConnection@SAMIFrontierClient.cpp:80] unregister d280026d540 with 1d583e386e0
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: unregisterService@CronetFrontierClient.cpp:343] unregisterService available_service_queue_: 10
+
+[2026-09-13 18:25:50.971] [error] [sami_asr_client_win.cpp:681] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIFrontierClient@SAMIFrontierClient.cpp:25] ~SAMIFrontierClient()+
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIFrontierClientCallback@SAMIFrontierClientCallback.cpp:21] ~SAMIFrontierClientCallback()+
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIFrontierClientCallback@SAMIFrontierClientCallback.cpp:23] ~SAMIFrontierClientCallback()-
+
+[2026-09-13 18:25:50.971] [error] [sami_asr_client_win.cpp:681] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIFrontierClient@SAMIFrontierClient.cpp:39] ~SAMIFrontierClient()-
+
+[2026-09-13 18:25:50.971] [warning] [sami_asr_client_win.cpp:678] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: stopConnection@sami_core_ttnet_websocket.cpp:133]  stopConnection isConnected : 1
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIWebsocketTTNetClient@SAMIWebsocketTTNetClient.cpp:35] ~SAMIWebsocketTTNetClient+
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIWebsocketTTNetCallback@SAMIWebsocketTTNetCallback.cpp:19] ~SAMIWebsocketTTNetCallback 000001D583FFA200 ref: 000001D58194EC80
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIWebsocketTTNetClient@SAMIWebsocketTTNetClient.cpp:42] ~SAMIWebsocketTTNetClient-
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIConnectPoolClient@SAMIConnectPoolClient.cpp:26] ~SAMIConnectPoolClient this: 000001D58194EC80
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: ~SAMIConnectPoolClientManager@SAMIConnectPoolClientManager.cpp:34] ~SAMIConnectPoolClientManager-
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: closeFrontier@CronetFrontierClientHelper.cpp:70] closeFrontier
+
+[2026-09-13 18:25:50.971] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: close@CronetFrontierClient.cpp:206] close frontier
+
+[result] events=46 text='第一句话测试。第二句话测试。第三句话测试。'

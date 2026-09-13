@@ -23,3 +23,8 @@ outputs/DoubaoVoicePortable/data/last_recording.wav
 __pycache__/
 *.pyc
 .venv/
+outputs/VoiceInputByRicky/app/
+outputs/VoiceInputByRicky/runtime/
+outputs/VoiceInputByRicky/data/logs/
+outputs/DoubaoVoicePortable/app/
+outputs/DoubaoVoicePortable/runtime/

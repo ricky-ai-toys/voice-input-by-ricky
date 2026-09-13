@@ -924,7 +924,7 @@ def remove_autostart() -> int:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="DoubaoVoicePortable")
+    ap = argparse.ArgumentParser(description="Voice Input by Ricky")
     ap.add_argument("--config", default=os.path.join(DEFAULT_ROOT, "data", "config.json"))
     ap.add_argument("--transcribe-file", help="legacy one-shot mode: transcribe a wav and exit")
     ap.add_argument("--simulate", help="run one streaming session from a wav (mic bypassed)")

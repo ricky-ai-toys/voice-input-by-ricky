@@ -642,3 +642,44 @@ Two more measurements narrow the remaining work:
 Current known rough edge: our message pump crashes (access violation) shortly after those two
 notifications arrive, so decoding the payload is the next concrete task; the engine side keeps
 running normally and the audio keeps streaming.
+
+### Milestone 21 - the engine does recognize our audio; the stop is what blocks the commit
+
+Three measurements this round, all with the private copy:
+
+1. **The cloud ASR returns real text for a session we triggered.** With the test wav played
+   through the speakers, the engine log contains
+   `payload: {"results":[{"is_interim":true,"text":"..."}]}` whose text grows with the
+   utterance (`X` is the engine's own placeholder for non-ASCII in its log, but a full-width
+   comma survives: `XAXX，XX`). Saved as `planb/evidence/asr_results.txt`;
+   `planb/decode_asr_text.py` extracts the fields.
+2. **A non-empty host context is accepted.** Sending `UpdateHostContext` with before/after text
+   (instead of empty strings) makes the engine cache it -
+   `[context][shell] apply-context ... has_context=1` - and it then feeds that text to the ASR
+   as recognition context (`[asr-context] ... cur_before_len=6 cur_after_len=6`).
+3. **RPC key events do not start voice.** `KeyDown`/`KeyUp` (op 0x04/0x05, `KeyCode`) are
+   accepted (status 0) but the engine never begins a session; the low-level hook really is the
+   only trigger - `planb/voice_session_rpc.py` shows no `voice startfrom` at all.
+
+That leaves one precise blocker for the transcript: the session never *commits* because it
+never stops cleanly. Instrumenting the hook (`planb/hook_peek.py`, which also hooks
+`VoiceKeyHookProc`) shows the mechanism:
+
+```
+[VHK][Trig] combo Alt 0xA5 UP -> real UP eaten + synthesized release (suppress menu)
+[VHK][Trig] SynthesizeMetaRelease meta=0xA5 is_win=0 events=3 injected
+```
+
+The engine deliberately swallows the real key-up and injects its own synthetic release events
+(seen as `vk=0xFC`, flags `0x10`/`0x90`). Our copy's patch removed the *injected* filter so
+that our scripted key would be accepted - which also makes the engine see **its own**
+synthetic events, and it then logs `unrelated key DOWN while consumed, cancel`: the session is
+cancelled instead of finalized, so `PeekVoiceCommit` never has committed text
+(`session=0 bytes=0`, 970/970 polls in the last run).
+
+The fix is to narrow the patch: keep ignoring *engine-synthesized* injected keys and accept only
+ours. The two candidates to discriminate on are the scan code (our injections use 0) and
+`dwExtraInfo` (both currently read 0, so the synthesized events likely carry a magic or a
+distinct vk such as `0xFC`). Once the stop finalizes cleanly, the commit - and therefore the
+transcript - should appear on the existing `PeekVoiceCommit` path, which our raw client already
+reaches (the engine logs `slot_PeekVoiceCommit` for every one of our polls).

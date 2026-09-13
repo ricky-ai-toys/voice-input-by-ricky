@@ -37,6 +37,42 @@ def lp(text: str) -> bytes:
 _KEEP_ALIVE: list = []
 
 
+class _KEYBDINPUT(ctypes.Structure):
+    _fields_ = [("wVk", wt.WORD), ("wScan", wt.WORD), ("dwFlags", wt.DWORD),
+                ("time", wt.DWORD), ("dwExtraInfo", ctypes.POINTER(wt.ULONG))]
+
+
+class _INPUT(ctypes.Structure):
+    _fields_ = [("type", wt.DWORD), ("ki", _KEYBDINPUT)]
+
+
+def send_key(vk: int, up: bool = False, use_sendinput: bool = False) -> None:
+    """Press/release a key.
+
+    `keybd_event` is the variant that has been proven to reach the engine's hook from a
+    non-foreground process (SendInput is subject to UIPI when the foreground window belongs to
+    a higher-integrity process), so it stays the default.
+    """
+    user32 = ctypes.WinDLL("user32", use_last_error=True)
+    if use_sendinput:
+        flags = 0x0002 if up else 0
+        inp = _INPUT(type=1, ki=_KEYBDINPUT(wVk=vk, wScan=0, dwFlags=flags, time=0,
+                                            dwExtraInfo=None))
+        user32.SendInput(1, ctypes.byref(inp), ctypes.sizeof(_INPUT))
+        return
+    user32.keybd_event.argtypes = [wt.BYTE, wt.BYTE, wt.DWORD, ctypes.c_void_p]
+    user32.keybd_event(vk, 0, 2 if up else 0, None)
+
+
+def send_click() -> None:
+    """A synthetic left click - the engine installs a mouse hook that stops voice on click."""
+    user32 = ctypes.WinDLL("user32", use_last_error=True)
+    user32.mouse_event.argtypes = [wt.DWORD, wt.DWORD, wt.DWORD, wt.DWORD, ctypes.c_void_p]
+    user32.mouse_event(0x0002, 0, 0, 0, None)   # LEFTDOWN
+    time.sleep(0.05)
+    user32.mouse_event(0x0004, 0, 0, 0, None)   # LEFTUP
+
+
 def make_foreground_window(activate: bool = True) -> int:
     """A real window + EDIT control, brought to the foreground.
 

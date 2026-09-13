@@ -21,7 +21,7 @@ import frida
 
 from pipe_client import Pipe, pb_str, start_server
 from settings_ipc_client import SettingsPipe, request
-from try_voice import lp, make_foreground_window
+from try_voice import lp, make_foreground_window, send_click, send_key
 from tsf_activate import activate_doubao_for_process
 
 FFPLAY = r"E:\ffmpeg\bin\ffplay.exe"
@@ -184,12 +184,9 @@ def main() -> int:
         res = pipe.call(op, body)
         print(f"[ctx] {name:22s} -> {res if res is None else res[2]}")
 
-    user32 = ctypes.WinDLL("user32", use_last_error=True)
-    user32.keybd_event.argtypes = [wt.BYTE, wt.BYTE, wt.DWORD, ctypes.c_void_p]
-
     player = play_async(wav)
     time.sleep(0.4)
-    user32.keybd_event(0xA5, 0, 0, None)
+    send_key(0xA5)
     print(f"[key] Right Alt down, playing {os.path.basename(wav)}")
 
     deadline = time.time() + hold
@@ -204,8 +201,11 @@ def main() -> int:
                 print(f"   [op 0x{op:02X} {time.time() - deadline + hold:4.2f}s] "
                       f"{res[1].hex()} {res[1].decode('utf-8', 'replace')[:80]!r}")
 
-    user32.keybd_event(0xA5, 0, 2, None)
+    send_key(0xA5, up=True)
     print("[key] Right Alt up; waiting for the tail")
+    if "--click-stop" in sys.argv:
+        send_click()
+        print("[mouse] synthetic left click sent (engine stops voice on click)")
     for i in range(12):
         pump(hwnd, 0.4, "tail")
         res = pipe.call(0x17, b"")

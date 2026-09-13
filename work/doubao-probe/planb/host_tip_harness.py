@@ -522,6 +522,31 @@ def main() -> int:
     if hwnd:
         focus_window(hwnd)
         print(f"[7.5] host window 0x{hwnd:X} created and focused", flush=True)
+        # the service may only expose its key sink once it has processed the focus change,
+        # so ask again after letting it settle
+        time.sleep(1.5)
+        kev2 = ctypes.c_void_p()
+        hr2 = vcall(tip.value, 0, ctypes.c_long,
+                    [ctypes.POINTER(GUID), ctypes.POINTER(ctypes.c_void_p)],
+                    ctypes.byref(GUID.parse(IID_ITfKeyEventSink)), ctypes.byref(kev2))
+        print(f"[7.6] re-QI(ITfKeyEventSink) hr=0x{hr2 & 0xFFFFFFFF:08X} ptr={kev2.value}",
+              flush=True)
+        if kev2.value:
+            eaten = wt.BOOL(0)
+            for label, slot in (("OnTestKeyDown", 4), ("OnKeyDown", 6)):
+                hr3 = vcall(kev2.value, slot, ctypes.c_long,
+                            [ctypes.c_void_p, wt.WPARAM, wt.LPARAM, ctypes.POINTER(wt.BOOL)],
+                            pic.value, VK_RMENU, 0x00380001, ctypes.byref(eaten))
+                print(f"[7.7] {label}(VK_RMENU) hr=0x{hr3 & 0xFFFFFFFF:08X} eaten={bool(eaten.value)}",
+                      flush=True)
+            time.sleep(hold)
+            hr3 = vcall(kev2.value, 7, ctypes.c_long,
+                        [ctypes.c_void_p, wt.WPARAM, wt.LPARAM, ctypes.POINTER(wt.BOOL)],
+                        pic.value, VK_RMENU, 0xC0380001, ctypes.byref(eaten))
+            print(f"[7.8] OnKeyUp(VK_RMENU) hr=0x{hr3 & 0xFFFFFFFF:08X} eaten={bool(eaten.value)}",
+                  flush=True)
+            time.sleep(3)
+            pump_messages(3)
         post_alt_sequence(hwnd, hold)
         pump_messages(hold + 6.0)
         print("[7.7] message loop finished", flush=True)

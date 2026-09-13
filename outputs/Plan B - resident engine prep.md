@@ -442,3 +442,24 @@ Two ways forward, both small:
    and can start the session from our own client;
 2. find what makes the core load `ui.dll` (candidate window / status bar creation path) and
    host that too - bigger, more fragile.
+
+### Milestone 12 - the missing ingredient is an *active* IME instance, not more hosting
+
+Two measurements closed the loop:
+
+1. **Module sets match exactly.** Real apps that have the IME loaded (ChatGPT, WeChat,
+   explorer, SearchHost) contain `tsf-oime.dll`, `tsf-oime-core.dll`, `rpc.dll` - and, like our
+   harness, **no `ui.dll`**. So our synthetic host is not missing a module that real apps have.
+2. **The IME is loaded but not active anywhere right now.** Attaching
+   `capture_pipe_attached.py` to ChatGPT.exe for 12 s showed only that app's own `uv` pipes -
+   zero traffic on `\\.\pipe\ObricIme\oime-server`. A loaded but unselected text service
+   produces no pipe traffic, which is why no keystroke we inject is ever answered.
+
+Also, re-querying `ITfKeyEventSink` on the TIP *after* the host settled still returns
+`E_NOINTERFACE` (hr=0x80004002), so the key handling really is not on the object we hold.
+
+Conclusion for the fork: everything reachable locally is now mapped. The one remaining input
+needed from a human is a **single real voice session with the IME actually selected**
+(Win+Space until the input indicator shows Doubao, then hold Right Alt and speak). That capture
+yields the op codes that start/stop voice; combined with milestone 11 (our host already picks
+up committed text through `PeekVoiceCommitText`) that is enough to build the client.

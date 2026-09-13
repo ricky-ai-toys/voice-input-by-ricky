@@ -707,3 +707,21 @@ milestone 11 built: a hosted TSF text store in the same process. The remaining w
 therefore to run that host *against the private engine* (load the copy's patched
 `tsf-oime-core.dll` by path via `DllGetClassObject` instead of the COM-registered installed
 one), so the core is the client that receives the commit text, and we read it out of the store.
+
+### Milestone 23 - a side effect worth fixing, and the stop window
+
+Two practical findings from running the sessions repeatedly:
+
+1. **Our experiments were mutating the installed IME's settings.** After a few sessions the
+   user's `%APPDATA%\DoubaoIme\conf\config.json` had
+   `voiceLongPressShortcut.modifierFlags` changed from `2049` to `514`, which silently broke the
+   long-press shortcut for the next runs (the hook logged `in_long=0` and no session started).
+   The engine reads and writes that file, and our copy shares it with the installed IME - a real
+   product must point the engine at its own profile directory. The value has been restored, and
+   `pipe_client.start_server()` now snapshots the file and restores it on exit, so no further
+   run can leave the user's settings changed.
+2. **The stop window is a few seconds wide.** `planb/stop_timing.py` shows the unrelated-key stop
+   (`PRESS_STOP`) working at t+2 s into a recording; by t+7 s the engine no longer reacts to
+   injected keys at all (Windows drops low-level hooks whose callback exceeds its timeout, and
+   the engine's callback does real work while recording). Stop the dictation inside that window
+   - or drive the stop the way the vendor's own client does - and the session finalises.

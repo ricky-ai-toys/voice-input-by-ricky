@@ -20,6 +20,7 @@ import time
 import frida
 
 from pipe_client import Pipe, pb_str, start_server
+from pipe_client import pb_int
 from settings_ipc_client import SettingsPipe, request
 from try_voice import lp, make_foreground_window, send_click, send_key
 from tsf_activate import activate_doubao_for_process
@@ -180,7 +181,10 @@ def main() -> int:
             (0x15, int(hwnd).to_bytes(8, "little") + (0x1122334455667788).to_bytes(8, "little"),
              "RegisterTsfNotifySink"),
             (0x14, lp("") + lp("") + lp("") + int(hwnd).to_bytes(8, "little") + lp("planb")
-             + lp("python.exe"), "UpdateHostContext")):
+             + lp("python.exe"), "UpdateHostContext"),
+            # the caret position - the engine may need it to treat the host as having a real
+            # insert point (CursorPos: x, y, height, relative, wait)
+            (0x08, pb_int(1, 100) + pb_int(2, 100) + pb_int(3, 20), "SetCursorPos")):
         res = pipe.call(op, body)
         print(f"[ctx] {name:22s} -> {res if res is None else res[2]}")
 

@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import ctypes
 import ctypes.wintypes as wt
+import atexit
 import os
 import subprocess
 import sys
@@ -216,12 +217,51 @@ def pb_dump(body: bytes) -> str:
 # server control
 # --------------------------------------------------------------------------- #
 def start_server(runtime: str) -> subprocess.Popen:
+    _snapshot_user_config()
     exe = os.path.join(runtime, "ImeService.exe")
     log_path = os.path.join(runtime, LOG_NAME)
     log = open(log_path, "wb")
     proc = subprocess.Popen([exe], cwd=runtime, stdout=log, stderr=subprocess.STDOUT,
                             creationflags=0x00000008)  # DETACHED_PROCESS
     return proc
+
+
+# --------------------------------------------------------------------------- #
+# user-config guard
+#
+# The engine keeps its settings in %APPDATA%\DoubaoIme\conf\config.json - the *same* file the
+# installed IME uses. Experiments have already changed `voiceLongPressShortcut.modifierFlags`
+# once, so every run through start_server() snapshots the file and puts it back on exit.
+# --------------------------------------------------------------------------- #
+_CONFIG_SNAPSHOT: tuple[str, bytes] | None = None
+
+
+def user_config_path() -> str:
+    return os.path.join(os.environ.get("APPDATA", ""), "DoubaoIme", "conf", "config.json")
+
+
+def _snapshot_user_config() -> None:
+    global _CONFIG_SNAPSHOT
+    path = user_config_path()
+    if _CONFIG_SNAPSHOT is None and os.path.exists(path):
+        with open(path, "rb") as fh:
+            _CONFIG_SNAPSHOT = (path, fh.read())
+        atexit.register(_restore_user_config)
+
+
+def _restore_user_config() -> None:
+    if not _CONFIG_SNAPSHOT:
+        return
+    path, data = _CONFIG_SNAPSHOT
+    try:
+        with open(path, "rb") as fh:
+            current = fh.read()
+        if current != data:
+            with open(path, "wb") as fh:
+                fh.write(data)
+            print(f"[guard] restored the user's {path} (the engine had rewritten it)")
+    except OSError:
+        pass
 
 
 def log_tail(runtime: str, count: int = 25) -> None:

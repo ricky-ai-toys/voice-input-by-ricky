@@ -1,0 +1,3 @@
+[info] matched WeChat.exe pid=23460
+[info] hooks ready in pid 23460
+[info] capturing 22s ...

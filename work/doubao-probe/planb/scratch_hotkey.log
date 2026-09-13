@@ -1,0 +1,430 @@
+[2026-09-13 19:23:37.393] [info] [server_main.cpp:2459] server start. [pid=23540].
+[2026-09-13 19:23:37.395] [warning] [service_process_bootstrapper.cpp:65] update activity query server start failed
+[2026-09-13 19:23:37.397] [info] [applog_runtime.cpp:154] [applog-runtime] init begin process=ImeService appid=685343 channel=release db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog app_version=0.9.0 encrypt=true event_verify=false
+[2026-09-13 19:23:37.397] [info] [applog_runtime.cpp:100] [applog-runtime] did ready: 2521637083956824
+[2026-09-13 19:23:37.397] [info] [applog_runtime.cpp:103] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog
+[2026-09-13 19:23:37.397] [info] [applog_runtime.cpp:180] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog
+[2026-09-13 19:23:37.397] [info] [applog_runtime.cpp:182] [applog-runtime] current did=2521637083956824
+[2026-09-13 19:23:37.398] [info] [service_process_bootstrapper.cpp:124] did dependent init begin did=2521637083956824
+[2026-09-13 19:23:37.399] [info] [TtnetEngine.cpp:238] [ttnet] opaque data store enable=true cert_count=145 api_ready=true
+[2026-09-13 19:23:37.400] [info] [ttnet_runtime.cpp:33] [ttnet-runtime] init result=1 did=2521637083956824
+[2026-09-13 19:23:37.400] [info] [asr_modify_pair_dispatcher.cpp:82] ModifyPairDispatcher.worker_loop_enter
+[2026-09-13 19:23:37.400] [info] [asr_modify_pair_dispatcher.cpp:33] ModifyPairDispatcher.start worker launched
+[2026-09-13 19:23:37.402] [info] [update_common.cpp:576] [update] comp=coordinator tid=- phase=pending step=check result=ok reason=- detail=automatic_update=enabled
+[2026-09-13 19:23:37.403] [info] [update_common.cpp:576] [update] comp=coordinator tid=- phase=pending step=check result=ok reason=- detail=scheduler=started,initial_ms=60000,interval_ms=3600000,channel=release
+[2026-09-13 19:23:37.443] [info] [parfait_runtime.cpp:32] [parfait-runtime] init result=1 work_path=C:\Users\Ricky\AppData\Roaming\DoubaoIme\parfait did=2521637083956824
+[2026-09-13 19:23:37.443] [info] [applog_runtime.cpp:200] [applog-event] queued event=server_start params_size=2
+[2026-09-13 19:23:37.444] [info] [controller.cpp:747] settings_repository init: loaded
+[2026-09-13 19:23:37.444] [info] [update_common.cpp:576] [update] comp=coordinator tid=- phase=pending step=check result=ok reason=- detail=automatic_update=enabled
+[2026-09-13 19:23:37.444] [info] [input_mode.cpp:80] Current input state is Pinyin26IdleState
+[2026-09-13 19:23:37.444] [info] [pinyin26_mode.cpp:195] ==========  config == fullshape:false, traditional:false, keyboard_type:0, shuangpinsheme:6
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2510:oime_engine::pinyin::Engine::Set] Engine::Set::HantTraditional false
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2492:oime_engine::pinyin::Engine::Set] Engine::Set::KeyboardType 0
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2519:oime_engine::pinyin::Engine::Set] Engine::Set::AutoCorrect true
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2535:oime_engine::pinyin::Engine::Set] Engine::Set::EnableFuzzy false
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2543:oime_engine::pinyin::Engine::Set] Engine::Set::IntelligentFuzzy true
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2551:oime_engine::pinyin::Engine::Set] Engine::Set::FuzzyType 455
+[2026-09-13 19:23:37.445] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 19:23:37.445] [error] [shell_impl.cpp:70] [engine] [engine.cpp:2595:oime_engine::pinyin::Engine::Set] Engine::Set non-supported type
+[2026-09-13 19:23:37.445] [error] [shell_impl.cpp:70] [engine] [engine.cpp:2595:oime_engine::pinyin::Engine::Set] Engine::Set non-supported type
+[2026-09-13 19:23:37.445] [info] [pinyin26_mode.cpp:227] ==========  config == autocorrect:true, enable_fuzzy:false, fuzzy_type:455, enable_kaomoji:true, enable_emoji:true
+[2026-09-13 19:23:37.479] [info] [engine_wrapper.cpp:109] load sys dict finished. path=C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\scratch\files\data\dict, result=0
+[2026-09-13 19:23:37.480] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:228:oime_engine::pinyin::PyDictManager::LoadUserDict] Engine::LoadUsrDict::CloudHotWordDict failed
+[2026-09-13 19:23:37.481] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:233:oime_engine::pinyin::PyDictManager::LoadUserDict] Engine::LoadUsrDict::CloudSensitiveWordDict failed
+[2026-09-13 19:23:37.482] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:275:oime_engine::pinyin::PyDictManager::LoadUserDict] Engine::LoadUsrDict::EmotionPictureDict failed
+[2026-09-13 19:23:37.482] [info] [engine_wrapper.cpp:132] load usr dict finished. path=C:\Users\Ricky\AppData\Roaming\DoubaoIme\dict, result=0
+[2026-09-13 19:23:37.482] [info] [shell_impl.cpp:170] [context][shell] attach mode=0 has_cached_context=0 tick=0 before_len=0 after_len=0 selected_len=0
+[2026-09-13 19:23:37.482] [info] [shell_impl.cpp:206] [context][shell] clear-engine-context mode=0 reason=no-cached-context
+[2026-09-13 19:23:37.482] [info] [shell_impl.cpp:214] [context][shell] set-engine-context mode=0 before_len=0 result=0
+[2026-09-13 19:23:37.482] [info] [shell_impl.cpp:172] Attach Input mode[0] success.
+[2026-09-13 19:23:37.482] [info] [convert_utils.cpp:558] UserWordsUpload.precheck callback_registered has_callback=1
+[2026-09-13 19:23:37.482] [info] [ime_net_sdk_client_win.cpp:36] ime_net_sdk client started worker_count=2
+[2026-09-13 19:23:37.482] [info] [controller.cpp:797] ime_net config init env_enable_cloud=1 ime_net_client_ready=1
+[2026-09-13 19:23:37.482] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk] mac version: 0.1.7
+[2026-09-13 19:23:37.482] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk] mac logger init success, level = Info
+[2026-09-13 19:23:37.482] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk] net-sdk-kernal default config loaded
+[2026-09-13 19:23:37.482] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk] has been initialized，version:[sdk-0.1.7][net-sdk-kernal-0.1.0]
+[2026-09-13 19:23:37.482] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-net-sdk-kernal] init tokio runtime, config:Multi(2)
+[2026-09-13 19:23:37.483] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-net-sdk-kernal] enter runtime:EnterGuard { _guard: SetCurrentGuard { prev: None, depth: 1, _p: PhantomData<tokio::util::markers::SyncNotSend> }, _handle_lifetime: PhantomData<&tokio::runtime::handle::Handle> }
+[2026-09-13 19:23:37.483] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-net-sdk-kernal] tokio runtime success
+[2026-09-13 19:23:37.483] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal] init endpoint, start load config
+[2026-09-13 19:23:37.483] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal] version = 0.1.0, load config success config = *, create ca store
+[2026-09-13 19:23:37.483] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal] load ca cert success, index = [0]
+[2026-09-13 19:23:37.483] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal] ca store build over, start load cert and key.
+[2026-09-13 19:23:37.483] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal] cert and key load success, start build client config.
+[2026-09-13 19:23:37.483] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal] init client_crypto over, alpn protocols:[["h3"]]
+[2026-09-13 19:23:37.483] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal] init client default config success, start bind addr pares
+[2026-09-13 19:23:37.483] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal] bind addr pares success = 0.0.0.0:0
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:936] sami extra space_between_zh_and_num enable=0 remove_space=1
+[2026-09-13 19:23:37.484] [info] [controller.cpp:2535] voice connection pool warmup trigger source=Init env_enable_cloud=1 client_ready=1
+[2026-09-13 19:23:37.484] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal] endpoint bind addr success
+[2026-09-13 19:23:37.484] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal] endpoint init over
+[2026-09-13 19:23:37.484] [info] [ime_net_sdk_client_win.cpp:232] ime_net_sdk init success
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:1102] sami connection pool warmup worker started
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:266] sami connection pool async warmup requested merged=0 reused_pool=0 frontier=0 connect_pool=0 idle_scheduled=0
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:1194] sami connection pool async warmup begin frontier=0 connect_pool=0 idle_scheduled=0
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinputsuccess: redirect_print_string_to_oslog(00007FF61B946950) idx 0
+[2026-09-13 19:23:37.484] [info] [controller.cpp:886] settings_ipc_server started on \\.\pipe\DoubaoIme\settings-rpc
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:936] sami extra space_between_zh_and_num enable=0 remove_space=1
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: createFrontierWithParams@CronetFrontierClientHelper.cpp:58] create frontier header success
+
+[2026-09-13 19:23:37.490] [info] [font_win.cpp:29] [FontWin] Create size: 19 scale: 1
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: CronetFrontierClient@CronetFrontierClient.cpp:23] CronetFrontierClient()
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: initEngine@sami_core_ttnet_engine_manager.cpp:71]  sami sdk init ttnet, sdk use non-inject
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: getParams@CronetFrontierClientHelper.cpp:79] getParams success, url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:74] Frontier config url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws, did: 2521637083956824, aid: 685343
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: parseUrl@url_utils.cpp:51] frontier-audio-ime-quic.doubao.com/api/v1/ws to frontier-audio-ime-quic.doubao.com /api/v1/ws 
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:118] frontier connect timeout: 5000
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:133] create frontier header success
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:146] frontier query: aid=685343&app_name=ImeService&app_version=0.9.0&cellularProvider=&channel=release&device_brand=System manufacturer&device_id=2521637083956824&device_model=System Product Name&device_platform=windows&device_type=Windows&os=windows&os_version=Windows 10.0.26200&region=US&screen_height=1440&screen_width=2560&version_name=0.9.0
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@CronetFrontierClient.cpp:175] configParams finished
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: updateFrontierPingInterval@CronetFrontierClientHelper.cpp:66] updatePingInterval ping_period_mills: 3000
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: updatePingInterval@CronetFrontierClient.cpp:189] update ping period mills: 3000
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: StartThreadRunner@IBaseThreadRunner.cpp:25]  ******* SAMIConnectPoolService StartThreadRunner
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@SAMIConnectPoolContext.cpp:28] ConnectPool params protocol_type: 3, timeout: 5000, url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws;wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws, appKey: OrnqKvSSrs
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: addConnectClient@SAMIConnectPoolService.cpp:37] addConnectClient oime_windows wss://frontier-audio-ime-quic.doubao.com/api/v1/ws;wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws 2
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: operator ()@IBaseThreadRunner.cpp:32]  SAMIConnectPoolService StartThreadRunner begin running
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIConnectPoolClientManager@SAMIConnectPoolClientManager.cpp:14] SAMIConnectPoolClientManager
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIConnectPoolClient@SAMIConnectPoolClient.cpp:22] SAMIConnectPoolClient
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 0, client count: 2
+
+[2026-09-13 19:23:37.484] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:131] oime_windows start maintain
+
+[2026-09-13 19:23:37.485] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: buildTransportClient@TransportClientFactory.cpp:27] buildTransportClient create frontier client, url: wss://frontier-audio-ime-quic.doubao.com/api/v1/ws
+
+[2026-09-13 19:23:37.485] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIFrontierClientCallback@SAMIFrontierClientCallback.cpp:17] SAMIFrontierClientCallback() 000002563A397690 maps 000002563E77E580
+
+[2026-09-13 19:23:37.485] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIFrontierClient@SAMIFrontierClient.cpp:21] network type: 0, enable reuse: 1
+
+[2026-09-13 19:23:37.485] [error] [sami_asr_client_win.cpp:681] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIFrontierClient@SAMIFrontierClient.cpp:22] client 2563ea3d0e0 bind 2563a397690, cb 2563e77e580
+
+[2026-09-13 19:23:37.485] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: registerService@CronetFrontierClient.cpp:287] registerService available_service_queue_: 10
+
+[2026-09-13 19:23:37.485] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: registerService@CronetFrontierClient.cpp:322] register 6a000026e030 id 1 delegate 6a0000259260
+
+[2026-09-13 19:23:37.485] [error] [sami_asr_client_win.cpp:681] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: startConnection@SAMIFrontierClient.cpp:75] register 6a000026e030 with 2563ea3d0e0
+
+[2026-09-13 19:23:37.485] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: sendAuth@SAMIConnectPoolClient.cpp:154] send auth ping
+
+[2026-09-13 19:23:37.485] [info] [sami_asr_client_win.cpp:1093] sami connection pool idle shutdown worker started
+[2026-09-13 19:23:37.485] [info] [sami_asr_client_win.cpp:1133] sami connection pool idle shutdown scheduled delay_ms=300000 generation=1 rescheduled=0 frontier=1 connect_pool=1 running=0 accepting_audio=0 stopping=0 handle=0
+[2026-09-13 19:23:37.485] [info] [sami_asr_client_win.cpp:224] sami connection pool warmup ok=1 reused_pool=0 frontier=1 connect_pool=1
+[2026-09-13 19:23:37.485] [info] [sami_asr_client_win.cpp:1197] sami connection pool async warmup done ok=1
+[2026-09-13 19:23:37.485] [info] [sami_asr_client_win.cpp:1148] sami connection pool idle shutdown wait begin delay_ms=300000 generation=1 frontier=1 connect_pool=1
+[2026-09-13 19:23:37.485] [info] [appearance_config.cpp:57] [AppearanceConfig] Init to 2
+[2026-09-13 19:23:37.485] [info] [appearance_config.cpp:107] [AppearanceConfig] font_cand is nullptr, root = 0x0
+[2026-09-13 19:23:37.485] [info] [appearance_config.cpp:116] [AppearanceConfig] font_index is nullptr, root = 0x0
+[2026-09-13 19:23:37.501] [info] [font_win.cpp:29] [FontWin] Create size: 16 scale: 1
+[2026-09-13 19:23:37.501] [info] [font_win.cpp:29] [FontWin] Create size: 12 scale: 1
+[2026-09-13 19:23:37.503] [info] [window_win.cpp:107] WindowWin created hwnd=0x111112 win_style=240 ex_style=0x8080088 actual_ex_style=0x8080088
+[2026-09-13 19:23:37.503] [info] [font_win.cpp:51] [FontWin] Destroy size: 28 scale: 1.5
+[2026-09-13 19:23:37.503] [info] [font_win.cpp:51] [FontWin] Destroy size: 24 scale: 1.5
+[2026-09-13 19:23:37.503] [info] [appearance_config.cpp:76] [AppearanceConfig] ResetScale from 0 to 1.5
+[2026-09-13 19:23:37.503] [info] [font_win.cpp:51] [FontWin] Destroy size: 28 scale: 1.5
+[2026-09-13 19:23:37.504] [info] [font_win.cpp:29] [FontWin] Create size: 16 scale: 1.5
+[2026-09-13 19:23:37.504] [info] [font_win.cpp:51] [FontWin] Destroy size: 24 scale: 1.5
+[2026-09-13 19:23:37.504] [info] [appearance_config.cpp:103] [AppearanceConfig] font_cand ReSize to 16, font_level_ 2
+[2026-09-13 19:23:37.504] [info] [font_win.cpp:29] [FontWin] Create size: 13 scale: 1.5
+[2026-09-13 19:23:37.504] [info] [appearance_config.cpp:112] [AppearanceConfig] font_index ReSize to 13, font_level_ 2
+[2026-09-13 19:23:37.506] [info] [font_win.cpp:29] [FontWin] Create size: 13 scale: 1
+[2026-09-13 19:23:37.506] [info] [window_win.cpp:107] WindowWin created hwnd=0x180562 win_style=240 ex_style=0x8080088 actual_ex_style=0x8080088
+[2026-09-13 19:23:37.506] [info] [font_win.cpp:51] [FontWin] Destroy size: 19 scale: 1.5
+[2026-09-13 19:23:37.507] [info] [status_bar_window.cpp:687] status bar move to default pos=(2324, 1300) work=(0,0 2560x1368)
+[2026-09-13 19:23:37.507] [info] [voice_wave_model.cpp:290] [voice-wave] top_target=0.0000 peak_idx=1
+[2026-09-13 19:23:37.700] [info] [ime_manager.cpp:111] current ime is keyboard
+[2026-09-13 19:23:37.700] [info] [controller.cpp:4160] setting_status daily check skipped, already reported today date=2026-09-13
+[2026-09-13 19:23:37.700] [info] [controller.cpp:4187] setting_status daily check scheduled delay_ms=16612301
+[2026-09-13 19:23:37.700] [info] [server_main.cpp:728] voice mouse hook installed on dedicated thread (left/right click stops voice)
+[2026-09-13 19:23:37.700] [info] [server_main.cpp:370] voice key hook installed (ref=1) on dedicated thread
+[2026-09-13 19:23:37.700] [info] [rpc_server_impl.cpp:255] PipeServer security descriptor enabled: D:(A;;GA;;;SY)(A;;GA;;;BA)(A;;GA;;;IU)(A;;GA;;;AU)(A;;GA;;;AC)
+[2026-09-13 19:23:37.700] [info] [server_main.cpp:950] ServerRpcThread begin.
+[2026-09-13 19:23:37.700] [info] [server_main.cpp:953] ServerRpcThread CreateRpcServer: 1
+[2026-09-13 19:23:37.700] [info] [server_main.cpp:967] ServerRpcThread Run addr: \\.\pipe\ObricIme\oime-serveR
+[2026-09-13 19:23:37.700] [info] [server_main.cpp:287] [SysChEnHotkey] cache refreshed assigned=1 mods=0x2 side=0xC0 vk=0x20
+[2026-09-13 19:23:37.700] [info] [server_main.cpp:975] ServerTsfLogRpcThread begin.
+[2026-09-13 19:23:37.701] [info] [server_main.cpp:982] ServerUpdateLogRpcThread begin.
+[2026-09-13 19:23:37.701] [info] [update_log_rpc_server_win.cpp:818] UpdateLogPipeServer listening session=1
+[2026-09-13 19:23:37.702] [info] [server_main.cpp:2638] server is runing. [pid=23540].
+[2026-09-13 19:23:37.702] [info] [server_main.cpp:925] update service readiness rpc=1 persistence=1 ready=1
+[2026-09-13 19:23:38.203] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnServiceReady@SAMIFrontierClientCallback.cpp:34] OnServiceReady {"app_live":718.485,"bis_stream_num":1,"build_connection_time":362.709,"conn_dur":362.709,"conn_state":2,"connection_id":"18434690162902308538","decode_frame_error":0,"disconnect_times":0,"error_code":0,"extra_info":"{\"bis\":{\"connection_mode\":4,\"extra\":\"\",\"flags\":128,\"ping\":0,\"rebuild\":false,\"stream_id\":3,\"timeout\":5000,\"transport_type\":0},\"url_dispatch\":{\"action_info\":[],\"domain_merge_info\":{\"state\":0},\"effective_ratio\":0.0,\"empty_action\":false,\"epoch\":-1888019194,\"md5\":\"9e3102c427e6a3bf9982641c021af61a\",\"source\":0,\"update_time\":\"1789298617478\"}}","final_host":"frontier-audio-ime-quic.doubao.com","ft_state":0,"ft_type":1,"ft_version":"v1","host_port":"frontier-audio-ime-quic.doubao.com","init_time":1789298617.483758,"is_background":false,"is_conn_ready":true,"last_duration":355.438,"log_type":"frontier_all","ping_max_times":0,"ping_period":10000,"ping_timeout":5000,"rebuild_enabled":false,"rebuild_timeout":5100,"received_bytes":"614","recv_goaway":false,"retry_times":0,"rt_time":1789298618.202244,"sent_bytes":"867","server_error":0,"service":{"end_stream_timeout":5000,"is_stream_ready":true,"stream_conn_dur":355.142,"stream_id":3,"stream_num":1,"stream_server_error":0,"stream_state":2},"total_duration":355.438,"transport_info":0}
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: onBinaryMessageReceived@SAMIConnectPoolClient.cpp:123] receive auth pong
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: CreateOneClient@SAMIConnectPoolClient.cpp:76] create a resource and add to connect pool 2563ea3d0e0, client type: 1
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:203] oime_windows create one client
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 1, client count: 2
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:131] oime_windows start maintain
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: buildTransportClient@TransportClientFactory.cpp:23] buildTransportClient create websocket client, url: wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: SAMIWebsocketTTNetCallback@SAMIWebsocketTTNetCallback.cpp:15] SAMIWebsocketTTNetCallback 0000025643AC0680 ref: 000002563E77E580
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@sami_core_ttnet_websocket.cpp:56] websocket init begin, url: wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws, ping pong timeout: 0, network_type: 0, connect timeout: 5000
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@sami_core_ttnet_websocket.cpp:68] websocket init url: wss://frontier-audio-ime-ws.doubao.com/ocean/api/v1/ws?aid=685343&app_name=ImeService&app_version=0.9.0&cellularProvider=&channel=release&device_brand=System manufacturer&device_id=2521637083956824&device_model=System Product Name&device_platform=windows&device_type=Windows&os=windows&os_version=Windows 10.0.26200&region=US&screen_height=1440&screen_width=2560&version_name=0.9.0
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: init@sami_core_ttnet_websocket.cpp:102] websocket init end
+
+[2026-09-13 19:23:38.546] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: startConnection@sami_core_ttnet_websocket.cpp:117] Cronet_WSClient_StartConnection
+
+[2026-09-13 19:23:38.547] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: startConnection@sami_core_ttnet_websocket.cpp:120] WaitForConnectDone+
+
+[2026-09-13 19:23:38.547] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnConnectionStateChanged@SAMIWebsocketTTNetCallback.cpp:43] client 0000025643AC0680: state 0, ref: 000002563E77E580
+
+[2026-09-13 19:23:38.718] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnConnectionStateChanged@SAMIWebsocketTTNetCallback.cpp:43] client 0000025643AC0680: state 4, ref: 000002563E77E580
+
+[2026-09-13 19:23:38.718] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: startConnection@sami_core_ttnet_websocket.cpp:125] WaitForConnectDone-, cost time: 171.590800ms
+
+[2026-09-13 19:23:38.718] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: sendAuth@SAMIConnectPoolClient.cpp:154] send auth ping
+
+[2026-09-13 19:23:38.775] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: onBinaryMessageReceived@SAMIConnectPoolClient.cpp:123] receive auth pong
+
+[2026-09-13 19:23:38.775] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: CreateOneClient@SAMIConnectPoolClient.cpp:76] create a resource and add to connect pool 2563a8e33a0, client type: 0
+
+[2026-09-13 19:23:38.775] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:203] oime_windows create one client
+
+[2026-09-13 19:23:38.775] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:23:38.775] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:23:38.775] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:23:38.775] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:23:43.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:23:43.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:23:43.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:23:43.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:23:48.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:23:48.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:23:48.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:23:48.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:23:53.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:23:53.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:23:53.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:23:53.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:23:58.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:23:58.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:23:58.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:23:58.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:03.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:03.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:03.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:03.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:08.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:08.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:08.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:08.776] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:10.984] [info] [controller.cpp:2370] slot_SetUIElementShowState: prev=1, new=1
+[2026-09-13 19:24:10.984] [info] [controller.cpp:1963] ime_net connect trigger source=slot_FocusIn env_enable_cloud=1 initialized=1 last_state=0
+[2026-09-13 19:24:10.984] [info] [ime_net_sdk_client_win.cpp:73] ime_net_sdk queue connect async=1 initialized=1 last_state=0
+[2026-09-13 19:24:10.984] [info] [controller.cpp:2535] voice connection pool warmup trigger source=slot_FocusIn env_enable_cloud=1 client_ready=1
+[2026-09-13 19:24:10.984] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: ERROR - [ime-net-sdk] client::on_connect result = Init
+[2026-09-13 19:24:10.984] [info] [ime_net_sdk_client_win.cpp:250] ime_net_sdk connect begin async=1 state_before=10101
+[2026-09-13 19:24:10.984] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:on_async_connect reset connection stat to connecting
+[2026-09-13 19:24:10.984] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:set_connect_start check reconnection frequency
+[2026-09-13 19:24:10.984] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:on_async_connect start.
+[2026-09-13 19:24:10.984] [info] [ime_net_sdk_client_win.cpp:256] ime_net_sdk connect requested async=1 state=10102
+[2026-09-13 19:24:10.984] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:connecting: get end_point.
+[2026-09-13 19:24:10.984] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:connecting: dns host.
+[2026-09-13 19:24:10.985] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:on_connect,host[ime-igw.doubao.com:443] parse addr=122.14.229.138:443
+[2026-09-13 19:24:10.985] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:connecting: start connect server. count:[0] host[ime-igw.doubao.com:443] addr[122.14.229.138:443].
+[2026-09-13 19:24:10.985] [info] [controller.cpp:4214] Register TSF notify sink hwnd=0x3909D6 cookie=4110005585959714817 total=1
+[2026-09-13 19:24:10.986] [info] [controller.cpp:2370] slot_SetUIElementShowState: prev=1, new=1
+[2026-09-13 19:24:10.986] [info] [controller.cpp:1963] ime_net connect trigger source=slot_FocusIn env_enable_cloud=1 initialized=1 last_state=10102
+[2026-09-13 19:24:10.986] [info] [ime_net_sdk_client_win.cpp:73] ime_net_sdk queue connect async=1 initialized=1 last_state=10102
+[2026-09-13 19:24:10.986] [info] [controller.cpp:2535] voice connection pool warmup trigger source=slot_FocusIn env_enable_cloud=1 client_ready=1
+[2026-09-13 19:24:10.986] [info] [ime_net_sdk_client_win.cpp:250] ime_net_sdk connect begin async=1 state_before=10102
+[2026-09-13 19:24:10.986] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:on_async_connect reset connection stat to connecting
+[2026-09-13 19:24:10.986] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:set_connect_start check reconnection frequency
+[2026-09-13 19:24:10.986] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:set_connect_start: The connection is connecting.
+[2026-09-13 19:24:10.986] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:set_connect_start status judged successful, no wait.
+[2026-09-13 19:24:10.986] [info] [ime_net_sdk_client_win.cpp:256] ime_net_sdk connect requested async=1 state=10102
+[2026-09-13 19:24:11.017] [info] [controller.cpp:2370] slot_SetUIElementShowState: prev=1, new=1
+[2026-09-13 19:24:11.018] [info] [controller.cpp:1963] ime_net connect trigger source=slot_FocusIn env_enable_cloud=1 initialized=1 last_state=10102
+[2026-09-13 19:24:11.018] [info] [ime_net_sdk_client_win.cpp:73] ime_net_sdk queue connect async=1 initialized=1 last_state=10102
+[2026-09-13 19:24:11.018] [info] [controller.cpp:2535] voice connection pool warmup trigger source=slot_FocusIn env_enable_cloud=1 client_ready=1
+[2026-09-13 19:24:11.018] [info] [ime_net_sdk_client_win.cpp:250] ime_net_sdk connect begin async=1 state_before=10102
+[2026-09-13 19:24:11.018] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:on_async_connect reset connection stat to connecting
+[2026-09-13 19:24:11.018] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:set_connect_start check reconnection frequency
+[2026-09-13 19:24:11.018] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:set_connect_start: The connection is connecting.
+[2026-09-13 19:24:11.018] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:set_connect_start status judged successful, no wait.
+[2026-09-13 19:24:11.018] [info] [ime_net_sdk_client_win.cpp:256] ime_net_sdk connect requested async=1 state=10102
+[2026-09-13 19:24:11.019] [info] [controller.cpp:3093] voice state query state=0x0
+[2026-09-13 19:24:11.019] [info] [controller.cpp:5136] status bar visibility -> 1 (enabled=1)
+[2026-09-13 19:24:11.677] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:connecting: connect server success. start set global var.
+[2026-09-13 19:24:11.677] [info] [ime_net_sdk_client_win.cpp:129] ime_net_sdk: INFO - [ime-net-sdk-kernal]:connecting: set global var over
+[2026-09-13 19:24:13.777] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:13.777] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:13.777] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:13.777] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:18.778] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:18.778] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:18.778] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:18.778] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:23.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:23.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:23.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:23.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:28.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:28.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:28.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:28.780] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:33.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:33.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:33.779] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:33.780] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:38.780] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:38.780] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:38.780] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:38.780] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:43.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:43.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:43.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:43.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:48.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:48.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:48.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:48.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:53.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:53.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:53.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:53.781] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:24:58.782] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:24:58.782] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:24:58.782] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:24:58.782] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:25:03.782] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:25:03.782] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:25:03.782] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:25:03.782] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:25:06.766] [info] [update_common.cpp:576] [update] comp=coordinator tid=- phase=pending step=check result=ok reason=- detail=decision=requested,trigger=auto
+[2026-09-13 19:25:06.767] [info] [TtnetHttpClient.cpp:98] ttnet.DoRequest.begin trace_id=update-check method=GET url=https://ime.doubao.com/api/v1/version/list?channel=release&platform=windows&version_code=90000&history_version=false&device_id=2521637083956824 body_size=0 extra_headers=0 timeout_ms=15000
+[2026-09-13 19:25:06.767] [info] [TtnetHttpClient.cpp:166] ttnet.DoRequest.InitWithParams trace_id=update-check result=0 url=https://ime.doubao.com/api/v1/version/list?channel=release&platform=windows&version_code=90000&history_version=false&device_id=2521637083956824
+[2026-09-13 19:25:06.767] [info] [TtnetHttpClient.cpp:177] ttnet.DoRequest.Start trace_id=update-check start_result=0 body_size=0 timeout_ms=15000
+[2026-09-13 19:25:07.146] [info] [TtnetSerialExecutor.cpp:158] ttnet.ExecutorExecute.dispatch tid=36104 runnable=0x6a000038f920
+[2026-09-13 19:25:07.146] [info] [TtnetSerialExecutor.cpp:162] ttnet.ExecutorExecute.run.begin tid=21176 runnable=0x6a000038f920
+[2026-09-13 19:25:07.146] [info] [TtnetHttpClient.cpp:291] ttnet.OnResponseStarted tid=21176 trace_id=update-check request=0x6a000026ab40 buffer=0x6a0000255570
+[2026-09-13 19:25:07.146] [info] [TtnetSerialExecutor.cpp:166] ttnet.ExecutorExecute.run.end tid=21176 runnable=0x6a000038f920
+[2026-09-13 19:25:07.146] [info] [TtnetSerialExecutor.cpp:158] ttnet.ExecutorExecute.dispatch tid=36104 runnable=0x6a000038e940
+[2026-09-13 19:25:07.146] [info] [TtnetSerialExecutor.cpp:162] ttnet.ExecutorExecute.run.begin tid=25916 runnable=0x6a000038e940
+[2026-09-13 19:25:07.146] [info] [TtnetHttpClient.cpp:304] ttnet.OnReadCompleted tid=25916 trace_id=update-check bytes_read=45 body_size_before=0
+[2026-09-13 19:25:07.146] [info] [TtnetSerialExecutor.cpp:166] ttnet.ExecutorExecute.run.end tid=25916 runnable=0x6a000038e940
+[2026-09-13 19:25:07.146] [info] [TtnetSerialExecutor.cpp:158] ttnet.ExecutorExecute.dispatch tid=36104 runnable=0x6a000038fa60
+[2026-09-13 19:25:07.146] [info] [TtnetSerialExecutor.cpp:162] ttnet.ExecutorExecute.run.begin tid=35624 runnable=0x6a000038fa60
+[2026-09-13 19:25:07.146] [info] [TtnetHttpClient.cpp:331] ttnet.OnSucceeded tid=35624 trace_id=update-check status=200 body_size=45
+[2026-09-13 19:25:07.146] [info] [TtnetSerialExecutor.cpp:166] ttnet.ExecutorExecute.run.end tid=35624 runnable=0x6a000038fa60
+[2026-09-13 19:25:07.146] [info] [TtnetHttpClient.cpp:226] ttnet.DoRequest.wait.end trace_id=update-check done=1 status=200 body_size=45
+[2026-09-13 19:25:07.152] [info] [update_common.cpp:576] [update] comp=coordinator tid=- phase=pending step=check result=ok reason=- detail=decision=up_to_date
+[2026-09-13 19:25:08.783] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:25:08.783] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:25:08.783] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:25:08.783] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+
+[2026-09-13 19:25:13.783] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:61] connect pool transport resources size: 2, client count: 2
+
+[2026-09-13 19:25:13.783] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 0
+
+[2026-09-13 19:25:13.783] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: needMaintain@SAMIConnectPoolClientManager.cpp:63] transport client type: 1
+
+[2026-09-13 19:25:13.783] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: RunOnce@SAMIConnectPoolService.cpp:142] all ready, sleep
+

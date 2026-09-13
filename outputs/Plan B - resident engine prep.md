@@ -216,3 +216,38 @@ Evidence gathered this session (all reproducible with the scripts in `planb/`):
 Next concrete step: resolve the `call qword ptr [rip+disp]` targets inside each vtable method at
 runtime (read the IAT slot) to find which method calls `kernel32!CreateFileW` - that method is
 `Connect(pipe_name)`. Then drive it from Python together with the send/peek methods.
+
+### Milestone 5 - the vendor client runs inside our Python process and connects to the engine
+
+This is the breakthrough for Plan B. Instead of reimplementing the rpc client we now **host the
+vendor's own TSF text service**, which contains the entire client logic (pipe transport,
+microphone capture, cloud streaming, text commit).
+
+`probe_activate_tip.py` (run through `run_with_hooks.py`):
+
+```
+[1] ITfThreadMgr hr=0x00000000
+[2] ITfThreadMgr::Activate hr=0x00000000 tid=32
+[3] CreateDocumentMgr hr=0x00000000
+[4] CoCreateInstance(ITfTextInputProcessorEx) hr=0x80004002   (E_NOINTERFACE, expected)
+[4b] base ITfTextInputProcessor hr=0x00000000                (the service exposes the base iface)
+[hook] CreateFileA('\\.\pipe\ObricIme\oime-server')
+[hook] CreateFileA('\\.\pipe\ObricIme\oime-server-tsf-log')
+[5] Activate hr=0x00000000
+```
+
+So from plain Python: `CoCreateInstance(CLSID_TF_ThreadMgr)` -> `Activate` -> `CreateDocumentMgr`
+-> `CoCreateInstance(Doubao TIP CLSID)` -> `ITfTextInputProcessor::Activate(thread_mgr, tid)`
+works, and the service immediately opens the engine pipes (18 pipe opens observed in that run).
+The transport we could not find earlier lives inside `tsf-oime-core.dll`, and it is now running
+in-process with us.
+
+Remaining work, in order:
+1. **Feed the voice trigger**: QueryInterface the service for `ITfKeyEventSink` and call
+   `OnTestKeyDown/OnKeyDown/OnKeyUp` with `VK_RMENU` (Right Alt) to start/stop recording.
+2. **Give it a place to commit text**: implement a minimal `ITextStoreACP` and create a
+   context via `ITfDocumentMgr::CreateContext` (about 20 vtable methods; the voice text is
+   committed through `SetText`/`InsertAtSelection`). This is the text we paste.
+3. **Productise**: register the CLSID per-user (`HKCU\Software\Classes\CLSID\{9D2B2E2B-...}`)
+   pointing at our portable copy, redirect the core's `VersionDir` (HKCU or a patched stub) and
+   rename the pipe in the copy so it talks to *our* resident engine - all without admin rights.

@@ -1,0 +1,16 @@
+[info] CreateFileA IAT slot 0x180253130
+[info] CreateFileW IAT slot 0x180253198
+[info] call sites via IAT: ['0x180127105', '0x1801341f1', '0x1801d2218', '0x1801d2a12', '0x1801d2a70', '0x1801d2c90', '0x1801d356c', '0x1801d37c0', '0x1801d3a28', '0x1801d3cb4', '0x1802054c0', '0x180205561', '0x1802055aa', '0x180205664']
+[info] 14 code addresses can reach a CreateFile* call
+[vtable  0] rva=0x127F0 can-reach-CreateFile=False
+[vtable  1] rva=0x16FC0 can-reach-CreateFile=False
+[vtable  2] rva=0x12BD0 can-reach-CreateFile=False
+[vtable  3] rva=0x12EA0 can-reach-CreateFile=False
+[vtable  4] rva=0x14DB0 can-reach-CreateFile=False
+[vtable  5] rva=0x15F60 can-reach-CreateFile=False
+[vtable  6] rva=0x13070 can-reach-CreateFile=False
+[vtable  7] rva=0x13360 can-reach-CreateFile=False
+[vtable  8] rva=0x133F0 can-reach-CreateFile=False
+[vtable  9] rva=0x170C0 can-reach-CreateFile=False
+[vtable 10] rva=0x17D00 can-reach-CreateFile=False
+[vtable 11] rva=0x13D40 can-reach-CreateFile=False

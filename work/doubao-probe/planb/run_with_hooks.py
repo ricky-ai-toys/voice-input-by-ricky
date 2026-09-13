@@ -51,7 +51,9 @@ send({ kind: 'hooked' });
 
 def main() -> int:
     runtime = os.path.abspath(sys.argv[1])
-    probe = os.path.join(os.path.dirname(os.path.abspath(__file__)), "probe_client_connect.py")
+    here = os.path.dirname(os.path.abspath(__file__))
+    probe_name = sys.argv[2] if len(sys.argv) > 2 else "probe_client_connect.py"
+    probe = os.path.join(here, probe_name)
     argv = [sys.executable, probe, runtime]
 
     pid = frida.spawn(sys.executable, argv=argv, cwd=os.path.dirname(probe), stdio="inherit")

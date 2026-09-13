@@ -29,7 +29,9 @@ UTF16_PAIRS = [
     # message, so without this pair the copy still adds instances to the installed IME's pipe
     ("\\\\.\\pipe\\DoubaoIme\\settings-rpc", "\\\\.\\pipe\\DoubaoIme\\settings-rp"),
 ]
-TARGETS = ("ImeService.exe", "rpc.dll")
+# every module that carries the pipe name: the server, and the clients that talk to it
+TARGETS = ("ImeService.exe", "rpc.dll", "tsf-oime-core.dll",
+           "DoubaoIme.Settings.NativeRuntime.dll")
 
 
 def patch(path: str, suffix: str) -> int:

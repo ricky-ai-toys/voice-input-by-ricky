@@ -140,19 +140,42 @@ def main() -> int:
     print(f"[arm] {sp.call(request('settings.setVoiceTryoutActive', {'active': True, 'cookie': int(time.time())}))}")
     sp.close()
 
-    hwnd = make_foreground_window()
-    print(f"[host] hwnd=0x{hwnd:X} pid={os.getpid()}")
-    print(f"[tsf] activate -> 0x{activate_doubao_for_process(verbose=False):08X}")
+    foreign = "--foreign-focus" in sys.argv
+    if foreign and "--own-sink" in sys.argv:
+        # our own window receives the engine's notifications, but the *foreground* app stays
+        # the focus owner - that is what the hook's "allowed" check compares
+        hwnd = make_foreground_window(activate=False)
+        u = ctypes.WinDLL("user32")
+        u.GetForegroundWindow.restype = wt.HWND
+        pid_of_fg = wt.DWORD(0)
+        u.GetWindowThreadProcessId.argtypes = [wt.HWND, ctypes.POINTER(wt.DWORD)]
+        u.GetWindowThreadProcessId(u.GetForegroundWindow(), ctypes.byref(pid_of_fg))
+        focus_pid = pid_of_fg.value
+        print(f"[host] own sink hwnd=0x{hwnd:X}, focus owner pid={focus_pid} (foreground app)")
+    elif foreign:
+        u = ctypes.WinDLL("user32")
+        u.GetForegroundWindow.restype = wt.HWND
+        hwnd = u.GetForegroundWindow()
+        pid_of_fg = wt.DWORD(0)
+        u.GetWindowThreadProcessId.argtypes = [wt.HWND, ctypes.POINTER(wt.DWORD)]
+        u.GetWindowThreadProcessId(hwnd, ctypes.byref(pid_of_fg))
+        focus_pid = pid_of_fg.value
+        print(f"[host] reusing foreground window 0x{hwnd:X} pid={focus_pid}")
+    else:
+        hwnd = make_foreground_window()
+        focus_pid = os.getpid()
+        print(f"[host] hwnd=0x{hwnd:X} pid={focus_pid}")
+    if "--no-tsf" not in sys.argv:
+        print(f"[tsf] activate -> 0x{activate_doubao_for_process(verbose=False):08X}")
     watch = start_watch() if "--watch" in sys.argv else None
     pump = pump_messages if "--no-pump" not in sys.argv else (lambda *a, **k: None)
 
     pipe = Pipe(timeout=35.0)
-    my_pid = os.getpid()
     for op, body, name in (
             (0x02, b"", "Activate"),
             (0x11, pb_str(1, "keyboard") + pb_str(2, "oime") + pb_str(3, "planb"), "ImeChanged"),
             (0x1B, bytes.fromhex("0801"), "SetUIElementShowState"),
-            (0x06, my_pid.to_bytes(4, "little") + (1).to_bytes(4, "little") + lp("python.exe"),
+            (0x06, focus_pid.to_bytes(4, "little") + (1).to_bytes(4, "little") + lp("python.exe"),
              "FocusIn(pid)"),
             (0x15, int(hwnd).to_bytes(8, "little") + (0x1122334455667788).to_bytes(8, "little"),
              "RegisterTsfNotifySink"),

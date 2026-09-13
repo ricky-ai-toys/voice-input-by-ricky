@@ -621,3 +621,24 @@ that lives in the host process (the engine posts to the registered hwnd). Milest
 proved the receiving half - a hosted text store receives the committed text through the core -
 so the next step is to run the text-store host in the same process as this trigger, and the
 loop is closed.
+
+### Milestone 20 - no focus stealing, and where the transcript actually goes
+
+Two more measurements narrow the remaining work:
+
+1. **The "focus owner" must simply be the current foreground pid** - not our own pid. Sending
+   `FocusIn(pid = <foreground window's pid>)` from a background process is enough to get
+   `allowed=1`, so a product does not have to steal focus from the user's editor to start a
+   session. `voice_session_test.py --foreign-focus` demonstrates that (no window created at
+   all, hotkey still accepted).
+2. **The transcript is pushed to the registered notify sink, not pulled.** With the sink hwnd
+   registered to a window we own, the engine posts to it while dictating
+   (`id=0x031F wparam=1`, `id=0xC109`); `PeekVoiceCommit` stays `session=0 bytes=0` for a raw
+   pipe client even when the same session is streaming audio to the cloud. So the return path
+   is either (a) pump those notifications and decode the payload, or (b) host the text store
+   from milestone 11 - which already receives the committed text through the core - in the
+   same process that runs this trigger.
+
+Current known rough edge: our message pump crashes (access violation) shortly after those two
+notifications arrive, so decoding the payload is the next concrete task; the engine side keeps
+running normally and the audio keeps streaming.

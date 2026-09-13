@@ -37,7 +37,7 @@ def lp(text: str) -> bytes:
 _KEEP_ALIVE: list = []
 
 
-def make_foreground_window() -> int:
+def make_foreground_window(activate: bool = True) -> int:
     """A real window + EDIT control, brought to the foreground.
 
     The engine decides whether a client is allowed to drive input by looking at the
@@ -79,6 +79,13 @@ def make_foreground_window() -> int:
                                   wt.DWORD(0x00CF0000), 200, 200, 520, 180,
                                   None, None, hinst, None)
     user32.ShowWindow(hwnd, 5)          # SW_SHOW
+    if not activate:
+        # keep it a plain hidden-ish host: the engine only needs the hwnd to post to
+        user32.ShowWindow(hwnd, 0)      # SW_HIDE
+        edit = user32.CreateWindowExW(0, "EDIT", "", wt.DWORD(0x50010000), 10, 10, 480, 120,
+                                      hwnd, None, hinst, None)
+        user32.SetFocus(edit)
+        return hwnd
     # Windows only lets the *foreground* process steal focus, so borrow the current
     # foreground thread's input queue for a moment (the classic AttachThreadInput trick).
     user32.GetForegroundWindow.restype = wt.HWND

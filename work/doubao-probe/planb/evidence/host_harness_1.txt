@@ -1,0 +1,17 @@
+[1] ITfThreadMgr hr=0x00000000
+[2] tid=32 pdm=2062757028960
+Traceback (most recent call last):
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py", line 349, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py", line 299, in main
+    store = TextStoreACP()
+            ^^^^^^^^^^^^^^
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py", line 86, in __init__
+    self._build_vtable()
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py", line 122, in _build_vtable
+    self._hook(0, (qi, [ctypes.POINTER(GUID), ctypes.POINTER(ctypes.c_void_p)]))
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py", line 94, in _hook
+    self._vtable[index] = ctypes.cast(cb, ctypes.c_void_p).value
+    ~~~~~~~~~~~~^^^^^^^
+TypeError: one character bytes, bytearray or integer expected

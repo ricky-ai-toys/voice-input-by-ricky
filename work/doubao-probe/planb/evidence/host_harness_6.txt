@@ -1,0 +1,2 @@
+[1] ITfThreadMgr hr=0x00000000
+[2] tid=32 pdm=1746365998176

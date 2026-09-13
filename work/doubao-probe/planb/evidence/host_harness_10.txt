@@ -1,0 +1,16 @@
+[1] ITfThreadMgr hr=0x00000000
+[2] tid=32 pdm=1845114201184
+[2.2] docmgr vtable=0x7FF8F02891A0 QI(ITfDocumentMgr) hr=0x00000000
+[2.5] text store built, vtable=0x1AD996555C0
+[2.55] vtable[0..3] = 0x1AD9B430968, 0x1AD9B430930, 0x1AD9B4308F8, 0x1AD9B4308C0
+Traceback (most recent call last):
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py", line 385, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py", line 323, in main
+    hr_qi = vcall(store._self_ptr, 0, ctypes.c_long,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\host_tip_harness.py", line 294, in vcall
+    return ctypes.WINFUNCTYPE(restype, ctypes.c_void_p, *argtypes)(fn)(ptr, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: exception: access violation reading 0xFFFFFFFFFFFFFFFF

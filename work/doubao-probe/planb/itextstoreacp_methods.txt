@@ -1,0 +1,26 @@
+ 0. HRESULT AdviseSink(
+ 1. HRESULT UnadviseSink(
+ 2. HRESULT RequestLock(
+ 3. HRESULT GetStatus(
+ 4. HRESULT QueryInsert(
+ 5. HRESULT GetSelection(
+ 6. HRESULT SetSelection(
+ 7. HRESULT GetText(
+ 8. HRESULT SetText(
+ 9. HRESULT GetFormattedText(
+10. HRESULT GetEmbedded(
+11. HRESULT QueryInsertEmbedded(
+12. HRESULT InsertEmbedded(
+13. HRESULT InsertTextAtSelection(
+14. HRESULT InsertEmbeddedAtSelection(
+15. HRESULT RequestSupportedAttrs(
+16. HRESULT RequestAttrsAtPosition(
+17. HRESULT RequestAttrsTransitioningAtPosition(
+18. HRESULT FindNextAttrTransition(
+19. HRESULT RetrieveRequestedAttrs(
+20. HRESULT GetEndACP(
+21. HRESULT GetActiveView(
+22. HRESULT GetACPFromPoint(
+23. HRESULT GetTextExt(
+24. HRESULT GetScreenExt(
+25. HRESULT GetWnd(

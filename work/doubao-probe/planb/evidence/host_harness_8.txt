@@ -1,0 +1,4 @@
+[1] ITfThreadMgr hr=0x00000000
+[2] tid=32 pdm=2170636756064
+[2.2] docmgr vtable=0x7FF8F02891A0 QI(ITfDocumentMgr) hr=0x00000000
+[2.5] text store built, vtable=0x1F9641452F0

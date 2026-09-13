@@ -1,0 +1,3 @@
+[1] ITfThreadMgr hr=0x00000000
+[2] tid=32 pdm=1613067740256
+[2.5] text store built, vtable=0x177926052F0

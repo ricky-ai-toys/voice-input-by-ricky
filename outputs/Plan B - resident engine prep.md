@@ -268,3 +268,48 @@ ITfInputProcessorProfiles        {1F02B6C5-7842-4EE6-8A0B-9A24183A95CA}
 
 `ITextStoreACP` is not in that IDL; its documented id is `{28888FE3-C2A0-483A-A3EA-8CB1CE51FF3E}`
 and it is the next piece to implement.
+
+### Milestone 6 - a working TSF host in Python, and the RPC wire format
+
+`host_tip_harness.py` now implements a minimal `ITextStoreACP` (26 methods whose vtable order
+was extracted from Wine's `textstor.idl` by `extract_textstore_acp.py`) with ctypes-built
+vtables, and hosts the vendor service end to end:
+
+```
+[2.2] docmgr vtable=0x7FF8F02891A0 QI(ITfDocumentMgr) hr=0x00000000
+[2.6] store self-test: QI hr=0x00000000 GetEndACP hr=0x00000000 end=0
+[qi] QueryInterface({28888FE3-C2A0-483A-A3EA-8CB1CE51FF3D}) ... (TSF probing our store)
+[3] CreateContext(store) hr=0x00000000
+[4] SetFocus(docmgr) hr=0x00000000
+[5] CoCreateInstance(TIP) hr=0x00000000
+[6] Activate hr=0x00000000
+[7] QI(ITfKeyEventSink) hr=0x80004002      <-- the service does not expose a key sink
+```
+
+Two root causes were found and fixed on the way:
+
+* a COM object's **first field must be the vtable pointer**; handing TSF the vtable array itself
+  makes it read a callback address as the vtable and fail-fast (`0xC0000409`).
+* callback thunks must be kept alive, otherwise the vtable holds dangling pointers.
+
+Push-to-talk is therefore **not** delivered through `ITfKeyEventSink`; synthesized Right Alt
+inside the host process produced no voice activity either. The most likely missing step is
+activating the input profile so the service considers itself the active IME
+(`ITfInputProcessorProfileMgr` = `{71C6E74C-0F28-11D8-A82A-00065B84435C}`,
+`CLSID_TF_InputProcessorProfiles` = `{33C53A50-F456-4884-B049-85FD643ECFED}`, profile
+`{2B4D4B3A-4D4F-4C0A-8E66-7F771A2B9C10}` for langid `0x0804`).
+
+**RPC wire format captured** (`run_with_hooks.py` now logs pipe reads/writes; evidence
+`planb/evidence/pipe_traffic_activate.txt`):
+
+```
+[writefile] \\.\pipe\ObricIme\oime-server len=12  head=4f4d5045 0100 1b00 00000000
+                                                  "OMPE"  v1   op   payload_len
+[writefile] \\.\pipe\ObricIme\oime-server len=22  head=307d0000 01000000 0a000000 "python.exe"
+[writefile] \\.\pipe\ObricIme\oime-server len=5   head=08f8071801            (protobuf-ish body)
+[readfile]  \\.\pipe\ObricIme\oime-server len=16  head=10ecded7 0a000000 10000000
+[writefile] \\.\pipe\ObricIme\oime-server-tsf-log len=2315  head=544c4f47 "TLOG" ...
+```
+
+So the main pipe is a framed RPC channel (`OMPE`, version 1, u16 op, u32 length), and the
+`-tsf-log` pipe carries `TLOG` records (the core's own log stream - useful as a debug feed).

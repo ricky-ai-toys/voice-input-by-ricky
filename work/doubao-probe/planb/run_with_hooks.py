@@ -13,8 +13,9 @@ import time
 import frida
 
 JS = r"""
-let seen = {};
 const k32 = Process.getModuleByName('kernel32.dll');
+const pipes = {};          // handle value -> pipe name
+
 for (const api of ['CreateFileW', 'CreateFileA']) {
   const addr = k32.getExportByName(api);
   if (!addr) continue;
@@ -22,7 +23,37 @@ for (const api of ['CreateFileW', 'CreateFileA']) {
     onEnter(args) {
       try {
         const s = api === 'CreateFileW' ? args[0].readUtf16String() : args[0].readAnsiString();
-        if (s) send({ kind: 'open', api: api, name: s });
+        this.pipeName = s;
+      } catch (e) { /* ignore */ }
+    },
+    onLeave(retval) {
+      const name = this.pipeName || '';
+      if (name.toLowerCase().indexOf('pipe') >= 0) {
+        pipes[retval.toString()] = name;
+        send({ kind: 'open', api: 'CreateFile', name: name, handle: retval.toString() });
+      }
+    }
+  });
+}
+
+// log writes/reads on the engine pipes -> that is the RPC traffic
+for (const api of ['WriteFile', 'ReadFile']) {
+  const addr = k32.getExportByName(api);
+  if (!addr) continue;
+  Interceptor.attach(addr, {
+    onEnter(args) {
+      const h = args[0].toString();
+      const name = pipes[h];
+      if (!name) return;
+      try {
+        const len = args[2].toInt32();
+        if (len <= 0 || len > 65536) return;
+        const bytes = new Uint8Array(args[1].readByteArray(len));
+        let hex = '';
+        for (let i = 0; i < Math.min(bytes.length, 64); i++) {
+          hex += bytes[i].toString(16).padStart(2, '0');
+        }
+        send({ kind: api.toLowerCase(), name: name, len: len, hex: hex });
       } catch (e) { /* ignore */ }
     }
   });
@@ -70,6 +101,9 @@ def main() -> int:
             opens.append(name)
             if "pipe" in name.lower() or "oime" in name.lower():
                 print(f"[hook] {payload.get('api')}('{name}')", flush=True)
+        elif payload.get("kind") in ("writefile", "readfile"):
+            print(f"[{payload['kind']}] {payload['name']} len={payload['len']} "
+                  f"head={payload['hex']}", flush=True)
 
     script.on("message", on_message)
     script.load()

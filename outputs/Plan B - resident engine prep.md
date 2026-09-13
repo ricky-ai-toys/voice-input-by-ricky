@@ -378,3 +378,36 @@ Two routes remain, in order of cost:
    window, caret tracking) so the shell installs its own hotkey handling.
 
 Given the evidence, route 1 is the cheaper and more robust target for the fork.
+
+### Milestone 10 - profile activation can be injected, but that alone does not engage the IME
+
+`activate_profile_inject.js` + `activate_profile_inject.py` inject this into any process:
+
+```
+CoCreateInstance(CLSID_TF_InputProcessorProfiles) -> ITfInputProcessorProfileMgr
+ActivateProfile(TF_PROFILETYPE_INPUTPROCESSOR, 0x0804, {9D2B2E2B-...}, {2B4D4B3A-...},
+                NULL, TF_IPPMF_FORPROCESS)
+```
+
+Result in a real host (Notepad):
+
+```
+[activate] CoCreateInstance hr=0x00000000
+[activate] ActivateProfile   hr=0x00000000      <-- succeeds
+rpc.dll loaded in notepad = False               <-- but the IME never engages
+```
+
+So process-wide profile activation alone does not make the vendor's text service load: the
+language/profile also has to be the *active input language of the thread*, which the shell does
+when the user really switches IMEs. Locally we cannot fake that without impersonating the
+language-bar path (Win+Space cycling did not switch either - verified with SendInput plus a
+keystroke to force lazy loading).
+
+Combined with milestone 9 (the engine's voice pool is pre-warmed at startup), the practical
+conclusion for the fork is unchanged:
+
+* the **engine side is fully understood and controllable** (private-identity resident server,
+  warm voice pool, RPC framing captured);
+* the **client side** needs either one captured real voice session (to replay the op codes) or
+  the IME's own UI/shell, which engages only in a genuinely focused text host with the IME
+  selected as the active language profile.

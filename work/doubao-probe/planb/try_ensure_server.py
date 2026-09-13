@@ -19,6 +19,8 @@ VARIANTS = {
     4: "CreateRpcClient(wide pipe name) then ensure(handle)",
     5: "CreateRpcClient(private) + RpcPipe_GetInputState(handle)",
     6: "CreateRpcClient(private) + RpcPipe_SimpleMessage(handle)",
+    7: "RpcPipe_PeekVoiceCommitUtf8(buffer, &session, ctx, 0x40001)  [recovered signature]",
+    8: "CreateRpcClient(private) + EnsureServerRunning + PeekVoiceCommitUtf8",
 }
 
 
@@ -60,7 +62,7 @@ def main() -> int:
         print(f"[call] CreateRpcClient({pipe!r}) -> {client}", flush=True)
         ensure.argtypes = [ctypes.c_void_p]
         print(f"[call] RpcPipe_EnsureServerRunning({client}) -> {ensure(client)}", flush=True)
-    else:
+    elif variant in (5, 6):
         pipe = "\\\\.\\pipe\\ObricIme\\oime-serveR"
         create = dll.CreateRpcClient
         create.restype = ctypes.c_void_p
@@ -80,6 +82,34 @@ def main() -> int:
             fn.restype = ctypes.c_bool
             fn.argtypes = [ctypes.c_void_p]
             print(f"[call] RpcPipe_SimpleMessage({client}) -> {fn(client)}", flush=True)
+    elif variant == 8:
+        pipe = "\\\\.\\pipe\\ObricIme\\oime-serveR"
+        create = dll.CreateRpcClient
+        create.restype = ctypes.c_void_p
+        create.argtypes = [ctypes.c_char_p]
+        client = create(pipe.encode("utf-8"))
+        ensure = dll.RpcPipe_EnsureServerRunning
+        ensure.restype = ctypes.c_bool
+        ensure.argtypes = [ctypes.c_void_p]
+        print(f"[call] CreateRpcClient -> {client}; EnsureServerRunning -> {ensure(client)}", flush=True)
+        fn = dll.RpcPipe_PeekVoiceCommitUtf8
+        fn.restype = ctypes.c_int
+        fn.argtypes = [ctypes.c_char_p, ctypes.POINTER(ctypes.c_uint64), ctypes.c_void_p, ctypes.c_int]
+        buf = ctypes.create_string_buffer(0x40001)
+        session = ctypes.c_uint64(0)
+        n = fn(buf, ctypes.byref(session), None, 0x40001)
+        print(f"[call] PeekVoiceCommitUtf8 -> {n} session={session.value} text={buf.value!r}", flush=True)
+    else:
+        # signature recovered from tsf-oime-core.dll @0x180015122:
+        #   int PeekVoiceCommitUtf8(char* out_buf, uint64_t* session, void* ctx, int max_len)
+        fn = dll.RpcPipe_PeekVoiceCommitUtf8
+        fn.restype = ctypes.c_int
+        fn.argtypes = [ctypes.c_char_p, ctypes.POINTER(ctypes.c_uint64), ctypes.c_void_p, ctypes.c_int]
+        buf = ctypes.create_string_buffer(0x40001)
+        session = ctypes.c_uint64(0)
+        n = fn(buf, ctypes.byref(session), None, 0x40001)
+        print(f"[call] RpcPipe_PeekVoiceCommitUtf8(buf, &session, NULL, 0x40001) -> {n}", flush=True)
+        print(f"[call] session={session.value} text={buf.value!r}", flush=True)
     return 0
 
 

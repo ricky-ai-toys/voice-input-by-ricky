@@ -148,3 +148,47 @@ Next steps (in order):
    to prove when a frame actually arrives.
 3. First real target: make the server report "client connected / op received", then drive
    key events and read the voice commit text.
+
+### Milestone 3 - signature recovery works, round trip still open
+
+`find_callsite.py` now also resolves **delay-load thunks** (`jmp qword ptr [IAT]`), which is
+how the core really reaches `rpc.dll`. That immediately produced the one call site of
+`RpcPipe_PeekVoiceCommitUtf8` in `tsf-oime-core.dll` (evidence:
+`planb/evidence/peek_callsite.txt`):
+
+```
+0x1800150F8  mov   [rsp+0x40], rbp                 ; session id (in/out)
+0x1800150FD  lea   rcx, [rip+0x1a3efc]            ; std::string buffer (SSO aware)
+0x18001510C  cmovae rcx, [rip+0x1a3eec]           ; -> char* output buffer
+0x180015114  mov   r9d, 0x40001                   ; max length (0x40001)
+0x18001511A  mov   r8,  qword ptr [rdi]            ; context pointer
+0x18001511D  lea   rdx, [rsp+0x40]                ; &session
+0x180015122  call  RpcPipe_PeekVoiceCommitUtf8
+0x180015127  movsxd rsi, eax                       ; returns int bytes; >0 means text
+```
+
+so the shape is:
+
+```c
+int RpcPipe_PeekVoiceCommitUtf8(char* out_utf8, uint64_t* session,
+                                const void* ctx, int max_len);
+```
+
+`AckVoiceCommit`/`KeyEvent`/`UpdateHostContextUtf8` can be recovered the same way.
+
+Calling it from Python against the private pipe returns **-1** and our server still shows zero
+`PipeCall` entries, i.e. the client never really connected:
+
+```
+CreateRpcClient('...oime-serveR') -> handle ; RpcPipe_EnsureServerRunning(handle) -> True
+RpcPipe_PeekVoiceCommitUtf8(buf, &session, NULL, 0x40001) -> -1
+```
+
+Open questions for the next session (in order):
+1. What `CreateRpcClient` really takes - a name alone yields a lazily filled client (a bogus
+   name behaves identically), so either the name must be paired with a mode/callback, or the
+   connection is opened by a different entry point.
+2. Whether `EnsureServerRunning` uses the supplied handle or a default pipe name (it returned
+   True even for a non-existent name, so it is not proof of connection).
+3. Which call performs the actual `CreateFile` on the pipe - hooking `CreateFileW` inside a
+   probe process while calling the API will answer this in one step.

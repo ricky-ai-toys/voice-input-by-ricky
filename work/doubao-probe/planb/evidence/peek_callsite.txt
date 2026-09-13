@@ -1,0 +1,61 @@
+RpcPipe_PeekVoiceCommitUtf8 imported from rpc.dll, IAT slot VA=0x180158788
+direct call sites: 0, IAT load sites: 0
+delay-load thunks (jmp [IAT]): 1
+callers of the thunk: 1
+========================================================================
+--- setup before call to thunk at 0x180015122 ---
+  0x180015052: mov       ebx, edx
+  0x180015054: mov       r14, rcx
+  0x180015057: xor       ebp, ebp
+  0x180015059: mov       qword ptr [rcx], rbp
+  0x18001505C: mov       rax, rdx
+  0x18001505F: cmp       qword ptr [rdx + 0x18], 8
+  0x180015064: jb        0x180015069
+  0x180015066: mov       rax, qword ptr [rdx]
+  0x180015069: mov       qword ptr [rdx + 0x10], rbp
+  0x18001506D: mov       word ptr [rax], bp
+  0x180015070: lea       rcx, [rip + 0x145cc9]
+  0x180015077: call      0x18000c3c0
+  0x18001507C: cmp       qword ptr [rip + 0x1a3f8d], rbp
+  0x180015083: je        0x1800152a4
+  0x180015089: mov       ecx, dword ptr [rip + 0x1acc81]
+  0x18001508F: mov       rax, qword ptr gs:[0x58]
+  0x180015098: mov       rsi, qword ptr [rax + rcx*8]
+  0x18001509C: mov       ecx, 0x68
+  0x1800150A1: mov       eax, dword ptr [rcx + rsi]
+  0x1800150A4: test      al, 1
+  0x1800150A6: jne       0x1800150d1
+  0x1800150A8: or        eax, 1
+  0x1800150AB: mov       dword ptr [rcx + rsi], eax
+  0x1800150AE: mov       eax, 0x50
+  0x1800150B3: mov       edi, eax
+  0x1800150B5: mov       qword ptr [rax + rsi], rbp
+  0x1800150B9: mov       qword ptr [rax + rsi + 8], rbp
+  0x1800150BE: mov       qword ptr [rax + rsi + 0x10], rbp
+  0x1800150C3: lea       rcx, [rip + 0x142446]
+  0x1800150CA: call      0x18009da94
+  0x1800150CF: jmp       0x1800150d6
+  0x1800150D1: mov       edi, 0x50
+  0x1800150D6: add       rdi, rsi
+  0x1800150D9: mov       rax, qword ptr [rdi + 8]
+  0x1800150DD: sub       rax, qword ptr [rdi]
+  0x1800150E0: cmp       rax, 0x40001
+  0x1800150E6: jae       0x1800150f8
+  0x1800150E8: mov       r8, rdi
+  0x1800150EB: mov       edx, 0x40001
+  0x1800150F0: mov       rcx, rdi
+  0x1800150F3: call      0x180002d40
+  0x1800150F8: mov       qword ptr [rsp + 0x40], rbp
+  0x1800150FD: lea       rcx, [rip + 0x1a3efc]
+  0x180015104: cmp       qword ptr [rip + 0x1a3f0c], 0x10
+  0x18001510C: cmovae    rcx, qword ptr [rip + 0x1a3eec]
+  0x180015114: mov       r9d, 0x40001
+  0x18001511A: mov       r8, qword ptr [rdi]
+  0x18001511D: lea       rdx, [rsp + 0x40]
+  0x180015122: call      0x18006e14b   <== call thunk
+  0x180015127: movsxd    rsi, eax
+  0x18001512A: mov       rcx, qword ptr [rsp + 0x40]
+  0x18001512F: test      eax, eax
+  0x180015131: jle       0x18001526e
+  0x180015137: test      rcx, rcx
+  0x18001513A: je        0x18001526e

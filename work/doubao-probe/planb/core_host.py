@@ -18,6 +18,7 @@ import sys
 import time
 
 import host_tip_harness as harness
+import frida
 from pipe_client import Pipe, pb_int, pb_str, start_server
 from settings_ipc_client import SettingsPipe, request
 from try_voice import lp, make_foreground_window, send_key
@@ -32,6 +33,69 @@ DEFAULT_WAV = os.path.join(os.path.dirname(os.path.abspath(__file__)),
 
 ole32 = ctypes.OleDLL("ole32")
 kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+
+# The bundled core logs into the engine's `-tsf-log` pipe. Watching our own pipe writes is the
+# only way to see its state (it is the client half, and it lives in *our* process).
+WATCH_JS = r"""
+const k32 = Process.getModuleByName('kernel32.dll');
+const pipes = {};
+Interceptor.attach(k32.getExportByName('CreateFileW'), {
+  onEnter(args) { try { this.name = args[0].readUtf16String(); } catch (e) { this.name = ''; } },
+  onLeave(retval) {
+    if (this.name && this.name.toLowerCase().indexOf('tsf-log') >= 0) {
+      pipes[retval.toString()] = this.name;
+      send({ kind: 'pipe', name: this.name });
+    }
+  }
+});
+Interceptor.attach(k32.getExportByName('WriteFile'), {
+  onEnter(args) {
+    const name = pipes[args[0].toString()];
+    if (!name) return;
+    try {
+      const len = args[2].toInt32();
+      if (len <= 0 || len > 65536) return;
+      const bytes = new Uint8Array(args[1].readByteArray(len));
+      let hex = '';
+      for (let i = 0; i < bytes.length; i++) hex += bytes[i].toString(16).padStart(2, '0');
+      send({ kind: 'write', name: name, hex: hex });
+    } catch (e) {}
+  }
+});
+send({ kind: 'ready' });
+"""
+
+
+def decode_tlog(blob: bytes) -> list[str]:
+    out = []
+    pos = 0
+    while pos + 20 <= len(blob):
+        if blob[pos:pos + 4] != b"TLOG":
+            break
+        size = int.from_bytes(blob[pos + 16:pos + 20], "little")
+        text = blob[pos + 20:pos + 20 + size]
+        out.append(text.decode("utf-8", "replace").strip())
+        pos += 20 + size
+    return out
+
+
+def start_core_watch() -> None:
+    session = frida.attach(os.getpid())
+    script = session.create_script(WATCH_JS)
+
+    def on_message(message, data):  # noqa: ANN001
+        if message.get("type") != "send":
+            return
+        payload = message["payload"]
+        if payload.get("kind") == "write":
+            for line in decode_tlog(bytes.fromhex(payload["hex"])):
+                if line:
+                    print(f"   [core] {line[:170]}")
+        elif payload.get("kind") == "pipe":
+            print(f"   [core] opened {payload['name']}")
+
+    script.on("message", on_message)
+    script.load()
 
 
 def load_tip_from_path(dll_path: str, verbose: bool = True) -> ctypes.c_void_p:
@@ -81,6 +145,9 @@ def main() -> int:
 
     proc = start_server(runtime)
     print(f"[info] engine pid={proc.pid}")
+    if "--no-watch" not in sys.argv:
+        start_core_watch()
+        print("[watch] core-side pipe logging enabled")
     sp = SettingsPipe()
     print(f"[arm] {sp.call(request('settings.setVoiceTryoutActive', {'active': True, 'cookie': int(time.time())}))}")
     sp.close()

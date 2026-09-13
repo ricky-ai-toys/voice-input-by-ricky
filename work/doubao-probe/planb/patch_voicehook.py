@@ -58,7 +58,8 @@ def _patch_all(blob: bytearray, signature: bytes, patch: bytes, label: str) -> i
         pos = idx + len(signature)
 
 
-def patch(path: str, mode: str = "bypass", no_synth: bool = False) -> int:
+def patch(path: str, mode: str = "bypass", no_synth: bool = False,
+          keep_filters: bool = False) -> int:
     pe = pefile.PE(path)
     base = pe.OPTIONAL_HEADER.ImageBase
     original = open(path, "rb").read()
@@ -71,14 +72,15 @@ def patch(path: str, mode: str = "bypass", no_synth: bool = False) -> int:
         chunk = blob[start:end]
         hits = 0
         pos = 0
-        while True:
-            idx = chunk.find(INJECTED, pos)
-            if idx < 0:
-                break
-            blob[start + idx:start + idx + len(INJECTED)] = b"\x90" * len(INJECTED)
-            print(f"[ok] injected-key check patched at VA 0x{base + vaddr + idx:X}")
-            hits += 1
-            pos = idx + len(INJECTED)
+        if not keep_filters:
+            while True:
+                idx = chunk.find(INJECTED, pos)
+                if idx < 0:
+                    break
+                blob[start + idx:start + idx + len(INJECTED)] = b"\x90" * len(INJECTED)
+                print(f"[ok] injected-key check patched at VA 0x{base + vaddr + idx:X}")
+                hits += 1
+                pos = idx + len(INJECTED)
         count += hits
 
         idx = chunk.find(GATES)
@@ -95,18 +97,19 @@ def patch(path: str, mode: str = "bypass", no_synth: bool = False) -> int:
             print(f"[ok] voice-hook state gates patched ({mode}) at VA 0x{base + vaddr + idx:X}")
             count += 1
 
-        pos = 0
-        while True:
-            idx = chunk.find(VOICE_PATH_INJECTED, pos)
-            if idx < 0:
-                break
-            # keep the `test`, drop the conditional jump
-            patched = bytearray(VOICE_PATH_INJECTED)
-            patched[4:] = b"\x90" * (len(VOICE_PATH_INJECTED) - 4)
-            blob[start + idx:start + idx + len(VOICE_PATH_INJECTED)] = patched
-            print(f"[ok] voice-path injected filter patched at VA 0x{base + vaddr + idx:X}")
-            count += 1
-            pos = idx + len(VOICE_PATH_INJECTED)
+        if not keep_filters:
+            pos = 0
+            while True:
+                idx = chunk.find(VOICE_PATH_INJECTED, pos)
+                if idx < 0:
+                    break
+                # keep the `test`, drop the conditional jump
+                patched = bytearray(VOICE_PATH_INJECTED)
+                patched[4:] = b"\x90" * (len(VOICE_PATH_INJECTED) - 4)
+                blob[start + idx:start + idx + len(VOICE_PATH_INJECTED)] = patched
+                print(f"[ok] voice-path injected filter patched at VA 0x{base + vaddr + idx:X}")
+                count += 1
+                pos = idx + len(VOICE_PATH_INJECTED)
 
         if no_synth:
             want = base + SYNTH_CALL_VA
@@ -118,17 +121,18 @@ def patch(path: str, mode: str = "bypass", no_synth: bool = False) -> int:
                     count += 1
                 idx = chunk.find(SYNTH_CALL, idx + 1)
 
-        pos = 0
-        while True:
-            idx = chunk.find(MOUSE_INJECTED, pos)
-            if idx < 0:
-                break
-            patched = bytearray(MOUSE_INJECTED)
-            patched[5:] = b"\x90" * (len(MOUSE_INJECTED) - 5)   # keep the test, drop the jump
-            blob[start + idx:start + idx + len(MOUSE_INJECTED)] = patched
-            print(f"[ok] mouse-hook injected filter patched at VA 0x{base + vaddr + idx:X}")
-            count += 1
-            pos = idx + len(MOUSE_INJECTED)
+        if not keep_filters:
+            pos = 0
+            while True:
+                idx = chunk.find(MOUSE_INJECTED, pos)
+                if idx < 0:
+                    break
+                patched = bytearray(MOUSE_INJECTED)
+                patched[5:] = b"\x90" * (len(MOUSE_INJECTED) - 5)   # keep the test, drop the jump
+                blob[start + idx:start + idx + len(MOUSE_INJECTED)] = patched
+                print(f"[ok] mouse-hook injected filter patched at VA 0x{base + vaddr + idx:X}")
+                count += 1
+                pos = idx + len(MOUSE_INJECTED)
     if count:
         backup = path + ".orig"
         if not os.path.exists(backup):
@@ -151,12 +155,13 @@ def main() -> int:
         if flag in sys.argv:
             mode = name
     no_synth = "--no-synth" in sys.argv
+    keep_filters = "--keep-filters" in sys.argv
     runtime = os.path.abspath(args[0])
     path = os.path.join(runtime, "ImeService.exe")
     if not os.path.exists(path):
         print(f"[fail] {path} not found")
         return 1
-    patch(path, mode, no_synth)
+    patch(path, mode, no_synth, keep_filters)
     return 0
 
 

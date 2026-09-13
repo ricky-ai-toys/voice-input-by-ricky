@@ -1,0 +1,6 @@
+{
+  "hotkey": "right alt",
+  "show_overlay": true,
+  "paste": true,
+  "commit_timeout": 2.5
+}

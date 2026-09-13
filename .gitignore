@@ -26,6 +26,10 @@ __pycache__/
 outputs/VoiceInputByRicky/app/
 outputs/VoiceInputByRicky/runtime/
 outputs/VoiceInputByRicky/data/logs/
+outputs/VoiceInputByRicky/VoiceInputByRicky.exe
+work/doubao-probe/planb/build_tmp/
+work/doubao-probe/planb/data/
+work/doubao-probe/planb/*.spec
 outputs/DoubaoVoicePortable/app/
 outputs/DoubaoVoicePortable/runtime/
 work/doubao-probe/planb/scratch/

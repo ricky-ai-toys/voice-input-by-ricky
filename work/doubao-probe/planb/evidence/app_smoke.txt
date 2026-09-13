@@ -1,0 +1,4 @@
+[Voice Input by Ricky] runtime = C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\scratch
+[Voice Input by Ricky] Starting the engine...
+[Voice Input by Ricky] Ready - hold the hotkey and speak
+[Voice Input by Ricky] ready (right alt to talk)

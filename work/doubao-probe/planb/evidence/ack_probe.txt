@@ -1,0 +1,27 @@
+[self-test] relaxed 4 filter(s) in the engine's memory
+[planb] listening ...
+[planb] 第
+[planb] 第二
+[planb] 第二句
+[planb] 第二句话
+[planb] 第2句话，测试
+[planb] 第2句话，测试第
+[planb] 第二句话测试第三
+[planb] 第二句话测试第三句话
+[planb] 第2句话，测试，第3句话测试
+[planb] 第2句话，测试，第3句话测试。
+[planb] 句话测试，第二句话测试，第三句话测试。
+[planb] final: 句话测试，第二句话测试，第三句话测试。
+[session 1] '句话测试，第二句话测试，第三句话测试。'
+[raw 0x17] status=0 len=69 f0=wire1
+[export peek] ret=57 session=1 text='句话测试，第二句话测试，第三句话测试。'
+[export ack ] -> 1
+[raw 0x17 after ack] status=0 len=12 f0=0 f0=0 f0=0 f0=0 f0=0 f0=0
+[planb] listening ...
+[planb] 第三
+[planb] 第三句话
+[planb] 第3句话，测试
+[planb] 第3句话，测试。
+[planb] final: 第3句话，测试。
+[session 2] '第3句话，测试。'
+[self-test] restored 4 filter(s)

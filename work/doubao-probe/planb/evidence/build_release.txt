@@ -1,0 +1,84 @@
+[build] removing C:\Users\Ricky\Documents\Codex\2026-09-13\wo\outputs\VoiceInputByRicky\runtime
+[build] copying the vendor engine C:\Program Files\DoubaoIME\versions\v0.9.0.0 -> C:\Users\Ricky\Documents\Codex\2026-09-13\wo\outputs\VoiceInputByRicky\runtime
+[build] C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python.exe patch_names.py C:\Users\Ricky\Documents\Codex\2026-09-13\wo\outputs\VoiceInputByRicky\runtime --suffix 1
+[ok] ImeService.exe: patched 5/5 occurrence(s)
+[ok] rpc.dll: patched 0/0 occurrence(s)
+[ok] tsf-oime-core.dll: patched 2/2 occurrence(s)
+[ok] DoubaoIme.Settings.NativeRuntime.dll: patched 2/2 occurrence(s)
+total patched: 9
+[build] C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python.exe C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\..\scripts\patch_manifest.py C:\Users\Ricky\Documents\Codex\2026-09-13\wo\outputs\VoiceInputByRicky\runtime\ImeService.exe
+C:\Users\Ricky\Documents\Codex\2026-09-13\wo\outputs\VoiceInputByRicky\runtime\ImeService.exe: patched 1 occurrence(s); backup at C:\Users\Ricky\Documents\Codex\2026-09-13\wo\outputs\VoiceInputByRicky\runtime\ImeService.exe.orig
+[build] C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python.exe patch_voicehook.py C:\Users\Ricky\Documents\Codex\2026-09-13\wo\outputs\VoiceInputByRicky\runtime --mode=none --keep-filters
+[warn] signature not found (already patched?)
+[build] removed 3 .orig backup(s) from the release
+[build] C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python.exe -m PyInstaller --noconfirm --onefile --console --name VoiceInputByRicky --distpath C:\Users\Ricky\Documents\Codex\2026-09-13\wo\outputs\VoiceInputByRicky --workpath C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\build_tmp --specpath C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb --paths C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb --exclude-module frida --exclude-module numpy --exclude-module sounddevice C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\voice_input_app.py
+168 INFO: PyInstaller: 6.22.0, contrib hooks: 2026.6
+168 INFO: Python: 3.12.10
+185 INFO: Platform: Windows-11-10.0.26200-SP0
+185 INFO: Python environment: C:\Users\Ricky\AppData\Local\Programs\Python\Python312
+185 INFO: wrote C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\VoiceInputByRicky.spec
+204 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\Ricky\\Documents\\Codex\\2026-09-13\\wo\\work\\doubao-probe\\planb',
+ 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\python312.zip',
+ 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\DLLs',
+ 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib',
+ 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312',
+ 'C:\\Users\\Ricky\\AppData\\Roaming\\Python\\Python312\\site-packages',
+ 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages',
+ 'C:\\Users\\Ricky\\Documents\\Codex\\2026-09-13\\wo\\work\\doubao-probe\\planb']
+1359 INFO: checking Analysis
+1364 INFO: Building Analysis because Analysis-00.toc is non existent
+1364 INFO: Looking for Python shared library...
+1364 INFO: Using Python shared library: C:\Users\Ricky\AppData\Local\Programs\Python\Python312\python312.dll
+1364 INFO: Running Analysis Analysis-00.toc
+1364 INFO: Target bytecode optimization level: 0
+1364 INFO: Initializing module dependency graph...
+1364 INFO: Initializing module graph hook caches...
+1440 INFO: Analyzing modules for base_library.zip ...
+2893 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
+3360 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
+4604 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
+5947 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
+7087 INFO: Caching module dependency graph...
+7121 INFO: Analyzing C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\voice_input_app.py
+7148 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
+C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\settings_ipc_client.py:7: SyntaxWarning: invalid escape sequence '\p'
+  over `\\.\pipe\DoubaoIme\settings-rpc` (our copy renames it to `...settings-rp1`). The voice
+7321 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
+7338 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+7349 INFO: TclTkInfo: initializing cached Tcl/Tk info...
+7802 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
+7815 INFO: Processing module hooks (post-graph stage)...
+7815 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
+7815 INFO: Performing binary vs. data reclassification (927 entries)
+11457 INFO: Looking for ctypes DLLs
+11471 INFO: Analyzing run-time hooks ...
+11471 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+11486 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'C:\\Users\\Ricky\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+11510 INFO: Creating base_library.zip...
+11532 INFO: Looking for dynamic libraries
+11711 INFO: Extra DLL search directories (AddDllDirectory): []
+11711 INFO: Extra DLL search directories (PATH): []
+12178 INFO: Warnings written to C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\build_tmp\VoiceInputByRicky\warn-VoiceInputByRicky.txt
+12190 INFO: Graph cross-reference written to C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\build_tmp\VoiceInputByRicky\xref-VoiceInputByRicky.html
+12251 INFO: checking PYZ
+12251 INFO: Building PYZ because PYZ-00.toc is non existent
+12251 INFO: Building PYZ (ZlibArchive) C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\build_tmp\VoiceInputByRicky\PYZ-00.pyz
+12378 INFO: Building PYZ (ZlibArchive) C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\build_tmp\VoiceInputByRicky\PYZ-00.pyz completed successfully.
+12394 INFO: checking PKG
+12394 INFO: Building PKG because PKG-00.toc is non existent
+12394 INFO: Building PKG (CArchive) VoiceInputByRicky.pkg
+15299 INFO: Building PKG (CArchive) VoiceInputByRicky.pkg completed successfully.
+15313 INFO: Bootloader C:\Users\Ricky\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+15313 INFO: checking EXE
+15313 INFO: Building EXE because EXE-00.toc is non existent
+15313 INFO: Building EXE from EXE-00.toc
+15313 INFO: Copying bootloader EXE to C:\Users\Ricky\Documents\Codex\2026-09-13\wo\outputs\VoiceInputByRicky\VoiceInputByRicky.exe
+15391 INFO: Copying icon to EXE
+15445 INFO: Copying 0 resources to EXE
+15445 INFO: Embedding manifest in EXE
+15471 INFO: Appending PKG archive to EXE
+15526 INFO: Fixing EXE headers
+15725 INFO: Building EXE from EXE-00.toc completed successfully.
+15738 INFO: Build complete! The results are available in: C:\Users\Ricky\Documents\Codex\2026-09-13\wo\outputs\VoiceInputByRicky
+[build] C:\Users\Ricky\Documents\Codex\2026-09-13\wo\outputs\VoiceInputByRicky  (463 MB)

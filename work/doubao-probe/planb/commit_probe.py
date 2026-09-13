@@ -103,6 +103,16 @@ def main() -> int:
         if items and any(t for _, t in items):
             interim_seen = time.time() - started
             print(f"[asr] first non-empty result at t+{interim_seen:.1f}s")
+            if "--poll-during" in sys.argv:
+                print("[poll] while still recording:")
+                for _ in range(20):
+                    for op in (0x19, 0x09, 0x0A, 0x17):
+                        res = pipe.call(op, b"")
+                        if res and res[1] and res[1] != b"\x00" * len(res[1]):
+                            print(f"   [op 0x{op:02X}] {res[1].hex()} "
+                                  f"{res[1].decode('utf-8', 'replace')[:80]!r}")
+                    time.sleep(0.2)
+                print("[poll] done")
             if stop_op is None:
                 send_click()
                 print("[mouse] click sent to finalize in place")

@@ -1,0 +1,567 @@
+registry keys opened/created (327):
+   RegCreateKeyExW: <handle:0x534>\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Network\Location Awareness  [ok]
+   RegCreateKeyExW: <handle:0x594>\MpeHttpExt\Payload  [ok]
+   RegCreateKeyExW: <handle:0x81c>\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections  [ok]
+   RegCreateKeyExW: HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings  [ok]
+   RegCreateKeyExW: HKLM\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Internet Settings  [ok]
+   RegCreateKeyExW: HKLM\SOFTWARE\Policies\Microsoft\Windows\MpeHttpExt\Payload  [ok]
+   RegCreateKeyExW: HKLM\Software\Microsoft\EnterpriseCertificates\CA  [failed]
+   RegCreateKeyExW: HKLM\Software\Microsoft\EnterpriseCertificates\Root  [failed]
+   RegCreateKeyExW: HKLM\Software\Microsoft\SystemCertificates\AuthRoot  [failed]
+   RegCreateKeyExW: HKLM\Software\Microsoft\SystemCertificates\CA  [failed]
+   RegCreateKeyExW: HKLM\Software\Microsoft\SystemCertificates\Root  [failed]
+   RegCreateKeyExW: HKLM\Software\Microsoft\SystemCertificates\SmartCardRoot  [failed]
+   RegCreateKeyExW: HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings  [ok]
+   RegCreateKeyExW: HKLM\Software\Policies\Microsoft\SystemCertificates\CA  [failed]
+   RegCreateKeyExW: HKLM\Software\Policies\Microsoft\SystemCertificates\Root  [failed]
+   RegCreateKeyExW: HKLM\System\CurrentControlSet\Control\SecurityProviders\Schannel  [ok]
+   RegCreateKeyExW: HKLM\System\CurrentControlSet\Services\Tcpip\Parameters  [ok]
+   RegOpenKeyExW: <handle:0x234>\SessionInfo\1  [ok]
+   RegOpenKeyExW: <handle:0x3b8>\{2180947d-a172-46ae-b082-b226ac34fd0e}  [ok]
+   RegOpenKeyExW: <handle:0x3b8>\{92ef1edc-a917-4dd3-950a-8c8362af2edf}  [ok]
+   RegOpenKeyExW: <handle:0x43c>\{F1B32785-6FBA-4FCF-9D55-7B8E7F157091}  [ok]
+   RegOpenKeyExW: <handle:0x444>\PropertyBag  [failed]
+   RegOpenKeyExW: <handle:0x4ac>\KnownFolders  [failed]
+   RegOpenKeyExW: <handle:0x4ac>\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders  [ok]
+   RegOpenKeyExW: <handle:0x4e4>\{62AB5D82-FDC1-4DC3-A9DD-070D1D495D97}  [ok]
+   RegOpenKeyExW: <handle:0x4e8>\PropertyBag  [failed]
+   RegOpenKeyExW: <handle:0x4fa>\AppID\ImeService.exe  [failed]
+   RegOpenKeyExW: <handle:0x4fa>\CLSID\{1299CF18-C4F5-4B6A-BB0F-2299F0398E27}  [ok]
+   RegOpenKeyExW: <handle:0x4fa>\CLSID\{BCDE0395-E52F-467C-8E3D-C4579291692E}  [ok]
+   RegOpenKeyExW: <handle:0x4fa>\CLSID\{DCB00C01-570F-4A9B-8D69-199FDBA5723B}  [ok]
+   RegOpenKeyExW: <handle:0x4fa>\Elevation  [failed]
+   RegOpenKeyExW: <handle:0x4fa>\Interface\{D0074FFD-570F-4A9B-8D69-199FDBA5723B}  [ok]
+   RegOpenKeyExW: <handle:0x4fc>\{0a0c1ad8-2a39-11eb-9773-806e6f6e6963}  [ok]
+   RegOpenKeyExW: <handle:0x4fc>\{2180947d-a172-46ae-b082-b226ac34fd0e}  [ok]
+   RegOpenKeyExW: <handle:0x4fc>\{35908807-8825-4baf-9d58-ca9f9f02e5da}  [ok]
+   RegOpenKeyExW: <handle:0x4fc>\{92ef1edc-a917-4dd3-950a-8c8362af2edf}  [ok]
+   RegOpenKeyExW: <handle:0x504>\{35908807-8825-4baf-9d58-ca9f9f02e5da}  [ok]
+   RegOpenKeyExW: <handle:0x526>\Elevation  [failed]
+   RegOpenKeyExW: <handle:0x530>\{0a0c1ad8-2a39-11eb-9773-806e6f6e6963}  [ok]
+   RegOpenKeyExW: <handle:0x530>\{a7f47231-2728-4769-b829-1c06250eead1}  [ok]
+   RegOpenKeyExW: <handle:0x55c>\{aa11a7da-e6ee-422e-bce6-633595593a39}  [ok]
+   RegOpenKeyExW: <handle:0x568>\{a7f47231-2728-4769-b829-1c06250eead1}  [ok]
+   RegOpenKeyExW: <handle:0x56c>\{aa11a7da-e6ee-422e-bce6-633595593a39}  [ok]
+   RegOpenKeyExW: <handle:0x580>\Tcpip6  [ok]
+   RegOpenKeyExW: <handle:0x58c>\{2180947d-a172-46ae-b082-b226ac34fd0e}  [ok]
+   RegOpenKeyExW: <handle:0x58c>\{35908807-8825-4baf-9d58-ca9f9f02e5da}  [ok]
+   RegOpenKeyExW: <handle:0x58c>\{92ef1edc-a917-4dd3-950a-8c8362af2edf}  [ok]
+   RegOpenKeyExW: <handle:0x594>\MpeHttpExt.dll  [ok]
+   RegOpenKeyExW: <handle:0x594>\{0a0c1ad8-2a39-11eb-9773-806e6f6e6963}  [ok]
+   RegOpenKeyExW: <handle:0x594>\{a7f47231-2728-4769-b829-1c06250eead1}  [ok]
+   RegOpenKeyExW: <handle:0x594>\{aa11a7da-e6ee-422e-bce6-633595593a39}  [ok]
+   RegOpenKeyExW: <handle:0x5c0>\Windows NT Access Provider  [ok]
+   RegOpenKeyExW: <handle:0x5f6>\InprocServer32  [ok]
+   RegOpenKeyExW: <handle:0x5f6>\LocalServer32  [failed]
+   RegOpenKeyExW: <handle:0x5f6>\TreatAs  [failed]
+   RegOpenKeyExW: <handle:0x5fa>\Elevation  [failed]
+   RegOpenKeyExW: <handle:0x602>\InprocServer32  [ok]
+   RegOpenKeyExW: <handle:0x602>\LocalServer32  [failed]
+   RegOpenKeyExW: <handle:0x602>\TreatAs  [failed]
+   RegOpenKeyExW: <handle:0x604>\Software\Classes  [ok]
+   RegOpenKeyExW: <handle:0x60a>\InprocServer32  [ok]
+   RegOpenKeyExW: <handle:0x622>\CLSID\{1299CF18-C4F5-4B6A-BB0F-2299F0398E27}  [ok]
+   RegOpenKeyExW: <handle:0x622>\CLSID\{A47979D2-C419-11D9-A5B4-001185AD2B89}  [ok]
+   RegOpenKeyExW: <handle:0x622>\CLSID\{BCDE0395-E52F-467C-8E3D-C4579291692E}  [ok]
+   RegOpenKeyExW: <handle:0x622>\CLSID\{DCB00C01-570F-4A9B-8D69-199FDBA5723B}  [ok]
+   RegOpenKeyExW: <handle:0x624>\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections  [ok]
+   RegOpenKeyExW: <handle:0x648>\Connections  [ok]
+   RegOpenKeyExW: <handle:0x648>\{2180947d-a172-46ae-b082-b226ac34fd0e}  [ok]
+   RegOpenKeyExW: <handle:0x670>\{0a0c1ad8-2a39-11eb-9773-806e6f6e6963}  [ok]
+   RegOpenKeyExW: <handle:0x670>\{35908807-8825-4baf-9d58-ca9f9f02e5da}  [ok]
+   RegOpenKeyExW: <handle:0x670>\{92ef1edc-a917-4dd3-950a-8c8362af2edf}  [ok]
+   RegOpenKeyExW: <handle:0x670>\{a7f47231-2728-4769-b829-1c06250eead1}  [ok]
+   RegOpenKeyExW: <handle:0x670>\{aa11a7da-e6ee-422e-bce6-633595593a39}  [ok]
+   RegOpenKeyExW: <handle:0x680>\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\  [ok]
+   RegOpenKeyExW: <handle:0x68c>\Tcpip  [ok]
+   RegOpenKeyExW: <handle:0x6b8>\credssp.dll  [ok]
+   RegOpenKeyExW: <handle:0x738>\{0a0c1ad8-2a39-11eb-9773-806e6f6e6963}  [ok]
+   RegOpenKeyExW: <handle:0x738>\{2180947d-a172-46ae-b082-b226ac34fd0e}  [ok]
+   RegOpenKeyExW: <handle:0x738>\{35908807-8825-4baf-9d58-ca9f9f02e5da}  [ok]
+   RegOpenKeyExW: <handle:0x738>\{92ef1edc-a917-4dd3-950a-8c8362af2edf}  [ok]
+   RegOpenKeyExW: <handle:0x808>\CopyToVmOverwrite  [failed]
+   RegOpenKeyExW: <handle:0x808>\CopyToVmOverwriteWow64  [failed]
+   RegOpenKeyExW: <handle:0x808>\CopyToVmWhenNewer  [failed]
+   RegOpenKeyExW: <handle:0x808>\CopyToVmWhenNewer  [ok]
+   RegOpenKeyExW: <handle:0x808>\CopyToVmWhenNewerWow64  [failed]
+   RegOpenKeyExW: <handle:0x808>\CopyToVmWhenNewerWow64  [ok]
+   RegOpenKeyExW: <handle:0x81c>\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\  [ok]
+   RegOpenKeyExW: <handle:0x81c>\{a7f47231-2728-4769-b829-1c06250eead1}  [ok]
+   RegOpenKeyExW: <handle:0x81c>\{aa11a7da-e6ee-422e-bce6-633595593a39}  [ok]
+   RegOpenKeyExW: <handle:0x820>\Certificates  [ok]
+   RegOpenKeyExW: <handle:0x82c>\Connections  [ok]
+   RegOpenKeyExW: <handle:0x844>\CBFE9EB43B3B37FE0DFBC4C2EB2D4E07D08BD8E8  [failed]
+   RegOpenKeyExW: <handle:0x844>\DF3C24F9BFD666761B268073FE06D1CC8D4F82A4  [failed]
+   RegOpenKeyExW: <handle:0x844>\DF3C24F9BFD666761B268073FE06D1CC8D4F82A4  [ok]
+   RegOpenKeyExW: <handle:0x8b8>\  [ok]
+   RegOpenKeyExW: <handle:0x8b8>\CBFE9EB43B3B37FE0DFBC4C2EB2D4E07D08BD8E8  [failed]
+   RegOpenKeyExW: <handle:0x8c4>\Certificates  [ok]
+   RegOpenKeyExW: <handle:0x8c8>\Certificates  [ok]
+   RegOpenKeyExW: <handle:0x8dc>\Certificates  [ok]
+   RegOpenKeyExW: <handle:0x8e4>\Certificates  [ok]
+   RegOpenKeyExW: <handle:0x8fc>\Software\Microsoft\SystemCertificates\AuthRoot\AutoUpdate  [ok]
+   RegOpenKeyExW: <handle:0xaa4>\{F38BF404-1D43-42F2-9305-67DE0B28FC23}  [ok]
+   RegOpenKeyExW: <handle:0xaac>\PropertyBag  [ok]
+   RegOpenKeyExW: <handle:0xcd0>\PropertyBag  [ok]
+   RegOpenKeyExW: <handle:0xcd0>\{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}  [ok]
+   RegOpenKeyExW: <handle:0xcd0>\{6D809377-6AF0-444B-8957-A3773F02200E}  [ok]
+   RegOpenKeyExW: <handle:0xcd4>\{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}  [ok]
+   RegOpenKeyExW: <handle:0xcdc>\{0a0c1ad8-2a39-11eb-9773-806e6f6e6963}  [ok]
+   RegOpenKeyExW: <handle:0xcdc>\{2180947d-a172-46ae-b082-b226ac34fd0e}  [ok]
+   RegOpenKeyExW: <handle:0xcdc>\{35908807-8825-4baf-9d58-ca9f9f02e5da}  [ok]
+   RegOpenKeyExW: <handle:0xcdc>\{92ef1edc-a917-4dd3-950a-8c8362af2edf}  [ok]
+   RegOpenKeyExW: <handle:0xcdc>\{a7f47231-2728-4769-b829-1c06250eead1}  [ok]
+   RegOpenKeyExW: <handle:0xcdc>\{aa11a7da-e6ee-422e-bce6-633595593a39}  [ok]
+   RegOpenKeyExW: <handle:0xce8>\PropertyBag  [failed]
+   RegOpenKeyExW: <handle:0xce8>\{D65231B0-B2F1-4857-A4CE-A8E7C6EA7D27}  [ok]
+   RegOpenKeyExW: <handle:0xcec>\PropertyBag  [ok]
+   RegOpenKeyExW: <handle:0xd12>\InprocServer32  [ok]
+   RegOpenKeyExW: <handle:0xd12>\LocalServer32  [failed]
+   RegOpenKeyExW: <handle:0xd12>\ProxyStubClsid32  [ok]
+   RegOpenKeyExW: <handle:0xd12>\TreatAs  [failed]
+   RegOpenKeyExW: <handle:0xd46>\InprocServer32  [failed]
+   RegOpenKeyExW: <handle:0xd48>\{0a0c1ad8-2a39-11eb-9773-806e6f6e6963}  [ok]
+   RegOpenKeyExW: <handle:0xd48>\{2180947d-a172-46ae-b082-b226ac34fd0e}  [ok]
+   RegOpenKeyExW: <handle:0xd48>\{35908807-8825-4baf-9d58-ca9f9f02e5da}  [ok]
+   RegOpenKeyExW: <handle:0xd48>\{92ef1edc-a917-4dd3-950a-8c8362af2edf}  [ok]
+   RegOpenKeyExW: <handle:0xd48>\{a7f47231-2728-4769-b829-1c06250eead1}  [ok]
+   RegOpenKeyExW: <handle:0xd48>\{aa11a7da-e6ee-422e-bce6-633595593a39}  [ok]
+   RegOpenKeyExW: <handle:0xea0>\{2180947d-a172-46ae-b082-b226ac34fd0e}  [ok]
+   RegOpenKeyExW: <handle:0xea0>\{35908807-8825-4baf-9d58-ca9f9f02e5da}  [ok]
+   RegOpenKeyExW: <handle:0xea0>\{92ef1edc-a917-4dd3-950a-8c8362af2edf}  [ok]
+   RegOpenKeyExW: <handle:0xebc>\{0a0c1ad8-2a39-11eb-9773-806e6f6e6963}  [ok]
+   RegOpenKeyExW: <handle:0xebc>\{2180947d-a172-46ae-b082-b226ac34fd0e}  [ok]
+   RegOpenKeyExW: <handle:0xebc>\{35908807-8825-4baf-9d58-ca9f9f02e5da}  [ok]
+   RegOpenKeyExW: <handle:0xebc>\{92ef1edc-a917-4dd3-950a-8c8362af2edf}  [ok]
+   RegOpenKeyExW: <handle:0xebc>\{a7f47231-2728-4769-b829-1c06250eead1}  [ok]
+   RegOpenKeyExW: <handle:0xebc>\{aa11a7da-e6ee-422e-bce6-633595593a39}  [ok]
+   RegOpenKeyExW: <handle:0xed0>\{0a0c1ad8-2a39-11eb-9773-806e6f6e6963}  [ok]
+   RegOpenKeyExW: <handle:0xed0>\{a7f47231-2728-4769-b829-1c06250eead1}  [ok]
+   RegOpenKeyExW: <handle:0xed0>\{aa11a7da-e6ee-422e-bce6-633595593a39}  [ok]
+   RegOpenKeyExW: <handle:0xf08>\{0a0c1ad8-2a39-11eb-9773-806e6f6e6963}  [ok]
+   RegOpenKeyExW: <handle:0xf08>\{2180947d-a172-46ae-b082-b226ac34fd0e}  [ok]
+   RegOpenKeyExW: <handle:0xf08>\{35908807-8825-4baf-9d58-ca9f9f02e5da}  [ok]
+   RegOpenKeyExW: <handle:0xf08>\{92ef1edc-a917-4dd3-950a-8c8362af2edf}  [ok]
+   RegOpenKeyExW: <handle:0xf08>\{a7f47231-2728-4769-b829-1c06250eead1}  [ok]
+   RegOpenKeyExW: <handle:0xf08>\{aa11a7da-e6ee-422e-bce6-633595593a39}  [ok]
+   RegOpenKeyExW: <handle:0xf20>\DISPLAY1  [failed]
+   RegOpenKeyExW: HKCR\CLSID\{01B90D9A-8209-47F7-9C52-E1244BF50CED}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{076C2A6C-F78F-4C46-A723-3583E70876EA}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{1765E14E-1BD4-462E-B6B1-590BF1262AC6}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{22C21F93-7DDB-411C-9B17-C5B7BD064ABC}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{6D68D1DE-D432-4B0F-923A-091183A9BDA7}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{72B624DF-AE11-4948-A65C-351EB0829419}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{7F12E753-FC71-43D7-A51D-92F35977ABB5}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{9CB5172B-D600-46BA-AB77-77BB7E3A00D9}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{A26CEC36-234C-4950-AE16-E34AACE71D0D}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{AA94DCC2-B8B0-4898-B835-000AABD74393}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{AC4CE3CB-E1C1-44CD-8215-5A1665509EC2}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{C17CABB2-D4A3-47D7-A557-339B2EFBD4F1}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{E7E79A30-4F2C-4FAB-8D00-394F2D6BBEBE}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{ED822C8C-D6BE-4301-A631-0E1416BAD28F}  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{FAE3D380-FEA4-4623-8C75-C6B61110B681}\Instance  [ok]
+   RegOpenKeyExW: HKCR\CLSID\{FAE3D380-FEA4-4623-8C75-C6B61110B681}\Instance\Disabled  [failed]
+   RegOpenKeyExW: HKCU\Control Panel\Input Method\Hot Keys\00000010  [ok]
+   RegOpenKeyExW: HKCU\SOFTWARE\NVIDIA Corporation\Ansel  [ok]
+   RegOpenKeyExW: HKCU\Software\Microsoft\Avalon.Graphics  [ok]
+   RegOpenKeyExW: HKCU\Software\Microsoft\DirectX\UserGpuPreferences  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\DoubaoIme  [failed]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\OLE  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Containers  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\DRIVERS32  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\PolicyExtensions  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{0294953e-78e4-42e1-9d1c-2f4f9f9430ca}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{0294953e-78e4-42e1-9d1c-2f4f9f9430ca}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{105c7ebc-b067-464f-823d-00ecbe280176}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{105c7ebc-b067-464f-823d-00ecbe280176}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{128fb4b6-703a-492e-9766-83cf03a21e3e}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{128fb4b6-703a-492e-9766-83cf03a21e3e}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{19cb740a-4507-4660-82ad-40abe0e1f1a7}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{19cb740a-4507-4660-82ad-40abe0e1f1a7}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{23a02597-c4f6-414a-81df-87f658265fcf}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{23a02597-c4f6-414a-81df-87f658265fcf}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{2e62423a-cf46-4970-90cb-22b70e926d6d}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{2e62423a-cf46-4970-90cb-22b70e926d6d}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{3681d90a-31cd-42b5-a913-7d99c0004454}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{3681d90a-31cd-42b5-a913-7d99c0004454}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{49c3e9eb-c6b4-4453-a534-dc03e9d786d3}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{49c3e9eb-c6b4-4453-a534-dc03e9d786d3}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{4e6c3522-a64a-4f56-94b5-ced2997bea8f}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{4e6c3522-a64a-4f56-94b5-ced2997bea8f}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{5b38c86b-c0b2-4e65-b17c-c843b7ad907d}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{5b38c86b-c0b2-4e65-b17c-c843b7ad907d}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{7011e7e4-552e-43a9-8149-739cc8bb1ae3}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{7011e7e4-552e-43a9-8149-739cc8bb1ae3}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{8093172f-6d85-4e2f-b534-9130333da638}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{8093172f-6d85-4e2f-b534-9130333da638}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{86980cc6-1a98-410d-95b6-19584d120b01}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{86980cc6-1a98-410d-95b6-19584d120b01}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{87266c79-dfce-453f-bedd-929a348e7ee4}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{87266c79-dfce-453f-bedd-929a348e7ee4}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{8c3caa18-2aea-4d0a-8723-a5d2b121f434}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{8c3caa18-2aea-4d0a-8723-a5d2b121f434}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{90efee95-6c66-4e9d-a2d9-7907a8020482}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{90efee95-6c66-4e9d-a2d9-7907a8020482}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{a67f2b67-c9a5-4f6c-89a9-1531454befa1}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{a67f2b67-c9a5-4f6c-89a9-1531454befa1}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{dc5bd012-e6de-433a-bc31-7c5968e39cdc}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{dc5bd012-e6de-433a-bc31-7c5968e39cdc}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{dea63935-0189-47af-aabe-839593b35e40}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{dea63935-0189-47af-aabe-839593b35e40}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{f44a38fb-936f-41fd-b7c7-07668fad92c2}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{f44a38fb-936f-41fd-b7c7-07668fad92c2}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{0294953e-78e4-42e1-9d1c-2f4f9f9430ca}  [failed]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{0ea80d3d-fb4a-4c65-9f77-54c5d1e27292}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{0ea80d3d-fb4a-4c65-9f77-54c5d1e27292}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{11088615-c74b-46e9-9da8-ce1adaa12121}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{11088615-c74b-46e9-9da8-ce1adaa12121}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{15a702bd-ec4d-4011-9890-da97ec19af52}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{15a702bd-ec4d-4011-9890-da97ec19af52}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{20003aee-d0ae-4a43-afa2-e8f48d56c2dc}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{20003aee-d0ae-4a43-afa2-e8f48d56c2dc}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{2019892f-37e4-4598-8cb6-a839b37b6c95}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{2019892f-37e4-4598-8cb6-a839b37b6c95}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{21b2d62a-8086-46fc-9c0e-2264985997c8}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{21b2d62a-8086-46fc-9c0e-2264985997c8}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{2d8be1a6-3371-46d0-9734-b5aa46cad1aa}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{2d8be1a6-3371-46d0-9734-b5aa46cad1aa}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{3b9949e8-6bbf-47da-99f8-a5eb39fc5b6f}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{3b9949e8-6bbf-47da-99f8-a5eb39fc5b6f}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{44dd49bc-63d7-40d7-a6fd-112ba0cd952d}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{44dd49bc-63d7-40d7-a6fd-112ba0cd952d}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{53191a96-5a20-46f2-8c75-0ff30c6cbbac}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{53191a96-5a20-46f2-8c75-0ff30c6cbbac}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{61924f88-caa6-45e2-8bc3-ebb0bfd5ac6d}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{61924f88-caa6-45e2-8bc3-ebb0bfd5ac6d}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{7a155feb-b67d-41a7-a6b9-29fd90e6782d}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{7a155feb-b67d-41a7-a6b9-29fd90e6782d}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{8aa4dd60-d8bd-48f8-8bf8-ed12c330d2e9}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{8aa4dd60-d8bd-48f8-8bf8-ed12c330d2e9}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{aca0c1d2-fc7d-4be2-93b6-13327ae54dfa}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{aca0c1d2-fc7d-4be2-93b6-13327ae54dfa}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{b37ef203-b053-4fb3-8f60-f9b36abbe05c}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{b37ef203-b053-4fb3-8f60-f9b36abbe05c}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{cc3d0dce-04da-4d8d-9a5e-f64b414e07dd}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{cc3d0dce-04da-4d8d-9a5e-f64b414e07dd}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{dde0ff2c-4c12-426b-8752-cf7be41d1a05}  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render\{dde0ff2c-4c12-426b-8752-cf7be41d1a05}\Properties  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\NVIDIA Corporation\Ansel  [failed]
+   RegOpenKeyExW: HKLM\SOFTWARE\Policies\Microsoft\System\DNSClient  [failed]
+   RegOpenKeyExW: HKLM\SOFTWARE\Policies\Microsoft\Windows  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient  [ok]
+   RegOpenKeyExW: HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient\DnsPolicyConfig  [failed]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0003  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0004  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0005  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0006  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0007  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0008  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0009  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0010  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0011  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0012  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0013  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0014  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0015  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\Configuration  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\Properties  [failed]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\Cryptography\ECCParameters  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Control\DevQuery  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters\DnsConnections  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters\DnsConnectionsProxies  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters\DnsPolicyConfig  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters\dnscache  [failed]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Services\FontCache\Parameters  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Services\Winsock\Parameters  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Services\Winsock\Setup Migration\Providers  [ok]
+   RegOpenKeyExW: HKLM\SYSTEM\CurrentControlSet\Services\crypt32  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\Avalon.Graphics  [failed]
+   RegOpenKeyExW: HKLM\Software\Microsoft\COM3  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\Cryptography\TVO  [failed]
+   RegOpenKeyExW: HKLM\Software\Microsoft\Cryptography\Wintrust\Config  [failed]
+   RegOpenKeyExW: HKLM\Software\Microsoft\EnterpriseCertificates\CA  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\EnterpriseCertificates\CA\PhysicalStores  [failed]
+   RegOpenKeyExW: HKLM\Software\Microsoft\EnterpriseCertificates\Root  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\EnterpriseCertificates\Root\PhysicalStores  [failed]
+   RegOpenKeyExW: HKLM\Software\Microsoft\OLE  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\OLE\AppCompat  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\SystemCertificates\AuthRoot  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\SystemCertificates\AuthRoot\AutoUpdate  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\SystemCertificates\CA  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\SystemCertificates\CA\PhysicalStores  [failed]
+   RegOpenKeyExW: HKLM\Software\Microsoft\SystemCertificates\Root  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\SystemCertificates\Root\PhysicalStores  [failed]
+   RegOpenKeyExW: HKLM\Software\Microsoft\SystemCertificates\SmartCardRoot  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\Windows NT\CurrentVersion\PeerDist\Service  [failed]
+   RegOpenKeyExW: HKLM\Software\Microsoft\Windows NT\CurrentVersion\ProfileList  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\Windows\CurrentVersion  [ok]
+   RegOpenKeyExW: HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions  [ok]
+   RegOpenKeyExW: HKLM\Software\Policies\Microsoft\PeerDist\Service  [failed]
+   RegOpenKeyExW: HKLM\Software\Policies\Microsoft\SystemCertificates\AuthRoot  [failed]
+   RegOpenKeyExW: HKLM\Software\Policies\Microsoft\SystemCertificates\Root\ProtectedRoots  [failed]
+   RegOpenKeyExW: HKLM\Software\Policies\Microsoft\System\DNSClient  [failed]
+   RegOpenKeyExW: HKLM\Software\Policies\Microsoft\Windows NT\DnsClient  [ok]
+   RegOpenKeyExW: HKLM\System\CurrentControlSet\Control\GraphicsDrivers  [ok]
+   RegOpenKeyExW: HKLM\System\CurrentControlSet\Control\Hvsi  [failed]
+   RegOpenKeyExW: HKLM\System\CurrentControlSet\Control\LSA\AccessProviders  [ok]
+   RegOpenKeyExW: HKLM\System\CurrentControlSet\Control\Lsa\SspiCache  [ok]
+   RegOpenKeyExW: HKLM\System\CurrentControlSet\Control\SecurityProviders  [ok]
+   RegOpenKeyExW: HKLM\System\CurrentControlSet\Control\SecurityProviders\SaslProfiles  [ok]
+   RegOpenKeyExW: HKLM\System\CurrentControlSet\Services\Tcpip6\Parameters\Winsock  [ok]
+   RegOpenKeyExW: HKLM\System\CurrentControlSet\Services\Tcpip\Parameters\Interfaces  [ok]
+   RegOpenKeyExW: HKLM\System\CurrentControlSet\Services\Tcpip\Parameters\Winsock  [ok]
+   RegOpenKeyExW: HKLM\System\CurrentControlSet\Services\WinSock2\Parameters  [failed]
+   RegOpenKeyExW: HKLM\System\CurrentControlSet\Services\WinSock2\Parameters  [ok]
+   RegOpenKeyExW: HKU\S-1-5-21-1401507831-731864707-480903484-1000  [ok]
+
+values read/written (167):
+   <handle:0x3b8> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x3b8> :: MaxSockaddrLength (RegQueryValueExW)
+   <handle:0x3b8> :: MinSockaddrLength (RegQueryValueExW)
+   <handle:0x3b8> :: UseDelayedAcceptance (RegQueryValueExW)
+   <handle:0x3c0> :: DisplayVersion (RegQueryValueExW)
+   <handle:0x3c0> :: UBR (RegQueryValueExW)
+   <handle:0x444> :: Category (RegQueryValueExW)
+   <handle:0x444> :: LocalRedirectOnly (RegQueryValueExW)
+   <handle:0x444> :: Name (RegQueryValueExW)
+   <handle:0x444> :: PublishExpandedPath (RegQueryValueExW)
+   <handle:0x444> :: RelativePath (RegQueryValueExW)
+   <handle:0x4c4> :: Local AppData (RegQueryValueExW)
+   <handle:0x4dc> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x4e0> :: ProgramData (RegQueryValueExW)
+   <handle:0x4e8> :: Category (RegQueryValueExW)
+   <handle:0x4e8> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x4e8> :: Name (RegQueryValueExW)
+   <handle:0x4fa> ::  (RegQueryValueExW)
+   <handle:0x4fa> :: ThreadingModel (RegQueryValueExW)
+   <handle:0x4fc> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x500> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x504> :: DefaultSecureProtocols (RegQueryValueExW)
+   <handle:0x504> :: DisableBranchCache (RegQueryValueExW)
+   <handle:0x504> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x51c> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x526> ::  (RegQueryValueExW)
+   <handle:0x526> :: ThreadingModel (RegQueryValueExW)
+   <handle:0x528> :: Domain (RegQueryValueExW)
+   <handle:0x530> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x538> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x554> :: PolicySubPath (RegQueryValueExW)
+   <handle:0x568> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x574> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x57c> :: WinSock 2.0 Provider ID (RegQueryValueExW)
+   <handle:0x58c> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x590> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x5b4> :: Mapping (RegQueryValueExW)
+   <handle:0x5b4> :: Transports (RegQueryValueExW)
+   <handle:0x5c0> :: MartaExtension (RegQueryValueExW)
+   <handle:0x5c0> :: ProviderOrder (RegQueryValueExW)
+   <handle:0x5c8> :: ProviderPath (RegQueryValueExW)
+   <handle:0x5f6> ::  (RegQueryValueExW)
+   <handle:0x5fa> ::  (RegQueryValueExW)
+   <handle:0x5fa> :: ThreadingModel (RegQueryValueExW)
+   <handle:0x602> ::  (RegQueryValueExW)
+   <handle:0x606> ::  (RegQueryValueExW)
+   <handle:0x606> :: ThreadingModel (RegQueryValueExW)
+   <handle:0x60a> ::  (RegQueryValueExW)
+   <handle:0x60a> :: ThreadingModel (RegQueryValueExW)
+   <handle:0x60c> :: Com+Enabled (RegQueryValueExW)
+   <handle:0x648> :: MigrateProxy (RegQueryValueExW)
+   <handle:0x648> :: ProxyEnable (RegQueryValueExW)
+   <handle:0x65c> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x674> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x688> :: Mapping (RegQueryValueExW)
+   <handle:0x688> :: Transports (RegQueryValueExW)
+   <handle:0x68c> :: Mapping (RegQueryValueExW)
+   <handle:0x694> :: WinSock 2.0 Provider ID (RegQueryValueExW)
+   <handle:0x698> :: MaxSockaddrLength (RegQueryValueExW)
+   <handle:0x698> :: MinSockaddrLength (RegQueryValueExW)
+   <handle:0x698> :: UseDelayedAcceptance (RegQueryValueExW)
+   <handle:0x6ac> :: Hostname (RegQueryValueExW)
+   <handle:0x6b8> :: SecurityProviders (RegQueryValueExW)
+   <handle:0x700> :: Capabilities (RegQueryValueExW)
+   <handle:0x700> :: Comment (RegQueryValueExW)
+   <handle:0x700> :: Name (RegQueryValueExW)
+   <handle:0x700> :: RpcId (RegQueryValueExW)
+   <handle:0x700> :: TokenSize (RegQueryValueExW)
+   <handle:0x700> :: Type (RegQueryValueExW)
+   <handle:0x700> :: Version (RegQueryValueExW)
+   <handle:0x740> :: Domain (RegQueryValueExW)
+   <handle:0x740> :: Hostname (RegQueryValueExW)
+   <handle:0x764> :: Domain (RegQueryValueExW)
+   <handle:0x768> :: Hostname (RegQueryValueExW)
+   <handle:0x7bc> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x814> :: EnableDhcp (RegQueryValueExW)
+   <handle:0x82c> :: MigrateProxy (RegQueryValueExW)
+   <handle:0x82c> :: ProxyEnable (RegQueryValueExW)
+   <handle:0x8b8> :: Blob (RegQueryValueExW)
+   <handle:0x8ec> :: SystemManufacturer (RegQueryValueExW)
+   <handle:0x8ec> :: SystemProductName (RegQueryValueExW)
+   <handle:0x8fc> :: PinRulesLastSyncTime (RegQueryValueExW)
+   <handle:0x900> :: PinRulesEncodedCtl (RegQueryValueExW)
+   <handle:0x98c> :: Name (RegQueryValueExW)
+   <handle:0x9a4> :: AppsUseLightTheme (RegQueryValueExW)
+   <handle:0x9f0> :: SystemManufacturer (RegQueryValueExW)
+   <handle:0x9f0> :: SystemProductName (RegQueryValueExW)
+   <handle:0x9f4> :: SystemManufacturer (RegQueryValueExW)
+   <handle:0xa0c> :: Name (RegQueryValueExW)
+   <handle:0xa10> :: Name (RegQueryValueExW)
+   <handle:0xa2c> :: ClientCacheSize (RegQueryValueExW)
+   <handle:0xa54> :: FreestyleEnabled (RegQueryValueExW)
+   <handle:0xaac> :: Category (RegQueryValueExW)
+   <handle:0xaac> :: Name (RegQueryValueExW)
+   <handle:0xc84> :: Key Modifiers (RegQueryValueExW)
+   <handle:0xc84> :: Virtual Key (RegQueryValueExW)
+   <handle:0xcd0> :: Attributes (RegQueryValueExW)
+   <handle:0xcd0> :: Category (RegQueryValueExW)
+   <handle:0xcd0> :: LocalizedName (RegQueryValueExW)
+   <handle:0xcd0> :: Name (RegQueryValueExW)
+   <handle:0xcd0> :: PreCreate (RegQueryValueExW)
+   <handle:0xcd0> :: ProgramFilesDir (x86) (RegQueryValueExW)
+   <handle:0xce8> :: Category (RegQueryValueExW)
+   <handle:0xce8> :: Name (RegQueryValueExW)
+   <handle:0xce8> :: ProgramFilesDir (RegQueryValueExW)
+   <handle:0xcec> :: Category (RegQueryValueExW)
+   <handle:0xcec> :: Name (RegQueryValueExW)
+   <handle:0xd12> ::  (RegQueryValueExW)
+   <handle:0xd40> :: DeviceState (RegQueryValueExW)
+   <handle:0xd44> :: SystemSetupInProgress (RegQueryValueExW)
+   <handle:0xd44> :: midi (RegQueryValueExW)
+   <handle:0xd44> :: midi1 (RegQueryValueExW)
+   <handle:0xd44> :: midimapper (RegQueryValueExW)
+   <handle:0xd44> :: wave (RegQueryValueExW)
+   <handle:0xd44> :: wave1 (RegQueryValueExW)
+   <handle:0xd44> :: wave2 (RegQueryValueExW)
+   <handle:0xd44> :: wave3 (RegQueryValueExW)
+   <handle:0xd44> :: wave4 (RegQueryValueExW)
+   <handle:0xd44> :: wave5 (RegQueryValueExW)
+   <handle:0xd44> :: wavemapper (RegQueryValueExW)
+   <handle:0xd46> ::  (RegQueryValueExW)
+   <handle:0xd58> :: EnableDhcp (RegQueryValueExW)
+   <handle:0xd7c> :: {9c119480-ddc2-4954-a150-5bd240d454ad},2 (RegQueryValueExW)
+   <handle:0xd80> :: SystemManufacturer (RegQueryValueExW)
+   <handle:0xd80> :: SystemProductName (RegQueryValueExW)
+   <handle:0xd80> :: {a45c254e-df1c-4efd-8020-67d146a850e0},2 (RegQueryValueExW)
+   <handle:0xd80> :: {b3f8fa53-0004-438e-9003-51a46e139bfc},2 (RegQueryValueExW)
+   <handle:0xd80> :: {b3f8fa53-0004-438e-9003-51a46e139bfc},6 (RegQueryValueExW)
+   <handle:0xd84> :: DeviceState (RegQueryValueExW)
+   <handle:0xd88> :: DeviceState (RegQueryValueExW)
+   <handle:0xd88> :: FreestyleEnabled (RegQueryValueExW)
+   <handle:0xdd0> :: {1da5d803-d492-4edd-8c23-e0c0ffee7f0e},0 (RegQueryValueExW)
+   <handle:0xdd0> :: {a45c254e-df1c-4efd-8020-67d146a850e0},2 (RegQueryValueExW)
+   <handle:0xdd0> :: {b3f8fa53-0004-438e-9003-51a46e139bfc},2 (RegQueryValueExW)
+   <handle:0xdd0> :: {b3f8fa53-0004-438e-9003-51a46e139bfc},6 (RegQueryValueExW)
+   <handle:0xdd4> :: {194ef948-7cdb-403e-9f47-19418f7b24fd},1 (RegQueryValueExW)
+   <handle:0xdd8> :: DeviceState (RegQueryValueExW)
+   <handle:0xdd8> :: {194ef948-7cdb-403e-9f47-19418f7b24fd},1 (RegQueryValueExW)
+   <handle:0xddc> :: DevQueryEntry (RegQueryValueExW)
+   <handle:0xddc> :: DeviceState (RegQueryValueExW)
+   <handle:0xddc> :: DllName (RegQueryValueExW)
+   <handle:0xddc> :: IdType (RegQueryValueExW)
+   <handle:0xddc> :: NoStateFile (RegQueryValueExW)
+   <handle:0xddc> :: QueryFile (RegQueryValueExW)
+   <handle:0xddc> :: Transport (RegQueryValueExW)
+   <handle:0xddc> :: UUID (RegQueryValueExW)
+   <handle:0xddc> :: {194ef948-7cdb-403e-9f47-19418f7b24fd},1 (RegQueryValueExW)
+   <handle:0xddc> :: {1da5d803-d492-4edd-8c23-e0c0ffee7f0e},0 (RegQueryValueExW)
+   <handle:0xddc> :: {a45c254e-df1c-4efd-8020-67d146a850e0},2 (RegQueryValueExW)
+   <handle:0xddc> :: {b3f8fa53-0004-438e-9003-51a46e139bfc},1 (RegQueryValueExW)
+   <handle:0xddc> :: {b3f8fa53-0004-438e-9003-51a46e139bfc},2 (RegQueryValueExW)
+   <handle:0xddc> :: {b3f8fa53-0004-438e-9003-51a46e139bfc},6 (RegQueryValueExW)
+   <handle:0xde0> :: DeviceState (RegQueryValueExW)
+   <handle:0xde0> :: {194ef948-7cdb-403e-9f47-19418f7b24fd},1 (RegQueryValueExW)
+   <handle:0xde4> :: DeviceState (RegQueryValueExW)
+   <handle:0xde8> :: DeviceState (RegQueryValueExW)
+   <handle:0xdf0> :: DeviceState (RegQueryValueExW)
+   <handle:0xe7c> :: {9c119480-ddc2-4954-a150-5bd240d454ad},2 (RegQueryValueExW)
+   <handle:0xea8> :: EnableDhcp (RegQueryValueExW)
+   <handle:0xed4> :: EnableDhcp (RegQueryValueExW)
+   <handle:0xed8> :: EnableDhcp (RegQueryValueExW)
+   <handle:0xef0> :: EnableDhcp (RegQueryValueExW)
+   <handle:0xef8> :: EnableDhcp (RegQueryValueExW)
+   <handle:0xf20> :: Key Modifiers (RegQueryValueExW)
+   <handle:0xf20> :: Virtual Key (RegQueryValueExW)
+   <handle:0xf98> :: Key Modifiers (RegQueryValueExW)
+   <handle:0xf98> :: Virtual Key (RegQueryValueExW)
+
+files outside the runtime dir (68):
+   C:\PROGRAM FILES\WINDOWSAPPS\MICROSOFT.WINDOWSTERMINAL_1.24.11911.0_X64__8WEKYB3D8BBWE\CASCADIACODE.TTF
+   C:\PROGRAM FILES\WINDOWSAPPS\MICROSOFT.WINDOWSTERMINAL_1.24.11911.0_X64__8WEKYB3D8BBWE\CASCADIACODEITALIC.TTF
+   C:\PROGRAM FILES\WINDOWSAPPS\MICROSOFT.WINDOWSTERMINAL_1.24.11911.0_X64__8WEKYB3D8BBWE\CASCADIAMONO.TTF
+   C:\PROGRAM FILES\WINDOWSAPPS\MICROSOFT.WINDOWSTERMINAL_1.24.11911.0_X64__8WEKYB3D8BBWE\CASCADIAMONOITALIC.TTF
+   C:\ProgramData\NVIDIA Corporation\Drs\nvAppTimestamps
+   C:\ProgramData\NVIDIA Corporation\Drs\nvdrsdb0.bin
+   C:\ProgramData\NVIDIA Corporation\Drs\nvdrssel.bin
+   C:\USERS\RICKY\APPDATA\LOCAL\MICROSOFT\WINDOWS\FONTS\UBUNTUMONO[WGHT].TTF
+   C:\Users\Ricky\AppData\Local\DoubaoIme\Update\ui_state.json
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/applog.cache2
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/applog.cache2.temp.1789307046
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/applog.db2
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/applog.db2.temp.1789307042
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/applog.db2.temp.1789307043
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/applog.db2.temp.1789307045
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/applog.db2.temp.1789307047
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/applog.db2.temp.1789307050
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/custom.db2
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/custom.db2.temp.1789307045
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/monitor.db2
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/monitor.db2.temp.1789307043
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/monitor.db2.temp.1789307045
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/monitor.db2.temp.1789307047
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/monitor.db2.temp.1789307050
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/session.db2
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/session.db2.temp.1789307042
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog/session.db2.temp.1789307047
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\conf\config.json
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\conf\setting_status_last_date.txt
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\dict/asr_user_ner_dict.dat
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\dict/common_phrase_dict.dat
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\dict/usr.dat
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\dict/usr_bigram.dat
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\dict/usr_emailaddress.dat
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\dict/usr_enhance.dat
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\dict/usr_history_bigram.dat
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\dict/usr_url.dat
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\log\alog\alog\log\2026_09_13_1789307042044__ImeService__default.alog.hot
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\parfait\lock\685343\ImeService_12276
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\parfait\lock\685343\ImeService_35444
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\parfait\prepare\685343\0\0_1789307042_0_35444_0
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\parfait\ready\685343\0\0_1789307042_0_35444_0
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\parfait\settings\685343\pft_0.9.0_\pft_release\2521637083956824.pftconfig
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\ttnet\6063c1a6-daef-4582-ab37-3f2653303230.tmp
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\ttnet\node_race_results
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\ttnet\prefs\local_prefs.json
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\ttnet\server.json
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\ttnet\tt_net_config.config
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\ttnet\tt_net_config.config~RF14366821.TMP
+   C:\Users\Ricky\AppData\Roaming\DoubaoIme\ttnet\version
+   C:\WINDOWS\SYSTEM32\d3d10warp.dll
+   C:\WINDOWS\SYSTEM32\d3d12.dll
+   C:\WINDOWS\SYSTEM32\tzres.dll
+   C:\WINDOWS\SYSTEM32\wdmaud.drv
+   C:\WINDOWS\SYSTEM32\winnlsres.dll
+   C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_021cb587ccc8964f\NvMemMapStoragex.dll
+   C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_021cb587ccc8964f\nvgpucomp64.dll
+   C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_021cb587ccc8964f\nvldumdx.dll
+   C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_021cb587ccc8964f\nvppex.dll
+   C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_021cb587ccc8964f\nvwgf2umx.dll
+   C:\WINDOWS\System32\wshqos.dll
+   C:\WINDOWS\system32\drivers\NVIDIA Corporation\Drs\nvdrsdb.bin
+   C:\WINDOWS\system32\drivers\etc\hosts
+   \\.\MountPointManager
+   \\.\NUL
+   \\.\pipe\crashpad_35444_OLXJADJAOOUISNGO
+   \\?\C:\Users\Ricky\appdata\local\NVIDIA\DXCache\ac14a938854bd2fd.nvph

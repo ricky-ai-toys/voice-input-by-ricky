@@ -41,7 +41,10 @@ def main() -> int:
     run(sys.executable, "patch_names.py", runtime, "--suffix", "1")
     run(sys.executable, os.path.join("..", "scripts", "patch_manifest.py"),
         os.path.join(runtime, "ImeService.exe"))
-    run(sys.executable, "patch_voicehook.py", runtime, "--mode=none", "--no-synth")
+    # The product uses the *real* hotkey, so the copy keeps the vendor's own behaviour: only the
+    # private names and the uiAccess rewrite differ. (Scripted tests relax the injected-key
+    # filters in memory instead - see planb_voice_input.py --self-test.)
+    run(sys.executable, "patch_voicehook.py", runtime, "--mode=none", "--keep-filters")
     return 0
 
 

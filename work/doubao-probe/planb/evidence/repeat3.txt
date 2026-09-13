@@ -1,0 +1,24 @@
+[planb] engine pid=3124, host window=0x33041E
+[planb] armed (voice tryout + host context)
+[self-test] relaxed 4 filter(s) in the engine's memory
+[planb] listening ...
+[planb] 第
+[planb] 第二
+[planb] 第二句
+[planb] 第二句，画
+[planb] 第2句，画测试
+[planb] 句话测试第二句话测试。
+[planb] 句话测试第二句话测试。第
+[planb] 句话测试第二句话测试。第三
+[planb] 句话测试第二句话测试。第三句话
+[planb] 句话测试第二句话测试。第3句话，测试
+[planb] 第一句话测试第二句话测试，第三句话测试。
+[planb] final: 第一句话测试第二句话测试，第三句话测试。
+[self-test] session 1/3 -> '第一句话测试第二句话测试，第三句话测试。'
+[planb] listening ...
+[planb] (nothing recognised)
+[self-test] session 2/3 -> ''
+[planb] listening ...
+[planb] (nothing recognised)
+[self-test] session 3/3 -> ''
+[self-test] restored 4 filter(s)

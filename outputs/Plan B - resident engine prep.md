@@ -760,3 +760,65 @@ Two practical findings from running the sessions repeatedly:
    injected keys at all (Windows drops low-level hooks whose callback exceeds its timeout, and
    the engine's callback does real work while recording). Stop the dictation inside that window
    - or drive the stop the way the vendor's own client does - and the session finalises.
+
+### Milestone 25 - the transcript was always on the pipe, and the "second press" bug is an ack
+
+This supersedes the conclusion of milestones 21-24 ("the commit is unreachable, a hosted TSF core
+is required"). Two findings, both reproduced end to end:
+
+1. **The text channel is `GetInlineCommitText` (op 0x19) and `GetCompText` (op 0x09).** Polling
+   either op while a session records returns the cloud ASR sentence so far (protobuf: field 1 =
+   UTF-8 text, field 2 = caret). Nothing has to arrive *at a client*: the text is readable from
+   the pipe the whole time. `slot_PeekVoiceCommit` (session=0 bytes=0) and
+   `Controller::CheckCommit` are the *host-hand-off* path used by the vendor's TSF core; the
+   streaming path above does not need it, so **no host TSF core, no COM registration and no
+   `tsf-oct-core.dll` client are involved** (evidence: `planb/evidence/repeat3_ack.txt`,
+   `audit_deps.py`).
+2. **Repeated sessions are gated by an unacknowledged commit.** After a session the engine keeps
+   the finished sentence and refuses the next one:
+
+   ```
+   [controller.cpp:3429] voice record start blocked by unacked commit session=1 bytes=60
+   ```
+
+   Hand-made op 0x18 bodies do not clear it (the handler wants a well-formed message), but the
+   vendor's own export does - and it is reachable from a plain process:
+
+   ```
+   RpcPipe_PeekVoiceCommitUtf8(pipe, &session, buf, size) -> length   # final text
+   RpcPipe_AckVoiceCommit(pipe, session)                 -> 1        # clears the gate
+   ```
+
+   The engine confirms it: `slot_AckVoiceCommit success session=1 bytes=57`, and the next press
+   logs `voice record start ok=1`. This is the exact cause of the "second Right-Alt press does
+   nothing until you restart" bug, and acking also replaces the fixed post-release wait (the final
+   sentence lands 0.6-1.2 s after the key goes up instead of after a blind 1.2 s).
+
+### Milestone 26 - the target machine does not need Doubao IME at all
+
+`planb/audit_deps.py` spawns the engine suspended, hooks the registry and file APIs, and records
+everything the engine touches from process start. With `--simulate-clean` it additionally makes
+`HKLM\SOFTWARE\DoubaoIme` fail with `ERROR_FILE_NOT_FOUND`, i.e. it reproduces a machine where
+Doubao was never installed (evidence: `planb/evidence/dependency_audit.txt`,
+`planb/evidence/audit_clean_console.txt`).
+
+* `RegOpenKeyExW: HKLM\SOFTWARE\DoubaoIme [failed]` - and the session still recognises speech.
+  Nothing is ever written to HKLM, so a standard user is enough.
+* Outside its own folder the engine only touches `%APPDATA%\DoubaoIme\...` (config, dictionaries,
+  logs, `ttnet` cache; all created on demand) plus system DLLs and audio drivers. It never reads
+  `C:\Program Files\DoubaoIME`, so the release is self-contained.
+* `planb_voice_input.py --no-tsf` skips the TSF profile activation entirely and still produces the
+  full transcript, so the target machine does not need the input method registered.
+
+### Milestone 27 - the portable release
+
+`planb/build_release.py` rebuilds everything reproducibly: it copies the pristine vendor version
+directory, applies `patch_names` (private pipes + mutex), `patch_manifest` (`uiAccess="false"`)
+and `patch_voicehook --mode=none --keep-filters`, drops the `.orig` backups, then builds the shell
+with PyInstaller (`frida`/`numpy`/`sounddevice` excluded - the product uses the real hotkey and
+needs none of them, which takes the exe from 132 MB to 11 MB).
+
+Result: `outputs/VoiceInputByRicky/` = `VoiceInputByRicky.exe` + `runtime/` + `data/config.json`
++ `README.md`, ~255 MB, no installer, no admin, no TSF. Smoke test: the packaged exe starts the
+engine from its own folder, arms the hotkey gate and reports ready
+(`planb/evidence/release_smoke.txt`).

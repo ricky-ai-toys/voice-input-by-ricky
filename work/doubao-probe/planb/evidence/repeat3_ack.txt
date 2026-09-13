@@ -1,0 +1,24 @@
+[planb] engine pid=35056, host window=0x46036C
+[planb] armed (voice tryout + host context)
+[self-test] relaxed 4 filter(s) in the engine's memory
+[planb] listening ...
+[planb] 第三
+[planb] 第三句话
+[planb] 第3句话，测试
+[planb] final (0.58s after release): 第一句话测试第二句话测试，第三句话测试。
+[self-test] session 1/3 -> '第3句话，测试'
+[planb] listening ...
+[planb] 第
+[planb] 第三
+[planb] 第三句话
+[planb] 第3句话，测试
+[planb] final (0.81s after release): 第一句话测试第二句话测试，第三句话测试。
+[self-test] session 2/3 -> '第3句话，测试'
+[planb] listening ...
+[planb] 第
+[planb] 第三
+[planb] 第三句话
+[planb] 第3句话，测试
+[planb] final (1.21s after release): 第一句话测试第二句话测试，第三句话测试。
+[self-test] session 3/3 -> '第3句话，测试'
+[self-test] restored 4 filter(s)

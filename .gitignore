@@ -28,3 +28,7 @@ outputs/VoiceInputByRicky/runtime/
 outputs/VoiceInputByRicky/data/logs/
 outputs/DoubaoVoicePortable/app/
 outputs/DoubaoVoicePortable/runtime/
+work/doubao-probe/planb/scratch/
+outputs/_release_stage/
+work/doubao-probe/planb/scratch_server*.log
+work/doubao-probe/planb/__pycache__/

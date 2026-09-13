@@ -94,3 +94,57 @@ What it does **not** prove yet:
 Next step for the fork: patch the pipe name in a scratch copy, start that copy as a server,
 re-run the litmus test against the private pipe, then recover the signatures of
 `RpcPipe_KeyEvent`, `RpcPipe_PeekVoiceCommitUtf8` and `RpcPipe_AckVoiceCommit`.
+
+---
+
+## Local progress (2026-09-13, first Plan B session)
+
+**Milestone 1 - resident server with a private identity: WORKING**
+
+Two fixed names keep a second engine from coexisting with the official IME; both are
+byte-length preserving rewrites (`planb/patch_names.py`):
+
+| Name | Original | Ours |
+| --- | --- | --- |
+| RPC pipe (ASCII) | `\\.\pipe\ObricIme\oime-server` | `\\.\pipe\ObricIme\oime-serveR` |
+| single instance (UTF-16LE) | `ObricImeServerSingleInstance` | `ObricImeServerSingleInstancR` |
+
+Evidence (`planb/evidence/server_private_pipe_run.log`): the copy starts, initialises the
+engine, and logs
+
+```
+[server_main.cpp:967] ServerRpcThread Run addr: \\.\pipe\ObricIme\oime-serveR
+```
+
+and keeps running **side by side with the installed engine** (our PID kept alive while the
+official IME still owned the original pipe).
+
+**Milestone 1b - the server path needs the full dictionaries.** With the trimmed package
+(no `files/data/dict`) the server dies in `shell_impl.cpp:178 Attach new mode fail` ->
+`controller.cpp:772 shell init failed`. The file-test path does not need them; the resident
+server does. So the Plan B package keeps the full runtime (~266 MB), not the 110 MB trim.
+
+**Milestone 2 - client library: partially proven, round trip still open.**
+
+From plain Python (`planb/try_ensure_server.py`):
+
+```
+CreateRpcClient('\\\\.\\pipe\\ObricIme\\oime-serveR') -> 2442380826800   (handle)
+RpcPipe_GetInputState(handle)                         -> 0
+RpcPipe_SimpleMessage(handle)                         -> True
+```
+
+Control test: `CreateRpcClient('...oime-does-not-exist')` **also** returns a handle and
+`EnsureServerRunning` also returns True, and our server's log shows **zero** `PipeCall`
+entries - so creation is lazy and nothing has actually reached our server yet. The client
+signatures are therefore still unknown.
+
+Next steps (in order):
+1. Recover the real argument shapes: extend `planb/find_callsite.py` to also catch
+   register-indirect calls (`mov reg, qword ptr [rip+disp]` followed by `call reg`), then read
+   the setup for `RpcPipe_KeyEvent`, `RpcPipe_UpdateHostContextUtf8`,
+   `RpcPipe_PeekVoiceCommitUtf8`, `RpcPipe_AckVoiceCommit` in `tsf-oime-core.dll`.
+2. Instrument our own server (`rpc_server_impl.cpp` logs `PipeCall begin op=%u req_size=%u`)
+   to prove when a frame actually arrives.
+3. First real target: make the server report "client connected / op received", then drive
+   key events and read the voice commit text.

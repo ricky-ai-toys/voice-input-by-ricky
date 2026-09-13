@@ -11,7 +11,15 @@ import ctypes
 import os
 import sys
 
-VARIANTS = {0: "no args", 1: "client handle from CreateRpcClient", 2: "wide-string path arg"}
+VARIANTS = {
+    0: "EnsureServerRunning() with no args",
+    1: "CreateRpcClient() no args, then ensure(handle)",
+    2: "EnsureServerRunning(wide pipe name)",
+    3: "CreateRpcClient(narrow pipe name) then ensure(handle)",
+    4: "CreateRpcClient(wide pipe name) then ensure(handle)",
+    5: "CreateRpcClient(private) + RpcPipe_GetInputState(handle)",
+    6: "CreateRpcClient(private) + RpcPipe_SimpleMessage(handle)",
+}
 
 
 def main() -> int:
@@ -35,10 +43,43 @@ def main() -> int:
         print(f"[call] CreateRpcClient() -> {client}", flush=True)
         ensure.argtypes = [ctypes.c_void_p]
         print(f"[call] RpcPipe_EnsureServerRunning({client}) -> {ensure(client)}", flush=True)
-    else:
+    elif variant == 2:
         ensure.argtypes = [ctypes.c_wchar_p]
         pipe = "\\\\.\\pipe\\ObricIme\\oime-server"
         print(f"[call] RpcPipe_EnsureServerRunning({pipe!r}) -> {ensure(pipe)}", flush=True)
+    elif variant in (3, 4):
+        pipe = "\\\\.\\pipe\\ObricIme\\oime-serveR"
+        create = dll.CreateRpcClient
+        create.restype = ctypes.c_void_p
+        if variant == 3:
+            create.argtypes = [ctypes.c_char_p]
+            client = create(pipe.encode("utf-8"))
+        else:
+            create.argtypes = [ctypes.c_wchar_p]
+            client = create(pipe)
+        print(f"[call] CreateRpcClient({pipe!r}) -> {client}", flush=True)
+        ensure.argtypes = [ctypes.c_void_p]
+        print(f"[call] RpcPipe_EnsureServerRunning({client}) -> {ensure(client)}", flush=True)
+    else:
+        pipe = "\\\\.\\pipe\\ObricIme\\oime-serveR"
+        create = dll.CreateRpcClient
+        create.restype = ctypes.c_void_p
+        create.argtypes = [ctypes.c_char_p]
+        client = create(pipe.encode("utf-8"))
+        print(f"[call] CreateRpcClient({pipe!r}) -> {client}", flush=True)
+        if not client:
+            print("[fail] no client handle", flush=True)
+            return 1
+        if variant == 5:
+            fn = dll.RpcPipe_GetInputState
+            fn.restype = ctypes.c_int
+            fn.argtypes = [ctypes.c_void_p]
+            print(f"[call] RpcPipe_GetInputState({client}) -> {fn(client)}", flush=True)
+        else:
+            fn = dll.RpcPipe_SimpleMessage
+            fn.restype = ctypes.c_bool
+            fn.argtypes = [ctypes.c_void_p]
+            print(f"[call] RpcPipe_SimpleMessage({client}) -> {fn(client)}", flush=True)
     return 0
 
 

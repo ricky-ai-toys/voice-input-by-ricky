@@ -1,0 +1,67 @@
+[2026-09-13 18:59:02.099] [info] [server_main.cpp:2459] server start. [pid=12640].
+[2026-09-13 18:59:02.100] [warning] [service_process_bootstrapper.cpp:65] update activity query server start failed
+[2026-09-13 18:59:02.102] [info] [applog_runtime.cpp:154] [applog-runtime] init begin process=ImeService appid=685343 channel=release db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog app_version=0.9.0 encrypt=true event_verify=false
+[2026-09-13 18:59:02.103] [info] [applog_runtime.cpp:100] [applog-runtime] did ready: 2521637083956824
+[2026-09-13 18:59:02.103] [info] [applog_runtime.cpp:103] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog
+[2026-09-13 18:59:02.103] [info] [applog_runtime.cpp:180] [did-compare] process=ImeService did=2521637083956824 db_dir=C:\Users\Ricky\AppData\Roaming\DoubaoIme\applog
+[2026-09-13 18:59:02.103] [info] [applog_runtime.cpp:182] [applog-runtime] current did=2521637083956824
+[2026-09-13 18:59:02.103] [info] [service_process_bootstrapper.cpp:124] did dependent init begin did=2521637083956824
+[2026-09-13 18:59:02.105] [info] [TtnetEngine.cpp:238] [ttnet] opaque data store enable=true cert_count=145 api_ready=true
+[2026-09-13 18:59:02.106] [info] [ttnet_runtime.cpp:33] [ttnet-runtime] init result=1 did=2521637083956824
+[2026-09-13 18:59:02.107] [info] [asr_modify_pair_dispatcher.cpp:82] ModifyPairDispatcher.worker_loop_enter
+[2026-09-13 18:59:02.107] [info] [asr_modify_pair_dispatcher.cpp:33] ModifyPairDispatcher.start worker launched
+[2026-09-13 18:59:02.109] [info] [update_common.cpp:576] [update] comp=coordinator tid=- phase=pending step=check result=ok reason=- detail=automatic_update=enabled
+[2026-09-13 18:59:02.110] [info] [update_common.cpp:576] [update] comp=coordinator tid=- phase=pending step=check result=ok reason=- detail=scheduler=started,initial_ms=60000,interval_ms=3600000,channel=release
+[2026-09-13 18:59:02.173] [info] [parfait_runtime.cpp:32] [parfait-runtime] init result=1 work_path=C:\Users\Ricky\AppData\Roaming\DoubaoIme\parfait did=2521637083956824
+[2026-09-13 18:59:02.173] [info] [applog_runtime.cpp:200] [applog-event] queued event=server_start params_size=2
+[2026-09-13 18:59:02.184] [info] [controller.cpp:747] settings_repository init: loaded
+[2026-09-13 18:59:02.184] [info] [update_common.cpp:576] [update] comp=coordinator tid=- phase=pending step=check result=ok reason=- detail=automatic_update=enabled
+[2026-09-13 18:59:02.184] [info] [input_mode.cpp:80] Current input state is Pinyin26IdleState
+[2026-09-13 18:59:02.184] [info] [pinyin26_mode.cpp:195] ==========  config == fullshape:false, traditional:false, keyboard_type:0, shuangpinsheme:6
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2510:oime_engine::pinyin::Engine::Set] Engine::Set::HantTraditional false
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2492:oime_engine::pinyin::Engine::Set] Engine::Set::KeyboardType 0
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2519:oime_engine::pinyin::Engine::Set] Engine::Set::AutoCorrect true
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2535:oime_engine::pinyin::Engine::Set] Engine::Set::EnableFuzzy false
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2543:oime_engine::pinyin::Engine::Set] Engine::Set::IntelligentFuzzy true
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2551:oime_engine::pinyin::Engine::Set] Engine::Set::FuzzyType 455
+[2026-09-13 18:59:02.184] [info] [shell_impl.cpp:63] [engine] [engine.cpp:2599:oime_engine::pinyin::Engine::Set] Engine::Set success
+[2026-09-13 18:59:02.184] [error] [shell_impl.cpp:70] [engine] [engine.cpp:2595:oime_engine::pinyin::Engine::Set] Engine::Set non-supported type
+[2026-09-13 18:59:02.184] [error] [shell_impl.cpp:70] [engine] [engine.cpp:2595:oime_engine::pinyin::Engine::Set] Engine::Set non-supported type
+[2026-09-13 18:59:02.184] [info] [pinyin26_mode.cpp:227] ==========  config == autocorrect:true, enable_fuzzy:false, fuzzy_type:455, enable_kaomoji:true, enable_emoji:true
+[2026-09-13 18:59:02.184] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:65:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::SyllableDict failed
+[2026-09-13 18:59:02.184] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:71:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::SysDict failed
+[2026-09-13 18:59:02.184] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:77:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::SysBigramDict failed
+[2026-09-13 18:59:02.184] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:83:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::CorrectDict failed
+[2026-09-13 18:59:02.184] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:95:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::ExtensionDict failed
+[2026-09-13 18:59:02.184] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:103:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::TradSimDict failed
+[2026-09-13 18:59:02.185] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:118:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::FollowDict failed
+[2026-09-13 18:59:02.185] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:125:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::SensitiveWordDict failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [mlp_model.cpp:2082:oime_engine::pinyin::MLPModel::LoadModel] Load MLP model exception, ErrorCode: 3, ErrorString: Load model from C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\scratch\files\data\dict/d9cce8a55257 failed:Load model C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\scratch\files\data\dict/d9cce8a55257 failed. File doesn't exist
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:129:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::MLPModel no gpt2 failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [mlp_model.cpp:2082:oime_engine::pinyin::MLPModel::LoadModel] Load MLP model exception, ErrorCode: 3, ErrorString: Load model from C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\scratch\files\data\dict/3aa2ea70d0b2 failed:Load model C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\scratch\files\data\dict/3aa2ea70d0b2 failed. File doesn't exist
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:133:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::MLPModel For Cloud failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:139:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::QuantifierDict failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:145:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::UrlSysDict failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:151:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::EmailSysDict failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:157:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::SysPoemGramDict failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:163:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::AsrCharErrorDict failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:169:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::FieldDict failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:175:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::AsrNgramDict failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:181:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::IncorrectSyllableDict failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:187:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::SysBigDict failed
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:70] [engine] [dict_manager.cpp:193:oime_engine::pinyin::PyDictManager::LoadSysDict] Engine::LoadSysDict::EmotionPictureDict failed
+[2026-09-13 18:59:02.201] [error] [engine_wrapper.cpp:104] load sys dict failed. C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\scratch\files\data\dict, fatal error
+[2026-09-13 18:59:02.201] [error] [input_mode.cpp:46] load engine dict failed. sys_dict_path=C:\Users\Ricky\Documents\Codex\2026-09-13\wo\work\doubao-probe\planb\scratch\files\data\dict, usr_dict_path=C:\Users\Ricky\AppData\Roaming\DoubaoIme\dict
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:178] Attach new mode fail.
+[2026-09-13 18:59:02.201] [error] [shell_impl.cpp:408] attach failed. mode is 0
+[2026-09-13 18:59:02.201] [error] [controller.cpp:1162] init failed.
+[2026-09-13 18:59:02.201] [error] [controller.cpp:772] shell init failed.
+[2026-09-13 18:59:02.201] [error] [server_main.cpp:2566] init failed.
+[2026-09-13 18:59:02.201] [info] [asr_modify_pair_dispatcher.cpp:119] ModifyPairDispatcher.worker_loop_exit
+[2026-09-13 18:59:02.201] [info] [asr_modify_pair_dispatcher.cpp:48] ModifyPairDispatcher.stop worker joined

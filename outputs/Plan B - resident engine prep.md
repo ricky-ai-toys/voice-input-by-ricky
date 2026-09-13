@@ -822,3 +822,13 @@ Result: `outputs/VoiceInputByRicky/` = `VoiceInputByRicky.exe` + `runtime/` + `d
 + `README.md`, ~255 MB, no installer, no admin, no TSF. Smoke test: the packaged exe starts the
 engine from its own folder, arms the hotkey gate and reports ready
 (`planb/evidence/release_smoke.txt`).
+
+Two more results from the same day:
+
+* **Long dictation is no longer capped.** A 52 s utterance (six paragraphs, mixed Chinese and
+  English, a date) came back complete, with the final commit 1.4 s after the key went up
+  (`planb/evidence/long_52s.txt`). The v0.1.1 "~40 s" limit was an artefact of the file-based
+  feed, not of the engine.
+* **Driving the hotkey over the pipe does not work.** `planb/pipe_key_test.py` sends op 0x04/0x05
+  (and the `RpcPipe_KeyDown` export) while armed: the engine accepts the frames (status 0) but
+  never logs `voice record start`, so the product keeps watching the *real* key locally.

@@ -201,6 +201,23 @@ def main() -> int:
                 print(f"   [op 0x{op:02X} {time.time() - deadline + hold:4.2f}s] "
                       f"{res[1].hex()} {res[1].decode('utf-8', 'replace')[:80]!r}")
 
+    if "--stop-key" in sys.argv:
+        # the engine neutralises the Alt state when the session starts, so the real key-up never
+        # arrives; an unrelated key press during recording is what the hook maps to PRESS_STOP
+        stopped = False
+        for attempt in range(12):
+            send_key(0x41)
+            time.sleep(0.05)
+            send_key(0x41, up=True)
+            time.sleep(0.25)
+            if os.path.exists(log_path):
+                tail = open(log_path, "rb").read()[-20000:].decode("utf-8", "replace")
+                if "controller handle msg=PRESS_STOP" in tail:
+                    print(f"[key] unrelated key 'A' -> engine PRESS_STOP (attempt {attempt + 1})")
+                    stopped = True
+                    break
+        if not stopped:
+            print("[key] engine never reported PRESS_STOP after 12 attempts")
     send_key(0xA5, up=True)
     print("[key] Right Alt up; waiting for the tail")
     if "--click-stop" in sys.argv:

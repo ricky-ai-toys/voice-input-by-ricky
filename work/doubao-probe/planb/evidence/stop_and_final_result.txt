@@ -1,0 +1,6 @@
+[2026-09-13 20:56:36.504] [info] [controller.cpp:3410] [RAlt] controller handle msg=PRESS_START recording=0 want_start=1 want_stop=0 tick=336264156 from_rpc=false duration=0 trigger_ts=336264156
+[2026-09-13 20:56:36.916] [info] [controller.cpp:2947] voice startfrom reported reason=shortcut start_method=long_click task_id=ime_win_b0e33b1a-5cef-43c5-b0bc-d3a3f357324c start_ts_ms=1789304196504
+[2026-09-13 20:56:40.132] [info] [voice_key_hook.cpp:28] [VHK][Trig] unrelated key DOWN while consumed, cancel
+[2026-09-13 20:56:40.132] [info] [voice_key_hook.cpp:28] [VHK][Trig] unrelated while active -> VOICE_PRESS_STOP (latched=0 wave=1 rec=0 combo=0)
+[2026-09-13 20:56:40.132] [info] [controller.cpp:3410] [RAlt] controller handle msg=PRESS_STOP recording=1 want_start=0 want_stop=1 tick=336267781 from_rpc=false duration=336267781 trigger_ts=0
+[2026-09-13 20:56:40.550] [info] [sami_asr_client_win.cpp:675] samicore [mammon]win_14.92.1-alpha.10-oinput[SAMICORE: OnEvent@asr_processor.cpp:165] [000001E5434475C0] online OnMessage event: , payload: {"results":[{"end_time":3.5999999046325684,"is_interim":false,"is_vad_finished":true,"text":"YXX。"},{"end_time":3.5999999046325684,"extra":{"nonstream_result":true},"is_interim":false,"text":"YXX。"}]}, seq_id: 0, task_id: ime_win_b0e33b1a-5cef-43c5-b0bc-d3a3f357324c, status_code: 20000000, status_text: OK, switch_flag: 0

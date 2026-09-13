@@ -683,3 +683,27 @@ ours. The two candidates to discriminate on are the scan code (our injections us
 distinct vk such as `0xFC`). Once the stop finalizes cleanly, the commit - and therefore the
 transcript - should appear on the existing `PeekVoiceCommit` path, which our raw client already
 reaches (the engine logs `slot_PeekVoiceCommit` for every one of our polls).
+
+### Milestone 22 - the stop exists (`PRESS_STOP`), the final ASR result arrives, but the client
+still gets nothing
+
+Two more facts, both from `planb/hook_peek.py` / `planb/hook_synth.py`:
+
+1. **An unrelated key press is a clean stop.** While a session records, pressing any other key
+   makes the hook post `VOICE_PRESS_STOP` and the controller logs
+   `[RAlt] controller handle msg=PRESS_STOP recording=1 want_start=0 want_stop=1` (evidence:
+   `planb/evidence/stop_and_final_result.txt`). That is a documented, reachable stop path that
+   does not depend on our synthetic Alt-up.
+2. **The engine does receive a final result.** With a ~7 s hold and the stop above, the log
+   contains `{"is_interim":false,"text":"..."}` - the cloud's final sentence - so capture,
+   streaming, endpointing and finalisation all happen.
+
+What is still missing is the *hand-off to a client*: with the stop happening, `PeekVoiceCommit`
+still answers `session=0 bytes=0` (679 polls in that run), and the engine posts nothing to the
+registered notify sink hwnd (`planb/hook_sink.py` hooked `PostMessageW`, `SendMessageW` and
+`PostThreadMessageW` inside the engine and saw no notification during the session). The engine
+only serves a transcript to a client it considers a real text service - which is exactly what
+milestone 11 built: a hosted TSF text store in the same process. The remaining work is
+therefore to run that host *against the private engine* (load the copy's patched
+`tsf-oime-core.dll` by path via `DllGetClassObject` instead of the COM-registered installed
+one), so the core is the client that receives the commit text, and we read it out of the store.

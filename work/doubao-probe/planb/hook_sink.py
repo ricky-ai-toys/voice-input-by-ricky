@@ -63,6 +63,15 @@ for (const api of ['PostMessageW', 'SendMessageW']) {
                      wparam: args[2].toString(), lparam: args[3].toString() };
       info.lparam_str = tryString(args[3]);
       info.wparam_str = tryString(args[2]);
+      // if the payload is a struct, show the first few fields as pointers/ints
+      try {
+        const p = args[3];
+        if (!p.isNull()) {
+          const words = [];
+          for (let i = 0; i < 4; i++) words.push(p.add(i * 8).readPointer().toString());
+          info.lparam_words = words;
+        }
+      } catch (e) {}
       try {
         const bt = Thread.backtrace(this.context, Backtracer.ACCURATE).map(modOf).slice(0, 4);
         info.from = bt.join(' <- ');
@@ -102,6 +111,8 @@ def main() -> int:
                 print(f"        wparam str = {payload['wparam_str'][:120]!r}")
             if payload.get("from"):
                 print(f"        from {payload['from']}")
+            if payload.get("lparam_words"):
+                print(f"        lparam words = {payload['lparam_words']}")
         else:
             print(f"   [hook] {payload}")
 
@@ -139,9 +150,19 @@ def main() -> int:
     user32.keybd_event(0xA5, 0, 0, None)
     print("[key] Right Alt down")
     time.sleep(hold)
+    for attempt in range(10):
+        user32.keybd_event(0x41, 0, 0, None)
+        time.sleep(0.05)
+        user32.keybd_event(0x41, 0, 2, None)
+        time.sleep(0.3)
+        log.flush()
+        tail = open(os.path.join(runtime, "hook_sink_server.log"), "rb").read()[-20000:]
+        if b"PRESS_STOP" in tail:
+            print(f"[key] stop accepted after {attempt + 1} attempt(s)")
+            break
     user32.keybd_event(0xA5, 0, 2, None)
     print("[key] Right Alt up")
-    time.sleep(6.0)
+    time.sleep(8.0)
     pipe.close()
     print(f"[done] {len(hits)} messages captured")
     try:
